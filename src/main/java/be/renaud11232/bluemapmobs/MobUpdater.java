@@ -5,46 +5,40 @@ import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Bukkit;
-import org.bukkit.World;
-import org.bukkit.entity.LivingEntity;
 
-import java.util.*;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class MobUpdater implements Runnable {
-
     private final BlueMapAPI api;
-    private final Map<World, Map<LivingEntity, Marker>> worldMarkers;
 
     public MobUpdater(BlueMapAPI api) {
         this.api = api;
-        this.worldMarkers = new HashMap<>();
     }
 
     @Override
     public void run() {
         Bukkit.getServer().getWorlds().forEach(world -> {
-            Set<LivingEntity> livingEntities = new HashSet<>(world.getLivingEntities());
-            Map<LivingEntity, Marker> markers = worldMarkers.computeIfAbsent(world, id -> new HashMap<>());
-            markers.entrySet().removeIf(entry -> !livingEntities.contains(entry.getKey()));
-            livingEntities.forEach(livingEntity -> {
-                Marker marker = markers.computeIfAbsent(livingEntity, id -> POIMarker.builder()
-                        .label(livingEntity.getName())
-                        .maxDistance(1000)
+            Map<String, Marker> markers = world.getLivingEntities()
+                    .stream()
+                    .collect(Collectors.toMap(
+                            livingEntity -> livingEntity.getUniqueId().toString(),
+                            livingEntity -> POIMarker.builder()
+                                    .label(livingEntity.getName())
+                                    .position(livingEntity.getX(), livingEntity.getY() + livingEntity.getEyeHeight(), livingEntity.getZ())
+                                    .maxDistance(1000)
+                                    .build()
+                    ));
+            api.getWorld(world).ifPresent(blueMapWorld -> blueMapWorld.getMaps().forEach(map -> {
+                MarkerSet markerSet = map.getMarkerSets().computeIfAbsent("mobs-markers", id -> MarkerSet.builder()
+                        .label("Mobs")
+                        .toggleable(true)
+                        .defaultHidden(false)
                         .build()
                 );
-                marker.setPosition(livingEntity.getX(), livingEntity.getY(), livingEntity.getZ());
-            });
-            api.getWorld(world).ifPresent(blueMapWorld -> {
-                blueMapWorld.getMaps().forEach(map -> {
-                    MarkerSet markerSet = map.getMarkerSets().computeIfAbsent("mobs-markers", id -> MarkerSet.builder()
-                            .label("Mobs")
-                            .toggleable(true)
-                            .defaultHidden(false)
-                            .build()
-                    );
-                    markerSet.getMarkers().clear();
-                });
-            });
+                markerSet.getMarkers().clear();
+                markerSet.getMarkers().putAll(markers);
+            }));
         });
     }
 }
