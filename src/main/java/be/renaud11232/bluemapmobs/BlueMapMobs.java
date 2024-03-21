@@ -11,7 +11,7 @@ public final class BlueMapMobs extends JavaPlugin {
     public void onEnable() {
         BlueMapAPI.onEnable(api -> {
             getLogger().info("Scheduling MobUpdater task");
-            Bukkit.getScheduler().runTaskTimer(this, new MobUpdater(api), 0, 40);
+            Bukkit.getScheduler().runTaskTimer(this, new MobUpdateScheduler(this, api), 0, 40);
             getLogger().info("MobUpdater task scheduled");
         });
         BlueMapAPI.onDisable(api -> {
