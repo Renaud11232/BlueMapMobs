@@ -4,11 +4,20 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+@SuppressWarnings("unused")
 public final class BlueMapMobs extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        BlueMapAPI.onEnable(api -> Bukkit.getScheduler().runTaskTimerAsynchronously(this, new MobUpdater(api), 0, 0));
-        BlueMapAPI.onDisable(api -> Bukkit.getScheduler().cancelTasks(this));
+        BlueMapAPI.onEnable(api -> {
+            getLogger().info("Scheduling MobUpdater task");
+            Bukkit.getScheduler().runTaskTimer(this, new MobUpdater(api), 0, 40);
+            getLogger().info("MobUpdater task scheduled");
+        });
+        BlueMapAPI.onDisable(api -> {
+            getLogger().info("Cancelling tasks");
+            Bukkit.getScheduler().cancelTasks(this);
+            getLogger().info("Tasks cancelled");
+        });
     }
 }
