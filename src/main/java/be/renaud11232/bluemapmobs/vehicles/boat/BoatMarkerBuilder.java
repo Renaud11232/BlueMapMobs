@@ -13,8 +13,8 @@ public class BoatMarkerBuilder implements VehicleEntityMarkerBuilder<Boat> {
 
     @Override
     public Optional<Marker> build(Boat boat) {
-        if (boat instanceof ChestBoat) {
-            return chestBoatMarkerBuilder.build((ChestBoat) boat);
+        if (boat instanceof ChestBoat chestBoat) {
+            return chestBoatMarkerBuilder.build(chestBoat);
         }
         return VehicleEntityMarkerBuilder.super.build(boat);
     }

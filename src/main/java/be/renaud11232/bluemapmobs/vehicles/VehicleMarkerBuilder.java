@@ -16,10 +16,10 @@ public class VehicleMarkerBuilder implements VehicleEntityMarkerBuilder<Vehicle>
 
     @Override
     public Optional<Marker> build(Vehicle vehicle) {
-        if (vehicle instanceof Boat) {
-            return boatMarkerBuilder.build((Boat) vehicle);
-        } else if (vehicle instanceof Minecart) {
-            return minecartMarkerBuilder.build((Minecart) vehicle);
+        if (vehicle instanceof Boat boat) {
+            return boatMarkerBuilder.build(boat);
+        } else if (vehicle instanceof Minecart minecart) {
+            return minecartMarkerBuilder.build(minecart);
         }
         return Optional.empty();
     }
