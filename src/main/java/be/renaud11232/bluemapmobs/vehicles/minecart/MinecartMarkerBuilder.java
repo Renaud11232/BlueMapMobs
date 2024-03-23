@@ -19,20 +19,20 @@ public class MinecartMarkerBuilder implements MarkerBuilder<Minecart> {
 
     @Override
     public Optional<Marker> build(Minecart minecart) {
-        if (minecart instanceof CommandMinecart commandMinecart) {
-            return commandMinecartMarkerBuilder.build(commandMinecart);
-        } else if (minecart instanceof ExplosiveMinecart explosiveMinecart) {
-            return explosiveMinecartMarkerBuilder.build(explosiveMinecart);
-        } else if (minecart instanceof HopperMinecart hopperMinecart) {
-            return hopperMinecartMarkerBuilder.build(hopperMinecart);
-        } else if (minecart instanceof PoweredMinecart poweredMinecart) {
-            return poweredMinecartMarkerBuilder.build(poweredMinecart);
-        } else if (minecart instanceof RideableMinecart rideableMinecart) {
-            return rideableMinecartMarkerBuilder.build(rideableMinecart);
-        } else if (minecart instanceof SpawnerMinecart spawnerMinecart) {
-            return spawnerMinecartMarkerBuilder.build(spawnerMinecart);
-        } else if (minecart instanceof StorageMinecart storageMinecart) {
-            return storageMinecartMarkerBuilder.build(storageMinecart);
+        if (minecart instanceof CommandMinecart) {
+            return commandMinecartMarkerBuilder.build((CommandMinecart) minecart);
+        } else if (minecart instanceof ExplosiveMinecart) {
+            return explosiveMinecartMarkerBuilder.build((ExplosiveMinecart) minecart);
+        } else if (minecart instanceof HopperMinecart) {
+            return hopperMinecartMarkerBuilder.build((HopperMinecart) minecart);
+        } else if (minecart instanceof PoweredMinecart) {
+            return poweredMinecartMarkerBuilder.build((PoweredMinecart) minecart);
+        } else if (minecart instanceof RideableMinecart) {
+            return rideableMinecartMarkerBuilder.build((RideableMinecart) minecart);
+        } else if (minecart instanceof SpawnerMinecart) {
+            return spawnerMinecartMarkerBuilder.build((SpawnerMinecart) minecart);
+        } else if (minecart instanceof StorageMinecart) {
+            return storageMinecartMarkerBuilder.build((StorageMinecart) minecart);
         }
         return Optional.empty();
     }

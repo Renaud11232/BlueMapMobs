@@ -1,23 +1,24 @@
-package be.renaud11232.bluemapmobs.mobs;
+package be.renaud11232.bluemapmobs.livingentities;
 
 import be.renaud11232.bluemapmobs.BlueMapMobs;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
-import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.LivingEntity;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
-public class MobUpdater implements Runnable {
+public class LivingEntityUpdater implements Runnable {
 
     private final BlueMapAPI api;
+    private final LivingEntityMarkerBuilder livingEntityMarkerBuilder;
 
-    public MobUpdater(BlueMapAPI api) {
+    public LivingEntityUpdater(BlueMapAPI api) {
         this.api = api;
+        this.livingEntityMarkerBuilder = new LivingEntityMarkerBuilder();
     }
 
     @Override
@@ -25,17 +26,10 @@ public class MobUpdater implements Runnable {
         Bukkit.getServer().getWorlds().forEach(world -> {
             List<LivingEntity> livingEntities = world.getLivingEntities();
             Bukkit.getScheduler().runTaskAsynchronously(BlueMapMobs.getInstance(), () -> {
-                Map<String, Marker> markers = livingEntities.stream()
-                        .collect(Collectors.toMap(
-                                livingEntity -> livingEntity.getUniqueId().toString(),
-                                livingEntity -> POIMarker.builder()
-                                        .label(livingEntity.getName())
-                                        .position(livingEntity.getX(), livingEntity.getY() + livingEntity.getEyeHeight(), livingEntity.getZ())
-                                        .maxDistance(1000)
-                                        .build()
-                        ));
+                Map<String, Marker> markers = new HashMap<>();
+                livingEntities.forEach(livingEntity -> livingEntityMarkerBuilder.build(livingEntity).ifPresent(marker -> markers.put(livingEntity.getUniqueId().toString(), marker)));
                 api.getWorld(world).ifPresent(blueMapWorld -> blueMapWorld.getMaps().forEach(map -> {
-                    MarkerSet markerSet = map.getMarkerSets().computeIfAbsent("mobs-markers", id -> MarkerSet.builder()
+                    MarkerSet markerSet = map.getMarkerSets().computeIfAbsent("mob-markers", id -> MarkerSet.builder()
                             .label("Mobs")
                             .toggleable(true)
                             .defaultHidden(false)
