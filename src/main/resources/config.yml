@@ -16,7 +16,6 @@ marker_sets:
     label: "Mobs"
     toggleable: true
     default_hidden: true
-    small_icons: false
     max_distance: 1000
     display:
 
@@ -25,7 +24,6 @@ marker_sets:
     label: "Vehicles"
     toggleable: true
     default_hidden: true
-    small_icons: false
     max_distance: 1000
     display:
       chest_boat: true
