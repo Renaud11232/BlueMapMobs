@@ -1,7 +1,5 @@
 package be.renaud11232.bluemapmobs;
 
-import be.renaud11232.bluemapmobs.mobs.MobUpdater;
-import be.renaud11232.bluemapmobs.vehicles.VehicleUpdater;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,10 +14,9 @@ public final class BlueMapMobs extends JavaPlugin {
             getLogger().info("Reloading configuration file");
             reloadConfig();
             getLogger().info("Configuration file reloaded");
-            getLogger().info("Scheduling tasks");
-            Bukkit.getScheduler().runTaskTimer(this, new MobUpdater(api, getConfig()), 0, 40);
-            Bukkit.getScheduler().runTaskTimer(this, new VehicleUpdater(api, getConfig()), 0, 40);
-            getLogger().info("Tasks scheduled");
+            getLogger().info("Scheduling task");
+            Bukkit.getScheduler().runTaskTimer(this, new BlueMapMobsUpdateTask(api, getConfig()), 0, getConfig().getInt("general.refresh_rate", 20));
+            getLogger().info("Task scheduled");
         });
         BlueMapAPI.onDisable(api -> {
             getLogger().info("Cancelling tasks");
