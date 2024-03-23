@@ -45,7 +45,7 @@ public final class BlueMapMobs extends JavaPlugin {
                         try {
                             Path destinationFile = destinationPath.resolve(sourcePath.relativize(sourceFile).toString());
                             if(!Files.exists(destinationFile)) {
-                                Files.copy(sourceFile, destinationFile);
+                                Files.copy(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING);
                             }
                         } catch (IOException e) {
                             throw new RuntimeException(e);

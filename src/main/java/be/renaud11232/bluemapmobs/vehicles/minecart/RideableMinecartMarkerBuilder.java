@@ -11,7 +11,7 @@ public class RideableMinecartMarkerBuilder implements VehicleEntityMarkerBuilder
     @Override
     public Optional<POIMarker> build(RideableMinecart rideableMinecart) {
         return VehicleEntityMarkerBuilder.super.build(rideableMinecart).map(marker -> {
-            marker.setIcon(Icon.RIDEABLE_MINECART.getPath(), Icon.RIDEABLE_MINECART.getAnchor());
+            marker.setIcon(Icon.MINECART.getPath(), Icon.MINECART.getAnchor());
             return marker;
         });
     }

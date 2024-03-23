@@ -11,7 +11,7 @@ public class CommandMinecartMarkerBuilder implements VehicleEntityMarkerBuilder<
     @Override
     public Optional<POIMarker> build(CommandMinecart commandMinecart) {
         return VehicleEntityMarkerBuilder.super.build(commandMinecart).map(marker -> {
-            marker.setIcon(Icon.COMMAND_MINECART.getPath(), Icon.COMMAND_MINECART.getAnchor());
+            marker.setIcon(Icon.COMMAND_BLOCK_MINECART.getPath(), Icon.COMMAND_BLOCK_MINECART.getAnchor());
             return marker;
         });
     }

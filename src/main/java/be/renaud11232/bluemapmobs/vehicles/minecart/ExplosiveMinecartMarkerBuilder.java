@@ -11,7 +11,7 @@ public class ExplosiveMinecartMarkerBuilder implements VehicleEntityMarkerBuilde
     @Override
     public Optional<POIMarker> build(ExplosiveMinecart explosiveMinecart) {
         return VehicleEntityMarkerBuilder.super.build(explosiveMinecart).map(marker -> {
-            marker.setIcon(Icon.EXPLOSIVE_MINECART.getPath(), Icon.EXPLOSIVE_MINECART.getAnchor());
+            marker.setIcon(Icon.TNT_MINECART.getPath(), Icon.TNT_MINECART.getAnchor());
             return marker;
         });
     }
