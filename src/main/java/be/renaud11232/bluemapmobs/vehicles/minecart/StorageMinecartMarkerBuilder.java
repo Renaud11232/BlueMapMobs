@@ -11,7 +11,7 @@ public class StorageMinecartMarkerBuilder implements VehicleEntityMarkerBuilder<
     @Override
     public Optional<POIMarker> build(StorageMinecart storageMinecart) {
         return VehicleEntityMarkerBuilder.super.build(storageMinecart).map(marker -> {
-            marker.setIcon(Icon.STORAGE_MINECART.getPath(), Icon.STORAGE_MINECART.getAnchor());
+            marker.setIcon(Icon.CHEST_MINECART.getPath(), Icon.CHEST_MINECART.getAnchor());
             return marker;
         });
     }
