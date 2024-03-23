@@ -16,4 +16,9 @@ public interface MobEntityMarkerBuilder<T extends LivingEntity> extends MarkerBu
         });
     }
 
+    @Override
+    default String getAsset(String file) {
+        return MarkerBuilder.super.getAsset("mobs/" + file);
+    }
+
 }

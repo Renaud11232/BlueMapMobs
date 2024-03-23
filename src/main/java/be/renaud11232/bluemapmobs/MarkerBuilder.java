@@ -14,8 +14,13 @@ public interface MarkerBuilder<T extends Entity> {
                         .label(entity.getName())
                         .position(entity.getX(), entity.getY(), entity.getZ())
                         .maxDistance(1000)
+                        .icon(getAsset("unknown.png"), 24, 24)
                         .build()
         );
+    }
+
+    default String getAsset(String file) {
+        return "assets/bluemapmobs/" + file;
     }
 
 }
