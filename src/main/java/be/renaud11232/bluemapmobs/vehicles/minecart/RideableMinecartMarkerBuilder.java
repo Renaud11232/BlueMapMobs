@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public class RideableMinecartMarkerBuilder implements VehicleEntityMarkerBuilder<RideableMinecart> {
     @Override
-    public Optional<Marker> build(RideableMinecart entity) {
-        return Optional.empty();
+    public Optional<Marker> build(RideableMinecart rideableMinecart) {
+        return VehicleEntityMarkerBuilder.super.build(rideableMinecart);
     }
 }

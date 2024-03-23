@@ -9,8 +9,8 @@ import java.util.Optional;
 public class ChestBoatMarkerBuilder implements VehicleEntityMarkerBuilder<ChestBoat> {
 
     @Override
-    public Optional<Marker> build(ChestBoat entity) {
-        return Optional.empty();
+    public Optional<Marker> build(ChestBoat chestBoat) {
+        return VehicleEntityMarkerBuilder.super.build(chestBoat);
     }
 
 }

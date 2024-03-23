@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public class CommandMinecartMarkerBuilder implements VehicleEntityMarkerBuilder<CommandMinecart> {
     @Override
-    public Optional<Marker> build(CommandMinecart entity) {
-        return Optional.empty();
+    public Optional<Marker> build(CommandMinecart commandMinecart) {
+        return VehicleEntityMarkerBuilder.super.build(commandMinecart);
     }
 }
