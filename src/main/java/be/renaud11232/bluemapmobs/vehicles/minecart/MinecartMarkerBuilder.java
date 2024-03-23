@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.vehicles.minecart;
 
 import be.renaud11232.bluemapmobs.vehicles.VehicleEntityMarkerBuilder;
-import de.bluecolored.bluemap.api.markers.Marker;
+import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.minecart.*;
 
@@ -18,7 +18,7 @@ public class MinecartMarkerBuilder implements VehicleEntityMarkerBuilder<Minecar
     private final StorageMinecartMarkerBuilder storageMinecartMarkerBuilder = new StorageMinecartMarkerBuilder();
 
     @Override
-    public Optional<Marker> build(Minecart minecart) {
+    public Optional<POIMarker> build(Minecart minecart) {
         if (minecart instanceof CommandMinecart commandMinecart) {
             return commandMinecartMarkerBuilder.build(commandMinecart);
         } else if (minecart instanceof ExplosiveMinecart explosiveMinecart) {
