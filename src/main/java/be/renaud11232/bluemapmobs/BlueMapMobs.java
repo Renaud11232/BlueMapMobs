@@ -56,7 +56,6 @@ public final class BlueMapMobs extends JavaPlugin {
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public static BlueMapMobs getInstance() {
