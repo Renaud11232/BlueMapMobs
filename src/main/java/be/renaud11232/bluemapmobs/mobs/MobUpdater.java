@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapmobs.livingentities;
+package be.renaud11232.bluemapmobs.mobs;
 
 import be.renaud11232.bluemapmobs.BlueMapMobs;
 import de.bluecolored.bluemap.api.BlueMapAPI;
@@ -11,14 +11,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class LivingEntityUpdater implements Runnable {
+public class MobUpdater implements Runnable {
 
     private final BlueMapAPI api;
-    private final LivingEntityMarkerBuilder livingEntityMarkerBuilder;
+    private final MobMarkerBuilder mobMarkerBuilder;
 
-    public LivingEntityUpdater(BlueMapAPI api) {
+    public MobUpdater(BlueMapAPI api) {
         this.api = api;
-        this.livingEntityMarkerBuilder = new LivingEntityMarkerBuilder();
+        this.mobMarkerBuilder = new MobMarkerBuilder();
     }
 
     @Override
@@ -27,7 +27,7 @@ public class LivingEntityUpdater implements Runnable {
             List<LivingEntity> livingEntities = world.getLivingEntities();
             Bukkit.getScheduler().runTaskAsynchronously(BlueMapMobs.getInstance(), () -> {
                 Map<String, Marker> markers = new HashMap<>();
-                livingEntities.forEach(livingEntity -> livingEntityMarkerBuilder.build(livingEntity).ifPresent(marker -> markers.put(livingEntity.getUniqueId().toString(), marker)));
+                livingEntities.forEach(livingEntity -> mobMarkerBuilder.build(livingEntity).ifPresent(marker -> markers.put(livingEntity.getUniqueId().toString(), marker)));
                 api.getWorld(world).ifPresent(blueMapWorld -> blueMapWorld.getMaps().forEach(map -> {
                     MarkerSet markerSet = map.getMarkerSets().computeIfAbsent("mob-markers", id -> MarkerSet.builder()
                             .label("Mobs")

@@ -1,13 +1,13 @@
 package be.renaud11232.bluemapmobs.vehicles.minecart;
 
-import be.renaud11232.bluemapmobs.MarkerBuilder;
+import be.renaud11232.bluemapmobs.vehicles.VehicleEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.Marker;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.minecart.*;
 
 import java.util.Optional;
 
-public class MinecartMarkerBuilder implements MarkerBuilder<Minecart> {
+public class MinecartMarkerBuilder implements VehicleEntityMarkerBuilder<Minecart> {
 
     private final CommandMinecartMarkerBuilder commandMinecartMarkerBuilder = new CommandMinecartMarkerBuilder();
     private final ExplosiveMinecartMarkerBuilder explosiveMinecartMarkerBuilder = new ExplosiveMinecartMarkerBuilder();
@@ -34,6 +34,6 @@ public class MinecartMarkerBuilder implements MarkerBuilder<Minecart> {
         } else if (minecart instanceof StorageMinecart) {
             return storageMinecartMarkerBuilder.build((StorageMinecart) minecart);
         }
-        return Optional.empty();
+        return VehicleEntityMarkerBuilder.super.build(minecart);
     }
 }
