@@ -35,12 +35,12 @@ public final class BlueMapMobs extends JavaPlugin {
     }
 
     private void extractAssets(BlueMapAPI api) {
-        Path destinationPath = api.getWebApp().getWebRoot().resolve("assets").resolve(getClass().getName());
         try {
             Path jarPath = Path.of(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
             try (FileSystem jar = FileSystems.newFileSystem(jarPath)) {
                 Path sourcePath = jar.getPath("assets");
                 try (Stream<Path> sourceFiles = Files.walk(sourcePath)) {
+                    Path destinationPath = api.getWebApp().getWebRoot().resolve("assets").resolve(getClass().getName());
                     sourceFiles.forEach(sourceFile -> {
                         try {
                             Path destinationFile = destinationPath.resolve(sourcePath.relativize(sourceFile).toString());
