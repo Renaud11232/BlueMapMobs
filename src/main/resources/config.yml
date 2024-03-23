@@ -1,0 +1,39 @@
+general:
+  # Number of ticks between updates
+  refresh_rate: 20
+  # Hide markers when they are in light levels under the specified value
+  # 0 = Full shadow
+  # 15 = Full light
+  minimum_light_level: 4
+  # Hide markers when they are in direct sky light levels under the specified value
+  # 0 = Full shadow
+  # 15 = Full light
+  minimum_sky_light_level: 0
+
+marker_sets:
+  mobs:
+    key: "bluemapmobs-mobs"
+    label: "Mobs"
+    toggleable: true
+    default_hidden: true
+    small_icons: false
+    max_distance: 1000
+    display:
+
+  vehicles:
+    key: "bluemapmobs-vehicles"
+    label: "Vehicles"
+    toggleable: true
+    default_hidden: true
+    small_icons: false
+    max_distance: 1000
+    display:
+      chest_boat: true
+      boat: true
+      command_minecart: true
+      explosive_minecart: true
+      hopper_minecart: true
+      powered_minecart: true
+      rideable_minecart: true
+      spawner_minecart: true
+      storage_minecart: true
