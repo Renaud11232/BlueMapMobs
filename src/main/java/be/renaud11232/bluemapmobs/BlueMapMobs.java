@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapmobs;
 
-import be.renaud11232.bluemapmobs.livingentities.LivingEntityUpdater;
+import be.renaud11232.bluemapmobs.mobs.MobUpdater;
 import be.renaud11232.bluemapmobs.vehicles.VehicleUpdater;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
@@ -16,7 +16,7 @@ public final class BlueMapMobs extends JavaPlugin {
             reloadConfig();
             getLogger().info("Configuration file reloaded");
             getLogger().info("Scheduling tasks");
-            Bukkit.getScheduler().runTaskTimer(this, new LivingEntityUpdater(api), 0, 40);
+            Bukkit.getScheduler().runTaskTimer(this, new MobUpdater(api), 0, 40);
             Bukkit.getScheduler().runTaskTimer(this, new VehicleUpdater(api), 0, 40);
             getLogger().info("Tasks scheduled");
         });
