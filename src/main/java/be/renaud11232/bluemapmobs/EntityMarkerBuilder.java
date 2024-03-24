@@ -14,7 +14,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
 
     @Override
     @SuppressWarnings("unchecked")
-    public Optional<POIMarker> build(T entity) {
+    public final Optional<POIMarker> build(T entity) {
         return markerBuilders.entrySet()
                 .stream()
                 .filter(entry -> entry.getKey().isInstance(entity))

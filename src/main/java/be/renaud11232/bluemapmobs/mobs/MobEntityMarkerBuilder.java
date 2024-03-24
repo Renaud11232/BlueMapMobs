@@ -1,16 +1,16 @@
 package be.renaud11232.bluemapmobs.mobs;
 
-import be.renaud11232.bluemapmobs.MarkerBuilder;
+import be.renaud11232.bluemapmobs.EntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.entity.Mob;
 
 import java.util.Optional;
 
-public interface MobEntityMarkerBuilder<T extends Mob> extends MarkerBuilder<T> {
+public abstract class MobEntityMarkerBuilder<T extends Mob> extends EntityMarkerBuilder<T> {
 
     @Override
-    default Optional<POIMarker> build(T mob) {
-        return MarkerBuilder.super.build(mob).map(marker ->  {
+    public Optional<POIMarker> buildDefault(T mob) {
+        return super.buildDefault(mob).map(marker ->  {
             marker.setPosition(mob.getX(), mob.getY() + mob.getEyeHeight(), mob.getZ());
             return marker;
         });

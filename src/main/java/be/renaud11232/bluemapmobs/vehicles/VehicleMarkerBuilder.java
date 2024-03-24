@@ -6,7 +6,7 @@ import org.bukkit.entity.Minecart;
 import org.bukkit.entity.Vehicle;
 
 
-public class VehicleMarkerBuilder extends EntityMarkerBuilder<Vehicle> implements VehicleEntityMarkerBuilder<Vehicle> {
+public class VehicleMarkerBuilder extends EntityMarkerBuilder<Vehicle> {
 
     public VehicleMarkerBuilder() {
         registerMarkerBuilder(Boat.class, new BoatMarkerBuilder());
