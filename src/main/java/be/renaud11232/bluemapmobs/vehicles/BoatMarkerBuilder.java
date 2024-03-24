@@ -1,7 +1,8 @@
-package be.renaud11232.bluemapmobs.vehicles.boat;
+package be.renaud11232.bluemapmobs.vehicles;
 
 import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.vehicles.VehicleEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.vehicles.boat.ChestBoatMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.entity.Boat;
 import org.bukkit.entity.ChestBoat;

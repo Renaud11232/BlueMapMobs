@@ -9,6 +9,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Vehicle;
 
 import java.util.Collection;
@@ -37,7 +39,7 @@ public class BlueMapMobsUpdateTask implements Runnable {
         Bukkit.getServer().getWorlds().forEach(world -> {
             updateMarkersAsynchronously(
                     world,
-                    World::getLivingEntities,
+                    w -> w.getEntitiesByClass(Mob.class),
                     mobMarkerBuilder,
                     config.getString("marker_sets.mobs.key", "bluemapmobs-mobs"),
                     () -> MarkerSet.builder()
@@ -48,7 +50,7 @@ public class BlueMapMobsUpdateTask implements Runnable {
             );
             updateMarkersAsynchronously(
                     world,
-                    w -> w.getEntitiesByClass(Vehicle.class),
+                    w -> w.getEntitiesByClass(Vehicle.class).stream().filter(entity -> !(entity instanceof LivingEntity)).toList(),
                     vehicleMarkerBuilder,
                     config.getString("marker_sets.vehicles.key", "bluemapmobs-mobs"),
                     () -> MarkerSet.builder()
