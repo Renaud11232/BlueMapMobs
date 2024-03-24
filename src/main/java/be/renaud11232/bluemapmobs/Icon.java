@@ -11,6 +11,7 @@ public enum Icon {
     FURNACE_MINECART("assets/bluemapmobs/vehicles/minecart/furnace_minecart.png", new Vector2i(16, 16)),
     HOPPER_MINECART("assets/bluemapmobs/vehicles/minecart/hopper_minecart.png", new Vector2i(16, 16)),
     MINECART("assets/bluemapmobs/vehicles/minecart/minecart.png", new Vector2i(16, 16)),
+    SPAWNER_MINECART("assets/bluemapmobs/vehicles/minecart/spawner_minecart.png", new Vector2i(16, 16)),
     TNT_MINECART("assets/bluemapmobs/vehicles/minecart/tnt_minecart.png", new Vector2i(16, 16)),
 
     ACACIA_BOAT("assets/bluemapmobs/vehicles/boat/acacia_boat.png", new Vector2i(16, 16)),
