@@ -1,14 +1,13 @@
 general:
   # Number of ticks between updates
-  refresh_rate: 20
-  # Hide markers when they are in light levels under the specified value
-  # 0 = Full shadow
-  # 15 = Full light
-  minimum_light_level: 4
-  # Hide markers when they are in direct sky light levels under the specified value
-  # 0 = Full shadow
-  # 15 = Full light
-  minimum_sky_light_level: 0
+  refresh_rate: 200
+  # Hide markers if they are in light levels under the specified value
+  # Both values have to be below the threshold fot the marker to be hidden
+  # 0 = Full shadow (doesn't hide the marker)
+  # 16 = Full block light
+  # 15 = Full sky light
+  minimum_block_light: 4
+  minimum_sky_light: 1
 
 marker_sets:
   mobs:
