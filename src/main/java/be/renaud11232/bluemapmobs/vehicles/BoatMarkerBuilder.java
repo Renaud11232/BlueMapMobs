@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.vehicles;
 
+import be.renaud11232.bluemapmobs.EntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.vehicles.VehicleEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.vehicles.boat.ChestBoatMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.entity.Boat;
@@ -9,16 +9,15 @@ import org.bukkit.entity.ChestBoat;
 
 import java.util.Optional;
 
-public class BoatMarkerBuilder implements VehicleEntityMarkerBuilder<Boat> {
+public class BoatMarkerBuilder extends EntityMarkerBuilder<Boat> {
 
-    private final ChestBoatMarkerBuilder chestBoatMarkerBuilder = new ChestBoatMarkerBuilder();
+    public BoatMarkerBuilder() {
+        registerMarkerBuilder(ChestBoat.class, new ChestBoatMarkerBuilder());
+    }
 
     @Override
-    public Optional<POIMarker> build(Boat boat) {
-        if (boat instanceof ChestBoat chestBoat) {
-            return chestBoatMarkerBuilder.build(chestBoat);
-        }
-        return VehicleEntityMarkerBuilder.super.build(boat).map(marker -> {
+    public Optional<POIMarker> buildDefault(Boat boat) {
+        return super.buildDefault(boat).map(marker -> {
             switch (boat.getBoatType()) {
                 case ACACIA:
                     marker.setIcon(Icon.ACACIA_BOAT.getPath(), Icon.ACACIA_BOAT.getAnchor());

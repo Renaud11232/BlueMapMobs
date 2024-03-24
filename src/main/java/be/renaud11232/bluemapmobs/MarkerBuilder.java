@@ -8,6 +8,10 @@ import java.util.Optional;
 public interface MarkerBuilder<T extends Entity> {
 
     default Optional<POIMarker> build(T entity) {
+        return buildDefault(entity);
+    }
+
+    default Optional<POIMarker> buildDefault(T entity) {
         return Optional.of(
                 POIMarker.builder()
                         .label(entity.getName())
