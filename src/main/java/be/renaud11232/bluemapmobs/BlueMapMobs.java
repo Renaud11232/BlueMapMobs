@@ -24,7 +24,7 @@ public final class BlueMapMobs extends JavaPlugin {
             extractAssets(api);
             getLogger().info("Assets copied");
             getLogger().info("Scheduling task");
-            Bukkit.getScheduler().runTaskTimer(this, new BlueMapMobsUpdateTask(api, getConfig()), 0, getConfig().getInt("general.refresh_rate", 20));
+            Bukkit.getScheduler().runTaskTimer(this, new BlueMapMobsUpdateTask(api, getConfig()), 0, 200);
             getLogger().info("Task scheduled");
         });
         BlueMapAPI.onDisable(api -> {
