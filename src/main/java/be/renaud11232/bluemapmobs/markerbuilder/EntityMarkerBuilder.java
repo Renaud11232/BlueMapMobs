@@ -10,7 +10,7 @@ import java.util.Optional;
 public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBuilder<T> {
 
     @SuppressWarnings("rawtypes")
-    private final Map<Class<? extends T>, MarkerBuilder> markerBuilders = new HashMap<>();
+    private final Map<Class<? extends Entity>, MarkerBuilder> markerBuilders = new HashMap<>();
 
     @Override
     @SuppressWarnings("unchecked")
@@ -23,7 +23,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
                 .or(() -> MarkerBuilder.super.build(entity));
     }
 
-    protected <U extends T> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
+    protected <U extends Entity> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
         markerBuilders.put(klass, builder);
     }
 }
