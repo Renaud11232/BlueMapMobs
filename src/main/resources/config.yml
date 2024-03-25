@@ -1,6 +1,4 @@
 general:
-  # Number of ticks between updates
-  refresh_rate: 200
   # Hide markers if they are in light levels under the specified value
   # Both values have to be below the threshold fot the marker to be hidden
   # 0 = Full shadow (doesn't hide the marker)
