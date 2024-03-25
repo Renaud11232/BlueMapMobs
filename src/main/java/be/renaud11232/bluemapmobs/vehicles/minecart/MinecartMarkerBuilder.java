@@ -1,7 +1,6 @@
-package be.renaud11232.bluemapmobs.vehicles;
+package be.renaud11232.bluemapmobs.vehicles.minecart;
 
 import be.renaud11232.bluemapmobs.EntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.vehicles.minecart.*;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.minecart.*;
 
