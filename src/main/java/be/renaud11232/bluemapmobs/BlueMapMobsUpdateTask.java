@@ -1,7 +1,8 @@
 package be.renaud11232.bluemapmobs;
 
-import be.renaud11232.bluemapmobs.mob.MobMarkerBuilder;
-import be.renaud11232.bluemapmobs.vehicles.VehicleMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.MarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.MobMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.VehicleMarkerBuilder;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
