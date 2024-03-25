@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapmobs.mobs;
+package be.renaud11232.bluemapmobs.mob;
 
 import be.renaud11232.bluemapmobs.EntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
