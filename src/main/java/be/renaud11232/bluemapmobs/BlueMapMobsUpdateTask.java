@@ -10,7 +10,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Vehicle;
 
@@ -51,7 +50,7 @@ public class BlueMapMobsUpdateTask implements Runnable {
             );
             updateMarkersAsynchronously(
                     world,
-                    w -> w.getEntitiesByClass(Vehicle.class).stream().filter(entity -> !(entity instanceof LivingEntity)).toList(),
+                    w -> w.getEntitiesByClass(Vehicle.class),
                     vehicleMarkerBuilder,
                     config.getString("marker_sets.vehicles.key", "bluemapmobs-mobs"),
                     () -> MarkerSet.builder()
