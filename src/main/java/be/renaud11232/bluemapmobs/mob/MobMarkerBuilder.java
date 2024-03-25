@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapmobs.mobs;
+package be.renaud11232.bluemapmobs.mob;
 
 import org.bukkit.entity.*;
 
