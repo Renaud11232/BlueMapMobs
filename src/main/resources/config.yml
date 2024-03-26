@@ -13,22 +13,25 @@ marker_sets:
     label: "Mobs"
     toggleable: true
     default_hidden: true
-    max_distance: 1000
-    display:
+    markers:
+      max_distance: 1000
+      types:
+
 
   vehicles:
     key: "bluemapmobs-vehicles"
     label: "Vehicles"
     toggleable: true
     default_hidden: true
-    max_distance: 1000
-    display:
-      chest_boat: true
-      boat: true
-      command_minecart: true
-      explosive_minecart: true
-      hopper_minecart: true
-      powered_minecart: true
-      rideable_minecart: true
-      spawner_minecart: true
-      storage_minecart: true
+    markers:
+      max_distance: 1000
+      types:
+        chest_boat: true
+        boat: true
+        command_minecart: true
+        explosive_minecart: true
+        hopper_minecart: true
+        powered_minecart: true
+        rideable_minecart: true
+        spawner_minecart: true
+        storage_minecart: true

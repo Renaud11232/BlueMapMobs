@@ -5,7 +5,7 @@ import org.bukkit.entity.Entity;
 
 import java.util.Optional;
 
-public class HiddenMarkerBuilder<T extends Entity> extends EntityMarkerBuilder<T> {
+public class HiddenMarkerBuilder<T extends Entity> implements MarkerBuilder<T> {
 
     @Override
     public Optional<POIMarker> buildDefault(T entity) {

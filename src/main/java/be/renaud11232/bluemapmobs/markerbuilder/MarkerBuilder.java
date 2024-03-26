@@ -17,7 +17,6 @@ public interface MarkerBuilder<T extends Entity> {
                 POIMarker.builder()
                         .label(entity.getName())
                         .position(entity.getX(), entity.getY(), entity.getZ())
-                        .maxDistance(1000)
                         .icon(Icon.UNKNOWN.getPath(), Icon.UNKNOWN.getAnchor())
                         .build()
         );

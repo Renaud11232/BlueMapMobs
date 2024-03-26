@@ -3,14 +3,16 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.spider.CaveSpiderMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Spider;
 
 import java.util.Optional;
 
 public class SpiderMarkerBuilder extends MobEntityMarkerBuilder<Spider> {
-    public SpiderMarkerBuilder() {
-        registerMarkerBuilder(CaveSpider.class, new CaveSpiderMarkerBuilder());
+    public SpiderMarkerBuilder(FileConfiguration config) {
+        super(config);
+        registerMarkerBuilder(CaveSpider.class, new CaveSpiderMarkerBuilder(config));
     }
 
     @Override
