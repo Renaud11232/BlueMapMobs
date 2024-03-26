@@ -8,6 +8,7 @@ import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Vehicle;
@@ -22,6 +23,7 @@ public class BlueMapMobsUpdateTask implements Runnable {
 
     private final BlueMapMobs plugin;
     private final BlueMapAPI api;
+    private final FileConfiguration config;
     private final MobMarkerBuilder mobMarkerBuilder;
     private final VehicleMarkerBuilder vehicleMarkerBuilder;
 
@@ -29,6 +31,7 @@ public class BlueMapMobsUpdateTask implements Runnable {
     public BlueMapMobsUpdateTask(BlueMapMobs plugin, BlueMapAPI api) {
         this.plugin = plugin;
         this.api = api;
+        this.config = plugin.getConfig();
         this.mobMarkerBuilder = new MobMarkerBuilder();
         this.vehicleMarkerBuilder = new VehicleMarkerBuilder();
     }
@@ -40,22 +43,22 @@ public class BlueMapMobsUpdateTask implements Runnable {
                     world,
                     w -> w.getEntitiesByClass(Mob.class),
                     mobMarkerBuilder,
-                    plugin.getConfig().getString("marker_sets.mobs.key", "bluemapmobs-mobs"),
+                    config.getString("marker_sets.mobs.key", "bluemapmobs-mobs"),
                     () -> MarkerSet.builder()
-                            .label(plugin.getConfig().getString("marker_sets.mobs.label", "Mobs"))
-                            .toggleable(plugin.getConfig().getBoolean("marker_sets.mobs.toggleable", true))
-                            .defaultHidden(plugin.getConfig().getBoolean("marker_sets.mobs.default_hidden", true))
+                            .label(config.getString("marker_sets.mobs.label", "Mobs"))
+                            .toggleable(config.getBoolean("marker_sets.mobs.toggleable", true))
+                            .defaultHidden(config.getBoolean("marker_sets.mobs.default_hidden", true))
                             .build()
             );
             updateMarkersAsynchronously(
                     world,
                     w -> w.getEntitiesByClass(Vehicle.class),
                     vehicleMarkerBuilder,
-                    plugin.getConfig().getString("marker_sets.vehicles.key", "bluemapmobs-mobs"),
+                    config.getString("marker_sets.vehicles.key", "bluemapmobs-mobs"),
                     () -> MarkerSet.builder()
-                            .label(plugin.getConfig().getString("marker_sets.vehicles.label", "Vehicles"))
-                            .toggleable(plugin.getConfig().getBoolean("marker_sets.vehicles.toggleable", true))
-                            .defaultHidden(plugin.getConfig().getBoolean("marker_sets.vehicles.default_hidden", true))
+                            .label(config.getString("marker_sets.vehicles.label", "Vehicles"))
+                            .toggleable(config.getBoolean("marker_sets.vehicles.toggleable", true))
+                            .defaultHidden(config.getBoolean("marker_sets.vehicles.default_hidden", true))
                             .build()
             );
         });
