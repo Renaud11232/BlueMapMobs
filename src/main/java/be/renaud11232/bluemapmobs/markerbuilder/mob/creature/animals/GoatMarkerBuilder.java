@@ -1,4 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
-public class GoatMarkerBuilder {
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.entity.Goat;
+
+import java.util.Optional;
+
+public class GoatMarkerBuilder extends MobEntityMarkerBuilder<Goat> {
+    @Override
+    public Optional<POIMarker> buildDefault(Goat mob) {
+        //TODO
+        return super.buildDefault(mob);
+    }
 }
