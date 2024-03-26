@@ -6,7 +6,7 @@ import org.bukkit.entity.*;
 
 public class CreatureMarkerBuilder extends MobEntityMarkerBuilder<Creature> {
     public CreatureMarkerBuilder() {
-        registerMarkerBuilder(Ageable.class, new AgeableMarkerBuilder());
+        registerMarkerBuilder(Animals.class, new AnimalsMarkerBuilder());
         registerMarkerBuilder(Allay.class, new AllayMarkerBuilder());
         registerMarkerBuilder(Golem.class, new GolemMarkerBuilder());
         registerMarkerBuilder(Monster.class, new MonsterMarkerBuilder());
