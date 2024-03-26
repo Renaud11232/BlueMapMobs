@@ -16,7 +16,88 @@ marker_sets:
     markers:
       max_distance: 1000
       types:
-
+        bat: true
+        allay: true
+        #TODO vvv
+        camel: true
+        donkey: true
+        llama: true
+        trader_llama: true
+        mule: true
+        horse: true
+        skeleton_horse: true
+        zombie_horse: true
+        axolotl: true
+        bee: true
+        cat: true
+        chicken: true
+        cow: true
+        mushroom_cow: true
+        fox: true
+        frog: true
+        goat: true
+        hoglin: true
+        ocelot: true
+        panda: true
+        parrot: true
+        pig: true
+        polar_bear: true
+        rabbit: true
+        sheep: true
+        sniffer: true
+        strider: true
+        turtle: true
+        wolf: true
+        iron_golem: true
+        shulker: true
+        snowman: true
+        skeleton: true
+        stray: true
+        wither_skeleton: true
+        blaze: true
+        breeze: true
+        creeper: true
+        enderman: true
+        endermite: true
+        giant: true
+        guardian: true
+        elder_guardian: true
+        piglin: true
+        piglin_brute: true
+        pillager: true
+        evoker: true
+        illusioner: true
+        vindicator: true
+        ravager: true
+        witch: true
+        silverfish: true
+        spider: true
+        cave_spider: true
+        vex: true
+        warden: true
+        wither: true
+        zoglin: true
+        zombie: true
+        drowned: true
+        husk: true
+        pig_zombie: true
+        zombie_villager: true
+        #TODO ^^^
+        villager: true
+        wandering_trader: true
+        dolphin: true
+        cod: true
+        puffer_fish: true
+        salmon: true
+        tadpole: true
+        tropical_fish: true
+        squid: true
+        glow_squid: true
+        ender_dragon: true
+        ghast: true
+        phantom: true
+        slime: true
+        magma_cube: true
 
   vehicles:
     key: "bluemapmobs-vehicles"
@@ -26,8 +107,8 @@ marker_sets:
     markers:
       max_distance: 1000
       types:
-        chest_boat: true
         boat: true
+        chest_boat: true
         command_minecart: true
         explosive_minecart: true
         hopper_minecart: true
