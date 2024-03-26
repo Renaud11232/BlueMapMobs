@@ -20,17 +20,17 @@ public final class BlueMapMobs extends JavaPlugin {
             getLogger().info("Reloading configuration file");
             reloadConfig();
             getLogger().info("Configuration file reloaded");
-            getLogger().info("Copying assets");
+            getLogger().info("Extracting assets to web root");
             extractAssets(api);
-            getLogger().info("Assets copied");
-            getLogger().info("Scheduling task");
+            getLogger().info("Assets extracted");
+            getLogger().info("Scheduling update task");
             Bukkit.getScheduler().runTaskTimer(this, new BlueMapMobsUpdateTask(api, getConfig()), 0, 200);
-            getLogger().info("Task scheduled");
+            getLogger().info("Update task scheduled");
         });
         BlueMapAPI.onDisable(api -> {
-            getLogger().info("Cancelling tasks");
+            getLogger().info("Cancelling all tasks");
             Bukkit.getScheduler().cancelTasks(this);
-            getLogger().info("Tasks cancelled");
+            getLogger().info("All tasks cancelled");
         });
     }
 
