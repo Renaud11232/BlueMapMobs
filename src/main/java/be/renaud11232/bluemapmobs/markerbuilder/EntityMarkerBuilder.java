@@ -36,8 +36,20 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
                 .orElseGet(() -> MarkerBuilder.super.build(entity));
     }
 
+    @Override
+    public Optional<POIMarker> buildDefault(T entity) {
+        if(isDisplayed()) {
+            return MarkerBuilder.super.buildDefault(entity);
+        }
+        return Optional.empty();
+    }
+
     protected <U extends Entity> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
         markerBuilders.put(klass, builder);
+    }
+
+    protected boolean isDisplayed() {
+        return true;
     }
 
     public FileConfiguration getConfig() {

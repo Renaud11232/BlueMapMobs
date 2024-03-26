@@ -36,4 +36,8 @@ public class BoatMarkerBuilder extends VehicleEntityMarkerBuilder<Boat> {
         });
     }
 
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.vehicles.markers.types.boat", true);
+    }
 }

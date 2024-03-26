@@ -33,4 +33,9 @@ public class ChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<ChestBoat
         });
     }
 
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.vehicles.markers.types.chest_boat", true);
+    }
+
 }
