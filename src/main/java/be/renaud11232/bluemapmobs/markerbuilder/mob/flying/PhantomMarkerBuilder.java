@@ -18,4 +18,9 @@ public class PhantomMarkerBuilder extends MobEntityMarkerBuilder<Phantom> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.phantom", true);
+    }
 }

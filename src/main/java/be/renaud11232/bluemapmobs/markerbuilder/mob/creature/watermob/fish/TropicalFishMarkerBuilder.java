@@ -18,4 +18,9 @@ public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFi
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.tropical_fish", true);
+    }
 }
