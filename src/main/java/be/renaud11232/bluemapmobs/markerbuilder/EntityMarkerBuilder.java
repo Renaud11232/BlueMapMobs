@@ -21,18 +21,21 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     }
 
     @Override
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked,rawtypes")
     public final Optional<POIMarker> build(T entity) {
         Block block = entity.getLocation().getBlock();
         if(block.getLightFromBlocks() < config.getInt("general.minimum_block_light", 4) && block.getLightFromSky() < config.getInt("general.minimum_sky_light", 1)) {
             return Optional.empty();
         }
-        return markerBuilders.entrySet()
+        Optional<MarkerBuilder> markerBuilder = markerBuilders.entrySet()
                 .stream()
                 .filter(entry -> entry.getKey().isInstance(entity))
-                .findFirst()
-                .flatMap(entry -> entry.getValue().build(entity))
-                .or(() -> MarkerBuilder.super.build(entity));
+                .map(Map.Entry::getValue)
+                .findFirst();
+        if(markerBuilder.isPresent()) {
+            return markerBuilder.get().build(entity);
+        }
+        return MarkerBuilder.super.build(entity);
     }
 
     protected <U extends Entity> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
