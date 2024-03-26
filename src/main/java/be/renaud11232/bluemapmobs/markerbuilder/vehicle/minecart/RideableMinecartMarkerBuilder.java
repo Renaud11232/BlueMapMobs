@@ -21,4 +21,9 @@ public class RideableMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<Ri
             return marker;
         });
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.vehicles.markers.types.rideable_minecart", true);
+    }
 }

@@ -21,4 +21,9 @@ public class CommandMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<Com
             return marker;
         });
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.vehicles.markers.types.command_minecart", true);
+    }
 }

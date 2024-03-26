@@ -21,4 +21,9 @@ public class HopperMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<Hopp
             return marker;
         });
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.vehicles.markers.types.hopper_minecart", true);
+    }
 }

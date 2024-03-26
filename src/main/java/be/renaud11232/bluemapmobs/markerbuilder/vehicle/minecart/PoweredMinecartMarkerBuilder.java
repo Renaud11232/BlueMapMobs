@@ -21,4 +21,9 @@ public class PoweredMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<Pow
             return marker;
         });
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.vehicles.markers.types.powered_minecart", true);
+    }
 }
