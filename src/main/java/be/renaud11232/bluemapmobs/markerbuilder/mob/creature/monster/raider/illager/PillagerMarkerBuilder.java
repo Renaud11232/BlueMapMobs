@@ -1,4 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.raider.illager;
 
-public class PillagerMarkerBuilder {
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.entity.Pillager;
+
+import java.util.Optional;
+
+public class PillagerMarkerBuilder extends MobEntityMarkerBuilder<Pillager> {
+    @Override
+    public Optional<POIMarker> buildDefault(Pillager mob) {
+        //TODO
+        return super.buildDefault(mob);
+    }
 }

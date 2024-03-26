@@ -1,4 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie;
 
-public class HuskMarkerBuilder {
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.entity.Husk;
+
+import java.util.Optional;
+
+public class HuskMarkerBuilder extends MobEntityMarkerBuilder<Husk> {
+    @Override
+    public Optional<POIMarker> buildDefault(Husk mob) {
+        //TODO
+        return super.buildDefault(mob);
+    }
 }

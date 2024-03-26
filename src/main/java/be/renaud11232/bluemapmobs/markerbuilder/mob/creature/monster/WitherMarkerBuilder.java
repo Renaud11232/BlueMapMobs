@@ -1,4 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster;
 
-public class WitherMarkerBuilder {
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.entity.Wither;
+
+import java.util.Optional;
+
+public class WitherMarkerBuilder extends MobEntityMarkerBuilder<Wither> {
+    @Override
+    public Optional<POIMarker> buildDefault(Wither mob) {
+        //TODO
+        return super.buildDefault(mob);
+    }
 }
