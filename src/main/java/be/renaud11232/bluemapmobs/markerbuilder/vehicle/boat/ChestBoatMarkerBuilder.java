@@ -3,11 +3,16 @@ package be.renaud11232.bluemapmobs.markerbuilder.vehicle.boat;
 import be.renaud11232.bluemapmobs.markerbuilder.EntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.Icon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.ChestBoat;
 
 import java.util.Optional;
 
 public class ChestBoatMarkerBuilder extends EntityMarkerBuilder<ChestBoat> {
+
+    public ChestBoatMarkerBuilder(FileConfiguration config) {
+        super(config);
+    }
 
     @Override
     public Optional<POIMarker> buildDefault(ChestBoat chestBoat) {

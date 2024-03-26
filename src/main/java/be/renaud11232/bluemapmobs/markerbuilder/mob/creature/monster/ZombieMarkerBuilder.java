@@ -6,16 +6,18 @@ import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.Husk
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.PigZombieMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.ZombieVillagerMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 import java.util.Optional;
 
 public class ZombieMarkerBuilder extends MobEntityMarkerBuilder<Zombie> {
-    public ZombieMarkerBuilder() {
-        registerMarkerBuilder(Drowned.class, new DrownedMarkerBuilder());
-        registerMarkerBuilder(Husk.class, new HuskMarkerBuilder());
-        registerMarkerBuilder(PigZombie.class, new PigZombieMarkerBuilder());
-        registerMarkerBuilder(ZombieVillager.class, new ZombieVillagerMarkerBuilder());
+    public ZombieMarkerBuilder(FileConfiguration config) {
+        super(config);
+        registerMarkerBuilder(Drowned.class, new DrownedMarkerBuilder(config));
+        registerMarkerBuilder(Husk.class, new HuskMarkerBuilder(config));
+        registerMarkerBuilder(PigZombie.class, new PigZombieMarkerBuilder(config));
+        registerMarkerBuilder(ZombieVillager.class, new ZombieVillagerMarkerBuilder(config));
     }
 
     @Override

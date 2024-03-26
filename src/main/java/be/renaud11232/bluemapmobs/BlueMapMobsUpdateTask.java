@@ -32,8 +32,8 @@ public class BlueMapMobsUpdateTask implements Runnable {
         this.plugin = plugin;
         this.api = api;
         this.config = plugin.getConfig();
-        this.mobMarkerBuilder = new MobMarkerBuilder();
-        this.vehicleMarkerBuilder = new VehicleMarkerBuilder();
+        this.mobMarkerBuilder = new MobMarkerBuilder(config);
+        this.vehicleMarkerBuilder = new VehicleMarkerBuilder(config);
     }
 
     @Override
