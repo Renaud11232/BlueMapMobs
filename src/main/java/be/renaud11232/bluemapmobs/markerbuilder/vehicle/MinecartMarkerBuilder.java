@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.vehicle;
 
-import be.renaud11232.bluemapmobs.markerbuilder.EntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.vehicle.minecart.*;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Minecart;
 import org.bukkit.entity.minecart.*;
 
-public class MinecartMarkerBuilder extends EntityMarkerBuilder<Minecart> {
+public class MinecartMarkerBuilder extends VehicleEntityMarkerBuilder<Minecart> {
 
     public MinecartMarkerBuilder(FileConfiguration config) {
         super(config);
