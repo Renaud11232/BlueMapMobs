@@ -24,7 +24,7 @@ public final class BlueMapMobs extends JavaPlugin {
             extractAssets(api);
             getLogger().info("Assets extracted");
             getLogger().info("Scheduling update task");
-            Bukkit.getScheduler().runTaskTimer(this, new BlueMapMobsUpdateTask(api, getConfig()), 0, 200);
+            Bukkit.getScheduler().runTaskTimer(this, new BlueMapMobsUpdateTask(this, api), 0, 200);
             getLogger().info("Update task scheduled");
         });
         BlueMapAPI.onDisable(api -> {
@@ -56,9 +56,5 @@ public final class BlueMapMobs extends JavaPlugin {
         } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    public static BlueMapMobs getInstance() {
-        return (BlueMapMobs) Bukkit.getPluginManager().getPlugin("BlueMapMobs");
     }
 }
