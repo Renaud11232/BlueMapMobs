@@ -5,7 +5,7 @@ import com.flowpowered.math.vector.Vector2i;
 public enum Icon {
 
     //TODO make all icons 24x24
-    UNKNOWN("assets/bluemapmobs/unknown.png", new Vector2i(16, 16)),
+    UNKNOWN("assets/bluemapmobs/unknown.png", new Vector2i(12, 12)),
 
     CHEST_MINECART("assets/bluemapmobs/vehicles/minecart/chest_minecart.png", new Vector2i(16, 16)),
     COMMAND_BLOCK_MINECART("assets/bluemapmobs/vehicles/minecart/command_block_minecart.png", new Vector2i(16, 16)),
