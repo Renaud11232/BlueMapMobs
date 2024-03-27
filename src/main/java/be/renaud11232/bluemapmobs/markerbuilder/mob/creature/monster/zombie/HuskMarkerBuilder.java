@@ -18,4 +18,9 @@ public class HuskMarkerBuilder extends MobEntityMarkerBuilder<Husk> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.husk", true);
+    }
 }

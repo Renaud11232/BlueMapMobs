@@ -18,4 +18,9 @@ public class CamelMarkerBuilder extends MobEntityMarkerBuilder<Camel> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.camel", true);
+    }
 }

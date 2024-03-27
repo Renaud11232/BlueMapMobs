@@ -18,4 +18,9 @@ public class VindicatorMarkerBuilder extends MobEntityMarkerBuilder<Vindicator> 
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.vindicator", true);
+    }
 }

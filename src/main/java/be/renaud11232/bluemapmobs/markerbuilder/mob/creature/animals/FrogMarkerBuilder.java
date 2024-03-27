@@ -18,4 +18,9 @@ public class FrogMarkerBuilder extends MobEntityMarkerBuilder<Frog> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.frog", true);
+    }
 }

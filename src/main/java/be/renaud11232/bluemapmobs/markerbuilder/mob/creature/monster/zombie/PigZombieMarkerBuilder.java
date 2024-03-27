@@ -18,4 +18,9 @@ public class PigZombieMarkerBuilder extends MobEntityMarkerBuilder<PigZombie> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.pig_zombie", true);
+    }
 }
