@@ -18,4 +18,9 @@ public class ZombieHorseMarkerBuilder extends MobEntityMarkerBuilder<ZombieHorse
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.zombie_horse", true);
+    }
 }

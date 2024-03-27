@@ -18,4 +18,9 @@ public class WitherMarkerBuilder extends MobEntityMarkerBuilder<Wither> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.wither", true);
+    }
 }

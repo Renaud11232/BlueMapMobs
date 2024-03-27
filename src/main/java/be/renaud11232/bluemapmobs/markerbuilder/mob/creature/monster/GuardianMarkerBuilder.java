@@ -20,4 +20,9 @@ public class GuardianMarkerBuilder extends MobEntityMarkerBuilder<Guardian> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.guardian", true);
+    }
 }

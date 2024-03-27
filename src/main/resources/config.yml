@@ -18,7 +18,6 @@ marker_sets:
       types:
         bat: true
         allay: true
-        #TODO vvv
         camel: true
         donkey: true
         llama: true
@@ -82,7 +81,6 @@ marker_sets:
         husk: true
         pig_zombie: true
         zombie_villager: true
-        #TODO ^^^
         villager: true
         wandering_trader: true
         dolphin: true

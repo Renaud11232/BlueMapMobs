@@ -18,4 +18,9 @@ public class OcelotMarkerBuilder extends MobEntityMarkerBuilder<Ocelot> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.ocelot", true);
+    }
 }

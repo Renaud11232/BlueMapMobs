@@ -18,4 +18,9 @@ public class PiglinBruteMarkerBuilder extends MobEntityMarkerBuilder<PiglinBrute
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.piglin_brute", true);
+    }
 }
