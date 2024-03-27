@@ -18,4 +18,9 @@ public class HorseMarkerBuilder extends MobEntityMarkerBuilder<Horse> {
         //TODO
         return super.buildDefault(mob);
     }
+
+    @Override
+    protected boolean isDisplayed() {
+        return getConfig().getBoolean("marker_sets.mobs.markers.types.horse", true);
+    }
 }
