@@ -4,6 +4,7 @@ import com.flowpowered.math.vector.Vector2i;
 
 public enum Icon {
 
+    //TODO make all icons 24x24
     UNKNOWN("assets/bluemapmobs/unknown.png", new Vector2i(16, 16)),
 
     CHEST_MINECART("assets/bluemapmobs/vehicles/minecart/chest_minecart.png", new Vector2i(16, 16)),
@@ -33,6 +34,7 @@ public enum Icon {
     SPRUCE_BOAT("assets/bluemapmobs/vehicles/boat/spruce_boat.png", new Vector2i(16, 16)),
     SPRUCE_CHEST_BOAT("assets/bluemapmobs/vehicles/boat/spruce_chest_boat.png", new Vector2i(16, 16)),
 
+    BAT("assets/bluemapmobs/mobs/ambient/bat.png", new Vector2i(12, 12)),
     COW("assets/bluemapmobs/mobs/creature/animals/cow/cow.png", new Vector2i(12, 12)),
     RED_MOOSHROOM("assets/bluemapmobs/mobs/creature/animals/cow/red_mooshroom.png", new Vector2i(12, 12)),
     BROWN_MOOSHROOM("assets/bluemapmobs/mobs/creature/animals/cow/brown_mooshroom.png", new Vector2i(12, 12));
