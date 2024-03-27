@@ -31,7 +31,11 @@ public enum Icon {
     OAK_BOAT("assets/bluemapmobs/vehicles/boat/oak_boat.png", new Vector2i(16, 16)),
     OAK_CHEST_BOAT("assets/bluemapmobs/vehicles/boat/oak_chest_boat.png", new Vector2i(16, 16)),
     SPRUCE_BOAT("assets/bluemapmobs/vehicles/boat/spruce_boat.png", new Vector2i(16, 16)),
-    SPRUCE_CHEST_BOAT("assets/bluemapmobs/vehicles/boat/spruce_chest_boat.png", new Vector2i(16, 16));
+    SPRUCE_CHEST_BOAT("assets/bluemapmobs/vehicles/boat/spruce_chest_boat.png", new Vector2i(16, 16)),
+
+    COW("assets/bluemapmobs/mobs/creature/animals/cow/cow.png", new Vector2i(12, 12)),
+    RED_MOOSHROOM("assets/bluemapmobs/mobs/creature/animals/cow/red_mooshroom.png", new Vector2i(12, 12)),
+    BROWN_MOOSHROOM("assets/bluemapmobs/mobs/creature/animals/cow/brown_mooshroom.png", new Vector2i(12, 12));
 
     private final String path;
     private final Vector2i anchor;
