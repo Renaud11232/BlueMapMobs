@@ -35,6 +35,13 @@ public enum Icon {
     SPRUCE_CHEST_BOAT("assets/bluemapmobs/vehicles/boat/spruce_chest_boat.png", new Vector2i(16, 16)),
 
     BAT("assets/bluemapmobs/mobs/ambient/bat.png", new Vector2i(12, 12)),
+    BROWN_LLAMA("assets/bluemapmobs/mobs/creature/animals/abstracthorse/chestedhorse/llama/brown_llama.png", new Vector2i(12, 12)),
+    CREAMY_LLAMA("assets/bluemapmobs/mobs/creature/animals/abstracthorse/chestedhorse/llama/creamy_llama.png", new Vector2i(12, 12)),
+    GRAY_LLAMA("assets/bluemapmobs/mobs/creature/animals/abstracthorse/chestedhorse/llama/gray_llama.png", new Vector2i(12, 12)),
+    WHITE_LLAMA("assets/bluemapmobs/mobs/creature/animals/abstracthorse/chestedhorse/llama/white_llama.png", new Vector2i(12, 12)),
+    DONKEY("assets/bluemapmobs/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12)),
+    MULE("assets/bluemapmobs/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12)),
+    CAMEL("assets/bluemapmobs/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12)),
     COW("assets/bluemapmobs/mobs/creature/animals/cow/cow.png", new Vector2i(12, 12)),
     RED_MOOSHROOM("assets/bluemapmobs/mobs/creature/animals/cow/red_mooshroom.png", new Vector2i(12, 12)),
     BROWN_MOOSHROOM("assets/bluemapmobs/mobs/creature/animals/cow/brown_mooshroom.png", new Vector2i(12, 12));

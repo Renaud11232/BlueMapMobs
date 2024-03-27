@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse.llama.TraderLlamaMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
@@ -16,9 +17,18 @@ public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Llama mob) {
-        //TODO
-        return super.buildDefault(mob);
+    public Optional<POIMarker> buildDefault(Llama llama) {
+        //TODO Add all Llama carpet colors ?
+        return super.buildDefault(llama).map(marker -> {
+            Icon icon = switch (llama.getColor()) {
+                case GRAY -> Icon.GRAY_LLAMA;
+                case BROWN -> Icon.BROWN_LLAMA;
+                case CREAMY -> Icon.CREAMY_LLAMA;
+                case WHITE -> Icon.WHITE_LLAMA;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
+            return marker;
+        });
     }
 
     @Override
