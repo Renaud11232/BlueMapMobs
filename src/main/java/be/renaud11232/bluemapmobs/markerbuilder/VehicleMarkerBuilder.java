@@ -12,7 +12,6 @@ public class VehicleMarkerBuilder extends VehicleEntityMarkerBuilder<Vehicle> {
         super(config);
         registerMarkerBuilder(Boat.class, new BoatMarkerBuilder(config));
         registerMarkerBuilder(Minecart.class, new MinecartMarkerBuilder(config));
-        registerMarkerBuilder(Mob.class, new HiddenMarkerBuilder<>());
     }
 
 }

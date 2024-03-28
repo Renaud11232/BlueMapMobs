@@ -5,6 +5,7 @@ import be.renaud11232.bluemapmobs.markerbuilder.VehicleMarkerBuilder;
 import be.renaud11232.bluemapmobs.markersetbuilder.VehicleMarkerSetBuilder;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
+import org.bukkit.entity.Mob;
 import org.bukkit.entity.Vehicle;
 
 import java.util.Collection;
@@ -17,6 +18,9 @@ public class WorldVehicleMarkerUpdater extends WorldEntityMarkerUpdater<Vehicle>
 
     @Override
     public Collection<Vehicle> getEntities(World world) {
-        return world.getEntitiesByClass(Vehicle.class);
+        return world.getEntitiesByClass(Vehicle.class)
+                .stream()
+                .filter(vehicle -> !(vehicle instanceof Mob))
+                .toList();
     }
 }
