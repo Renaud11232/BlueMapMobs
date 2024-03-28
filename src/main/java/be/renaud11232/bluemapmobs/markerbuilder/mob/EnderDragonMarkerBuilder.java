@@ -17,7 +17,7 @@ public class EnderDragonMarkerBuilder extends MobEntityMarkerBuilder<EnderDragon
     @Override
     public Optional<POIMarker> buildDefault(EnderDragon mob) {
         return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.ENDER_DRAGON.getPath(), Icon.ENDERMAN.getAnchor());
+            marker.setIcon(Icon.ENDER_DRAGON.getPath(), Icon.ENDER_DRAGON.getAnchor());
             return marker;
         });
     }

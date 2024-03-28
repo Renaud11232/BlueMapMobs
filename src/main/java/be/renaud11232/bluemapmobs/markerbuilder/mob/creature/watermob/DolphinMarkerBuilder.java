@@ -17,7 +17,7 @@ public class DolphinMarkerBuilder extends MobEntityMarkerBuilder<Dolphin> {
     @Override
     public Optional<POIMarker> buildDefault(Dolphin mob) {
         return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.DOLPHIN.getPath(), Icon.DONKEY.getAnchor());
+            marker.setIcon(Icon.DOLPHIN.getPath(), Icon.DOLPHIN.getAnchor());
             return marker;
         });
     }
