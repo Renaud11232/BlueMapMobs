@@ -14,10 +14,12 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     private final FileConfiguration config;
     @SuppressWarnings("rawtypes")
     private final Map<Class<? extends Entity>, MarkerBuilder> markerBuilders;
+    private final boolean displayed;
 
     public EntityMarkerBuilder(FileConfiguration config) {
         this.config = config;
         this.markerBuilders = new HashMap<>();
+        displayed = isDisplayed();
     }
 
     @Override
@@ -38,7 +40,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
 
     @Override
     public Optional<POIMarker> buildDefault(T entity) {
-        if(isDisplayed()) {
+        if(displayed) {
             return MarkerBuilder.super.buildDefault(entity);
         }
         return Optional.empty();

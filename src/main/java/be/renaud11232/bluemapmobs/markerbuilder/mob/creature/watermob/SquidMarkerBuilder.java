@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.watermob;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.watermob.squid.GlowSquidMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
@@ -17,8 +18,10 @@ public class SquidMarkerBuilder extends MobEntityMarkerBuilder<Squid> {
 
     @Override
     public Optional<POIMarker> buildDefault(Squid mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.SQUID.getPath(), Icon.SQUID.getAnchor());
+            return marker;
+        });
     }
 
     @Override

@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.slime.MagmaCubeMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
@@ -17,8 +18,10 @@ public class SlimeMarkerBuilder extends MobEntityMarkerBuilder<Slime> {
 
     @Override
     public Optional<POIMarker> buildDefault(Slime mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.SLIME.getPath(), Icon.SLIME.getAnchor());
+            return marker;
+        });
     }
 
     @Override

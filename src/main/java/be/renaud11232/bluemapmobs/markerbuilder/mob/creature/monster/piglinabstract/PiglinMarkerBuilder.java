@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.piglinabstract;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,8 +16,10 @@ public class PiglinMarkerBuilder extends MobEntityMarkerBuilder<Piglin> {
 
     @Override
     public Optional<POIMarker> buildDefault(Piglin mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.PIGLIN.getPath(), Icon.PIGLIN.getAnchor());
+            return marker;
+        });
     }
 
     @Override

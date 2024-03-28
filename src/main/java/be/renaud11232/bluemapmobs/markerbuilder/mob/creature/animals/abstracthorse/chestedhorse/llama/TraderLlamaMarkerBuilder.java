@@ -4,7 +4,6 @@ import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Llama;
 import org.bukkit.entity.TraderLlama;
 
 import java.util.Optional;

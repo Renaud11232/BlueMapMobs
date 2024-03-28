@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,8 +16,10 @@ public class DrownedMarkerBuilder extends MobEntityMarkerBuilder<Drowned> {
 
     @Override
     public Optional<POIMarker> buildDefault(Drowned mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.DROWNED.getPath(), Icon.DROWNED.getAnchor());
+            return marker;
+        });
     }
 
     @Override
