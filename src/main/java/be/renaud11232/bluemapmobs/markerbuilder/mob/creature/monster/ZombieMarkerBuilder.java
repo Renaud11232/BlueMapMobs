@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.DrownedMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.HuskMarkerBuilder;
@@ -22,8 +23,10 @@ public class ZombieMarkerBuilder extends MobEntityMarkerBuilder<Zombie> {
 
     @Override
     public Optional<POIMarker> buildDefault(Zombie mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.ZOMBIE.getPath(), Icon.ZOMBIE.getAnchor());
+            return marker;
+        });
     }
 
     @Override

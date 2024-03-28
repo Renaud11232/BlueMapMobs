@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.npc.abstractvillager;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,8 +16,10 @@ public class WanderingTraderMarkerBuilder extends MobEntityMarkerBuilder<Wanderi
 
     @Override
     public Optional<POIMarker> buildDefault(WanderingTrader mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.WANDERING_TRADER.getPath(), Icon.WANDERING_TRADER.getAnchor());
+            return marker;
+        });
     }
 
     @Override

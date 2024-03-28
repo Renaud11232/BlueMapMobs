@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.raider.illager;
 
+import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,8 +16,10 @@ public class PillagerMarkerBuilder extends MobEntityMarkerBuilder<Pillager> {
 
     @Override
     public Optional<POIMarker> buildDefault(Pillager mob) {
-        //TODO
-        return super.buildDefault(mob);
+        return super.buildDefault(mob).map(marker -> {
+            marker.setIcon(Icon.PILLAGER.getPath(), Icon.PILLAGER.getAnchor());
+            return marker;
+        });
     }
 
     @Override
