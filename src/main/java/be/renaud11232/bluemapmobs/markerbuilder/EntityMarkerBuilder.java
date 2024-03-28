@@ -6,6 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -34,8 +35,12 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
                 .filter(entry -> entry.getKey().isInstance(entity))
                 .map(Map.Entry::getValue)
                 .findFirst()
-                .map(markerBuilder -> markerBuilder.build(entity))
-                .orElseGet(() -> MarkerBuilder.super.build(entity));
+                .map(markerBuilder -> (Optional<POIMarker>)markerBuilder.build(entity))
+                .orElseGet(() -> MarkerBuilder.super.build(entity))
+                .map(marker -> {
+                    marker.addStyleClasses(List.of("bluemapmobs-marker"));
+                    return marker;
+                });
     }
 
     @Override

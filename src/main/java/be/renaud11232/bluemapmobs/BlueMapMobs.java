@@ -36,12 +36,16 @@ public final class BlueMapMobs extends JavaPlugin {
             try (FileSystem jar = FileSystems.newFileSystem(jarPath)) {
                 Path sourcePath = jar.getPath("assets");
                 try (Stream<Path> sourceFiles = Files.walk(sourcePath)) {
-                    Path destinationPath = api.getWebApp().getWebRoot().resolve("assets").resolve("bluemapmobs");
+                    Path relativeDestinationPath = Path.of("assets").resolve("bluemapmobs");
                     sourceFiles.forEach(sourceFile -> {
                         try {
-                            Path destinationFile = destinationPath.resolve(sourcePath.relativize(sourceFile).toString());
+                            Path relativeDestinationFile = relativeDestinationPath.resolve(sourcePath.relativize(sourceFile).toString());
+                            Path destinationFile = api.getWebApp().getWebRoot().resolve(relativeDestinationFile);
                             if(!Files.exists(destinationFile)) {
                                 Files.copy(sourceFile, destinationFile);
+                            }
+                            if(relativeDestinationFile.toString().endsWith(".css")) {
+                                api.getWebApp().registerStyle(relativeDestinationFile.toString());
                             }
                         } catch (IOException e) {
                             throw new RuntimeException(e);
