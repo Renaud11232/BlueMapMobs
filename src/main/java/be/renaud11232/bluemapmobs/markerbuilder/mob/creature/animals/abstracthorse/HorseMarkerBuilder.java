@@ -17,6 +17,7 @@ public class HorseMarkerBuilder extends MobEntityMarkerBuilder<Horse> {
     @Override
     public Optional<POIMarker> buildDefault(Horse mob) {
         return super.buildDefault(mob).map(marker -> {
+            //TODO Add horse colors
             marker.setIcon(Icon.HORSE.getPath(), Icon.HORSE.getAnchor());
             return marker;
         });
