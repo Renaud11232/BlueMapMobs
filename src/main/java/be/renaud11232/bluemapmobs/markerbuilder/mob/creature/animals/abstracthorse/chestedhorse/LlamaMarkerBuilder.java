@@ -18,15 +18,9 @@ public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
 
     @Override
     public Optional<POIMarker> buildDefault(Llama llama) {
-        //TODO Add all Llama carpet colors ?
+        //TODO Add all llama colors & carpets ?
         return super.buildDefault(llama).map(marker -> {
-            Icon icon = switch (llama.getColor()) {
-                case GRAY -> Icon.GRAY_LLAMA;
-                case BROWN -> Icon.BROWN_LLAMA;
-                case CREAMY -> Icon.CREAMY_LLAMA;
-                case WHITE -> Icon.WHITE_LLAMA;
-            };
-            marker.setIcon(icon.getPath(), icon.getAnchor());
+            marker.setIcon(Icon.LLAMA.getPath(), Icon.LLAMA.getAnchor());
             return marker;
         });
     }

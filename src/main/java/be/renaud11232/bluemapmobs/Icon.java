@@ -3,8 +3,6 @@ package be.renaud11232.bluemapmobs;
 import com.flowpowered.math.vector.Vector2i;
 
 public enum Icon {
-
-    //TODO make all icons 24x24
     UNKNOWN("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
 
     CHEST_MINECART("assets/bluemapmobs/img/vehicles/minecart/chest_minecart.png", new Vector2i(12, 12)),
@@ -37,16 +35,15 @@ public enum Icon {
     ALLAY("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12)),
     CAMEL("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12)),
     DONKEY("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12)),
-    //TODO trader llama + carpet variants
-    BROWN_LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/brown_llama.png", new Vector2i(12, 12)),
-    CREAMY_LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/creamy_llama.png", new Vector2i(12, 12)),
-    GRAY_LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/gray_llama.png", new Vector2i(12, 12)),
-    WHITE_LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/white_llama.png", new Vector2i(12, 12)),
+    //TODO llama colors & carpet variants
+    LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/llama.png", new Vector2i(12, 12)),
+    //TODO llama colors
+    TRADER_LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/trader_llama.png", new Vector2i(12, 12)),
     MULE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12)),
-    //TODO horse variants
-    HORSE("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
-    SKELETON_HORSE("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
-    ZOMBIE_HORSE("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
+    //TODO horse colors
+    HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse.png", new Vector2i(12, 12)),
+    SKELETON_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12)),
+    ZOMBIE_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12)),
     AXOLOTL("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     BEE("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     CAT("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
