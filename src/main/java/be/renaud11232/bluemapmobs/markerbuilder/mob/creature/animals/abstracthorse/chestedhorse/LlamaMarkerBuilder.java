@@ -18,7 +18,6 @@ public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
 
     @Override
     public Optional<POIMarker> buildDefault(Llama llama) {
-        //TODO Add all llama colors & carpets ?
         return super.buildDefault(llama).map(marker -> {
             marker.setIcon(Icon.LLAMA.getPath(), Icon.LLAMA.getAnchor());
             return marker;

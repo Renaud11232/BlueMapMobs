@@ -16,7 +16,6 @@ public class TraderLlamaMarkerBuilder extends MobEntityMarkerBuilder<TraderLlama
 
     @Override
     public Optional<POIMarker> buildDefault(TraderLlama traderLlama) {
-        //TODO Add llama colors
         return super.buildDefault(traderLlama).map(marker -> {
             marker.setIcon(Icon.TRADER_LLAMA.getPath(), Icon.TRADER_LLAMA.getAnchor());
             return marker;
