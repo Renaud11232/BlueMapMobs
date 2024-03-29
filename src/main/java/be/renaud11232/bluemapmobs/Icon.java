@@ -34,7 +34,7 @@ public enum Icon {
     SPRUCE_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/spruce_chest_boat.png", new Vector2i(12, 12)),
 
     BAT("assets/bluemapmobs/img/mobs/ambient/bat.png", new Vector2i(12, 12)),
-    ALLAY("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
+    ALLAY("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12)),
     CAMEL("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12)),
     DONKEY("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12)),
     //TODO trader llama + carpet variants
