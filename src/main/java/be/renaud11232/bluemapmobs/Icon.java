@@ -116,7 +116,7 @@ public enum Icon {
     TROPICAL_FISH("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     SQUID("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     GLOW_SQUID("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
-    ENDER_DRAGON("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
+    ENDER_DRAGON("assets/bluemapmobs/img/mobs/ender_dragon.png", new Vector2i(12, 12)),
     GHAST("assets/bluemapmobs/img/mobs/flying/ghast.png", new Vector2i(12, 12)),
     PHANTOM("assets/bluemapmobs/img/mobs/flying/phantom.png", new Vector2i(12, 12)),
     SLIME("assets/bluemapmobs/img/mobs/slime/slime.png", new Vector2i(12, 12)),
