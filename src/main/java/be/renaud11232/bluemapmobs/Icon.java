@@ -110,8 +110,8 @@ public enum Icon {
     PIG_ZOMBIE("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     ZOMBIE_VILLAGER("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     //TODO Jobs variants ?
-    VILLAGER("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
-    WANDERING_TRADER("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
+    VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager.png", new Vector2i(12, 12)),
+    WANDERING_TRADER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/wandering_trader.png", new Vector2i(12, 12)),
     DOLPHIN("assets/bluemapmobs/img/mobs/creature/watermob/dolphin.png", new Vector2i(12, 12)),
     COD("assets/bluemapmobs/img/mobs/creature/watermob/fish/cod.png", new Vector2i(12, 12)),
     PUFFER_FISH("assets/bluemapmobs/img/mobs/creature/watermob/fish/puffer_fish.png", new Vector2i(12, 12)),
