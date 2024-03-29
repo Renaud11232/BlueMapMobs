@@ -1,4 +1,5 @@
 #map-container .bluemapmobs-marker img {
     width: 24px;
+    height: 24px;
     image-rendering: pixelated;
 }
