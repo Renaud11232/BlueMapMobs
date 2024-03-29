@@ -15,9 +15,14 @@ public class FrogMarkerBuilder extends MobEntityMarkerBuilder<Frog> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Frog mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.FROG.getPath(), Icon.FROG.getAnchor());
+    public Optional<POIMarker> buildDefault(Frog frog) {
+        return super.buildDefault(frog).map(marker -> {
+            Icon icon = switch (frog.getVariant()) {
+                case COLD -> Icon.COLD_FROG;
+                case WARM -> Icon.TROPICAL_FROG;
+                case TEMPERATE -> Icon.TEMPERATE_FROG;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
