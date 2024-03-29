@@ -119,8 +119,8 @@ public enum Icon {
     ENDER_DRAGON("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     GHAST("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
     PHANTOM("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
-    SLIME("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12)),
-    MAGMA_CUBE("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12));
+    SLIME("assets/bluemapmobs/img/mobs/slime/slime.png", new Vector2i(12, 12)),
+    MAGMA_CUBE("assets/bluemapmobs/img/mobs/slime/magma_cube.png", new Vector2i(12, 12));
 
     private final String path;
     private final Vector2i anchor;
