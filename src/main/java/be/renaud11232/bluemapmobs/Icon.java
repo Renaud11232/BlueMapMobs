@@ -40,7 +40,11 @@ public enum Icon {
     TRADER_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/trader_llama.png", new Vector2i(12, 12)),
     MULE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12)),
     //TODO horse colors
-    HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse.png", new Vector2i(12, 12)),
+    HORSE_MARKINGS_NONE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_none.png", new Vector2i(12, 12)),
+    HORSE_MARKINGS_WHITE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white.png", new Vector2i(12, 12)),
+    HORSE_MARKINGS_WHITEFIELD("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_whitefield.png", new Vector2i(12, 12)),
+    HORSE_MARKINGS_WHITE_DOTS("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white_dots.png", new Vector2i(12, 12)),
+    HORSE_MARKINGS_BLACK_DOTS("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_black_dots.png", new Vector2i(12, 12)),
     SKELETON_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12)),
     ZOMBIE_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12)),
     LUCY_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/lucy_axolotl.png", new Vector2i(12, 12)),

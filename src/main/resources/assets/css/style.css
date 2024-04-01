@@ -114,3 +114,35 @@
 #map-container .bluemapmobs-pink-sheep img {
     --sheep-color: var(--pink);
 }
+
+#map-container .bluemapmobs-horse img {
+    background-size: cover;
+}
+
+#map-container .bluemapmobs-white-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_white.png");
+}
+
+#map-container .bluemapmobs-creamy-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_creamy.png");
+}
+
+#map-container .bluemapmobs-chestnut-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_chestnut.png");
+}
+
+#map-container .bluemapmobs-brown-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_brown.png");
+}
+
+#map-container .bluemapmobs-black-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_black.png");
+}
+
+#map-container .bluemapmobs-gray-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_gray.png");
+}
+
+#map-container .bluemapmobs-dark-brown-horse img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_dark_brown.png");
+}
