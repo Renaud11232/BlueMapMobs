@@ -73,8 +73,9 @@ public enum Icon {
     SNIFFER("assets/bluemapmobs/img/mobs/creature/animals/sniffer.png", new Vector2i(12, 12)),
     STRIDER("assets/bluemapmobs/img/mobs/creature/animals/strider.png", new Vector2i(12, 12)),
     TURTLE("assets/bluemapmobs/img/mobs/creature/animals/turtle.png", new Vector2i(12, 12)),
-    //TODO tamed vs untamed
-    WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf.png", new Vector2i(12, 12)),
+    UNTAMED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_wolf.png", new Vector2i(12, 12)),
+    TAMED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_wolf.png", new Vector2i(12, 12)),
+    ANGRY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_wolf.png", new Vector2i(12, 12)),
     IRON_GOLEM("assets/bluemapmobs/img/mobs/creature/golem/iron_golem.png", new Vector2i(12, 12)),
     SHULKER("assets/bluemapmobs/img/mobs/creature/golem/shulker.png", new Vector2i(12, 12)),
     SNOWMAN("assets/bluemapmobs/img/mobs/creature/golem/snowman.png", new Vector2i(12, 12)),
