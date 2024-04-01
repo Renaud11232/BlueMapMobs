@@ -84,8 +84,7 @@ public enum Icon {
     WHITE_SPLOTCHED_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white_splotched.png", new Vector2i(12, 12)),
     TOAST_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/toast.png", new Vector2i(12, 12)),
     CAERBANNOG_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/caerbannog.png", new Vector2i(12, 12)),
-    //TODO sheep colors
-    SHEEP("assets/bluemapmobs/img/mobs/creature/animals/sheep.png", new Vector2i(12, 12)),
+    SHEEP("assets/bluemapmobs/img/mobs/creature/animals/sheep/sheep.png", new Vector2i(12, 12)),
     SNIFFER("assets/bluemapmobs/img/mobs/creature/animals/sniffer.png", new Vector2i(12, 12)),
     STRIDER("assets/bluemapmobs/img/mobs/creature/animals/strider.png", new Vector2i(12, 12)),
     TURTLE("assets/bluemapmobs/img/mobs/creature/animals/turtle.png", new Vector2i(12, 12)),
