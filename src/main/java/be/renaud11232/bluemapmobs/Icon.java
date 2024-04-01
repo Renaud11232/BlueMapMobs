@@ -76,8 +76,14 @@ public enum Icon {
     GRAY_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/gray_parrot.png", new Vector2i(12, 12)),
     PIG("assets/bluemapmobs/img/mobs/creature/animals/pig.png", new Vector2i(12, 12)),
     POLAR_BEAR("assets/bluemapmobs/img/mobs/creature/animals/polar_bear.png", new Vector2i(12, 12)),
-    //TODO rabbit colors
-    RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit.png", new Vector2i(12, 12)),
+    BLACK_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/black.png", new Vector2i(12, 12)),
+    BROWN_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/brown.png", new Vector2i(12, 12)),
+    GOLD_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/gold.png", new Vector2i(12, 12)),
+    SALT_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/salt.png", new Vector2i(12, 12)),
+    WHITE_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white.png", new Vector2i(12, 12)),
+    WHITE_SPLOTCHED_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white_splotched.png", new Vector2i(12, 12)),
+    TOAST_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/toast.png", new Vector2i(12, 12)),
+    CAERBANNOG_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/caerbannog.png", new Vector2i(12, 12)),
     //TODO sheep colors
     SHEEP("assets/bluemapmobs/img/mobs/creature/animals/sheep.png", new Vector2i(12, 12)),
     SNIFFER("assets/bluemapmobs/img/mobs/creature/animals/sniffer.png", new Vector2i(12, 12)),
