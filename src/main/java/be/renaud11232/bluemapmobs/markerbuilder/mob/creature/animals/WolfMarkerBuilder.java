@@ -15,9 +15,17 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Wolf mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.WOLF.getPath(), Icon.WOLF.getAnchor());
+    public Optional<POIMarker> buildDefault(Wolf wolf) {
+        return super.buildDefault(wolf).map(marker -> {
+            Icon icon;
+            if(wolf.isTamed()) {
+                icon = Icon.TAMED_WOLF;
+            } else if (wolf.isAngry()) {
+                icon = Icon.ANGRY_WOLF;
+            } else {
+                icon = Icon.UNTAMED_WOLF;
+            }
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
