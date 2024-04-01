@@ -62,8 +62,13 @@ public enum Icon {
     GOAT("assets/bluemapmobs/img/mobs/creature/animals/goat.png", new Vector2i(12, 12)),
     HOGLIN("assets/bluemapmobs/img/mobs/creature/animals/hoglin.png", new Vector2i(12, 12)),
     OCELOT("assets/bluemapmobs/img/mobs/creature/animals/ocelot.png", new Vector2i(12, 12)),
-    //TODO panda genes
-    PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda.png", new Vector2i(12, 12)),
+    NORMAL_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/normal_panda.png", new Vector2i(12, 12)),
+    LAZY_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/lazy_panda.png", new Vector2i(12, 12)),
+    WORRIED_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/worried_panda.png", new Vector2i(12, 12)),
+    PLAYFUL_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/playful_panda.png", new Vector2i(12, 12)),
+    AGGRESSIVE_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/aggressive_panda.png", new Vector2i(12, 12)),
+    WEAK_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/weak_panda.png", new Vector2i(12, 12)),
+    BROWN_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/brown_panda.png", new Vector2i(12, 12)),
     //TODO Parrot colors
     PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot.png", new Vector2i(12, 12)),
     PIG("assets/bluemapmobs/img/mobs/creature/animals/pig.png", new Vector2i(12, 12)),
