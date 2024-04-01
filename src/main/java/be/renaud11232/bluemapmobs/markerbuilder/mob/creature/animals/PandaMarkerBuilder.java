@@ -15,9 +15,18 @@ public class PandaMarkerBuilder extends MobEntityMarkerBuilder<Panda> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Panda mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.PANDA.getPath(), Icon.PANDA.getAnchor());
+    public Optional<POIMarker> buildDefault(Panda panda) {
+        return super.buildDefault(panda).map(marker -> {
+            Icon icon =  switch (panda.getCombinedGene()) {
+                case NORMAL -> Icon.NORMAL_PANDA;
+                case LAZY -> Icon.LAZY_PANDA;
+                case WORRIED -> Icon.WORRIED_PANDA;
+                case PLAYFUL -> Icon.PLAYFUL_PANDA;
+                case AGGRESSIVE -> Icon.AGGRESSIVE_PANDA;
+                case WEAK -> Icon.WEAK_PANDA;
+                case BROWN -> Icon.BROWN_PANDA;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
