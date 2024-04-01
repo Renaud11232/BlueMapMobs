@@ -1,6 +1,27 @@
+.bluemapmobs-marker {
+    --icon-width: 24px;
+    --icon-height: 24px;
+    --white: #F9FFFE;
+    --light-gray: #9D9D97;
+    --gray: #474F52;
+    --black: #1D1D21;
+    --brown: #835432;
+    --red: #B02E26;
+    --orange: #F9801D;
+    --yellow: #FED83D;
+    --lime: #80C71F;
+    --green: #5E7C16;
+    --cyan: #169C9C;
+    --light-blue: #3AB3DA;
+    --blue: #3C44AA;
+    --purple: #8932B8;
+    --magenta: #C74EBD;
+    --pink: #F38BAA;
+}
+
 #map-container .bluemapmobs-marker img {
-    width: 24px;
-    height: 24px;
+    width: var(--icon-width);
+    height: var(--icon-height);
     image-rendering: pixelated;
 }
 
@@ -22,4 +43,74 @@
 
 #map-container .bluemapmobs-brown-llama img {
     background-image: url("../img/mobs/creature/animals/abstracthorse/chestedhorse/llama/brown_llama.png");
+}
+
+#map-container .bluemapmobs-sheep img {
+    background: linear-gradient(var(--sheep-color), var(--sheep-color)) calc(var(--icon-width) * 0.0625) calc(var(--icon-height) * 0.0625) / calc(var(--icon-width) * 0.875) calc(var(--icon-height) * 0.875) no-repeat,
+                url("../img/mobs/creature/animals/sheep/sheep_fur.png") 0 0 / var(--icon-width) var(--icon-height) no-repeat;
+    background-blend-mode: multiply;
+}
+
+#map-container .bluemapmobs-white-sheep img {
+    --sheep-color: var(--white);
+}
+
+#map-container .bluemapmobs-lightgray-sheep img {
+    --sheep-color: var(--light-gray);
+}
+
+#map-container .bluemapmobs-gray-sheep img {
+    --sheep-color: var(--gray);
+}
+
+#map-container .bluemapmobs-black-sheep img {
+    --sheep-color: var(--black);
+}
+
+#map-container .bluemapmobs-brown-sheep img {
+    --sheep-color: var(--brown);
+}
+
+#map-container .bluemapmobs-red-sheep img {
+    --sheep-color: var(--red);
+}
+
+#map-container .bluemapmobs-orange-sheep img {
+    --sheep-color: var(--orange);
+}
+
+#map-container .bluemapmobs-yellow-sheep img {
+    --sheep-color: var(--yellow);
+}
+
+#map-container .bluemapmobs-lime-sheep img {
+    --sheep-color: var(--lime);
+}
+
+#map-container .bluemapmobs-green-sheep img {
+    --sheep-color: var(--green);
+}
+
+#map-container .bluemapmobs-cyan-sheep img {
+    --sheep-color: var(--cyan);
+}
+
+#map-container .bluemapmobs-lightblue-sheep img {
+    --sheep-color: var(--light-blue);
+}
+
+#map-container .bluemapmobs-blue-sheep img {
+    --sheep-color: var(--blue);
+}
+
+#map-container .bluemapmobs-purple-sheep img {
+    --sheep-color: var(--purple);
+}
+
+#map-container .bluemapmobs-magenta-sheep img {
+    --sheep-color: var(--magenta);
+}
+
+#map-container .bluemapmobs-pink-sheep img {
+    --sheep-color: var(--pink);
 }
