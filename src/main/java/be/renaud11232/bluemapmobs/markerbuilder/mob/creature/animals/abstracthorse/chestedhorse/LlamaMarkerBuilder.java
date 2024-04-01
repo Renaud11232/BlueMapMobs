@@ -8,6 +8,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Llama;
 import org.bukkit.entity.TraderLlama;
 
+import java.util.List;
 import java.util.Optional;
 
 public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
@@ -19,7 +20,14 @@ public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
     @Override
     public Optional<POIMarker> buildDefault(Llama llama) {
         return super.buildDefault(llama).map(marker -> {
-            marker.setIcon(Icon.LLAMA.getPath(), Icon.LLAMA.getAnchor());
+            String llamaColorStyle = switch (llama.getColor()) {
+                case CREAMY -> "bluemapmobs-creamy-llama";
+                case WHITE -> "bluemapmobs-white-llama";
+                case GRAY -> "bluemapmobs-gray-llama";
+                case BROWN -> "bluemapmobs-brown-llama";
+            };
+            marker.addStyleClasses(List.of("bluemapmobs-llama", llamaColorStyle));
+            marker.setIcon(Icon.LLAMA_EMPTY_DECOR.getPath(), Icon.LLAMA_EMPTY_DECOR.getAnchor());
             return marker;
         });
     }
