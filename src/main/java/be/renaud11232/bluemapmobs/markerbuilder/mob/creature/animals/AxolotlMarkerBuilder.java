@@ -15,9 +15,16 @@ public class AxolotlMarkerBuilder extends MobEntityMarkerBuilder<Axolotl> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Axolotl mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.AXOLOTL.getPath(), Icon.AXOLOTL.getAnchor());
+    public Optional<POIMarker> buildDefault(Axolotl axolotl) {
+        return super.buildDefault(axolotl).map(marker -> {
+            Icon icon = switch (axolotl.getVariant()) {
+                case LUCY -> Icon.LUCY_AXOLOTL;
+                case WILD -> Icon.WILD_AXOLOTL;
+                case GOLD -> Icon.GOLD_AXOLOTL;
+                case CYAN -> Icon.CYAN_AXOLOTL;
+                case BLUE -> Icon.BLUE_AXOLOTL;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }

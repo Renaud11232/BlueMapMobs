@@ -43,8 +43,11 @@ public enum Icon {
     HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse.png", new Vector2i(12, 12)),
     SKELETON_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12)),
     ZOMBIE_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12)),
-    //TODO Axolotl colors
-    AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl.png", new Vector2i(12, 12)),
+    LUCY_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/lucy_axolotl.png", new Vector2i(12, 12)),
+    WILD_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/wild_axolotl.png", new Vector2i(12, 12)),
+    GOLD_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/gold_axolotl.png", new Vector2i(12, 12)),
+    CYAN_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/cyan_axolotl.png", new Vector2i(12, 12)),
+    BLUE_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/blue_axolotl.png", new Vector2i(12, 12)),
     BEE("assets/bluemapmobs/img/mobs/creature/animals/bee.png", new Vector2i(12, 12)),
     CAT("assets/bluemapmobs/img/mobs/creature/animals/cat.png", new Vector2i(12, 12)),
     CHICKEN("assets/bluemapmobs/img/mobs/creature/animals/chicken.png", new Vector2i(12, 12)),
