@@ -69,8 +69,11 @@ public enum Icon {
     AGGRESSIVE_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/aggressive_panda.png", new Vector2i(12, 12)),
     WEAK_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/weak_panda.png", new Vector2i(12, 12)),
     BROWN_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/brown_panda.png", new Vector2i(12, 12)),
-    //TODO Parrot colors
-    PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot.png", new Vector2i(12, 12)),
+    RED_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/red_parrot.png", new Vector2i(12, 12)),
+    BLUE_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/blue_parrot.png", new Vector2i(12, 12)),
+    GREEN_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/green_parrot.png", new Vector2i(12, 12)),
+    CYAN_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/cyan_parrot.png", new Vector2i(12, 12)),
+    GRAY_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/gray_parrot.png", new Vector2i(12, 12)),
     PIG("assets/bluemapmobs/img/mobs/creature/animals/pig.png", new Vector2i(12, 12)),
     POLAR_BEAR("assets/bluemapmobs/img/mobs/creature/animals/polar_bear.png", new Vector2i(12, 12)),
     //TODO rabbit colors

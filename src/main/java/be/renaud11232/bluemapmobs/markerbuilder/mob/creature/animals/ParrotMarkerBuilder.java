@@ -15,9 +15,16 @@ public class ParrotMarkerBuilder extends MobEntityMarkerBuilder<Parrot> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Parrot mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.PARROT.getPath(), Icon.PARROT.getAnchor());
+    public Optional<POIMarker> buildDefault(Parrot parrot) {
+        return super.buildDefault(parrot).map(marker -> {
+            Icon icon = switch (parrot.getVariant()) {
+                case RED -> Icon.RED_PARROT;
+                case BLUE -> Icon.BLUE_PARROT;
+                case GREEN -> Icon.GREEN_PARROT;
+                case CYAN -> Icon.CYAN_PARROT;
+                case GRAY -> Icon.GRAY_PARROT;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
