@@ -15,9 +15,13 @@ public class FoxMarkerBuilder extends MobEntityMarkerBuilder<Fox> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Fox mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.FOX.getPath(), Icon.FOX.getAnchor());
+    public Optional<POIMarker> buildDefault(Fox fox) {
+        return super.buildDefault(fox).map(marker -> {
+            Icon icon = switch (fox.getFoxType()) {
+                case RED -> Icon.RED_FOX;
+                case SNOW -> Icon.SNOW_FOX;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }

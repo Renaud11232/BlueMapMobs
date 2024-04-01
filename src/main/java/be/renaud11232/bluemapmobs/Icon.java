@@ -54,8 +54,8 @@ public enum Icon {
     COW("assets/bluemapmobs/img/mobs/creature/animals/cow/cow.png", new Vector2i(12, 12)),
     RED_MOOSHROOM("assets/bluemapmobs/img/mobs/creature/animals/cow/red_mooshroom.png", new Vector2i(12, 12)),
     BROWN_MOOSHROOM("assets/bluemapmobs/img/mobs/creature/animals/cow/brown_mooshroom.png", new Vector2i(12, 12)),
-    //TODO fox colors
-    FOX("assets/bluemapmobs/img/mobs/creature/animals/fox.png", new Vector2i(12, 12)),
+    RED_FOX("assets/bluemapmobs/img/mobs/creature/animals/fox/red_fox.png", new Vector2i(12, 12)),
+    SNOW_FOX("assets/bluemapmobs/img/mobs/creature/animals/fox/snow_fox.png", new Vector2i(12, 12)),
     TEMPERATE_FROG("assets/bluemapmobs/img/mobs/creature/animals/frog/temperate_frog.png", new Vector2i(12, 12)),
     COLD_FROG("assets/bluemapmobs/img/mobs/creature/animals/frog/cold_frog.png", new Vector2i(12, 12)),
     TROPICAL_FROG("assets/bluemapmobs/img/mobs/creature/animals/frog/tropical_frog.png", new Vector2i(12, 12)),
