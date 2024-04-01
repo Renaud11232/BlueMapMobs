@@ -20,8 +20,6 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
             Icon icon;
             if(wolf.isTamed()) {
                 icon = Icon.TAMED_WOLF;
-            } else if (wolf.isAngry()) {
-                icon = Icon.ANGRY_WOLF;
             } else {
                 icon = Icon.UNTAMED_WOLF;
             }
