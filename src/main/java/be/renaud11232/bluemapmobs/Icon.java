@@ -35,10 +35,9 @@ public enum Icon {
     ALLAY("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12)),
     CAMEL("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12)),
     DONKEY("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12)),
-    //TODO llama colors & carpet variants
-    LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/llama.png", new Vector2i(12, 12)),
-    //TODO llama colors
-    TRADER_LLAMA("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/trader_llama.png", new Vector2i(12, 12)),
+    //TODO carpet variants
+    LLAMA_EMPTY_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/empty.png", new Vector2i(12, 12)),
+    TRADER_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/trader_llama.png", new Vector2i(12, 12)),
     MULE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12)),
     //TODO horse colors
     HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse.png", new Vector2i(12, 12)),

@@ -3,3 +3,23 @@
     height: 24px;
     image-rendering: pixelated;
 }
+
+#map-container .bluemapmobs-llama img {
+    background-size: cover;
+}
+
+#map-container .bluemapmobs-creamy-llama img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/chestedhorse/llama/creamy_llama.png");
+}
+
+#map-container .bluemapmobs-white-llama img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/chestedhorse/llama/white_llama.png");
+}
+
+#map-container .bluemapmobs-gray-llama img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/chestedhorse/llama/gray_llama.png");
+}
+
+#map-container .bluemapmobs-brown-llama img {
+    background-image: url("../img/mobs/creature/animals/abstracthorse/chestedhorse/llama/brown_llama.png");
+}
