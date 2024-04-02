@@ -6,6 +6,7 @@ general:
   # 15 = Full sky light
   minimum_block_light: 4
   minimum_sky_light: 1
+  overwrite_assets: true
 
 marker_sets:
   mobs:
