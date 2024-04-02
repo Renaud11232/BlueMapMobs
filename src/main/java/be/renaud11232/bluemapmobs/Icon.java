@@ -39,7 +39,6 @@ public enum Icon {
     LLAMA_EMPTY_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/empty.png", new Vector2i(12, 12)),
     TRADER_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/trader_llama.png", new Vector2i(12, 12)),
     MULE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12)),
-    //TODO horse colors
     HORSE_MARKINGS_NONE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_none.png", new Vector2i(12, 12)),
     HORSE_MARKINGS_WHITE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white.png", new Vector2i(12, 12)),
     HORSE_MARKINGS_WHITEFIELD("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_whitefield.png", new Vector2i(12, 12)),
