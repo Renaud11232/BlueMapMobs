@@ -31,6 +31,7 @@ public final class BlueMapMobs extends JavaPlugin {
     }
 
     private void extractAssets(BlueMapAPI api) {
+        boolean overwrite = getConfig().getBoolean("general.overwrite_assets", true);
         try {
             Path jarPath = Path.of(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
             try (FileSystem jar = FileSystems.newFileSystem(jarPath)) {
@@ -41,10 +42,11 @@ public final class BlueMapMobs extends JavaPlugin {
                         try {
                             Path relativeDestinationFile = relativeDestinationPath.resolve(sourcePath.relativize(sourceFile).toString());
                             Path destinationFile = api.getWebApp().getWebRoot().resolve(relativeDestinationFile);
-                            if(!Files.exists(destinationFile)) {
-                                Files.copy(sourceFile, destinationFile);
+                            try {
+                                Files.copy(sourceFile, destinationFile, overwrite ? new CopyOption[]{StandardCopyOption.REPLACE_EXISTING} : new CopyOption[]{});
+                            } catch (DirectoryNotEmptyException ignored) {
                             }
-                            if(relativeDestinationFile.toString().endsWith(".css")) {
+                            if (relativeDestinationFile.toString().endsWith(".css")) {
                                 api.getWebApp().registerStyle(relativeDestinationFile.toString());
                             }
                         } catch (IOException e) {
