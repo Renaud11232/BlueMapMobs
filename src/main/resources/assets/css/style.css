@@ -115,6 +115,19 @@
     --sheep-color: var(--pink);
 }
 
+@keyframes rainbow-sheep {
+    0% {
+        backdrop-filter: hue-rotate(0deg);
+    }
+    100% {
+        backdrop-filter: hue-rotate(360deg);
+    }
+}
+
+#map-container .bluemapmobs-jeb-sheep img {
+    animation: rainbow-sheep 10s infinite;
+}
+
 #map-container .bluemapmobs-horse img {
     background-size: cover;
 }
