@@ -21,7 +21,7 @@ public class SheepMarkerBuilder extends MobEntityMarkerBuilder<Sheep> {
         return super.buildDefault(sheep).map(marker -> {
             marker.addStyleClasses(List.of("bluemapmobs-sheep"));
             if(sheep.getName().equals("jeb_")) {
-                marker.addStyleClasses(List.of("bluemapmobs-red-sheep", "bluemapmobs-jeb-sheep"));
+                marker.addStyleClasses(List.of("bluemapmobs-jeb-sheep"));
             } else {
                 DyeColor color = sheep.getColor();
                 if (color != null) {
