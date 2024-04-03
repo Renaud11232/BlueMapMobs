@@ -34,7 +34,7 @@ public class HorseMarkerBuilder extends MobEntityMarkerBuilder<Horse> {
                 case GRAY -> "bluemapmobs-gray-horse";
                 case DARK_BROWN -> "bluemapmobs-darkbrown-horse";
             };
-            marker.addStyleClasses(List.of(horseColorClass));
+            marker.addStyleClasses(List.of("bluemapmobs-horse", horseColorClass));
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
