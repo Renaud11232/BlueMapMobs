@@ -1,22 +1,6 @@
 .bluemapmobs-marker {
     --icon-width: 24px;
     --icon-height: 24px;
-    --white: #F9FFFE;
-    --light-gray: #9D9D97;
-    --gray: #474F52;
-    --black: #1D1D21;
-    --brown: #835432;
-    --red: #B02E26;
-    --orange: #F9801D;
-    --yellow: #FED83D;
-    --lime: #80C71F;
-    --green: #5E7C16;
-    --cyan: #169C9C;
-    --light-blue: #3AB3DA;
-    --blue: #3C44AA;
-    --purple: #8932B8;
-    --magenta: #C74EBD;
-    --pink: #F38BAA;
 }
 
 #map-container .bluemapmobs-marker img {
@@ -46,73 +30,71 @@
 }
 
 #map-container .bluemapmobs-sheep img {
-    background: linear-gradient(var(--sheep-color), var(--sheep-color)) calc(var(--icon-width) * 0.0625) calc(var(--icon-height) * 0.0625) / calc(var(--icon-width) * 0.875) calc(var(--icon-height) * 0.875) no-repeat,
-                url("../img/mobs/creature/animals/sheep/sheep_fur.png") 0 0 / var(--icon-width) var(--icon-height) no-repeat;
-    background-blend-mode: multiply;
+    background-size: cover;
 }
 
 #map-container .bluemapmobs-white-sheep img {
-    --sheep-color: var(--white);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_white.png");
 }
 
 #map-container .bluemapmobs-lightgray-sheep img {
-    --sheep-color: var(--light-gray);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_light_gray.png");
 }
 
 #map-container .bluemapmobs-gray-sheep img {
-    --sheep-color: var(--gray);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_gray.png");
 }
 
 #map-container .bluemapmobs-black-sheep img {
-    --sheep-color: var(--black);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_black.png");
 }
 
 #map-container .bluemapmobs-brown-sheep img {
-    --sheep-color: var(--brown);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_brown.png");
 }
 
 #map-container .bluemapmobs-red-sheep img {
-    --sheep-color: var(--red);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_red.png");
 }
 
 #map-container .bluemapmobs-orange-sheep img {
-    --sheep-color: var(--orange);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_orange.png");
 }
 
 #map-container .bluemapmobs-yellow-sheep img {
-    --sheep-color: var(--yellow);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_yellow.png");
 }
 
 #map-container .bluemapmobs-lime-sheep img {
-    --sheep-color: var(--lime);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_lime.png");
 }
 
 #map-container .bluemapmobs-green-sheep img {
-    --sheep-color: var(--green);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_green.png");
 }
 
 #map-container .bluemapmobs-cyan-sheep img {
-    --sheep-color: var(--cyan);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_cyan.png");
 }
 
 #map-container .bluemapmobs-lightblue-sheep img {
-    --sheep-color: var(--light-blue);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_light_blue.png");
 }
 
 #map-container .bluemapmobs-blue-sheep img {
-    --sheep-color: var(--blue);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_blue.png");
 }
 
 #map-container .bluemapmobs-purple-sheep img {
-    --sheep-color: var(--purple);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_purple.png");
 }
 
 #map-container .bluemapmobs-magenta-sheep img {
-    --sheep-color: var(--magenta);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_magenta.png");
 }
 
 #map-container .bluemapmobs-pink-sheep img {
-    --sheep-color: var(--pink);
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_pink.png");
 }
 
 @keyframes rainbow-sheep {
@@ -125,6 +107,7 @@
 }
 
 #map-container .bluemapmobs-jeb-sheep img {
+    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_red.png");
     animation: rainbow-sheep 10s infinite;
 }
 
