@@ -15,8 +15,8 @@ public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFi
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(TropicalFish mob) {
-        return super.buildDefault(mob).map(marker -> {
+    public Optional<POIMarker> buildDefault(TropicalFish tropicalFish) {
+        return super.buildDefault(tropicalFish).map(marker -> {
             marker.setIcon(Icon.TROPICAL_FISH.getPath(), Icon.TROPICAL_FISH.getAnchor());
             return marker;
         });
