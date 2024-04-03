@@ -9,7 +9,10 @@
     image-rendering: pixelated;
 }
 
-#map-container .bluemapmobs-llama img {
+#map-container .bluemapmobs-llama img,
+#map-container .bluemapmobs-sheep img,
+#map-container .bluemapmobs-horse img,
+#map-container .bluemapmobs-tropical-fish img {
     background-size: cover;
 }
 
@@ -27,10 +30,6 @@
 
 #map-container .bluemapmobs-brown-llama img {
     background-image: url("../img/mobs/creature/animals/abstracthorse/chestedhorse/llama/brown_llama.png");
-}
-
-#map-container .bluemapmobs-sheep img {
-    background-size: cover;
 }
 
 #map-container .bluemapmobs-white-sheep img {
@@ -111,10 +110,6 @@
     animation: rainbow-sheep 10s infinite;
 }
 
-#map-container .bluemapmobs-horse img {
-    background-size: cover;
-}
-
 #map-container .bluemapmobs-white-horse img {
     background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_white.png");
 }
@@ -141,4 +136,132 @@
 
 #map-container .bluemapmobs-dark-brown-horse img {
     background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_darkbrown.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-black img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_black.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-blue img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_blue.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-brown img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_brown.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-cyan img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_cyan.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-gray img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_gray.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-green img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_green.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-light-blue img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_light_blue.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-light-gray img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_light_gray.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-lime img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_lime.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-magenta img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_magenta.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-orange img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_orange.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-pink img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pink.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-purple img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_purple.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-red img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_red.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-white img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_white.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-a-yellow img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_yellow.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-black img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_black.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-blue img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_blue.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-brown img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_brown.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-cyan img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_cyan.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-gray img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_gray.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-green img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_green.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-light-blue img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_light_blue.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-light-gray img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_light_gray.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-lime img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_lime.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-magenta img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_magenta.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-orange img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_orange.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-pink img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pink.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-purple img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_purple.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-red img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_red.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-white img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_white.png");
+}
+
+#map-container .bluemapmobs-tropical-fish-b-yellow img {
+    background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_yellow.png");
 }
