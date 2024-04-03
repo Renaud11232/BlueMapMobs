@@ -6,6 +6,7 @@ import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.TropicalFish;
 
+import java.util.List;
 import java.util.Optional;
 
 public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFish> {
@@ -17,7 +18,13 @@ public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFi
     @Override
     public Optional<POIMarker> buildDefault(TropicalFish tropicalFish) {
         return super.buildDefault(tropicalFish).map(marker -> {
-            marker.setIcon(Icon.TROPICAL_FISH.getPath(), Icon.TROPICAL_FISH.getAnchor());
+            Icon icon = Icon.valueOf("TROPICAL_FISH_" + tropicalFish.getPattern().name() + "_" + tropicalFish.getBodyColor().name());
+            String bodyType = switch (tropicalFish.getPattern()) {
+                case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
+                case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";
+            };
+            marker.addStyleClasses(List.of("bluemapmobs-tropical-fish", "bluemapmobs-tropical-fish-" + bodyType + "-" + tropicalFish.getBodyColor().name().toLowerCase().replace('_', '-')));
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
