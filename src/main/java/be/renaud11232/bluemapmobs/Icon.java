@@ -143,8 +143,13 @@ public enum Icon {
     PIG_ZOMBIE("assets/bluemapmobs/img/mobs/creature/monster/zombie/pig_zombie.png", new Vector2i(12, 12)),
     //TODO Job variants ?
     ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager.png", new Vector2i(12, 12)),
-    //TODO Jobs variants ?
-    VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager.png", new Vector2i(12, 12)),
+    DESERT_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/desert.png", new Vector2i(12, 12)),
+    JUNGLE_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/jungle.png", new Vector2i(12, 12)),
+    PLAINS_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/plains.png", new Vector2i(12, 12)),
+    SAVANNA_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/savanna.png", new Vector2i(12, 12)),
+    SNOWY_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/snowy.png", new Vector2i(12, 12)),
+    SWAMP_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/swamp.png", new Vector2i(12, 12)),
+    TAIGA_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/taiga.png", new Vector2i(12, 12)),
     WANDERING_TRADER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/wandering_trader.png", new Vector2i(12, 12)),
     DOLPHIN("assets/bluemapmobs/img/mobs/creature/watermob/dolphin.png", new Vector2i(12, 12)),
     COD("assets/bluemapmobs/img/mobs/creature/watermob/fish/cod.png", new Vector2i(12, 12)),
