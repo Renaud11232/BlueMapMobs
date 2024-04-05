@@ -18,12 +18,20 @@ public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFi
     @Override
     public Optional<POIMarker> buildDefault(TropicalFish tropicalFish) {
         return super.buildDefault(tropicalFish).map(marker -> {
-            Icon icon = Icon.valueOf("TROPICAL_FISH_" + tropicalFish.getPattern().name() + "_" + tropicalFish.getBodyColor().name());
             String bodyType = switch (tropicalFish.getPattern()) {
                 case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
                 case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";
             };
-            marker.addStyleClasses(List.of("bluemapmobs-tropical-fish", "bluemapmobs-tropical-fish-" + bodyType + "-" + tropicalFish.getBodyColor().name().toLowerCase().replace('_', '-')));
+            String pattern = switch (tropicalFish.getPattern()) {
+                case KOB, FLOPPER -> "1";
+                case SUNSTREAK, STRIPEY -> "2";
+                case SNOOPER, GLITTER -> "3";
+                case DASHER, BLOCKFISH -> "4";
+                case BRINELY, BETTY -> "5";
+                case SPOTTY, CLAYFISH -> "6";
+            };
+            Icon icon = Icon.valueOf(String.format("TROPICAL_FISH_%s_PATTERN_%s_%s", bodyType.toUpperCase(), pattern, tropicalFish.getPatternColor().name()));
+            marker.addStyleClasses(List.of("bluemapmobs-tropical-fish", String.format("bluemapmobs-tropical-fish-%s-%s", bodyType, tropicalFish.getBodyColor().name().toLowerCase().replace('_', '-'))));
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
