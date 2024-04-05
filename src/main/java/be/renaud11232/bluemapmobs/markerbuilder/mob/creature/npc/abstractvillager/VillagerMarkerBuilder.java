@@ -15,9 +15,18 @@ public class VillagerMarkerBuilder extends MobEntityMarkerBuilder<Villager> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Villager mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.VILLAGER.getPath(), Icon.VILLAGER.getAnchor());
+    public Optional<POIMarker> buildDefault(Villager villager) {
+        return super.buildDefault(villager).map(marker -> {
+            Icon icon = switch (villager.getVillagerType()) {
+                case SNOW -> Icon.SNOWY_VILLAGER;
+                case SWAMP -> Icon.SWAMP_VILLAGER;
+                case TAIGA -> Icon.TAIGA_VILLAGER;
+                case DESERT -> Icon.DESERT_VILLAGER;
+                case JUNGLE -> Icon.JUNGLE_VILLAGER;
+                case PLAINS -> Icon.PLAINS_VILLAGER;
+                case SAVANNA -> Icon.SAVANNA_VILLAGER;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
