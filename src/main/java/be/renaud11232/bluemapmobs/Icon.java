@@ -151,8 +151,7 @@ public enum Icon {
     PUFFER_FISH("assets/bluemapmobs/img/mobs/creature/watermob/fish/puffer_fish.png", new Vector2i(12, 12)),
     SALMON("assets/bluemapmobs/img/mobs/creature/watermob/fish/salmon.png", new Vector2i(12, 12)),
     TADPOLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tadpole.png", new Vector2i(12, 12)),
-    //TODO variants & colors
-    TROPICAL_FISH("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish.png", new Vector2i(12, 12)),
+    //TODO tropical fish icons definitions
     SQUID("assets/bluemapmobs/img/mobs/creature/watermob/squid/squid.png", new Vector2i(12, 12)),
     GLOW_SQUID("assets/bluemapmobs/img/mobs/creature/watermob/squid/glow_squid.png", new Vector2i(12, 12)),
     ENDER_DRAGON("assets/bluemapmobs/img/mobs/ender_dragon.png", new Vector2i(12, 12)),
