@@ -31,22 +31,22 @@ public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
             ItemStack decor = llama.getInventory().getDecor();
             if (decor != null) {
                 icon = switch (decor.getType()) {
-                    case WHITE_DYE -> Icon.WHITE_LLAMA_DECOR;
-                    case LIGHT_GRAY_DYE -> Icon.LIGHTGRAY_LLAMA_DECOR;
-                    case GRAY_DYE -> Icon.GRAY_LLAMA_DECOR;
-                    case BLACK_DYE -> Icon.BLACK_LLAMA_DECOR;
-                    case BROWN_DYE -> Icon.BROWN_LLAMA_DECOR;
-                    case RED_DYE -> Icon.RED_LLAMA_DECOR;
-                    case ORANGE_DYE -> Icon.ORANGE_LLAMA_DECOR;
-                    case YELLOW_DYE -> Icon.YELLOW_LLAMA_DECOR;
-                    case LIME_DYE -> Icon.LIME_LLAMA_DECOR;
-                    case GREEN_DYE -> Icon.GREEN_LLAMA_DECOR;
-                    case CYAN_DYE -> Icon.CYAN_LLAMA_DECOR;
-                    case LIGHT_BLUE_DYE -> Icon.LIGHTBLUE_LLAMA_DECOR;
-                    case BLUE_DYE -> Icon.BLUE_LLAMA_DECOR;
-                    case PURPLE_DYE -> Icon.PURPLE_LLAMA_DECOR;
-                    case MAGENTA_DYE -> Icon.MAGENTA_LLAMA_DECOR;
-                    case PINK_DYE -> Icon.PINK_LLAMA_DECOR;
+                    case WHITE_CARPET -> Icon.WHITE_LLAMA_DECOR;
+                    case LIGHT_GRAY_CARPET -> Icon.LIGHTGRAY_LLAMA_DECOR;
+                    case GRAY_CARPET -> Icon.GRAY_LLAMA_DECOR;
+                    case BLACK_CARPET -> Icon.BLACK_LLAMA_DECOR;
+                    case BROWN_CARPET -> Icon.BROWN_LLAMA_DECOR;
+                    case RED_CARPET -> Icon.RED_LLAMA_DECOR;
+                    case ORANGE_CARPET -> Icon.ORANGE_LLAMA_DECOR;
+                    case YELLOW_CARPET -> Icon.YELLOW_LLAMA_DECOR;
+                    case LIME_CARPET -> Icon.LIME_LLAMA_DECOR;
+                    case GREEN_CARPET -> Icon.GREEN_LLAMA_DECOR;
+                    case CYAN_CARPET -> Icon.CYAN_LLAMA_DECOR;
+                    case LIGHT_BLUE_CARPET -> Icon.LIGHTBLUE_LLAMA_DECOR;
+                    case BLUE_CARPET -> Icon.BLUE_LLAMA_DECOR;
+                    case PURPLE_CARPET -> Icon.PURPLE_LLAMA_DECOR;
+                    case MAGENTA_CARPET -> Icon.MAGENTA_LLAMA_DECOR;
+                    case PINK_CARPET -> Icon.PINK_LLAMA_DECOR;
                     default -> Icon.LLAMA_EMPTY_DECOR;
                 };
             }
