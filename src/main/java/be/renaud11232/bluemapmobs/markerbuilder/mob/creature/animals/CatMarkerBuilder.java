@@ -15,10 +15,22 @@ public class CatMarkerBuilder extends MobEntityMarkerBuilder<Cat> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Cat mob) {
-        return super.buildDefault(mob).map(marker -> {
-            //TODO Cat colors
-            marker.setIcon(Icon.CAT.getPath(), Icon.CAT.getAnchor());
+    public Optional<POIMarker> buildDefault(Cat cat) {
+        return super.buildDefault(cat).map(marker -> {
+            Icon icon = switch (cat.getCatType()) {
+                case RED -> Icon.RED_CAT;
+                case BLACK -> Icon.BLACK_CAT;
+                case TABBY -> Icon.TABBY_CAT;
+                case WHITE -> Icon.WHITE_CAT;
+                case CALICO -> Icon.CALICO_CAT;
+                case JELLIE -> Icon.JELLIE_CAT;
+                case PERSIAN -> Icon.PERSIAN_CAT;
+                case RAGDOLL -> Icon.RAGDOLL_CAT;
+                case SIAMESE -> Icon.SIAMESE_CAT;
+                case ALL_BLACK -> Icon.ALL_BLACK_CAT;
+                case BRITISH_SHORTHAIR -> Icon.BRITISH_SHORTHAIR_CAT;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
