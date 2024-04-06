@@ -15,9 +15,18 @@ public class ZombieVillagerMarkerBuilder extends MobEntityMarkerBuilder<ZombieVi
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(ZombieVillager mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.ZOMBIE_VILLAGER.getPath(), Icon.ZOMBIE_VILLAGER.getAnchor());
+    public Optional<POIMarker> buildDefault(ZombieVillager zombieVillager) {
+        return super.buildDefault(zombieVillager).map(marker -> {
+            Icon icon = switch (zombieVillager.getVillagerType()) {
+                case SNOW -> Icon.SNOWY_ZOMBIE_VILLAGER;
+                case SWAMP -> Icon.SWAMP_ZOMBIE_VILLAGER;
+                case TAIGA -> Icon.TAIGA_ZOMBIE_VILLAGER;
+                case DESERT -> Icon.DESERT_ZOMBIE_VILLAGER;
+                case JUNGLE -> Icon.JUNGLE_ZOMBIE_VILLAGER;
+                case PLAINS -> Icon.PLAINS_ZOMBIE_VILLAGER;
+                case SAVANNA -> Icon.SAVANNA_ZOMBIE_VILLAGER;
+            };
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
