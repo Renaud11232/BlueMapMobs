@@ -19,33 +19,29 @@ public class SheepMarkerBuilder extends MobEntityMarkerBuilder<Sheep> {
     @Override
     public Optional<POIMarker> buildDefault(Sheep sheep) {
         return super.buildDefault(sheep).map(marker -> {
-            marker.addStyleClasses(List.of("bluemapmobs-sheep"));
-            if(sheep.getName().equals("jeb_")) {
-                marker.addStyleClasses(List.of("bluemapmobs-jeb-sheep"));
-            } else {
-                DyeColor color = sheep.getColor();
-                if (color != null) {
-                    String colorClass = switch (color) {
-                        case WHITE -> "bluemapmobs-white-sheep";
-                        case ORANGE -> "bluemapmobs-orange-sheep";
-                        case MAGENTA -> "bluemapmobs-magenta-sheep";
-                        case LIGHT_BLUE -> "bluemapmobs-lightblue-sheep";
-                        case YELLOW -> "bluemapmobs-yellow-sheep";
-                        case LIME -> "bluemapmobs-lime-sheep";
-                        case PINK -> "bluemapmobs-pink-sheep";
-                        case GRAY -> "bluemapmobs-gray-sheep";
-                        case LIGHT_GRAY -> "bluemapmobs-lightgray-sheep";
-                        case CYAN -> "bluemapmobs-cyan-sheep";
-                        case PURPLE -> "bluemapmobs-purple-sheep";
-                        case BLUE -> "bluemapmobs-blue-sheep";
-                        case BROWN -> "bluemapmobs-brown-sheep";
-                        case GREEN -> "bluemapmobs-green-sheep";
-                        case RED -> "bluemapmobs-red-sheep";
-                        case BLACK -> "bluemapmobs-black-sheep";
-                    };
-                    marker.addStyleClasses(List.of(colorClass));
-                }
+            DyeColor color = sheep.getColor();
+            String colorClass = "bluemapmobs-white-sheep";
+            if (color != null) {
+                colorClass = switch (color) {
+                    case WHITE -> "bluemapmobs-white-sheep";
+                    case ORANGE -> "bluemapmobs-orange-sheep";
+                    case MAGENTA -> "bluemapmobs-magenta-sheep";
+                    case LIGHT_BLUE -> "bluemapmobs-lightblue-sheep";
+                    case YELLOW -> "bluemapmobs-yellow-sheep";
+                    case LIME -> "bluemapmobs-lime-sheep";
+                    case PINK -> "bluemapmobs-pink-sheep";
+                    case GRAY -> "bluemapmobs-gray-sheep";
+                    case LIGHT_GRAY -> "bluemapmobs-lightgray-sheep";
+                    case CYAN -> "bluemapmobs-cyan-sheep";
+                    case PURPLE -> "bluemapmobs-purple-sheep";
+                    case BLUE -> "bluemapmobs-blue-sheep";
+                    case BROWN -> "bluemapmobs-brown-sheep";
+                    case GREEN -> "bluemapmobs-green-sheep";
+                    case RED -> "bluemapmobs-red-sheep";
+                    case BLACK -> "bluemapmobs-black-sheep";
+                };
             }
+            marker.addStyleClasses(List.of("bluemapmobs-sheep", colorClass));
             marker.setIcon(Icon.SHEEP.getPath(), Icon.SHEEP.getAnchor());
             return marker;
         });

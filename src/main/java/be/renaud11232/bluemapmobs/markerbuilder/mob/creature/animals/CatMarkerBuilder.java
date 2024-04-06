@@ -17,6 +17,7 @@ public class CatMarkerBuilder extends MobEntityMarkerBuilder<Cat> {
     @Override
     public Optional<POIMarker> buildDefault(Cat mob) {
         return super.buildDefault(mob).map(marker -> {
+            //TODO Cat colors
             marker.setIcon(Icon.CAT.getPath(), Icon.CAT.getAnchor());
             return marker;
         });

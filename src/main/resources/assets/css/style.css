@@ -96,20 +96,6 @@
     background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_pink.png");
 }
 
-@keyframes rainbow-sheep {
-    0% {
-        backdrop-filter: hue-rotate(0deg);
-    }
-    100% {
-        backdrop-filter: hue-rotate(360deg);
-    }
-}
-
-#map-container .bluemapmobs-jeb-sheep img {
-    background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_red.png");
-    animation: rainbow-sheep 10s infinite;
-}
-
 #map-container .bluemapmobs-white-horse img {
     background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_white.png");
 }
