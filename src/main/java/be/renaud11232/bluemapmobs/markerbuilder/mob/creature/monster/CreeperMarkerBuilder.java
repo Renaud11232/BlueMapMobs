@@ -15,10 +15,15 @@ public class CreeperMarkerBuilder extends MobEntityMarkerBuilder<Creeper> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Creeper mob) {
-        return super.buildDefault(mob).map(marker -> {
-            //TODO big creeper
-            marker.setIcon(Icon.CREEPER.getPath(), Icon.CREEPER.getAnchor());
+    public Optional<POIMarker> buildDefault(Creeper creeper) {
+        return super.buildDefault(creeper).map(marker -> {
+            Icon icon;
+            if (creeper.isPowered()) {
+                icon = Icon.CHARGED_CREEPER;
+            } else {
+                icon = Icon.CREEPER;
+            }
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
