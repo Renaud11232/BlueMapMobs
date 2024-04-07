@@ -10,6 +10,8 @@
   <packaging>jar</packaging>
 
   <name>BlueMapMobs</name>
+  <description>BlueMap plugin that adds mobs (and vehicles) on the map, much like dynmap-mobs for dynmap</description>
+  <url>https://github.com/Renaud11232/BlueMapMobs</url>
 
   <properties>
     <java.version>17</java.version>
