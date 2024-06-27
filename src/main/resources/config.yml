@@ -27,6 +27,7 @@ marker_sets:
         horse: true
         skeleton_horse: true
         zombie_horse: true
+        armadillo: true
         axolotl: true
         bee: true
         cat: true
