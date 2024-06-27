@@ -17,11 +17,47 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
     @Override
     public Optional<POIMarker> buildDefault(Wolf wolf) {
         return super.buildDefault(wolf).map(marker -> {
-            Icon icon;
+            Icon icon = Icon.UNKNOWN;
             if(wolf.isTamed()) {
-                icon = Icon.TAMED_WOLF;
+                if (wolf.getVariant().equals(Wolf.Variant.ASHEN)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.BLACK)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.CHESTNUT)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.PALE)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.RUSTY)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.SNOWY)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.SPOTTED)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.STRIPED)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.WOODS)) {
+
+                }
             } else {
-                icon = Icon.UNTAMED_WOLF;
+                if (wolf.getVariant().equals(Wolf.Variant.ASHEN)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.BLACK)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.CHESTNUT)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.PALE)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.RUSTY)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.SNOWY)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.SPOTTED)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.STRIPED)) {
+
+                } else if (wolf.getVariant().equals(Wolf.Variant.WOODS)) {
+
+                }
             }
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
