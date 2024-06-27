@@ -9,6 +9,7 @@ public class AnimalsMarkerBuilder extends MobEntityMarkerBuilder<Animals> {
     public AnimalsMarkerBuilder(FileConfiguration config) {
         super(config);
         registerMarkerBuilder(AbstractHorse.class, new AbstractHorseMarkerBuilder(config));
+        registerMarkerBuilder(Armadillo.class, new ArmadilloMarkerBuilder(config));
         registerMarkerBuilder(Axolotl.class, new AxolotlMarkerBuilder(config));
         registerMarkerBuilder(Bee.class, new BeeMarkerBuilder(config));
         registerMarkerBuilder(Cat.class, new CatMarkerBuilder(config));

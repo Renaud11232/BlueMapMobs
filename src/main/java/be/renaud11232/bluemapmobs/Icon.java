@@ -61,6 +61,7 @@ public enum Icon {
     HORSE_MARKINGS_BLACK_DOTS("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_black_dots.png", new Vector2i(12, 12)),
     SKELETON_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12)),
     ZOMBIE_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12)),
+    ARMADILLO("assets/bluemapmobs/img/mobs/creature/animals/armadillo.png", new Vector2i(12, 12)),
     LUCY_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/lucy_axolotl.png", new Vector2i(12, 12)),
     WILD_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/wild_axolotl.png", new Vector2i(12, 12)),
     GOLD_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/gold_axolotl.png", new Vector2i(12, 12)),
