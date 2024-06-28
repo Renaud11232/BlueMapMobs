@@ -147,6 +147,7 @@ public enum Icon {
     IRON_GOLEM("assets/bluemapmobs/img/mobs/creature/golem/iron_golem.png", new Vector2i(12, 12)),
     SHULKER("assets/bluemapmobs/img/mobs/creature/golem/shulker.png", new Vector2i(12, 12)),
     SNOWMAN("assets/bluemapmobs/img/mobs/creature/golem/snowman.png", new Vector2i(12, 12)),
+    BOGGED("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/bogged.png", new Vector2i(12, 12)),
     SKELETON("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/skeleton.png", new Vector2i(12, 12)),
     STRAY("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/stray.png", new Vector2i(12, 12)),
     WITHER_SKELETON("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/wither_skeleton.png", new Vector2i(12, 12)),
