@@ -52,6 +52,7 @@ marker_sets:
         iron_golem: true
         shulker: true
         snowman: true
+        bogged: true
         skeleton: true
         stray: true
         wither_skeleton: true
