@@ -55,11 +55,11 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
         return super.buildDefault(wolf).map(marker -> {
             Icon icon;
             if(wolf.isAngry()) {
-                icon = angryWolfIcons.getOrDefault(wolf.getVariant(), Icon.ANGRY_WOLF);
+                icon = angryWolfIcons.get(wolf.getVariant());
             } else if (wolf.isTamed()) {
-                icon = tamedWolfIcons.getOrDefault(wolf.getVariant(), Icon.TAMED_WOLF);
+                icon = tamedWolfIcons.get(wolf.getVariant());
             } else {
-                icon = untamedWolfIcons.getOrDefault(wolf.getVariant(), Icon.UNTAMED_WOLF);
+                icon = untamedWolfIcons.get(wolf.getVariant());
             }
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
