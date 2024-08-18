@@ -6,22 +6,25 @@ import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Frog;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class FrogMarkerBuilder extends MobEntityMarkerBuilder<Frog> {
 
+    private final Map<Frog.Variant, Icon> icons = new HashMap<>();
+
     public FrogMarkerBuilder(FileConfiguration config) {
         super(config);
+        icons.put(Frog.Variant.COLD, Icon.COLD_FROG);
+        icons.put(Frog.Variant.WARM, Icon.TROPICAL_FROG);
+        icons.put(Frog.Variant.TEMPERATE, Icon.TEMPERATE_FROG);
     }
 
     @Override
     public Optional<POIMarker> buildDefault(Frog frog) {
         return super.buildDefault(frog).map(marker -> {
-            Icon icon = switch (frog.getVariant()) {
-                case COLD -> Icon.COLD_FROG;
-                case WARM -> Icon.TROPICAL_FROG;
-                case TEMPERATE -> Icon.TEMPERATE_FROG;
-            };
+            Icon icon = icons.getOrDefault(frog.getVariant(), Icon.UNKNOWN);
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
