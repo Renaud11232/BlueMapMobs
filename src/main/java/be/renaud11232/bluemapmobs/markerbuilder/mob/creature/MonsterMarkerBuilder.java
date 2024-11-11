@@ -11,6 +11,7 @@ public class MonsterMarkerBuilder extends MobEntityMarkerBuilder<Monster> {
         registerMarkerBuilder(AbstractSkeleton.class, new AbstractSkeletonMarkerBuilder(config));
         registerMarkerBuilder(Blaze.class, new BlazeMarkerBuilder(config));
         registerMarkerBuilder(Breeze.class, new BreezeMarkerBuilder(config));
+        registerMarkerBuilder(Creaking.class, new CreakingMarkerBuilder(config));
         registerMarkerBuilder(Creeper.class, new CreeperMarkerBuilder(config));
         registerMarkerBuilder(Enderman.class, new EndermanMarkerBuilder(config));
         registerMarkerBuilder(Endermite.class, new EndermiteMarkerBuilder(config));

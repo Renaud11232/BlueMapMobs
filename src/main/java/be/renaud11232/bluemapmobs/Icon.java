@@ -153,6 +153,7 @@ public enum Icon {
     WITHER_SKELETON("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/wither_skeleton.png", new Vector2i(12, 12)),
     BLAZE("assets/bluemapmobs/img/mobs/creature/monster/blaze.png", new Vector2i(12, 12)),
     BREEZE("assets/bluemapmobs/img/mobs/creature/monster/breeze.png", new Vector2i(12, 12)),
+    CREAKING("assets/bluemapmobs/img/mobs/creature/monster/creaking.png", new Vector2i(12, 12)),
     CREEPER("assets/bluemapmobs/img/mobs/creature/monster/creeper/creeper.png", new Vector2i(12, 12)),
     CHARGED_CREEPER("assets/bluemapmobs/img/mobs/creature/monster/creeper/charged_creeper.png", new Vector2i(12, 12)),
     ENDERMAN("assets/bluemapmobs/img/mobs/creature/monster/enderman.png", new Vector2i(12, 12)),
