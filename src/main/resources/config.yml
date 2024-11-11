@@ -58,6 +58,7 @@ marker_sets:
         wither_skeleton: true
         blaze: true
         breeze: true
+        creaking: true
         creeper: true
         enderman: true
         endermite: true
