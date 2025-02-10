@@ -51,7 +51,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
         return Optional.empty();
     }
 
-    protected <U extends Entity> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
+    protected <U extends T> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
         markerBuilders.put(klass, builder);
     }
 

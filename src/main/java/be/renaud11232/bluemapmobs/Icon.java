@@ -30,6 +30,8 @@ public enum Icon {
     OAK_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/oak_chest_boat.png", new Vector2i(12, 12)),
     SPRUCE_BOAT("assets/bluemapmobs/img/vehicles/boat/spruce_boat.png", new Vector2i(12, 12)),
     SPRUCE_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/spruce_chest_boat.png", new Vector2i(12, 12)),
+    PALE_OAK_BOAT("assets/bluemapmobs/img/vehicles/boat/pale_oak_boat.png", new Vector2i(12, 12)),
+    PALE_OAK_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/pale_oak_chest_boat.png", new Vector2i(12, 12)),
 
     BAT("assets/bluemapmobs/img/mobs/ambient/bat.png", new Vector2i(12, 12)),
     ALLAY("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12)),
