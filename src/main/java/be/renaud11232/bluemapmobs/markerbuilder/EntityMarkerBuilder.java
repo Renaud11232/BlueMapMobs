@@ -14,7 +14,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
 
     private final FileConfiguration config;
     @SuppressWarnings("rawtypes")
-    private final Map<Class<? extends Entity>, MarkerBuilder> markerBuilders;
+    private final Map<Class<? extends T>, MarkerBuilder> markerBuilders;
     private final boolean displayed;
 
     public EntityMarkerBuilder(FileConfiguration config) {
