@@ -8,13 +8,13 @@ import org.bukkit.entity.*;
 public class AnimalsMarkerBuilder extends MobEntityMarkerBuilder<Animals> {
     public AnimalsMarkerBuilder(FileConfiguration config) {
         super(config);
+        registerMarkerBuilder(AbstractCow.class, new AbstractCowMarkerBuilder(config));
         registerMarkerBuilder(AbstractHorse.class, new AbstractHorseMarkerBuilder(config));
         registerMarkerBuilder(Armadillo.class, new ArmadilloMarkerBuilder(config));
         registerMarkerBuilder(Axolotl.class, new AxolotlMarkerBuilder(config));
         registerMarkerBuilder(Bee.class, new BeeMarkerBuilder(config));
         registerMarkerBuilder(Cat.class, new CatMarkerBuilder(config));
         registerMarkerBuilder(Chicken.class, new ChickenMarkerBuilder(config));
-        registerMarkerBuilder(Cow.class, new CowMarkerBuilder(config));
         registerMarkerBuilder(Fox.class, new FoxMarkerBuilder(config));
         registerMarkerBuilder(Frog.class, new FrogMarkerBuilder(config));
         registerMarkerBuilder(Goat.class, new GoatMarkerBuilder(config));

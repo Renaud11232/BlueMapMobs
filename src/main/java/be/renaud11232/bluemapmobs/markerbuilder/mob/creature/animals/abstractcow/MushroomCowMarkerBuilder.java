@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.cow;
+package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractcow;
 
 import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
