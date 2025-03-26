@@ -13,11 +13,21 @@ import java.util.function.Function;
 public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends VehicleEntityMarkerBuilder<T> {
     private final Function<T, K> keyGetter;
     private final Map<K, Icon> icons;
+    private final Icon defaultIcon;
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, String displayedConfigKey, Function<T, K> keyGetter) {
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, String displayedConfigKey, Function<T, K> keyGetter, Icon defaultIcon) {
         super(config, displayedConfigKey);
         this.keyGetter = keyGetter;
         this.icons = new HashMap<>();
+        this.defaultIcon = defaultIcon;
+    }
+
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, String displayedConfigKey, Function<T, K> keyGetter) {
+        this(config, displayedConfigKey, keyGetter, Icon.UNKNOWN);
+    }
+
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Function<T, K> keyGetter, Icon defaultIcon) {
+        this(config, null, keyGetter, defaultIcon);
     }
 
     public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Function<T, K> keyGetter) {
@@ -31,7 +41,7 @@ public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends 
     @Override
     public Optional<POIMarker> buildDefault(T mob) {
         return super.buildDefault(mob).map(marker -> {
-            Icon icon = icons.getOrDefault(keyGetter.apply(mob), Icon.UNKNOWN);
+            Icon icon = icons.getOrDefault(keyGetter.apply(mob), defaultIcon);
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
