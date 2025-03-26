@@ -1,25 +1,32 @@
-package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
+package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractcow;
 
 import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.cow.MushroomCowMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Cow;
-import org.bukkit.entity.MushroomCow;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class CowMarkerBuilder extends MobEntityMarkerBuilder<Cow> {
+
+    private final Map<Cow.Variant, Icon> cowIcons;
+
     public CowMarkerBuilder(FileConfiguration config) {
         super(config);
-        registerMarkerBuilder(MushroomCow.class, new MushroomCowMarkerBuilder(config));
+        cowIcons = new HashMap<>();
+        cowIcons.put(Cow.Variant.TEMPERATE, Icon.TEMPERATE_COW);
+        cowIcons.put(Cow.Variant.COLD, Icon.COLD_COW);
+        cowIcons.put(Cow.Variant.WARM, Icon.WARM_COW);
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Cow mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.COW.getPath(), Icon.COW.getAnchor());
+    public Optional<POIMarker> buildDefault(Cow cow) {
+        return super.buildDefault(cow).map(marker -> {
+            Icon icon = cowIcons.get(cow.getVariant());
+            marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
     }
