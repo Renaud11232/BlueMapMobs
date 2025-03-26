@@ -17,7 +17,7 @@ public class PandaMarkerBuilder extends MobEntityMarkerBuilder<Panda> {
     @Override
     public Optional<POIMarker> buildDefault(Panda panda) {
         return super.buildDefault(panda).map(marker -> {
-            Icon icon =  switch (panda.getCombinedGene()) {
+            Icon icon =  switch (getCombinedGene(panda)) {
                 case NORMAL -> Icon.NORMAL_PANDA;
                 case LAZY -> Icon.LAZY_PANDA;
                 case WORRIED -> Icon.WORRIED_PANDA;
@@ -29,6 +29,17 @@ public class PandaMarkerBuilder extends MobEntityMarkerBuilder<Panda> {
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
+    }
+
+    public Panda.Gene getCombinedGene(Panda panda) {
+        Panda.Gene main = panda.getMainGene();
+        if (main.isRecessive()) {
+            if (panda.getHiddenGene() == main) {
+                return main;
+            }
+            return Panda.Gene.NORMAL;
+        }
+        return panda.getMainGene();
     }
 
     @Override
