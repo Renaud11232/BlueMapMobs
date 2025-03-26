@@ -1,29 +1,16 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractcow;
 
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import de.bluecolored.bluemap.api.markers.POIMarker;
+import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MushroomCow;
 
-import java.util.Optional;
-
-public class MushroomCowMarkerBuilder extends MobEntityMarkerBuilder<MushroomCow> {
+public class MushroomCowMarkerBuilder extends MappedIconMobEntityMarkerBuilder<MushroomCow, MushroomCow.Variant> {
 
     public MushroomCowMarkerBuilder(FileConfiguration config) {
-        super(config);
-    }
-
-    @Override
-    public Optional<POIMarker> buildDefault(MushroomCow mushroomCow) {
-        return super.buildDefault(mushroomCow).map(marker -> {
-            Icon icon = switch (mushroomCow.getVariant()) {
-                case RED -> Icon.RED_MOOSHROOM;
-                case BROWN -> Icon.BROWN_MOOSHROOM;
-            };
-            marker.setIcon(icon.getPath(), icon.getAnchor());
-            return marker;
-        });
+        super(config, MushroomCow::getVariant);
+        registerIcon(MushroomCow.Variant.RED, Icon.RED_MOOSHROOM);
+        registerIcon(MushroomCow.Variant.BROWN, Icon.BROWN_MOOSHROOM);
     }
 
     @Override
