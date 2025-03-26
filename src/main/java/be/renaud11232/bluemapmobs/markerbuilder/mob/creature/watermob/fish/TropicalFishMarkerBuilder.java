@@ -10,9 +10,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFish> {
-
     public TropicalFishMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.mobs.markers.types.tropical_fish");
     }
 
     @Override
@@ -35,10 +34,5 @@ public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFi
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.tropical_fish", true);
     }
 }

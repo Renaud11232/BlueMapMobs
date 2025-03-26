@@ -7,14 +7,9 @@ import org.bukkit.entity.Pig;
 
 public class PigMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Pig, Pig.Variant> {
     public PigMarkerBuilder(FileConfiguration config) {
-        super(config, Pig::getVariant);
+        super(config, "marker_sets.mobs.markers.types.pig", Pig::getVariant);
         registerIcon(Pig.Variant.TEMPERATE, Icon.TEMPERATE_PIG);
         registerIcon(Pig.Variant.COLD, Icon.COLD_PIG);
         registerIcon(Pig.Variant.WARM, Icon.WARM_PIG);
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.pig", true);
     }
 }

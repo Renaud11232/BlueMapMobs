@@ -14,7 +14,7 @@ import java.util.Optional;
 
 public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
     public LlamaMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.mobs.markers.types.llama");
         registerMarkerBuilder(TraderLlama.class, new TraderLlamaMarkerBuilder(config));
     }
 
@@ -54,10 +54,5 @@ public class LlamaMarkerBuilder extends MobEntityMarkerBuilder<Llama> {
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.llama", true);
     }
 }

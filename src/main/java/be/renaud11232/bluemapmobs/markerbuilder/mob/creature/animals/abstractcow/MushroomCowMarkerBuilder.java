@@ -6,15 +6,9 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MushroomCow;
 
 public class MushroomCowMarkerBuilder extends MappedIconMobEntityMarkerBuilder<MushroomCow, MushroomCow.Variant> {
-
     public MushroomCowMarkerBuilder(FileConfiguration config) {
-        super(config, MushroomCow::getVariant);
+        super(config, "marker_sets.mobs.markers.types.mushroom_cow", MushroomCow::getVariant);
         registerIcon(MushroomCow.Variant.RED, Icon.RED_MOOSHROOM);
         registerIcon(MushroomCow.Variant.BROWN, Icon.BROWN_MOOSHROOM);
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.mushroom_cow", true);
     }
 }

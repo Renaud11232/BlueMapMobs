@@ -9,9 +9,8 @@ import org.bukkit.entity.Panda;
 import java.util.Optional;
 
 public class PandaMarkerBuilder extends MobEntityMarkerBuilder<Panda> {
-
     public PandaMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.mobs.markers.types.panda");
     }
 
     @Override
@@ -40,10 +39,5 @@ public class PandaMarkerBuilder extends MobEntityMarkerBuilder<Panda> {
             return Panda.Gene.NORMAL;
         }
         return panda.getMainGene();
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.panda", true);
     }
 }

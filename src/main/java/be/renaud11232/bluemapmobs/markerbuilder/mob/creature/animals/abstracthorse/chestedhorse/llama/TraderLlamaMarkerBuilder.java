@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse.llama;
 
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.TraderLlama;
@@ -9,10 +9,9 @@ import org.bukkit.entity.TraderLlama;
 import java.util.List;
 import java.util.Optional;
 
-public class TraderLlamaMarkerBuilder extends MobEntityMarkerBuilder<TraderLlama> {
-
+public class TraderLlamaMarkerBuilder extends SingleIconMobEntityMarkerBuilder<TraderLlama> {
     public TraderLlamaMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.mobs.markers.types.trader_llama", Icon.TRADER_LLAMA_DECOR);
     }
 
     @Override
@@ -25,13 +24,7 @@ public class TraderLlamaMarkerBuilder extends MobEntityMarkerBuilder<TraderLlama
                 case BROWN -> "bluemapmobs-brown-llama";
             };
             marker.addStyleClasses(List.of("bluemapmobs-llama", llamaColorStyle));
-            marker.setIcon(Icon.TRADER_LLAMA_DECOR.getPath(), Icon.TRADER_LLAMA_DECOR.getAnchor());
             return marker;
         });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.trader_llama", true);
     }
 }

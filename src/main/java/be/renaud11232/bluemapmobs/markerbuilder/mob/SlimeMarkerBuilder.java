@@ -9,12 +9,7 @@ import org.bukkit.entity.Slime;
 
 public class SlimeMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Slime> {
     public SlimeMarkerBuilder(FileConfiguration config) {
-        super(config, Icon.SLIME);
+        super(config, "marker_sets.mobs.markers.types.slime", Icon.SLIME);
         registerMarkerBuilder(MagmaCube.class, new MagmaCubeMarkerBuilder(config));
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.slime", true);
     }
 }

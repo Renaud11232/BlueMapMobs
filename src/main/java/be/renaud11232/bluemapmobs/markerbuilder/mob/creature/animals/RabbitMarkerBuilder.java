@@ -9,9 +9,8 @@ import org.bukkit.entity.Rabbit;
 import java.util.Optional;
 
 public class RabbitMarkerBuilder extends MobEntityMarkerBuilder<Rabbit> {
-
     public RabbitMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.mobs.markers.types.rabbit");
     }
 
     @Override
@@ -29,10 +28,5 @@ public class RabbitMarkerBuilder extends MobEntityMarkerBuilder<Rabbit> {
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.rabbit", true);
     }
 }

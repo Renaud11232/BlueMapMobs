@@ -11,13 +11,12 @@ import java.util.Map;
 import java.util.Optional;
 
 public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
-
     private final Map<Wolf.Variant, Icon> angryWolfIcons;
     private final Map<Wolf.Variant, Icon> tamedWolfIcons;
     private final Map<Wolf.Variant, Icon> untamedWolfIcons;
 
     public WolfMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.mobs.markers.types.wolf");
         angryWolfIcons = new HashMap<>();
         angryWolfIcons.put(Wolf.Variant.ASHEN, Icon.ANGRY_ASHEN_WOLF);
         angryWolfIcons.put(Wolf.Variant.BLACK, Icon.ANGRY_BLACK_WOLF);
@@ -64,10 +63,5 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.wolf", true);
     }
 }
