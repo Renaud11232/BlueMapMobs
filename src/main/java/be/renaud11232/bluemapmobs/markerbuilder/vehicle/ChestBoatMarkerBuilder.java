@@ -7,9 +7,8 @@ import org.bukkit.entity.ChestBoat;
 import org.bukkit.entity.boat.*;
 
 public class ChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<ChestBoat> {
-
     public ChestBoatMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.vehicles.markers.types.chest_boat");
         registerMarkerBuilder(AcaciaChestBoat.class, new AcaciaChestBoatMarkerBuilder(config));
         registerMarkerBuilder(BambooChestRaft.class, new BambooChestRaftMarkerBuilder(config));
         registerMarkerBuilder(BirchChestBoat.class, new BirchChestBoatMarkerBuilder(config));
@@ -21,10 +20,4 @@ public class ChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<ChestBoat
         registerMarkerBuilder(PaleOakChestBoat.class, new PaleOakChestBoatMarkerBuilder(config));
         registerMarkerBuilder(SpruceChestBoat.class, new SpruceChestBoatMarkerBuilder(config));
     }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.vehicles.markers.types.chest_boat", true);
-    }
-
 }

@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
+import be.renaud11232.bluemapmobs.MarkerTypeVisibilityConfig;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -17,10 +18,22 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     private final Map<Class<? extends T>, MarkerBuilder> markerBuilders;
     private final boolean displayed;
 
-    public EntityMarkerBuilder(FileConfiguration config) {
+    //TODO: remove String constructor
+    public EntityMarkerBuilder(FileConfiguration config, String displayedConfigKey) {
         this.config = config;
         this.markerBuilders = new HashMap<>();
-        displayed = isDisplayed();
+        displayed = displayedConfigKey == null || config.getBoolean(displayedConfigKey, true);
+    }
+
+    public EntityMarkerBuilder(FileConfiguration config, MarkerTypeVisibilityConfig markerTypeVisibilityConfig) {
+        this.config = config;
+        this.markerBuilders = new HashMap<>();
+        displayed = markerTypeVisibilityConfig == null || config.getBoolean(markerTypeVisibilityConfig.getKey(), markerTypeVisibilityConfig.getDefaultValue());
+    }
+
+    public EntityMarkerBuilder(FileConfiguration config) {
+        //TODO remove non needed cast
+        this(config, (MarkerTypeVisibilityConfig) null);
     }
 
     @Override
@@ -53,10 +66,6 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
 
     protected <U extends T> void registerMarkerBuilder(Class<? extends U> klass, MarkerBuilder<U> builder) {
         markerBuilders.put(klass, builder);
-    }
-
-    protected boolean isDisplayed() {
-        return true;
     }
 
     public FileConfiguration getConfig() {

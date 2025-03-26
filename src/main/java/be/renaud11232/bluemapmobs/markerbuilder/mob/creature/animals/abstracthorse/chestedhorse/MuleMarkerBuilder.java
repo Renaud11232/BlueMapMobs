@@ -1,29 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse;
 
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import de.bluecolored.bluemap.api.markers.POIMarker;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mule;
 
-import java.util.Optional;
-
-public class MuleMarkerBuilder extends MobEntityMarkerBuilder<Mule> {
-
+public class MuleMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Mule> {
     public MuleMarkerBuilder(FileConfiguration config) {
-        super(config);
-    }
-
-    @Override
-    public Optional<POIMarker> buildDefault(Mule mob) {
-        return super.buildDefault(mob).map(marker -> {
-            marker.setIcon(Icon.MULE.getPath(), Icon.MULE.getAnchor());
-            return marker;
-        });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.mobs.markers.types.mule", true);
+        super(config, "marker_sets.mobs.markers.types.mule", Icon.MULE);
     }
 }

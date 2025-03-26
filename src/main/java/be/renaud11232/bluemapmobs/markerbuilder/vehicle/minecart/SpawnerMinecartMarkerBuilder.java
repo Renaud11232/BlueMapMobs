@@ -1,30 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.vehicle.minecart;
 
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
-import de.bluecolored.bluemap.api.markers.POIMarker;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleIconVehicleEntityMarkerBuilder;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.SpawnerMinecart;
 
-import java.util.Optional;
-
-public class SpawnerMinecartMarkerBuilder  extends VehicleEntityMarkerBuilder<SpawnerMinecart> {
-
+public class SpawnerMinecartMarkerBuilder  extends SingleIconVehicleEntityMarkerBuilder<SpawnerMinecart> {
     public SpawnerMinecartMarkerBuilder(FileConfiguration config) {
-        super(config);
+        super(config, "marker_sets.vehicles.markers.types.spawner_minecart", Icon.SPAWNER_MINECART);
     }
-
-    @Override
-    public Optional<POIMarker> buildDefault(SpawnerMinecart spawnerMinecart) {
-        return super.buildDefault(spawnerMinecart).map(marker -> {
-            marker.setIcon(Icon.SPAWNER_MINECART.getPath(), Icon.SPAWNER_MINECART.getAnchor());
-            return marker;
-        });
-    }
-
-    @Override
-    protected boolean isDisplayed() {
-        return getConfig().getBoolean("marker_sets.vehicles.markers.types.spawner_minecart", true);
-    }
-
 }
