@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import de.bluecolored.bluemap.api.markers.POIMarker;
+import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
 
@@ -15,7 +16,8 @@ public abstract class MobEntityMarkerBuilder<T extends Mob> extends EntityMarker
     @Override
     public Optional<POIMarker> buildDefault(T mob) {
         return super.buildDefault(mob).map(marker ->  {
-            marker.setPosition(mob.getX(), mob.getY() + mob.getEyeHeight(), mob.getZ());
+            Location eyeLocation = mob.getEyeLocation();
+            marker.setPosition(eyeLocation.getX(), eyeLocation.getY(), eyeLocation.getZ());
             marker.setMaxDistance(getConfig().getDouble("marker_sets.mobs.markers.max_distance", 1000));
             return marker;
         });
