@@ -24,6 +24,10 @@ public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends 
         this(config, null, keyGetter);
     }
 
+    protected void registerIcon(K key, Icon icon) {
+        icons.put(key, icon);
+    }
+
     @Override
     public Optional<POIMarker> buildDefault(T mob) {
         return super.buildDefault(mob).map(marker -> {
