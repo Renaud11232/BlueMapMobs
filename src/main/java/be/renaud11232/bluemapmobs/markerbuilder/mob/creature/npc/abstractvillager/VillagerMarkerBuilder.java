@@ -2,13 +2,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.npc.abstractvillag
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Villager;
 
 public class VillagerMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Villager, Villager.Type> {
     public VillagerMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.VILLAGER, Villager::getVillagerType);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.VILLAGER, Villager::getVillagerType);
         registerIcon(Villager.Type.SNOW, MobIcon.SNOWY_VILLAGER);
         registerIcon(Villager.Type.SWAMP, MobIcon.SWAMP_VILLAGER);
         registerIcon(Villager.Type.TAIGA, MobIcon.TAIGA_VILLAGER);

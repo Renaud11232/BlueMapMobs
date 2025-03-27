@@ -3,7 +3,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractho
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse.llama.TraderLlamaMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -16,7 +16,7 @@ import java.util.Optional;
 
 public class LlamaMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Llama, Material> {
     public LlamaMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.LLAMA, MobIcon.LLAMA_EMPTY_DECOR, LlamaMarkerBuilder::getCarpet);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.LLAMA, MobIcon.LLAMA_EMPTY_DECOR, LlamaMarkerBuilder::getCarpet);
         registerMarkerBuilder(TraderLlama.class, new TraderLlamaMarkerBuilder(config));
         registerIcon(Material.WHITE_CARPET, MobIcon.WHITE_LLAMA_DECOR);
         registerIcon(Material.LIGHT_GRAY_CARPET, MobIcon.LIGHTGRAY_LLAMA_DECOR);

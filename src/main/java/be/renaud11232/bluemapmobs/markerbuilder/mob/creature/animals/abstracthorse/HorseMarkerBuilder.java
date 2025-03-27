@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractho
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Horse;
@@ -12,7 +12,7 @@ import java.util.Optional;
 
 public class HorseMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Horse, Horse.Style> {
     public HorseMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.HORSE, Horse::getStyle);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.HORSE, Horse::getStyle);
         registerIcon(Horse.Style.NONE, MobIcon.HORSE_MARKINGS_NONE);
         registerIcon(Horse.Style.WHITE, MobIcon.HORSE_MARKINGS_WHITE);
         registerIcon(Horse.Style.WHITEFIELD, MobIcon.HORSE_MARKINGS_WHITEFIELD);

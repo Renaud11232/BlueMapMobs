@@ -2,12 +2,12 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.raider.ill
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Evoker;
 
 public class EvokerMarkerBuilder extends MobEntityMarkerBuilder<Evoker> {
     public EvokerMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.EVOKER, MobIcon.EVOKER);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.EVOKER, MobIcon.EVOKER);
     }
 }

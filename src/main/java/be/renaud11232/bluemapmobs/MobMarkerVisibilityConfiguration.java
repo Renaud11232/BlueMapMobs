@@ -2,6 +2,7 @@ package be.renaud11232.bluemapmobs;
 
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 
+//TODO: remove this
 public enum MobMarkerVisibilityConfiguration implements BooleanConfiguration {
     BAT("marker_sets.mobs.markers.types.bat", true),
     ALLAY("marker_sets.mobs.markers.types.allay", true),

@@ -3,14 +3,14 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.watermob;
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.watermob.squid.GlowSquidMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.GlowSquid;
 import org.bukkit.entity.Squid;
 
 public class SquidMarkerBuilder extends MobEntityMarkerBuilder<Squid> {
     public SquidMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.SQUID, MobIcon.SQUID);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.SQUID, MobIcon.SQUID);
         registerMarkerBuilder(GlowSquid.class, new GlowSquidMarkerBuilder(config));
     }
 }
