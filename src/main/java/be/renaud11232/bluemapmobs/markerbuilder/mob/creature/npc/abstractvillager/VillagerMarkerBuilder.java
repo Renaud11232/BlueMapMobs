@@ -1,20 +1,20 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.npc.abstractvillager;
 
-import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Villager;
 
 public class VillagerMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Villager, Villager.Type> {
     public VillagerMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Mobs.Markers.Types.VILLAGER, Villager::getVillagerType);
-        registerIcon(Villager.Type.SNOW, MobIcon.SNOWY_VILLAGER);
-        registerIcon(Villager.Type.SWAMP, MobIcon.SWAMP_VILLAGER);
-        registerIcon(Villager.Type.TAIGA, MobIcon.TAIGA_VILLAGER);
-        registerIcon(Villager.Type.DESERT, MobIcon.DESERT_VILLAGER);
-        registerIcon(Villager.Type.JUNGLE, MobIcon.JUNGLE_VILLAGER);
-        registerIcon(Villager.Type.PLAINS, MobIcon.PLAINS_VILLAGER);
-        registerIcon(Villager.Type.SAVANNA, MobIcon.SAVANNA_VILLAGER);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VILLAGER, Villager::getVillagerType);
+        registerIcon(Villager.Type.SNOW, BlueMapMobsIcon.Mob.SNOWY_VILLAGER);
+        registerIcon(Villager.Type.SWAMP, BlueMapMobsIcon.Mob.SWAMP_VILLAGER);
+        registerIcon(Villager.Type.TAIGA, BlueMapMobsIcon.Mob.TAIGA_VILLAGER);
+        registerIcon(Villager.Type.DESERT, BlueMapMobsIcon.Mob.DESERT_VILLAGER);
+        registerIcon(Villager.Type.JUNGLE, BlueMapMobsIcon.Mob.JUNGLE_VILLAGER);
+        registerIcon(Villager.Type.PLAINS, BlueMapMobsIcon.Mob.PLAINS_VILLAGER);
+        registerIcon(Villager.Type.SAVANNA, BlueMapMobsIcon.Mob.SAVANNA_VILLAGER);
     }
 }

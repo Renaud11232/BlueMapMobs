@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapmobs;
+package be.renaud11232.bluemapmobs.icon;
 
 import com.flowpowered.math.vector.Vector2i;
 

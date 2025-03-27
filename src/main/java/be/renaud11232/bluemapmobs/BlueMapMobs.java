@@ -31,7 +31,7 @@ public final class BlueMapMobs extends JavaPlugin {
     }
 
     private void extractAssets(BlueMapAPI api) {
-        boolean overwrite = Configuration.General.OVERWRITE_ASSETS.get(getConfig());
+        boolean overwrite = BlueMapMobsConfiguration.General.OVERWRITE_ASSETS.get(getConfig());
         try {
             Path jarPath = Path.of(getClass().getProtectionDomain().getCodeSource().getLocation().toURI());
             try (FileSystem jar = FileSystems.newFileSystem(jarPath)) {

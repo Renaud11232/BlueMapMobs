@@ -1,16 +1,16 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractcow;
 
-import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Cow;
 
 public class CowMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Cow, Cow.Variant> {
     public CowMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Mobs.Markers.Types.COW, Cow::getVariant);
-        registerIcon(Cow.Variant.TEMPERATE, MobIcon.TEMPERATE_COW);
-        registerIcon(Cow.Variant.COLD, MobIcon.COLD_COW);
-        registerIcon(Cow.Variant.WARM, MobIcon.WARM_COW);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.COW, Cow::getVariant);
+        registerIcon(Cow.Variant.TEMPERATE, BlueMapMobsIcon.Mob.TEMPERATE_COW);
+        registerIcon(Cow.Variant.COLD, BlueMapMobsIcon.Mob.COLD_COW);
+        registerIcon(Cow.Variant.WARM, BlueMapMobsIcon.Mob.WARM_COW);
     }
 }

@@ -1,8 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapmobs.Icon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
-import be.renaud11232.bluemapmobs.icon.CommonIcon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
@@ -23,7 +23,7 @@ public abstract class MappedIconMobEntityMarkerBuilder<T extends Mob, K> extends
     }
 
     public MappedIconMobEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Function<T, K> keyGetter) {
-        this(config, visibilityConfiguration, CommonIcon.UNKNOWN, keyGetter);
+        this(config, visibilityConfiguration, BlueMapMobsIcon.Common.UNKNOWN, keyGetter);
     }
 
     public MappedIconMobEntityMarkerBuilder(FileConfiguration config, Icon defaultIcon, Function<T, K> keyGetter) {
