@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapmobs.MarkerTypeVisibilityConfig;
+import be.renaud11232.bluemapmobs.EntityMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Icon;
+import be.renaud11232.bluemapmobs.icon.CommonIcon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -12,28 +14,29 @@ import java.util.Map;
 import java.util.Optional;
 
 public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBuilder<T> {
-
     private final FileConfiguration config;
     @SuppressWarnings("rawtypes")
     private final Map<Class<? extends T>, MarkerBuilder> markerBuilders;
     private final boolean displayed;
+    private final Icon defaultIcon;
 
-    //TODO: remove String constructor
-    public EntityMarkerBuilder(FileConfiguration config, String displayedConfigKey) {
+    public EntityMarkerBuilder(FileConfiguration config, EntityMarkerVisibilityConfiguration visibilityConfiguration, Icon defaultIcon) {
         this.config = config;
         this.markerBuilders = new HashMap<>();
-        displayed = displayedConfigKey == null || config.getBoolean(displayedConfigKey, true);
+        displayed = visibilityConfiguration == null || config.getBoolean(visibilityConfiguration.getKey(), visibilityConfiguration.getDefaultValue());
+        this.defaultIcon = defaultIcon;
     }
 
-    public EntityMarkerBuilder(FileConfiguration config, MarkerTypeVisibilityConfig markerTypeVisibilityConfig) {
-        this.config = config;
-        this.markerBuilders = new HashMap<>();
-        displayed = markerTypeVisibilityConfig == null || config.getBoolean(markerTypeVisibilityConfig.getKey(), markerTypeVisibilityConfig.getDefaultValue());
+    public EntityMarkerBuilder(FileConfiguration config, EntityMarkerVisibilityConfiguration visibilityConfiguration) {
+        this(config, visibilityConfiguration, CommonIcon.UNKNOWN);
+    }
+
+    public EntityMarkerBuilder(FileConfiguration config, Icon defaultIcon) {
+        this(config, null, defaultIcon);
     }
 
     public EntityMarkerBuilder(FileConfiguration config) {
-        //TODO remove non needed cast
-        this(config, (MarkerTypeVisibilityConfig) null);
+        this(config, (EntityMarkerVisibilityConfiguration) null);
     }
 
     @Override
@@ -48,7 +51,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
                 .filter(entry -> entry.getKey().isInstance(entity))
                 .map(Map.Entry::getValue)
                 .findFirst()
-                .map(markerBuilder -> (Optional<POIMarker>)markerBuilder.build(entity))
+                .map(markerBuilder -> (Optional<POIMarker>) markerBuilder.build(entity))
                 .orElseGet(() -> MarkerBuilder.super.build(entity))
                 .map(marker -> {
                     marker.addStyleClasses(List.of("bluemapmobs-marker"));
@@ -70,5 +73,10 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
 
     public FileConfiguration getConfig() {
         return this.config;
+    }
+
+    @Override
+    public Icon getDefaultIcon() {
+        return this.defaultIcon;
     }
 }

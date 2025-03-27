@@ -1,7 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.DyeColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -10,10 +11,10 @@ import org.bukkit.entity.Sheep;
 import java.util.List;
 import java.util.Optional;
 
-public class SheepMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Sheep> {
+public class SheepMarkerBuilder extends MobEntityMarkerBuilder<Sheep> {
 
     public SheepMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.sheep", Icon.SHEEP);
+        super(config, MobMarkerVisibilityConfiguration.SHEEP, MobIcon.SHEEP);
     }
 
     @Override

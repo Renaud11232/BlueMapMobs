@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.Icon;
+import be.renaud11232.bluemapmobs.icon.CommonIcon;
+import be.renaud11232.bluemapmobs.visibility.VehicleMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;
@@ -13,25 +15,23 @@ import java.util.function.Function;
 public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends VehicleEntityMarkerBuilder<T> {
     private final Function<T, K> keyGetter;
     private final Map<K, Icon> icons;
-    private final Icon defaultIcon;
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, String displayedConfigKey, Function<T, K> keyGetter, Icon defaultIcon) {
-        super(config, displayedConfigKey);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, VehicleMarkerVisibilityConfiguration visibilityConfiguration, Icon defaultIcon, Function<T, K> keyGetter) {
+        super(config, visibilityConfiguration, defaultIcon);
         this.keyGetter = keyGetter;
         this.icons = new HashMap<>();
-        this.defaultIcon = defaultIcon;
     }
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, String displayedConfigKey, Function<T, K> keyGetter) {
-        this(config, displayedConfigKey, keyGetter, Icon.UNKNOWN);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, VehicleMarkerVisibilityConfiguration visibilityConfiguration, Function<T, K> keyGetter) {
+        this(config, visibilityConfiguration, CommonIcon.UNKNOWN, keyGetter);
     }
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Function<T, K> keyGetter, Icon defaultIcon) {
-        this(config, null, keyGetter, defaultIcon);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Icon defaultIcon, Function<T, K> keyGetter) {
+        this(config, null, defaultIcon, keyGetter);
     }
 
     public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Function<T, K> keyGetter) {
-        this(config, null, keyGetter);
+        this(config, (VehicleMarkerVisibilityConfiguration) null, keyGetter);
     }
 
     protected void registerIcon(K key, Icon icon) {
@@ -41,7 +41,7 @@ public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends 
     @Override
     public Optional<POIMarker> buildDefault(T mob) {
         return super.buildDefault(mob).map(marker -> {
-            Icon icon = icons.getOrDefault(keyGetter.apply(mob), defaultIcon);
+            Icon icon = icons.getOrDefault(keyGetter.apply(mob), getDefaultIcon());
             marker.setIcon(icon.getPath(), icon.getAnchor());
             return marker;
         });

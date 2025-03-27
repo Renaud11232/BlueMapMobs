@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.ambient;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Bat;
 
-public class BatMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Bat> {
+public class BatMarkerBuilder extends MobEntityMarkerBuilder<Bat> {
     public BatMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.bat", Icon.BAT);
+        super(config, MobMarkerVisibilityConfiguration.BAT, MobIcon.BAT);
     }
 }

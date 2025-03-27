@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.watermob.squid;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.GlowSquid;
 
-public class GlowSquidMarkerBuilder extends SingleIconMobEntityMarkerBuilder<GlowSquid> {
+public class GlowSquidMarkerBuilder extends MobEntityMarkerBuilder<GlowSquid> {
     public GlowSquidMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.glow_squid", Icon.GLOW_SQUID);
+        super(config, MobMarkerVisibilityConfiguration.GLOW_SQUID, MobIcon.GLOW_SQUID);
     }
 }

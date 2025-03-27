@@ -1,5 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
+import be.renaud11232.bluemapmobs.Icon;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -8,8 +10,16 @@ import org.bukkit.entity.Mob;
 import java.util.Optional;
 
 public abstract class MobEntityMarkerBuilder<T extends Mob> extends EntityMarkerBuilder<T> {
-    public MobEntityMarkerBuilder(FileConfiguration config, String displayedConfigKey) {
-        super(config, displayedConfigKey);
+    public MobEntityMarkerBuilder(FileConfiguration config, MobMarkerVisibilityConfiguration visibilityConfiguration, Icon defaultIcon) {
+        super(config, visibilityConfiguration, defaultIcon);
+    }
+
+    public MobEntityMarkerBuilder(FileConfiguration config, MobMarkerVisibilityConfiguration visibilityConfiguration) {
+        super(config, visibilityConfiguration);
+    }
+
+    public MobEntityMarkerBuilder(FileConfiguration config, Icon defaultIcon) {
+        super(config, defaultIcon);
     }
 
     public MobEntityMarkerBuilder(FileConfiguration config) {

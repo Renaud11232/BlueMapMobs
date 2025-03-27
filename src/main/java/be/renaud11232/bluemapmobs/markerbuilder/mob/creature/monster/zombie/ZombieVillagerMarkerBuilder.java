@@ -1,20 +1,21 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie;
 
-import be.renaud11232.bluemapmobs.Icon;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.ZombieVillager;
 
 public class ZombieVillagerMarkerBuilder extends MappedIconMobEntityMarkerBuilder<ZombieVillager, Villager.Type> {
     public ZombieVillagerMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.zombie_villager", ZombieVillager::getVillagerType);
-        registerIcon(Villager.Type.SNOW, Icon.SNOWY_ZOMBIE_VILLAGER);
-        registerIcon(Villager.Type.SWAMP, Icon.SWAMP_ZOMBIE_VILLAGER);
-        registerIcon(Villager.Type.TAIGA, Icon.TAIGA_ZOMBIE_VILLAGER);
-        registerIcon(Villager.Type.DESERT, Icon.DESERT_ZOMBIE_VILLAGER);
-        registerIcon(Villager.Type.JUNGLE, Icon.JUNGLE_ZOMBIE_VILLAGER);
-        registerIcon(Villager.Type.PLAINS, Icon.PLAINS_ZOMBIE_VILLAGER);
-        registerIcon(Villager.Type.SAVANNA, Icon.SAVANNA_ZOMBIE_VILLAGER);
+        super(config, MobMarkerVisibilityConfiguration.ZOMBIE_VILLAGER, ZombieVillager::getVillagerType);
+        registerIcon(Villager.Type.SNOW, MobIcon.SNOWY_ZOMBIE_VILLAGER);
+        registerIcon(Villager.Type.SWAMP, MobIcon.SWAMP_ZOMBIE_VILLAGER);
+        registerIcon(Villager.Type.TAIGA, MobIcon.TAIGA_ZOMBIE_VILLAGER);
+        registerIcon(Villager.Type.DESERT, MobIcon.DESERT_ZOMBIE_VILLAGER);
+        registerIcon(Villager.Type.JUNGLE, MobIcon.JUNGLE_ZOMBIE_VILLAGER);
+        registerIcon(Villager.Type.PLAINS, MobIcon.PLAINS_ZOMBIE_VILLAGER);
+        registerIcon(Villager.Type.SAVANNA, MobIcon.SAVANNA_ZOMBIE_VILLAGER);
     }
 }
