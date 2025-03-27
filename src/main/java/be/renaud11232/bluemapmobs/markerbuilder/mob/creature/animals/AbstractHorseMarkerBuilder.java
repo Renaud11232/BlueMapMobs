@@ -6,12 +6,12 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class AbstractHorseMarkerBuilder extends MobEntityMarkerBuilder<AbstractHorse> {
-    public AbstractHorseMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Camel.class, new CamelMarkerBuilder(config));
-        registerMarkerBuilder(ChestedHorse.class, new ChestedHorseMarkerBuilder(config));
-        registerMarkerBuilder(Horse.class, new HorseMarkerBuilder(config));
-        registerMarkerBuilder(SkeletonHorse.class, new SkeletonHorseMarkerBuilder(config));
-        registerMarkerBuilder(ZombieHorse.class, new ZombieHorseMarkerBuilder(config));
+    public AbstractHorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Camel.class, new CamelMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(ChestedHorse.class, new ChestedHorseMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Horse.class, new HorseMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(SkeletonHorse.class, new SkeletonHorseMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(ZombieHorse.class, new ZombieHorseMarkerBuilder(config, defaultConfig));
     }
 }

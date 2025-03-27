@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Bat;
 
 public class BatMarkerBuilder extends MobEntityMarkerBuilder<Bat> {
-    public BatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BAT, BlueMapMobsIcon.Mob.BAT);
+    public BatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BAT, BlueMapMobsIcon.Mob.BAT);
     }
 }

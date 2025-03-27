@@ -8,7 +8,7 @@ import org.bukkit.entity.Breeze;
 
 public class BreezeMarkerBuilder extends MobEntityMarkerBuilder<Breeze> {
 
-    public BreezeMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BREEZE, BlueMapMobsIcon.Mob.BREEZE);
+    public BreezeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BREEZE, BlueMapMobsIcon.Mob.BREEZE);
     }
 }

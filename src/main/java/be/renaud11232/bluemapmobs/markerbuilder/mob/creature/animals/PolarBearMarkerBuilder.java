@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.PolarBear;
 
 public class PolarBearMarkerBuilder extends MobEntityMarkerBuilder<PolarBear> {
-    public PolarBearMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.POLAR_BEAR, BlueMapMobsIcon.Mob.POLAR_BEAR);
+    public PolarBearMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.POLAR_BEAR, BlueMapMobsIcon.Mob.POLAR_BEAR);
     }
 }

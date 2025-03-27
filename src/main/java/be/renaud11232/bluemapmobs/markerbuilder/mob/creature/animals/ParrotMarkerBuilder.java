@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Parrot;
 
 public class ParrotMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Parrot, Parrot.Variant> {
-    public ParrotMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PARROT, Parrot::getVariant);
+    public ParrotMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PARROT, Parrot::getVariant);
         registerIcon(Parrot.Variant.RED, BlueMapMobsIcon.Mob.RED_PARROT);
         registerIcon(Parrot.Variant.BLUE, BlueMapMobsIcon.Mob.BLUE_PARROT);
         registerIcon(Parrot.Variant.GREEN, BlueMapMobsIcon.Mob.GREEN_PARROT);

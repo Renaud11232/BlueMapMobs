@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.ExplosiveMinecart;
 
 public class ExplosiveMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<ExplosiveMinecart> {
-    public ExplosiveMinecartMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.EXPLOSIVE_MINECART, BlueMapMobsIcon.Vehicle.TNT_MINECART);
+    public ExplosiveMinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.EXPLOSIVE_MINECART, BlueMapMobsIcon.Vehicle.TNT_MINECART);
     }
 }

@@ -6,13 +6,13 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class CreatureMarkerBuilder extends MobEntityMarkerBuilder<Creature> {
-    public CreatureMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Animals.class, new AnimalsMarkerBuilder(config));
-        registerMarkerBuilder(Allay.class, new AllayMarkerBuilder(config));
-        registerMarkerBuilder(Golem.class, new GolemMarkerBuilder(config));
-        registerMarkerBuilder(Monster.class, new MonsterMarkerBuilder(config));
-        registerMarkerBuilder(NPC.class, new NPCMarkerBuilder(config));
-        registerMarkerBuilder(WaterMob.class, new WaterMobMarkerBuilder(config));
+    public CreatureMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Animals.class, new AnimalsMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Allay.class, new AllayMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Golem.class, new GolemMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Monster.class, new MonsterMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(NPC.class, new NPCMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(WaterMob.class, new WaterMobMarkerBuilder(config, defaultConfig));
     }
 }

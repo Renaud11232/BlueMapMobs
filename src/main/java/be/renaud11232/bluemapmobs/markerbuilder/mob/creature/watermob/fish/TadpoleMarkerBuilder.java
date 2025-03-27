@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Tadpole;
 
 public class TadpoleMarkerBuilder extends MobEntityMarkerBuilder<Tadpole> {
-    public TadpoleMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TADPOLE, BlueMapMobsIcon.Mob.TADPOLE);
+    public TadpoleMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TADPOLE, BlueMapMobsIcon.Mob.TADPOLE);
     }
 }

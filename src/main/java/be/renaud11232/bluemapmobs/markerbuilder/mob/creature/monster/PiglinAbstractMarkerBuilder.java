@@ -9,9 +9,9 @@ import org.bukkit.entity.PiglinAbstract;
 import org.bukkit.entity.PiglinBrute;
 
 public class PiglinAbstractMarkerBuilder extends MobEntityMarkerBuilder<PiglinAbstract> {
-    public PiglinAbstractMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Piglin.class, new PiglinMarkerBuilder(config));
-        registerMarkerBuilder(PiglinBrute.class, new PiglinBruteMarkerBuilder(config));
+    public PiglinAbstractMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Piglin.class, new PiglinMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(PiglinBrute.class, new PiglinBruteMarkerBuilder(config, defaultConfig));
     }
 }

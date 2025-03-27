@@ -10,18 +10,18 @@ import org.bukkit.entity.boat.*;
 
 public class BoatMarkerBuilder extends VehicleEntityMarkerBuilder<Boat> {
 
-    public BoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.BOAT);
-        registerMarkerBuilder(AcaciaBoat.class, new AcaciaBoatMarkerBuilder(config));
-        registerMarkerBuilder(BambooRaft.class, new BambooRaftMarkerBuilder(config));
-        registerMarkerBuilder(BirchBoat.class, new BirchBoatMarkerBuilder(config));
-        registerMarkerBuilder(CherryBoat.class, new CherryBoatMarkerBuilder(config));
-        registerMarkerBuilder(DarkOakBoat.class, new DarkOakBoatMarkerBuilder(config));
-        registerMarkerBuilder(JungleBoat.class, new JungleBoatMarkerBuilder(config));
-        registerMarkerBuilder(MangroveBoat.class, new MangroveBoatMarkerBuilder(config));
-        registerMarkerBuilder(OakBoat.class, new OakBoatMarkerBuilder(config));
-        registerMarkerBuilder(PaleOakBoat.class, new PaleOakBoatMarkerBuilder(config));
-        registerMarkerBuilder(SpruceBoat.class, new SpruceBoatMarkerBuilder(config));
-        registerMarkerBuilder(ChestBoat.class, new ChestBoatMarkerBuilder(config));
+    public BoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.BOAT);
+        registerMarkerBuilder(AcaciaBoat.class, new AcaciaBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(BambooRaft.class, new BambooRaftMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(BirchBoat.class, new BirchBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(CherryBoat.class, new CherryBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(DarkOakBoat.class, new DarkOakBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(JungleBoat.class, new JungleBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(MangroveBoat.class, new MangroveBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(OakBoat.class, new OakBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(PaleOakBoat.class, new PaleOakBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(SpruceBoat.class, new SpruceBoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(ChestBoat.class, new ChestBoatMarkerBuilder(config, defaultConfig));
     }
 }

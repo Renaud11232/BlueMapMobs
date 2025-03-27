@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.DarkOakBoat;
 
 public class DarkOakBoatMarkerBuilder extends VehicleEntityMarkerBuilder<DarkOakBoat> {
-    public DarkOakBoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsIcon.Vehicle.DARK_OAK_BOAT);
+    public DarkOakBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsIcon.Vehicle.DARK_OAK_BOAT);
     }
 }

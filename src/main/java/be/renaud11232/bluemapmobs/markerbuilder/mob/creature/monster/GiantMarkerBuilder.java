@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Giant;
 
 public class GiantMarkerBuilder extends MobEntityMarkerBuilder<Giant> {
-    public GiantMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GIANT, BlueMapMobsIcon.Mob.GIANT);
+    public GiantMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GIANT, BlueMapMobsIcon.Mob.GIANT);
     }
 }

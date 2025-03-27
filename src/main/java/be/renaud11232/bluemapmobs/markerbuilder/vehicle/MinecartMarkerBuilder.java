@@ -8,14 +8,14 @@ import org.bukkit.entity.minecart.*;
 
 public class MinecartMarkerBuilder extends VehicleEntityMarkerBuilder<Minecart> {
 
-    public MinecartMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(CommandMinecart.class, new CommandMinecartMarkerBuilder(config));
-        registerMarkerBuilder(ExplosiveMinecart.class, new ExplosiveMinecartMarkerBuilder(config));
-        registerMarkerBuilder(HopperMinecart.class, new HopperMinecartMarkerBuilder(config));
-        registerMarkerBuilder(PoweredMinecart.class, new PoweredMinecartMarkerBuilder(config));
-        registerMarkerBuilder(RideableMinecart.class, new RideableMinecartMarkerBuilder(config));
-        registerMarkerBuilder(SpawnerMinecart.class, new SpawnerMinecartMarkerBuilder(config));
-        registerMarkerBuilder(StorageMinecart.class, new StorageMinecartMarkerBuilder(config));
+    public MinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(CommandMinecart.class, new CommandMinecartMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(ExplosiveMinecart.class, new ExplosiveMinecartMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(HopperMinecart.class, new HopperMinecartMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(PoweredMinecart.class, new PoweredMinecartMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(RideableMinecart.class, new RideableMinecartMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(SpawnerMinecart.class, new SpawnerMinecartMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(StorageMinecart.class, new StorageMinecartMarkerBuilder(config, defaultConfig));
     }
 }

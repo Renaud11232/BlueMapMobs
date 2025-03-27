@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Blaze;
 
 public class BlazeMarkerBuilder extends MobEntityMarkerBuilder<Blaze> {
-    public BlazeMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BLAZE, BlueMapMobsIcon.Mob.BLAZE);
+    public BlazeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BLAZE, BlueMapMobsIcon.Mob.BLAZE);
     }
 }

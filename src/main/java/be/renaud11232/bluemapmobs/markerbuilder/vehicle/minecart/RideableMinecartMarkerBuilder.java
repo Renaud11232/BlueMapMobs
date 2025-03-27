@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.RideableMinecart;
 
 public class RideableMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<RideableMinecart> {
-    public RideableMinecartMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.RIDEABLE_MINECART, BlueMapMobsIcon.Vehicle.MINECART);
+    public RideableMinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.RIDEABLE_MINECART, BlueMapMobsIcon.Vehicle.MINECART);
     }
 }

@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Ghast;
 
 public class GhastMarkerBuilder extends MobEntityMarkerBuilder<Ghast> {
-    public GhastMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GHAST, BlueMapMobsIcon.Mob.GHAST);
+    public GhastMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GHAST, BlueMapMobsIcon.Mob.GHAST);
     }
 }

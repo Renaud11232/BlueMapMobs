@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Husk;
 
 public class HuskMarkerBuilder extends MobEntityMarkerBuilder<Husk> {
-    public HuskMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.HUSK, BlueMapMobsIcon.Mob.HUSK);
+    public HuskMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.HUSK, BlueMapMobsIcon.Mob.HUSK);
     }
 }

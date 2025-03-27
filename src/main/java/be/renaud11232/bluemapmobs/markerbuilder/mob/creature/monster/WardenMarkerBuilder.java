@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Warden;
 
 public class WardenMarkerBuilder extends MobEntityMarkerBuilder<Warden> {
-    public WardenMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WARDEN, BlueMapMobsIcon.Mob.WARDEN);
+    public WardenMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WARDEN, BlueMapMobsIcon.Mob.WARDEN);
     }
 }

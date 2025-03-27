@@ -9,9 +9,9 @@ import org.bukkit.entity.Ghast;
 import org.bukkit.entity.Phantom;
 
 public class FlyingMarkerBuilder extends MobEntityMarkerBuilder<Flying> {
-    public FlyingMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Ghast.class, new GhastMarkerBuilder(config));
-        registerMarkerBuilder(Phantom.class, new PhantomMarkerBuilder(config));
+    public FlyingMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Ghast.class, new GhastMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Phantom.class, new PhantomMarkerBuilder(config, defaultConfig));
     }
 }

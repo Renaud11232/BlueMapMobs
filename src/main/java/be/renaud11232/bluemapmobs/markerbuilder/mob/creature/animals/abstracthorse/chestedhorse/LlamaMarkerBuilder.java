@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Optional;
 
 public class LlamaMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Llama, Material> {
-    public LlamaMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.LLAMA, BlueMapMobsIcon.Mob.LLAMA_EMPTY_DECOR, LlamaMarkerBuilder::getCarpet);
-        registerMarkerBuilder(TraderLlama.class, new TraderLlamaMarkerBuilder(config));
+    public LlamaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.LLAMA, BlueMapMobsIcon.Mob.LLAMA_EMPTY_DECOR, LlamaMarkerBuilder::getCarpet);
+        registerMarkerBuilder(TraderLlama.class, new TraderLlamaMarkerBuilder(config, defaultConfig));
         registerIcon(Material.WHITE_CARPET, BlueMapMobsIcon.Mob.WHITE_LLAMA_DECOR);
         registerIcon(Material.LIGHT_GRAY_CARPET, BlueMapMobsIcon.Mob.LIGHTGRAY_LLAMA_DECOR);
         registerIcon(Material.GRAY_CARPET, BlueMapMobsIcon.Mob.GRAY_LLAMA_DECOR);

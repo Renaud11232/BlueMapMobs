@@ -6,12 +6,12 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class FishMarkerBuilder extends MobEntityMarkerBuilder<Fish> {
-    public FishMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Cod.class, new CodMarkerBuilder(config));
-        registerMarkerBuilder(PufferFish.class, new PufferFishMarkerBuilder(config));
-        registerMarkerBuilder(Salmon.class, new SalmonMarkerBuilder(config));
-        registerMarkerBuilder(Tadpole.class, new TadpoleMarkerBuilder(config));
-        registerMarkerBuilder(TropicalFish.class, new TropicalFishMarkerBuilder(config));
+    public FishMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Cod.class, new CodMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(PufferFish.class, new PufferFishMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Salmon.class, new SalmonMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Tadpole.class, new TadpoleMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(TropicalFish.class, new TropicalFishMarkerBuilder(config, defaultConfig));
     }
 }

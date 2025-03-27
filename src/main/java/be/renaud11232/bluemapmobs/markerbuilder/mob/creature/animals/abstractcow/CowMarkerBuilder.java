@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Cow;
 
 public class CowMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Cow, Cow.Variant> {
-    public CowMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.COW, Cow::getVariant);
+    public CowMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.COW, Cow::getVariant);
         registerIcon(Cow.Variant.TEMPERATE, BlueMapMobsIcon.Mob.TEMPERATE_COW);
         registerIcon(Cow.Variant.COLD, BlueMapMobsIcon.Mob.COLD_COW);
         registerIcon(Cow.Variant.WARM, BlueMapMobsIcon.Mob.WARM_COW);

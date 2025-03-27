@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Enderman;
 
 public class EndermanMarkerBuilder extends MobEntityMarkerBuilder<Enderman> {
-    public EndermanMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ENDERMAN, BlueMapMobsIcon.Mob.ENDERMAN);
+    public EndermanMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ENDERMAN, BlueMapMobsIcon.Mob.ENDERMAN);
     }
 }

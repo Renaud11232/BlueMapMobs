@@ -11,10 +11,10 @@ import org.bukkit.entity.Shulker;
 import org.bukkit.entity.Snowman;
 
 public class GolemMarkerBuilder extends MobEntityMarkerBuilder<Golem> {
-    public GolemMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(IronGolem.class, new IronGolemMarkerBuilder(config));
-        registerMarkerBuilder(Shulker.class, new ShulkerMarkerBuilder(config));
-        registerMarkerBuilder(Snowman.class, new SnowmanMarkerBuilder(config));
+    public GolemMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(IronGolem.class, new IronGolemMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Shulker.class, new ShulkerMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Snowman.class, new SnowmanMarkerBuilder(config, defaultConfig));
     }
 }

@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.CaveSpider;
 
 public class CaveSpiderMarkerBuilder extends MobEntityMarkerBuilder<CaveSpider> {
-    public CaveSpiderMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CAVE_SPIDER, BlueMapMobsIcon.Mob.CAVE_SPIDER);
+    public CaveSpiderMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CAVE_SPIDER, BlueMapMobsIcon.Mob.CAVE_SPIDER);
     }
 }

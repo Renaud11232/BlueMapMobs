@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.WitherSkeleton;
 
 public class WitherSkeletonMarkerBuilder extends MobEntityMarkerBuilder<WitherSkeleton> {
-    public WitherSkeletonMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WITHER_SKELETON, BlueMapMobsIcon.Mob.WITHER_SKELETON);
+    public WitherSkeletonMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WITHER_SKELETON, BlueMapMobsIcon.Mob.WITHER_SKELETON);
     }
 }

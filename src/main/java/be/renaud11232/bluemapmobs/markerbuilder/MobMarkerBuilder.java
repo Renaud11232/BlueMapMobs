@@ -6,12 +6,12 @@ import org.bukkit.entity.*;
 
 public class MobMarkerBuilder extends MobEntityMarkerBuilder<Mob> {
 
-    public MobMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Ambient.class, new AmbientMarkerBuilder(config));
-        registerMarkerBuilder(Creature.class, new CreatureMarkerBuilder(config));
-        registerMarkerBuilder(EnderDragon.class, new EnderDragonMarkerBuilder(config));
-        registerMarkerBuilder(Flying.class, new FlyingMarkerBuilder(config));
-        registerMarkerBuilder(Slime.class, new SlimeMarkerBuilder(config));
+    public MobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Ambient.class, new AmbientMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Creature.class, new CreatureMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(EnderDragon.class, new EnderDragonMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Flying.class, new FlyingMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Slime.class, new SlimeMarkerBuilder(config, defaultConfig));
     }
 }

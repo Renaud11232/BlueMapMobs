@@ -8,10 +8,10 @@ import org.bukkit.entity.*;
 
 public class VehicleMarkerBuilder extends VehicleEntityMarkerBuilder<Vehicle> {
 
-    public VehicleMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Boat.class, new BoatMarkerBuilder(config));
-        registerMarkerBuilder(Minecart.class, new MinecartMarkerBuilder(config));
+    public VehicleMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Boat.class, new BoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Minecart.class, new MinecartMarkerBuilder(config, defaultConfig));
     }
 
 }

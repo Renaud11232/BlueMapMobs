@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Creaking;
 
 public class CreakingMarkerBuilder extends MobEntityMarkerBuilder<Creaking> {
-    public CreakingMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CREAKING, BlueMapMobsIcon.Mob.CREAKING);
+    public CreakingMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CREAKING, BlueMapMobsIcon.Mob.CREAKING);
     }
 }

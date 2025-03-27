@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Evoker;
 
 public class EvokerMarkerBuilder extends MobEntityMarkerBuilder<Evoker> {
-    public EvokerMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.EVOKER, BlueMapMobsIcon.Mob.EVOKER);
+    public EvokerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.EVOKER, BlueMapMobsIcon.Mob.EVOKER);
     }
 }

@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Axolotl;
 
 public class AxolotlMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Axolotl, Axolotl.Variant> {
-    public AxolotlMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.AXOLOTL, Axolotl::getVariant);
+    public AxolotlMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.AXOLOTL, Axolotl::getVariant);
         registerIcon(Axolotl.Variant.LUCY, BlueMapMobsIcon.Mob.LUCY_AXOLOTL);
         registerIcon(Axolotl.Variant.WILD, BlueMapMobsIcon.Mob.WILD_AXOLOTL);
         registerIcon(Axolotl.Variant.GOLD, BlueMapMobsIcon.Mob.GOLD_AXOLOTL);

@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class TraderLlamaMarkerBuilder extends MobEntityMarkerBuilder<TraderLlama> {
-    public TraderLlamaMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TRADER_LLAMA, BlueMapMobsIcon.Mob.TRADER_LLAMA_DECOR);
+    public TraderLlamaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TRADER_LLAMA, BlueMapMobsIcon.Mob.TRADER_LLAMA_DECOR);
     }
 
     @Override

@@ -16,22 +16,22 @@ public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends 
     private final Function<T, K> keyGetter;
     private final Map<K, Icon> icons;
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Icon defaultIcon, Function<T, K> keyGetter) {
-        super(config, visibilityConfiguration, defaultIcon);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, BooleanConfiguration visibilityConfiguration, Icon defaultIcon, Function<T, K> keyGetter) {
+        super(config, defaultConfig, visibilityConfiguration, defaultIcon);
         this.keyGetter = keyGetter;
         this.icons = new HashMap<>();
     }
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Function<T, K> keyGetter) {
-        this(config, visibilityConfiguration, BlueMapMobsIcon.Common.UNKNOWN, keyGetter);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, BooleanConfiguration visibilityConfiguration, Function<T, K> keyGetter) {
+        this(config, defaultConfig, visibilityConfiguration, BlueMapMobsIcon.Common.UNKNOWN, keyGetter);
     }
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Icon defaultIcon, Function<T, K> keyGetter) {
-        this(config, null, defaultIcon, keyGetter);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, Icon defaultIcon, Function<T, K> keyGetter) {
+        this(config, defaultConfig, null, defaultIcon, keyGetter);
     }
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Function<T, K> keyGetter) {
-        this(config, (BooleanConfiguration) null, keyGetter);
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, Function<T, K> keyGetter) {
+        this(config, defaultConfig, (BooleanConfiguration) null, keyGetter);
     }
 
     protected void registerIcon(K key, Icon icon) {

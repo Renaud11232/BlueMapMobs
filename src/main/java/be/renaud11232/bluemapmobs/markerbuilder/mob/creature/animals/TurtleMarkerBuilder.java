@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Turtle;
 
 public class TurtleMarkerBuilder extends MobEntityMarkerBuilder<Turtle> {
-    public TurtleMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TURTLE, BlueMapMobsIcon.Mob.TURTLE);
+    public TurtleMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TURTLE, BlueMapMobsIcon.Mob.TURTLE);
     }
 }

@@ -8,8 +8,8 @@ import org.bukkit.entity.Villager;
 import org.bukkit.entity.ZombieVillager;
 
 public class ZombieVillagerMarkerBuilder extends MappedIconMobEntityMarkerBuilder<ZombieVillager, Villager.Type> {
-    public ZombieVillagerMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOMBIE_VILLAGER, ZombieVillager::getVillagerType);
+    public ZombieVillagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOMBIE_VILLAGER, ZombieVillager::getVillagerType);
         registerIcon(Villager.Type.SNOW, BlueMapMobsIcon.Mob.SNOWY_ZOMBIE_VILLAGER);
         registerIcon(Villager.Type.SWAMP, BlueMapMobsIcon.Mob.SWAMP_ZOMBIE_VILLAGER);
         registerIcon(Villager.Type.TAIGA, BlueMapMobsIcon.Mob.TAIGA_ZOMBIE_VILLAGER);

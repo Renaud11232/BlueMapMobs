@@ -9,9 +9,9 @@ import org.bukkit.entity.Illusioner;
 import org.bukkit.entity.Spellcaster;
 
 public class SpellcasterMarkerBuilder extends MobEntityMarkerBuilder<Spellcaster> {
-    public SpellcasterMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Evoker.class, new EvokerMarkerBuilder(config));
-        registerMarkerBuilder(Illusioner.class, new IllusionerMarkerBuilder(config));
+    public SpellcasterMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Evoker.class, new EvokerMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Illusioner.class, new IllusionerMarkerBuilder(config, defaultConfig));
     }
 }

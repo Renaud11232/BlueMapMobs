@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Silverfish;
 
 public class SilverfishMarkerBuilder extends MobEntityMarkerBuilder<Silverfish> {
-    public SilverfishMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SILVERFISH, BlueMapMobsIcon.Mob.SILVERFISH);
+    public SilverfishMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SILVERFISH, BlueMapMobsIcon.Mob.SILVERFISH);
     }
 }

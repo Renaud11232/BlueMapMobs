@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Drowned;
 
 public class DrownedMarkerBuilder extends MobEntityMarkerBuilder<Drowned> {
-    public DrownedMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.DROWNED, BlueMapMobsIcon.Mob.DROWNED);
+    public DrownedMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.DROWNED, BlueMapMobsIcon.Mob.DROWNED);
     }
 }

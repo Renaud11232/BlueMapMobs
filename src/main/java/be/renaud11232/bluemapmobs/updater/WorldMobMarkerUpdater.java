@@ -12,7 +12,7 @@ import java.util.Collection;
 public class WorldMobMarkerUpdater extends WorldEntityMarkerUpdater<Mob> {
 
     public WorldMobMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
-        super(plugin, api, new MobMarkerSetBuilder(plugin.getConfig()), new MobMarkerBuilder(plugin.getConfig()));
+        super(plugin, api, new MobMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new MobMarkerBuilder(plugin.getConfig(), plugin.getDefaultConfig()));
     }
 
     @Override

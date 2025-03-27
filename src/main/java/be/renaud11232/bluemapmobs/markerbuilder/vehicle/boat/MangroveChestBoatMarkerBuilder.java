@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.MangroveChestBoat;
 
 public class MangroveChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<MangroveChestBoat> {
-    public MangroveChestBoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsIcon.Vehicle.MANGROVE_CHEST_BOAT);
+    public MangroveChestBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsIcon.Vehicle.MANGROVE_CHEST_BOAT);
     }
 }

@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Goat;
 
 public class GoatMarkerBuilder extends MobEntityMarkerBuilder<Goat> {
-    public GoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GOAT, BlueMapMobsIcon.Mob.GOAT);
+    public GoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GOAT, BlueMapMobsIcon.Mob.GOAT);
     }
 }

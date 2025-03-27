@@ -4,7 +4,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 public interface StringConfiguration extends Configuration<String> {
     @Override
-    default String get(FileConfiguration config) {
-        return config.getString(getKey(), getDefaultValue());
+    default String get(FileConfiguration config, FileConfiguration defaultConfig) {
+        return config.getString(getKey(), defaultConfig.getString(getKey(), null));
     }
 }

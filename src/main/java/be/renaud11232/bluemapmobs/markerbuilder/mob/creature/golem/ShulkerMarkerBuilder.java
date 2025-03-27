@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Shulker;
 
 public class ShulkerMarkerBuilder extends MobEntityMarkerBuilder<Shulker> {
-    public ShulkerMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SHULKER, BlueMapMobsIcon.Mob.SHULKER);
+    public ShulkerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SHULKER, BlueMapMobsIcon.Mob.SHULKER);
     }
 }

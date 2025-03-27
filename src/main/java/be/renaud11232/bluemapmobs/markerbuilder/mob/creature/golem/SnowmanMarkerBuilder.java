@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Snowman;
 
 public class SnowmanMarkerBuilder extends MobEntityMarkerBuilder<Snowman> {
-    public SnowmanMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SNOWMAN, BlueMapMobsIcon.Mob.SNOWMAN);
+    public SnowmanMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SNOWMAN, BlueMapMobsIcon.Mob.SNOWMAN);
     }
 }

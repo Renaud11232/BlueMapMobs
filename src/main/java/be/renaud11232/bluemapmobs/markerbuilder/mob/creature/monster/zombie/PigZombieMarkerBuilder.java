@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.PigZombie;
 
 public class PigZombieMarkerBuilder extends MobEntityMarkerBuilder<PigZombie> {
-    public PigZombieMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIG_ZOMBIE, BlueMapMobsIcon.Mob.PIG_ZOMBIE);
+    public PigZombieMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIG_ZOMBIE, BlueMapMobsIcon.Mob.PIG_ZOMBIE);
     }
 }

@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vindicator;
 
 public class VindicatorMarkerBuilder extends MobEntityMarkerBuilder<Vindicator> {
-    public VindicatorMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VINDICATOR, BlueMapMobsIcon.Mob.VINDICATOR);
+    public VindicatorMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VINDICATOR, BlueMapMobsIcon.Mob.VINDICATOR);
     }
 }

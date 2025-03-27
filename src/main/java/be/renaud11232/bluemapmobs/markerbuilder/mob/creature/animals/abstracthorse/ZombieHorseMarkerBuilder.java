@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.ZombieHorse;
 
 public class ZombieHorseMarkerBuilder extends MobEntityMarkerBuilder<ZombieHorse> {
-    public ZombieHorseMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOMBIE_HORSE, BlueMapMobsIcon.Mob.ZOMBIE_HORSE);
+    public ZombieHorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOMBIE_HORSE, BlueMapMobsIcon.Mob.ZOMBIE_HORSE);
     }
 }

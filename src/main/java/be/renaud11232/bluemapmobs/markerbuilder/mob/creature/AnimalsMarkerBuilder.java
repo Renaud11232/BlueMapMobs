@@ -6,29 +6,29 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class AnimalsMarkerBuilder extends MobEntityMarkerBuilder<Animals> {
-    public AnimalsMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(AbstractCow.class, new AbstractCowMarkerBuilder(config));
-        registerMarkerBuilder(AbstractHorse.class, new AbstractHorseMarkerBuilder(config));
-        registerMarkerBuilder(Armadillo.class, new ArmadilloMarkerBuilder(config));
-        registerMarkerBuilder(Axolotl.class, new AxolotlMarkerBuilder(config));
-        registerMarkerBuilder(Bee.class, new BeeMarkerBuilder(config));
-        registerMarkerBuilder(Cat.class, new CatMarkerBuilder(config));
-        registerMarkerBuilder(Chicken.class, new ChickenMarkerBuilder(config));
-        registerMarkerBuilder(Fox.class, new FoxMarkerBuilder(config));
-        registerMarkerBuilder(Frog.class, new FrogMarkerBuilder(config));
-        registerMarkerBuilder(Goat.class, new GoatMarkerBuilder(config));
-        registerMarkerBuilder(Hoglin.class, new HoglinMarkerBuilder(config));
-        registerMarkerBuilder(Ocelot.class, new OcelotMarkerBuilder(config));
-        registerMarkerBuilder(Panda.class, new PandaMarkerBuilder(config));
-        registerMarkerBuilder(Parrot.class, new ParrotMarkerBuilder(config));
-        registerMarkerBuilder(Pig.class, new PigMarkerBuilder(config));
-        registerMarkerBuilder(PolarBear.class, new PolarBearMarkerBuilder(config));
-        registerMarkerBuilder(Rabbit.class, new RabbitMarkerBuilder(config));
-        registerMarkerBuilder(Sheep.class, new SheepMarkerBuilder(config));
-        registerMarkerBuilder(Sniffer.class, new SnifferMarkerBuilder(config));
-        registerMarkerBuilder(Strider.class, new StriderMarkerBuilder(config));
-        registerMarkerBuilder(Turtle.class, new TurtleMarkerBuilder(config));
-        registerMarkerBuilder(Wolf.class, new WolfMarkerBuilder(config));
+    public AnimalsMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(AbstractCow.class, new AbstractCowMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(AbstractHorse.class, new AbstractHorseMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Armadillo.class, new ArmadilloMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Axolotl.class, new AxolotlMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Bee.class, new BeeMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Cat.class, new CatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Chicken.class, new ChickenMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Fox.class, new FoxMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Frog.class, new FrogMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Goat.class, new GoatMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Hoglin.class, new HoglinMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Ocelot.class, new OcelotMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Panda.class, new PandaMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Parrot.class, new ParrotMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Pig.class, new PigMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(PolarBear.class, new PolarBearMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Rabbit.class, new RabbitMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Sheep.class, new SheepMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Sniffer.class, new SnifferMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Strider.class, new StriderMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Turtle.class, new TurtleMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Wolf.class, new WolfMarkerBuilder(config, defaultConfig));
     }
 }

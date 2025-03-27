@@ -11,10 +11,10 @@ import org.bukkit.entity.Ravager;
 import org.bukkit.entity.Witch;
 
 public class RaiderMarkerBuilder extends MobEntityMarkerBuilder<Raider> {
-    public RaiderMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Illager.class, new IllagerMarkerBuilder(config));
-        registerMarkerBuilder(Ravager.class, new RavagerMarkerBuilder(config));
-        registerMarkerBuilder(Witch.class, new WitchMarkerBuilder(config));
+    public RaiderMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Illager.class, new IllagerMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Ravager.class, new RavagerMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Witch.class, new WitchMarkerBuilder(config, defaultConfig));
     }
 }

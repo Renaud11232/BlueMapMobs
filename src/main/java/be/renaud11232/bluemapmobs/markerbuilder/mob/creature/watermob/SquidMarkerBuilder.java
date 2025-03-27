@@ -9,8 +9,8 @@ import org.bukkit.entity.GlowSquid;
 import org.bukkit.entity.Squid;
 
 public class SquidMarkerBuilder extends MobEntityMarkerBuilder<Squid> {
-    public SquidMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SQUID, BlueMapMobsIcon.Mob.SQUID);
-        registerMarkerBuilder(GlowSquid.class, new GlowSquidMarkerBuilder(config));
+    public SquidMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SQUID, BlueMapMobsIcon.Mob.SQUID);
+        registerMarkerBuilder(GlowSquid.class, new GlowSquidMarkerBuilder(config, defaultConfig));
     }
 }

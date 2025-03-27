@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Phantom;
 
 public class PhantomMarkerBuilder extends MobEntityMarkerBuilder<Phantom> {
-    public PhantomMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PHANTOM, BlueMapMobsIcon.Mob.PHANTOM);
+    public PhantomMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PHANTOM, BlueMapMobsIcon.Mob.PHANTOM);
     }
 }

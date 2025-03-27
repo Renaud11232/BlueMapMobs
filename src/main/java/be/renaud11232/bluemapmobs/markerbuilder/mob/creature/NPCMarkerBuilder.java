@@ -7,8 +7,8 @@ import org.bukkit.entity.AbstractVillager;
 import org.bukkit.entity.NPC;
 
 public class NPCMarkerBuilder extends MobEntityMarkerBuilder<NPC> {
-    public NPCMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(AbstractVillager.class, new AbstractVillagerMarkerBuilder(config));
+    public NPCMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(AbstractVillager.class, new AbstractVillagerMarkerBuilder(config, defaultConfig));
     }
 }

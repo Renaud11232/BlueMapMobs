@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vex;
 
 public class VexMarkerBuilder extends MobEntityMarkerBuilder<Vex> {
-    public VexMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VEX, BlueMapMobsIcon.Mob.VEX);
+    public VexMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VEX, BlueMapMobsIcon.Mob.VEX);
     }
 }
