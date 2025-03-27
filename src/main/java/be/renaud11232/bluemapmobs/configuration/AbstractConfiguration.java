@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapmobs.configuration;
 
-public abstract class AbstractConfiguration<T> implements TypedConfiguration<T> {
+public abstract class AbstractConfiguration<T> implements Configuration<T> {
     private final String key;
     private final T defaultValue;
 

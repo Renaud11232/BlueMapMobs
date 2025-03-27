@@ -1,9 +1,9 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.icon.CommonIcon;
+import be.renaud11232.bluemapmobs.icon.Icon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -29,7 +29,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     }
 
     public EntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration) {
-        this(config, visibilityConfiguration, CommonIcon.UNKNOWN);
+        this(config, visibilityConfiguration, BlueMapMobsIcon.Common.UNKNOWN);
     }
 
     public EntityMarkerBuilder(FileConfiguration config, Icon defaultIcon) {
@@ -44,7 +44,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     @SuppressWarnings("unchecked")
     public final Optional<POIMarker> build(T entity) {
         Block block = entity.getLocation().getBlock();
-        if(block.getLightFromBlocks() < Configuration.General.MINIMUM_BLOCK_LIGHT.get(config) && block.getLightFromSky() < Configuration.General.MINIMUM_SKY_LIGHT.get(config)) {
+        if(block.getLightFromBlocks() < BlueMapMobsConfiguration.General.MINIMUM_BLOCK_LIGHT.get(config) && block.getLightFromSky() < BlueMapMobsConfiguration.General.MINIMUM_SKY_LIGHT.get(config)) {
             return Optional.empty();
         }
         return markerBuilders.entrySet()

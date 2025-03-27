@@ -1,9 +1,9 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse;
 
-import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse.llama.TraderLlamaMarkerBuilder;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -16,24 +16,24 @@ import java.util.Optional;
 
 public class LlamaMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Llama, Material> {
     public LlamaMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Mobs.Markers.Types.LLAMA, MobIcon.LLAMA_EMPTY_DECOR, LlamaMarkerBuilder::getCarpet);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.LLAMA, BlueMapMobsIcon.Mob.LLAMA_EMPTY_DECOR, LlamaMarkerBuilder::getCarpet);
         registerMarkerBuilder(TraderLlama.class, new TraderLlamaMarkerBuilder(config));
-        registerIcon(Material.WHITE_CARPET, MobIcon.WHITE_LLAMA_DECOR);
-        registerIcon(Material.LIGHT_GRAY_CARPET, MobIcon.LIGHTGRAY_LLAMA_DECOR);
-        registerIcon(Material.GRAY_CARPET, MobIcon.GRAY_LLAMA_DECOR);
-        registerIcon(Material.BLACK_CARPET, MobIcon.BLACK_LLAMA_DECOR);
-        registerIcon(Material.BROWN_CARPET, MobIcon.BROWN_LLAMA_DECOR);
-        registerIcon(Material.RED_CARPET, MobIcon.RED_LLAMA_DECOR);
-        registerIcon(Material.ORANGE_CARPET, MobIcon.ORANGE_LLAMA_DECOR);
-        registerIcon(Material.YELLOW_CARPET, MobIcon.YELLOW_LLAMA_DECOR);
-        registerIcon(Material.LIME_CARPET, MobIcon.LIME_LLAMA_DECOR);
-        registerIcon(Material.GREEN_CARPET, MobIcon.GREEN_LLAMA_DECOR);
-        registerIcon(Material.CYAN_CARPET, MobIcon.CYAN_LLAMA_DECOR);
-        registerIcon(Material.LIGHT_BLUE_CARPET, MobIcon.LIGHTBLUE_LLAMA_DECOR);
-        registerIcon(Material.BLUE_CARPET, MobIcon.BLUE_LLAMA_DECOR);
-        registerIcon(Material.PURPLE_CARPET, MobIcon.PURPLE_LLAMA_DECOR);
-        registerIcon(Material.MAGENTA_CARPET, MobIcon.MAGENTA_LLAMA_DECOR);
-        registerIcon(Material.PINK_CARPET, MobIcon.PINK_LLAMA_DECOR);
+        registerIcon(Material.WHITE_CARPET, BlueMapMobsIcon.Mob.WHITE_LLAMA_DECOR);
+        registerIcon(Material.LIGHT_GRAY_CARPET, BlueMapMobsIcon.Mob.LIGHTGRAY_LLAMA_DECOR);
+        registerIcon(Material.GRAY_CARPET, BlueMapMobsIcon.Mob.GRAY_LLAMA_DECOR);
+        registerIcon(Material.BLACK_CARPET, BlueMapMobsIcon.Mob.BLACK_LLAMA_DECOR);
+        registerIcon(Material.BROWN_CARPET, BlueMapMobsIcon.Mob.BROWN_LLAMA_DECOR);
+        registerIcon(Material.RED_CARPET, BlueMapMobsIcon.Mob.RED_LLAMA_DECOR);
+        registerIcon(Material.ORANGE_CARPET, BlueMapMobsIcon.Mob.ORANGE_LLAMA_DECOR);
+        registerIcon(Material.YELLOW_CARPET, BlueMapMobsIcon.Mob.YELLOW_LLAMA_DECOR);
+        registerIcon(Material.LIME_CARPET, BlueMapMobsIcon.Mob.LIME_LLAMA_DECOR);
+        registerIcon(Material.GREEN_CARPET, BlueMapMobsIcon.Mob.GREEN_LLAMA_DECOR);
+        registerIcon(Material.CYAN_CARPET, BlueMapMobsIcon.Mob.CYAN_LLAMA_DECOR);
+        registerIcon(Material.LIGHT_BLUE_CARPET, BlueMapMobsIcon.Mob.LIGHTBLUE_LLAMA_DECOR);
+        registerIcon(Material.BLUE_CARPET, BlueMapMobsIcon.Mob.BLUE_LLAMA_DECOR);
+        registerIcon(Material.PURPLE_CARPET, BlueMapMobsIcon.Mob.PURPLE_LLAMA_DECOR);
+        registerIcon(Material.MAGENTA_CARPET, BlueMapMobsIcon.Mob.MAGENTA_LLAMA_DECOR);
+        registerIcon(Material.PINK_CARPET, BlueMapMobsIcon.Mob.PINK_LLAMA_DECOR);
     }
 
     @Override

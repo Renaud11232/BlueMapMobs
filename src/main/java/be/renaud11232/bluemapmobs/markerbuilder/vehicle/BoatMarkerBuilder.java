@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.vehicle;
 
 import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.vehicle.boat.*;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Boat;
 import org.bukkit.entity.ChestBoat;
@@ -11,7 +11,7 @@ import org.bukkit.entity.boat.*;
 public class BoatMarkerBuilder extends VehicleEntityMarkerBuilder<Boat> {
 
     public BoatMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Vehicles.Markers.Types.BOAT);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.BOAT);
         registerMarkerBuilder(AcaciaBoat.class, new AcaciaBoatMarkerBuilder(config));
         registerMarkerBuilder(BambooRaft.class, new BambooRaftMarkerBuilder(config));
         registerMarkerBuilder(BirchBoat.class, new BirchBoatMarkerBuilder(config));

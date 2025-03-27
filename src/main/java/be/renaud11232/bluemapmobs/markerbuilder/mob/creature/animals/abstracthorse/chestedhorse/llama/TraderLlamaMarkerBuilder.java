@@ -1,8 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse.llama;
 
-import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.TraderLlama;
@@ -12,7 +12,7 @@ import java.util.Optional;
 
 public class TraderLlamaMarkerBuilder extends MobEntityMarkerBuilder<TraderLlama> {
     public TraderLlamaMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Mobs.Markers.Types.TRADER_LLAMA, MobIcon.TRADER_LLAMA_DECOR);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TRADER_LLAMA, BlueMapMobsIcon.Mob.TRADER_LLAMA_DECOR);
     }
 
     @Override

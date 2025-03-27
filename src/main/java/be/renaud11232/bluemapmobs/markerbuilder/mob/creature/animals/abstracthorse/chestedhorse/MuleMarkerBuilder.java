@@ -1,13 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse;
 
-import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mule;
 
 public class MuleMarkerBuilder extends MobEntityMarkerBuilder<Mule> {
     public MuleMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Mobs.Markers.Types.MULE, MobIcon.MULE);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.MULE, BlueMapMobsIcon.Mob.MULE);
     }
 }

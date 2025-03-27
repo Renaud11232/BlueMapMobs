@@ -1,21 +1,21 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
-import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Panda;
 
 public class PandaMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Panda, Panda.Gene> {
     public PandaMarkerBuilder(FileConfiguration config) {
-        super(config, Configuration.MarkerSets.Mobs.Markers.Types.PANDA, PandaMarkerBuilder::getCombinedGene);
-        registerIcon(Panda.Gene.NORMAL, MobIcon.NORMAL_PANDA);
-        registerIcon(Panda.Gene.LAZY, MobIcon.LAZY_PANDA);
-        registerIcon(Panda.Gene.WORRIED, MobIcon.WORRIED_PANDA);
-        registerIcon(Panda.Gene.PLAYFUL, MobIcon.PLAYFUL_PANDA);
-        registerIcon(Panda.Gene.AGGRESSIVE, MobIcon.AGGRESSIVE_PANDA);
-        registerIcon(Panda.Gene.WEAK, MobIcon.WEAK_PANDA);
-        registerIcon(Panda.Gene.BROWN, MobIcon.BROWN_PANDA);
+        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PANDA, PandaMarkerBuilder::getCombinedGene);
+        registerIcon(Panda.Gene.NORMAL, BlueMapMobsIcon.Mob.NORMAL_PANDA);
+        registerIcon(Panda.Gene.LAZY, BlueMapMobsIcon.Mob.LAZY_PANDA);
+        registerIcon(Panda.Gene.WORRIED, BlueMapMobsIcon.Mob.WORRIED_PANDA);
+        registerIcon(Panda.Gene.PLAYFUL, BlueMapMobsIcon.Mob.PLAYFUL_PANDA);
+        registerIcon(Panda.Gene.AGGRESSIVE, BlueMapMobsIcon.Mob.AGGRESSIVE_PANDA);
+        registerIcon(Panda.Gene.WEAK, BlueMapMobsIcon.Mob.WEAK_PANDA);
+        registerIcon(Panda.Gene.BROWN, BlueMapMobsIcon.Mob.BROWN_PANDA);
     }
 
     private static Panda.Gene getCombinedGene(Panda panda) {
