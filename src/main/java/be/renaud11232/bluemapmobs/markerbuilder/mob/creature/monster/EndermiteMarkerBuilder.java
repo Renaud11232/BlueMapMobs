@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Endermite;
 
-public class EndermiteMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Endermite> {
+public class EndermiteMarkerBuilder extends MobEntityMarkerBuilder<Endermite> {
     public EndermiteMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.endermite", Icon.ENDERMITE);
+        super(config, MobMarkerVisibilityConfiguration.ENDERMITE, MobIcon.ENDERMITE);
     }
 }

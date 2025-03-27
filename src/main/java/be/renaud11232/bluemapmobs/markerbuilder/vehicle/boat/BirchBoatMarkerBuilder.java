@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.vehicle.boat;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconVehicleEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.VehicleIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.BirchBoat;
 
-public class BirchBoatMarkerBuilder extends SingleIconVehicleEntityMarkerBuilder<BirchBoat> {
+public class BirchBoatMarkerBuilder extends VehicleEntityMarkerBuilder<BirchBoat> {
     public BirchBoatMarkerBuilder(FileConfiguration config) {
-        super(config, Icon.BIRCH_BOAT);
+        super(config, VehicleIcon.BIRCH_BOAT);
     }
 }

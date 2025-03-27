@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.vehicle.minecart;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconVehicleEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.VehicleIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.VehicleMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.StorageMinecart;
 
-public class StorageMinecartMarkerBuilder extends SingleIconVehicleEntityMarkerBuilder<StorageMinecart> {
+public class StorageMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<StorageMinecart> {
     public StorageMinecartMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.vehicles.markers.types.storage_minecart", Icon.CHEST_MINECART);
+        super(config, VehicleMarkerVisibilityConfiguration.STORAGE_MINECART, VehicleIcon.CHEST_MINECART);
     }
 }

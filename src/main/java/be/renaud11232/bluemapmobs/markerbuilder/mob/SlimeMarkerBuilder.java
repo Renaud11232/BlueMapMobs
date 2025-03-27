@@ -1,15 +1,16 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.slime.MagmaCubeMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.Slime;
 
-public class SlimeMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Slime> {
+public class SlimeMarkerBuilder extends MobEntityMarkerBuilder<Slime> {
     public SlimeMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.slime", Icon.SLIME);
+        super(config, MobMarkerVisibilityConfiguration.SLIME, MobIcon.SLIME);
         registerMarkerBuilder(MagmaCube.class, new MagmaCubeMarkerBuilder(config));
     }
 }

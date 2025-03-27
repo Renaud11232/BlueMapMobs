@@ -8,7 +8,6 @@ import org.bukkit.entity.Entity;
 import java.util.Optional;
 
 public interface MarkerBuilder<T extends Entity> {
-
     default Optional<POIMarker> build(T entity) {
         return buildDefault(entity);
     }
@@ -19,9 +18,10 @@ public interface MarkerBuilder<T extends Entity> {
                 POIMarker.builder()
                         .label(entity.getName())
                         .position(location.getX(), location.getY(), location.getZ())
-                        .icon(Icon.UNKNOWN.getPath(), Icon.UNKNOWN.getAnchor())
+                        .icon(getDefaultIcon().getPath(), getDefaultIcon().getAnchor())
                         .build()
         );
     }
 
+    Icon getDefaultIcon();
 }

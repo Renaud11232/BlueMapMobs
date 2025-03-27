@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vex;
 
-public class VexMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Vex> {
+public class VexMarkerBuilder extends MobEntityMarkerBuilder<Vex> {
     public VexMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.vex", Icon.VEX);
+        super(config, MobMarkerVisibilityConfiguration.VEX, MobIcon.VEX);
     }
 }

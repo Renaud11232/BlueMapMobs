@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.golem;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.IronGolem;
 
-public class IronGolemMarkerBuilder extends SingleIconMobEntityMarkerBuilder<IronGolem> {
+public class IronGolemMarkerBuilder extends MobEntityMarkerBuilder<IronGolem> {
     public IronGolemMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.iron_golem", Icon.IRON_GOLEM);
+        super(config, MobMarkerVisibilityConfiguration.IRON_GOLEM, MobIcon.IRON_GOLEM);
     }
 }

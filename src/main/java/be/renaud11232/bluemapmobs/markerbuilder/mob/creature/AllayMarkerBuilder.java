@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature;
 
-import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.MobIcon;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Allay;
 
-public class AllayMarkerBuilder extends SingleIconMobEntityMarkerBuilder<Allay> {
+public class AllayMarkerBuilder extends MobEntityMarkerBuilder<Allay> {
     public AllayMarkerBuilder(FileConfiguration config) {
-        super(config, "marker_sets.mobs.markers.types.allay", Icon.ALLAY);
+        super(config, MobMarkerVisibilityConfiguration.ALLAY, MobIcon.ALLAY);
     }
 }
