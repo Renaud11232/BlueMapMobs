@@ -1,8 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.Icon;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.icon.CommonIcon;
-import be.renaud11232.bluemapmobs.VehicleMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;
@@ -16,13 +16,13 @@ public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends 
     private final Function<T, K> keyGetter;
     private final Map<K, Icon> icons;
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, VehicleMarkerVisibilityConfiguration visibilityConfiguration, Icon defaultIcon, Function<T, K> keyGetter) {
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Icon defaultIcon, Function<T, K> keyGetter) {
         super(config, visibilityConfiguration, defaultIcon);
         this.keyGetter = keyGetter;
         this.icons = new HashMap<>();
     }
 
-    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, VehicleMarkerVisibilityConfiguration visibilityConfiguration, Function<T, K> keyGetter) {
+    public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Function<T, K> keyGetter) {
         this(config, visibilityConfiguration, CommonIcon.UNKNOWN, keyGetter);
     }
 
@@ -31,7 +31,7 @@ public class MappedIconVehicleEntityMarkerBuilder<T extends Vehicle, K> extends 
     }
 
     public MappedIconVehicleEntityMarkerBuilder(FileConfiguration config, Function<T, K> keyGetter) {
-        this(config, (VehicleMarkerVisibilityConfiguration) null, keyGetter);
+        this(config, (BooleanConfiguration) null, keyGetter);
     }
 
     protected void registerIcon(K key, Icon icon) {

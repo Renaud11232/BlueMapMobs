@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Wolf;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class WolfMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Wolf, Map.Entry<WolfMarkerBuilder.WolfMood, Wolf.Variant>> {
     public WolfMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.WOLF, WolfMarkerBuilder::getWolfMood);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.WOLF, WolfMarkerBuilder::getWolfMood);
         registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.ASHEN), MobIcon.ANGRY_ASHEN_WOLF);
         registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.BLACK), MobIcon.ANGRY_BLACK_WOLF);
         registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.CHESTNUT), MobIcon.ANGRY_CHESTNUT_WOLF);

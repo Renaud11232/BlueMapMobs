@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Rabbit;
@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public class RabbitMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Rabbit, Rabbit.Type> {
     public RabbitMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.RABBIT, Rabbit::getRabbitType);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.RABBIT, Rabbit::getRabbitType);
         registerIcon(Rabbit.Type.GOLD, MobIcon.GOLD_RABBIT);
         registerIcon(Rabbit.Type.WHITE, MobIcon.WHITE_RABBIT);
         registerIcon(Rabbit.Type.BLACK_AND_WHITE, MobIcon.WHITE_SPLOTCHED_RABBIT);

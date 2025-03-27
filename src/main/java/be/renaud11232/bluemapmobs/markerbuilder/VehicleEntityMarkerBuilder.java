@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.Configuration;
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.VehicleMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;
@@ -10,11 +10,11 @@ import org.bukkit.entity.Vehicle;
 import java.util.Optional;
 
 public abstract class VehicleEntityMarkerBuilder<T extends Vehicle> extends EntityMarkerBuilder<T> {
-    public VehicleEntityMarkerBuilder(FileConfiguration config, VehicleMarkerVisibilityConfiguration visibilityConfiguration, Icon defaultIcon) {
+    public VehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Icon defaultIcon) {
         super(config, visibilityConfiguration, defaultIcon);
     }
 
-    public VehicleEntityMarkerBuilder(FileConfiguration config, VehicleMarkerVisibilityConfiguration visibilityConfiguration) {
+    public VehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration) {
         super(config, visibilityConfiguration);
     }
 

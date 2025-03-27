@@ -2,13 +2,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Panda;
 
 public class PandaMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Panda, Panda.Gene> {
     public PandaMarkerBuilder(FileConfiguration config) {
-        super(config, MobMarkerVisibilityConfiguration.PANDA, PandaMarkerBuilder::getCombinedGene);
+        super(config, Configuration.MarkerSets.Mobs.Markers.Types.PANDA, PandaMarkerBuilder::getCombinedGene);
         registerIcon(Panda.Gene.NORMAL, MobIcon.NORMAL_PANDA);
         registerIcon(Panda.Gene.LAZY, MobIcon.LAZY_PANDA);
         registerIcon(Panda.Gene.WORRIED, MobIcon.WORRIED_PANDA);
