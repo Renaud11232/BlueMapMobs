@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.icon.CommonIcon;
-import be.renaud11232.bluemapmobs.visibility.VehicleMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.VehicleMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;

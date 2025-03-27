@@ -1,8 +1,8 @@
-package be.renaud11232.bluemapmobs.visibility;
+package be.renaud11232.bluemapmobs;
 
-import be.renaud11232.bluemapmobs.EntityMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 
-public enum VehicleMarkerVisibilityConfiguration implements EntityMarkerVisibilityConfiguration {
+public enum VehicleMarkerVisibilityConfiguration implements BooleanConfiguration {
     BOAT("marker_sets.vehicles.markers.types.boat", true),
     CHEST_BOAT("marker_sets.vehicles.markers.types.chest_boat", true),
     COMMAND_MINECART("marker_sets.vehicles.markers.types.command_minecart", true),
@@ -27,7 +27,7 @@ public enum VehicleMarkerVisibilityConfiguration implements EntityMarkerVisibili
     }
 
     @Override
-    public boolean getDefaultValue() {
+    public Boolean getDefaultValue() {
         return defaultValue;
     }
 }

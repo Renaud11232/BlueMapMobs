@@ -1,8 +1,8 @@
-package be.renaud11232.bluemapmobs.visibility;
+package be.renaud11232.bluemapmobs;
 
-import be.renaud11232.bluemapmobs.EntityMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 
-public enum MobMarkerVisibilityConfiguration implements EntityMarkerVisibilityConfiguration {
+public enum MobMarkerVisibilityConfiguration implements BooleanConfiguration {
     BAT("marker_sets.mobs.markers.types.bat", true),
     ALLAY("marker_sets.mobs.markers.types.allay", true),
     CAMEL("marker_sets.mobs.markers.types.camel", true),
@@ -101,7 +101,7 @@ public enum MobMarkerVisibilityConfiguration implements EntityMarkerVisibilityCo
     }
 
     @Override
-    public boolean getDefaultValue() {
+    public Boolean getDefaultValue() {
         return defaultValue;
     }
 }

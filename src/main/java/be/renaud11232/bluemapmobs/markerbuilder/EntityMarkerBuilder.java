@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapmobs.EntityMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.Configuration;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.Icon;
 import be.renaud11232.bluemapmobs.icon.CommonIcon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
@@ -20,14 +21,14 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     private final boolean displayed;
     private final Icon defaultIcon;
 
-    public EntityMarkerBuilder(FileConfiguration config, EntityMarkerVisibilityConfiguration visibilityConfiguration, Icon defaultIcon) {
+    public EntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Icon defaultIcon) {
         this.config = config;
         this.markerBuilders = new HashMap<>();
-        displayed = visibilityConfiguration == null || config.getBoolean(visibilityConfiguration.getKey(), visibilityConfiguration.getDefaultValue());
+        displayed = visibilityConfiguration == null || visibilityConfiguration.get(config);
         this.defaultIcon = defaultIcon;
     }
 
-    public EntityMarkerBuilder(FileConfiguration config, EntityMarkerVisibilityConfiguration visibilityConfiguration) {
+    public EntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration) {
         this(config, visibilityConfiguration, CommonIcon.UNKNOWN);
     }
 
@@ -36,14 +37,14 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     }
 
     public EntityMarkerBuilder(FileConfiguration config) {
-        this(config, (EntityMarkerVisibilityConfiguration) null);
+        this(config, (BooleanConfiguration) null);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public final Optional<POIMarker> build(T entity) {
         Block block = entity.getLocation().getBlock();
-        if(block.getLightFromBlocks() < config.getInt("general.minimum_block_light", 4) && block.getLightFromSky() < config.getInt("general.minimum_sky_light", 1)) {
+        if(block.getLightFromBlocks() < Configuration.General.MINIMUM_BLOCK_LIGHT.get(config) && block.getLightFromSky() < Configuration.General.MINIMUM_SKY_LIGHT.get(config)) {
             return Optional.empty();
         }
         return markerBuilders.entrySet()
@@ -54,7 +55,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
                 .map(markerBuilder -> (Optional<POIMarker>) markerBuilder.build(entity))
                 .orElseGet(() -> MarkerBuilder.super.build(entity))
                 .map(marker -> {
-                    marker.addStyleClasses(List.of("bluemapmobs-marker"));
+                    marker.addStyleClasses(List.of("bluemapmobs-marker"));//TODO: Add style classes to dedicated file ?
                     return marker;
                 });
     }
