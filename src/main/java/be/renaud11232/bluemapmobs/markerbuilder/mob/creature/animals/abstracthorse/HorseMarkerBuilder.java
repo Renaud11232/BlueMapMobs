@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractho
 
 import be.renaud11232.bluemapmobs.icon.MobIcon;
 import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Horse;

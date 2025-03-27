@@ -1,7 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
+import be.renaud11232.bluemapmobs.Configuration;
 import be.renaud11232.bluemapmobs.Icon;
-import be.renaud11232.bluemapmobs.visibility.VehicleMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.VehicleMarkerVisibilityConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;
@@ -28,7 +29,7 @@ public abstract class VehicleEntityMarkerBuilder<T extends Vehicle> extends Enti
     @Override
     public Optional<POIMarker> buildDefault(T entity) {
         return super.buildDefault(entity).map(marker -> {
-            marker.setMaxDistance(getConfig().getDouble("marker_sets.vehicles.markers.max_distance", 1000));
+            marker.setMaxDistance(Configuration.MarkerSets.Vehicles.Markers.MAX_DISTANCE.get(getConfig()));
             return marker;
         });
     }

@@ -6,7 +6,7 @@ import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.Drow
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.HuskMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.PigZombieMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie.ZombieVillagerMarkerBuilder;
-import be.renaud11232.bluemapmobs.visibility.MobMarkerVisibilityConfiguration;
+import be.renaud11232.bluemapmobs.MobMarkerVisibilityConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
