@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Dolphin;
 
 public class DolphinMarkerBuilder extends MobEntityMarkerBuilder<Dolphin> {
-    public DolphinMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.DOLPHIN, BlueMapMobsIcon.Mob.DOLPHIN);
+    public DolphinMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.DOLPHIN, BlueMapMobsIcon.Mob.DOLPHIN);
     }
 }

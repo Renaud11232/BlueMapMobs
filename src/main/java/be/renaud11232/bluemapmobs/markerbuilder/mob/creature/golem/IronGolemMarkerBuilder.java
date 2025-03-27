@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.IronGolem;
 
 public class IronGolemMarkerBuilder extends MobEntityMarkerBuilder<IronGolem> {
-    public IronGolemMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.IRON_GOLEM, BlueMapMobsIcon.Mob.IRON_GOLEM);
+    public IronGolemMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.IRON_GOLEM, BlueMapMobsIcon.Mob.IRON_GOLEM);
     }
 }

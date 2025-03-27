@@ -10,8 +10,8 @@ import java.util.AbstractMap;
 import java.util.Map;
 
 public class WolfMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Wolf, Map.Entry<WolfMarkerBuilder.WolfMood, Wolf.Variant>> {
-    public WolfMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WOLF, WolfMarkerBuilder::getWolfMood);
+    public WolfMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WOLF, WolfMarkerBuilder::getWolfMood);
         registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.ASHEN), BlueMapMobsIcon.Mob.ANGRY_ASHEN_WOLF);
         registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.BLACK), BlueMapMobsIcon.Mob.ANGRY_BLACK_WOLF);
         registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.CHESTNUT), BlueMapMobsIcon.Mob.ANGRY_CHESTNUT_WOLF);

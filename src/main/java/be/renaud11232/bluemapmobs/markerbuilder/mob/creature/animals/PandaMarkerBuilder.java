@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Panda;
 
 public class PandaMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Panda, Panda.Gene> {
-    public PandaMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PANDA, PandaMarkerBuilder::getCombinedGene);
+    public PandaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PANDA, PandaMarkerBuilder::getCombinedGene);
         registerIcon(Panda.Gene.NORMAL, BlueMapMobsIcon.Mob.NORMAL_PANDA);
         registerIcon(Panda.Gene.LAZY, BlueMapMobsIcon.Mob.LAZY_PANDA);
         registerIcon(Panda.Gene.WORRIED, BlueMapMobsIcon.Mob.WORRIED_PANDA);

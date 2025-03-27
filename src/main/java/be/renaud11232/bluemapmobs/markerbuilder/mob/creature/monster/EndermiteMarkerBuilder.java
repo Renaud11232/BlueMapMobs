@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Endermite;
 
 public class EndermiteMarkerBuilder extends MobEntityMarkerBuilder<Endermite> {
-    public EndermiteMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ENDERMITE, BlueMapMobsIcon.Mob.ENDERMITE);
+    public EndermiteMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ENDERMITE, BlueMapMobsIcon.Mob.ENDERMITE);
     }
 }

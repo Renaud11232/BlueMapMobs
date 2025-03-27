@@ -11,10 +11,10 @@ import org.bukkit.entity.Squid;
 import org.bukkit.entity.WaterMob;
 
 public class WaterMobMarkerBuilder extends MobEntityMarkerBuilder<WaterMob> {
-    public WaterMobMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Dolphin.class, new DolphinMarkerBuilder(config));
-        registerMarkerBuilder(Fish.class, new FishMarkerBuilder(config));
-        registerMarkerBuilder(Squid.class, new SquidMarkerBuilder(config));
+    public WaterMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Dolphin.class, new DolphinMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Fish.class, new FishMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Squid.class, new SquidMarkerBuilder(config, defaultConfig));
     }
 }

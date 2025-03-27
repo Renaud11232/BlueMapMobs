@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Bogged;
 
 public class BoggedMarkerBuilder extends MobEntityMarkerBuilder<Bogged> {
-    public BoggedMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BOGGED, BlueMapMobsIcon.Mob.BOGGED);
+    public BoggedMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BOGGED, BlueMapMobsIcon.Mob.BOGGED);
     }
 }

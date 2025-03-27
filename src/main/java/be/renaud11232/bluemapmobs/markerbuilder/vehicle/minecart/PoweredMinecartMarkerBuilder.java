@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.PoweredMinecart;
 
 public class PoweredMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<PoweredMinecart> {
-    public PoweredMinecartMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.POWERED_MINECART, BlueMapMobsIcon.Vehicle.FURNACE_MINECART);
+    public PoweredMinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.POWERED_MINECART, BlueMapMobsIcon.Vehicle.FURNACE_MINECART);
     }
 }

@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Frog;
 
 public class FrogMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Frog, Frog.Variant> {
-    public FrogMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.FROG, Frog::getVariant);
+    public FrogMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.FROG, Frog::getVariant);
         registerIcon(Frog.Variant.COLD, BlueMapMobsIcon.Mob.COLD_FROG);
         registerIcon(Frog.Variant.WARM, BlueMapMobsIcon.Mob.TROPICAL_FROG);
         registerIcon(Frog.Variant.TEMPERATE, BlueMapMobsIcon.Mob.TEMPERATE_FROG);

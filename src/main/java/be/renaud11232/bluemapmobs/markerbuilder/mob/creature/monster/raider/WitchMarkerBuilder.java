@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Witch;
 
 public class WitchMarkerBuilder extends MobEntityMarkerBuilder<Witch> {
-    public WitchMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WITCH, BlueMapMobsIcon.Mob.WITCH);
+    public WitchMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WITCH, BlueMapMobsIcon.Mob.WITCH);
     }
 }

@@ -4,6 +4,5 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 public interface Configuration<T> {
     String getKey();
-    T getDefaultValue();//TODO: get default config from file ?
-    T get(FileConfiguration config);
+    T get(FileConfiguration config, FileConfiguration defaultConfig);
 }

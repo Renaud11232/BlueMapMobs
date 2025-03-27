@@ -10,26 +10,26 @@ import org.bukkit.entity.Vehicle;
 import java.util.Optional;
 
 public abstract class VehicleEntityMarkerBuilder<T extends Vehicle> extends EntityMarkerBuilder<T> {
-    public VehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Icon defaultIcon) {
-        super(config, visibilityConfiguration, defaultIcon);
+    public VehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, BooleanConfiguration visibilityConfiguration, Icon defaultIcon) {
+        super(config, defaultConfig, visibilityConfiguration, defaultIcon);
     }
 
-    public VehicleEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration) {
-        super(config, visibilityConfiguration);
+    public VehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, BooleanConfiguration visibilityConfiguration) {
+        super(config, defaultConfig, visibilityConfiguration);
     }
 
-    public VehicleEntityMarkerBuilder(FileConfiguration config, Icon defaultIcon) {
-        super(config, defaultIcon);
+    public VehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, Icon defaultIcon) {
+        super(config, defaultConfig, defaultIcon);
     }
 
-    public VehicleEntityMarkerBuilder(FileConfiguration config) {
-        super(config);
+    public VehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
     }
 
     @Override
     public Optional<POIMarker> buildDefault(T entity) {
         return super.buildDefault(entity).map(marker -> {
-            marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.MAX_DISTANCE.get(getConfig()));
+            marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.MAX_DISTANCE.get(getConfig(), getDefaultConfig()));
             return marker;
         });
     }

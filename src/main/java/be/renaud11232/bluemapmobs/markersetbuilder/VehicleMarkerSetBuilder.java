@@ -7,21 +7,21 @@ import org.bukkit.entity.Vehicle;
 
 public class VehicleMarkerSetBuilder extends EntityMarkerSetBuilder<Vehicle> {
 
-    public VehicleMarkerSetBuilder(FileConfiguration config) {
-        super(config);
+    public VehicleMarkerSetBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
     }
 
     @Override
     public MarkerSet build() {
         return MarkerSet.builder()
-                .label(BlueMapMobsConfiguration.MarkerSets.Vehicles.LABEL.get(getConfig()))
-                .toggleable(BlueMapMobsConfiguration.MarkerSets.Vehicles.TOGGLEABLE.get(getConfig()))
-                .defaultHidden(BlueMapMobsConfiguration.MarkerSets.Vehicles.DEFAULT_HIDDEN.get(getConfig()))
+                .label(BlueMapMobsConfiguration.MarkerSets.Vehicles.LABEL.get(getConfig(), getDefaultConfig()))
+                .toggleable(BlueMapMobsConfiguration.MarkerSets.Vehicles.TOGGLEABLE.get(getConfig(), getDefaultConfig()))
+                .defaultHidden(BlueMapMobsConfiguration.MarkerSets.Vehicles.DEFAULT_HIDDEN.get(getConfig(), getDefaultConfig()))
                 .build();
     }
 
     @Override
     public String getKey() {
-        return BlueMapMobsConfiguration.MarkerSets.Vehicles.KEY.get(getConfig());
+        return BlueMapMobsConfiguration.MarkerSets.Vehicles.KEY.get(getConfig(), getDefaultConfig());
     }
 }

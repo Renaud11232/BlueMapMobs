@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Allay;
 
 public class AllayMarkerBuilder extends MobEntityMarkerBuilder<Allay> {
-    public AllayMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ALLAY, BlueMapMobsIcon.Mob.ALLAY);
+    public AllayMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ALLAY, BlueMapMobsIcon.Mob.ALLAY);
     }
 }

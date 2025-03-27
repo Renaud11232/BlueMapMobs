@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Fox;
 
 public class FoxMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Fox, Fox.Type> {
-    public FoxMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.FOX, Fox::getFoxType);
+    public FoxMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.FOX, Fox::getFoxType);
         registerIcon(Fox.Type.RED, BlueMapMobsIcon.Mob.RED_FOX);
         registerIcon(Fox.Type.SNOW, BlueMapMobsIcon.Mob.SNOW_FOX);
     }

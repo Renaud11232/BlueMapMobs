@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MushroomCow;
 
 public class MushroomCowMarkerBuilder extends MappedIconMobEntityMarkerBuilder<MushroomCow, MushroomCow.Variant> {
-    public MushroomCowMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.MUSHROOM_COW, MushroomCow::getVariant);
+    public MushroomCowMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.MUSHROOM_COW, MushroomCow::getVariant);
         registerIcon(MushroomCow.Variant.RED, BlueMapMobsIcon.Mob.RED_MOOSHROOM);
         registerIcon(MushroomCow.Variant.BROWN, BlueMapMobsIcon.Mob.BROWN_MOOSHROOM);
     }

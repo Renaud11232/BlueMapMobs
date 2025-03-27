@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Camel;
 
 public class CamelMarkerBuilder extends MobEntityMarkerBuilder<Camel> {
-    public CamelMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CAMEL, BlueMapMobsIcon.Mob.CAMEL);
+    public CamelMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CAMEL, BlueMapMobsIcon.Mob.CAMEL);
     }
 }

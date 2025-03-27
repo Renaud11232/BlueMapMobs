@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EnderDragon;
 
 public class EnderDragonMarkerBuilder extends MobEntityMarkerBuilder<EnderDragon> {
-    public EnderDragonMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ENDER_DRAGON, BlueMapMobsIcon.Mob.ENDER_DRAGON);
+    public EnderDragonMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ENDER_DRAGON, BlueMapMobsIcon.Mob.ENDER_DRAGON);
     }
 }

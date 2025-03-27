@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.WanderingTrader;
 
 public class WanderingTraderMarkerBuilder extends MobEntityMarkerBuilder<WanderingTrader> {
-    public WanderingTraderMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WANDERING_TRADER, BlueMapMobsIcon.Mob.WANDERING_TRADER);
+    public WanderingTraderMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WANDERING_TRADER, BlueMapMobsIcon.Mob.WANDERING_TRADER);
     }
 }

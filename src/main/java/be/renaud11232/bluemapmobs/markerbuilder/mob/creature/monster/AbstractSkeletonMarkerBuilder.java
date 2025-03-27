@@ -9,11 +9,11 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class AbstractSkeletonMarkerBuilder extends MobEntityMarkerBuilder<AbstractSkeleton> {
-    public AbstractSkeletonMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Bogged.class, new BoggedMarkerBuilder(config));
-        registerMarkerBuilder(Skeleton.class, new SkeletonMarkerBuilder(config));
-        registerMarkerBuilder(Stray.class, new StrayMarkerBuilder(config));
-        registerMarkerBuilder(WitherSkeleton.class, new WitherSkeletonMarkerBuilder(config));
+    public AbstractSkeletonMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Bogged.class, new BoggedMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Skeleton.class, new SkeletonMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Stray.class, new StrayMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(WitherSkeleton.class, new WitherSkeletonMarkerBuilder(config, defaultConfig));
     }
 }

@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Piglin;
 
 public class PiglinMarkerBuilder extends MobEntityMarkerBuilder<Piglin> {
-    public PiglinMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIGLIN, BlueMapMobsIcon.Mob.PIGLIN);
+    public PiglinMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIGLIN, BlueMapMobsIcon.Mob.PIGLIN);
     }
 }

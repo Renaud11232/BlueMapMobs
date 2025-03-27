@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.SpawnerMinecart;
 
 public class SpawnerMinecartMarkerBuilder  extends VehicleEntityMarkerBuilder<SpawnerMinecart> {
-    public SpawnerMinecartMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.SPAWNER_MINECART, BlueMapMobsIcon.Vehicle.SPAWNER_MINECART);
+    public SpawnerMinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Vehicles.Markers.Types.SPAWNER_MINECART, BlueMapMobsIcon.Vehicle.SPAWNER_MINECART);
     }
 }

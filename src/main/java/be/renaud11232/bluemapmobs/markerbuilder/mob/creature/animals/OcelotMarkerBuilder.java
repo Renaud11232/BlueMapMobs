@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Ocelot;
 
 public class OcelotMarkerBuilder extends MobEntityMarkerBuilder<Ocelot> {
-    public OcelotMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.OCELOT, BlueMapMobsIcon.Mob.OCELOT);
+    public OcelotMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.OCELOT, BlueMapMobsIcon.Mob.OCELOT);
     }
 }

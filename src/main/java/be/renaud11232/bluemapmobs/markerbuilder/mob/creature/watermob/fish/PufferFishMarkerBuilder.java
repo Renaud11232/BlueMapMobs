@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.PufferFish;
 
 public class PufferFishMarkerBuilder extends MobEntityMarkerBuilder<PufferFish> {
-    public PufferFishMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PUFFER_FISH, BlueMapMobsIcon.Mob.PUFFER_FISH);
+    public PufferFishMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PUFFER_FISH, BlueMapMobsIcon.Mob.PUFFER_FISH);
     }
 }

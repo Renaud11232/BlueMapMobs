@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Bee;
 
 public class BeeMarkerBuilder extends MobEntityMarkerBuilder<Bee> {
-    public BeeMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BEE, BlueMapMobsIcon.Mob.BEE);
+    public BeeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.BEE, BlueMapMobsIcon.Mob.BEE);
     }
 }

@@ -11,11 +11,11 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class ZombieMarkerBuilder extends MobEntityMarkerBuilder<Zombie> {
-    public ZombieMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOMBIE, BlueMapMobsIcon.Mob.ZOMBIE);
-        registerMarkerBuilder(Drowned.class, new DrownedMarkerBuilder(config));
-        registerMarkerBuilder(Husk.class, new HuskMarkerBuilder(config));
-        registerMarkerBuilder(PigZombie.class, new PigZombieMarkerBuilder(config));
-        registerMarkerBuilder(ZombieVillager.class, new ZombieVillagerMarkerBuilder(config));
+    public ZombieMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOMBIE, BlueMapMobsIcon.Mob.ZOMBIE);
+        registerMarkerBuilder(Drowned.class, new DrownedMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Husk.class, new HuskMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(PigZombie.class, new PigZombieMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(ZombieVillager.class, new ZombieVillagerMarkerBuilder(config, defaultConfig));
     }
 }

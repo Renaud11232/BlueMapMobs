@@ -6,13 +6,18 @@ import org.bukkit.entity.Entity;
 public abstract class EntityMarkerSetBuilder<T extends Entity> implements MarkerSetBuilder<T> {
 
     private final FileConfiguration config;
+    private final FileConfiguration defaultConfig;
 
-    public EntityMarkerSetBuilder(FileConfiguration config) {
+    public EntityMarkerSetBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         this.config = config;
+        this.defaultConfig = defaultConfig;
     }
 
     public FileConfiguration getConfig() {
         return this.config;
     }
 
+    public FileConfiguration getDefaultConfig() {
+        return this.defaultConfig;
+    }
 }

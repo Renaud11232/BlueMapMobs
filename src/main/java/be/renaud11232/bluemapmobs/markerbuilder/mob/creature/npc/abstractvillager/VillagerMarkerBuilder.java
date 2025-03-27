@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Villager;
 
 public class VillagerMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Villager, Villager.Type> {
-    public VillagerMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VILLAGER, Villager::getVillagerType);
+    public VillagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VILLAGER, Villager::getVillagerType);
         registerIcon(Villager.Type.SNOW, BlueMapMobsIcon.Mob.SNOWY_VILLAGER);
         registerIcon(Villager.Type.SWAMP, BlueMapMobsIcon.Mob.SWAMP_VILLAGER);
         registerIcon(Villager.Type.TAIGA, BlueMapMobsIcon.Mob.TAIGA_VILLAGER);

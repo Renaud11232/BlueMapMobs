@@ -4,7 +4,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 public interface DoubleConfiguration extends Configuration<Double> {
     @Override
-    default Double get(FileConfiguration config) {
-        return config.getDouble(getKey(), getDefaultValue());
+    default Double get(FileConfiguration config, FileConfiguration defaultConfig) {
+        return config.getDouble(getKey(), defaultConfig.getDouble(getKey(), 0d));
     }
 }

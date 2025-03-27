@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Pig;
 
 public class PigMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Pig, Pig.Variant> {
-    public PigMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIG, Pig::getVariant);
+    public PigMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIG, Pig::getVariant);
         registerIcon(Pig.Variant.TEMPERATE, BlueMapMobsIcon.Mob.TEMPERATE_PIG);
         registerIcon(Pig.Variant.COLD, BlueMapMobsIcon.Mob.COLD_PIG);
         registerIcon(Pig.Variant.WARM, BlueMapMobsIcon.Mob.WARM_PIG);

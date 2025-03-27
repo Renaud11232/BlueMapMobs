@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Hoglin;
 
 public class HoglinMarkerBuilder extends MobEntityMarkerBuilder<Hoglin> {
-    public HoglinMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.HOGLIN, BlueMapMobsIcon.Mob.HOGLIN);
+    public HoglinMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.HOGLIN, BlueMapMobsIcon.Mob.HOGLIN);
     }
 }

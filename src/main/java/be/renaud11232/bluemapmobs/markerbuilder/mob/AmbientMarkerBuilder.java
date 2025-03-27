@@ -7,8 +7,8 @@ import org.bukkit.entity.Ambient;
 import org.bukkit.entity.Bat;
 
 public class AmbientMarkerBuilder extends MobEntityMarkerBuilder<Ambient> {
-    public AmbientMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Bat.class, new BatMarkerBuilder(config));
+    public AmbientMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Bat.class, new BatMarkerBuilder(config, defaultConfig));
     }
 }

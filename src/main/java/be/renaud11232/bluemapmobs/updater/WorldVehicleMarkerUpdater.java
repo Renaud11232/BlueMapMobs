@@ -13,7 +13,7 @@ import java.util.Collection;
 public class WorldVehicleMarkerUpdater extends WorldEntityMarkerUpdater<Vehicle> {
 
     public WorldVehicleMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
-        super(plugin, api, new VehicleMarkerSetBuilder(plugin.getConfig()), new VehicleMarkerBuilder(plugin.getConfig()));
+        super(plugin, api, new VehicleMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new VehicleMarkerBuilder(plugin.getConfig(), plugin.getDefaultConfig()));
     }
 
     @Override

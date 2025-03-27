@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Salmon;
 
 public class SalmonMarkerBuilder extends MobEntityMarkerBuilder<Salmon> {
-    public SalmonMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SALMON, BlueMapMobsIcon.Mob.SALMON);
+    public SalmonMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SALMON, BlueMapMobsIcon.Mob.SALMON);
     }
 }

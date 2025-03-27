@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Ravager;
 
 public class RavagerMarkerBuilder extends MobEntityMarkerBuilder<Ravager> {
-    public RavagerMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.RAVAGER, BlueMapMobsIcon.Mob.RAVAGER);
+    public RavagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.RAVAGER, BlueMapMobsIcon.Mob.RAVAGER);
     }
 }

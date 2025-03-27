@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.CherryBoat;
 
 public class CherryBoatMarkerBuilder extends VehicleEntityMarkerBuilder<CherryBoat> {
-    public CherryBoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsIcon.Vehicle.CHERRY_BOAT);
+    public CherryBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsIcon.Vehicle.CHERRY_BOAT);
     }
 }

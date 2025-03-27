@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Cod;
 
 public class CodMarkerBuilder extends MobEntityMarkerBuilder<Cod> {
-    public CodMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.COD, BlueMapMobsIcon.Mob.COD);
+    public CodMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.COD, BlueMapMobsIcon.Mob.COD);
     }
 }

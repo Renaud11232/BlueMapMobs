@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFish> {
-    public TropicalFishMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TROPICAL_FISH);
+    public TropicalFishMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TROPICAL_FISH);
     }
 
     @Override

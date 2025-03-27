@@ -7,8 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Cat;
 
 public class CatMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Cat, Cat.Type> {
-    public CatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CAT, Cat::getCatType);
+    public CatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CAT, Cat::getCatType);
         registerIcon(Cat.Type.RED, BlueMapMobsIcon.Mob.RED_CAT);
         registerIcon(Cat.Type.BLACK, BlueMapMobsIcon.Mob.RED_CAT);
         registerIcon(Cat.Type.TABBY, BlueMapMobsIcon.Mob.TABBY_CAT);

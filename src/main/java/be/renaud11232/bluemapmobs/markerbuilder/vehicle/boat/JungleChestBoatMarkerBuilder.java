@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.JungleChestBoat;
 
 public class JungleChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<JungleChestBoat> {
-    public JungleChestBoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsIcon.Vehicle.JUNGLE_CHEST_BOAT);
+    public JungleChestBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsIcon.Vehicle.JUNGLE_CHEST_BOAT);
     }
 }

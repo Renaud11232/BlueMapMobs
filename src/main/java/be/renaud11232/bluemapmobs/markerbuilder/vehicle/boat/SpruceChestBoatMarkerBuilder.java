@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.SpruceChestBoat;
 
 public class SpruceChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<SpruceChestBoat> {
-    public SpruceChestBoatMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsIcon.Vehicle.SPRUCE_CHEST_BOAT);
+    public SpruceChestBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsIcon.Vehicle.SPRUCE_CHEST_BOAT);
     }
 }

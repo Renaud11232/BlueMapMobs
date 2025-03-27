@@ -11,10 +11,10 @@ import org.bukkit.entity.Llama;
 import org.bukkit.entity.Mule;
 
 public class ChestedHorseMarkerBuilder extends MobEntityMarkerBuilder<ChestedHorse> {
-    public ChestedHorseMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Donkey.class, new DonkeyMarkerBuilder(config));
-        registerMarkerBuilder(Llama.class, new LlamaMarkerBuilder(config));
-        registerMarkerBuilder(Mule.class, new MuleMarkerBuilder(config));
+    public ChestedHorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Donkey.class, new DonkeyMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Llama.class, new LlamaMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Mule.class, new MuleMarkerBuilder(config, defaultConfig));
     }
 }

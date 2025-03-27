@@ -11,10 +11,10 @@ import org.bukkit.entity.Spellcaster;
 import org.bukkit.entity.Vindicator;
 
 public class IllagerMarkerBuilder extends MobEntityMarkerBuilder<Illager> {
-    public IllagerMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Pillager.class, new PillagerMarkerBuilder(config));
-        registerMarkerBuilder(Spellcaster.class, new SpellcasterMarkerBuilder(config));
-        registerMarkerBuilder(Vindicator.class, new VindicatorMarkerBuilder(config));
+    public IllagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Pillager.class, new PillagerMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Spellcaster.class, new SpellcasterMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(Vindicator.class, new VindicatorMarkerBuilder(config, defaultConfig));
     }
 }

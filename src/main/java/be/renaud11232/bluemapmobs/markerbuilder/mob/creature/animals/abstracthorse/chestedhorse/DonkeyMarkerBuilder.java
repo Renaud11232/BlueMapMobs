@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Donkey;
 
 public class DonkeyMarkerBuilder extends MobEntityMarkerBuilder<Donkey> {
-    public DonkeyMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.DONKEY, BlueMapMobsIcon.Mob.DONKEY);
+    public DonkeyMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.DONKEY, BlueMapMobsIcon.Mob.DONKEY);
     }
 }

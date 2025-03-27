@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.PiglinBrute;
 
 public class PiglinBruteMarkerBuilder extends MobEntityMarkerBuilder<PiglinBrute> {
-    public PiglinBruteMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIGLIN_BRUTE, BlueMapMobsIcon.Mob.PIGLIN_BRUTE);
+    public PiglinBruteMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PIGLIN_BRUTE, BlueMapMobsIcon.Mob.PIGLIN_BRUTE);
     }
 }

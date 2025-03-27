@@ -13,8 +13,8 @@ import java.util.Optional;
 
 public class SheepMarkerBuilder extends MobEntityMarkerBuilder<Sheep> {
 
-    public SheepMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SHEEP, BlueMapMobsIcon.Mob.SHEEP);
+    public SheepMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SHEEP, BlueMapMobsIcon.Mob.SHEEP);
     }
 
     @Override

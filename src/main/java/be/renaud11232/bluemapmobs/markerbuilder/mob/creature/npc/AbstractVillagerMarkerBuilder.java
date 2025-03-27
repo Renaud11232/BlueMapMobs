@@ -9,9 +9,9 @@ import org.bukkit.entity.Villager;
 import org.bukkit.entity.WanderingTrader;
 
 public class AbstractVillagerMarkerBuilder extends MobEntityMarkerBuilder<AbstractVillager> {
-    public AbstractVillagerMarkerBuilder(FileConfiguration config) {
-        super(config);
-        registerMarkerBuilder(Villager.class, new VillagerMarkerBuilder(config));
-        registerMarkerBuilder(WanderingTrader.class, new WanderingTraderMarkerBuilder(config));
+    public AbstractVillagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
+        registerMarkerBuilder(Villager.class, new VillagerMarkerBuilder(config, defaultConfig));
+        registerMarkerBuilder(WanderingTrader.class, new WanderingTraderMarkerBuilder(config, defaultConfig));
     }
 }

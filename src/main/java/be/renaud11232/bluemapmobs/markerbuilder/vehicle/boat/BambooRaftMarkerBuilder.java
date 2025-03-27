@@ -6,7 +6,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.BambooRaft;
 
 public class BambooRaftMarkerBuilder extends VehicleEntityMarkerBuilder<BambooRaft> {
-    public BambooRaftMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsIcon.Vehicle.BAMBOO_RAFT);
+    public BambooRaftMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsIcon.Vehicle.BAMBOO_RAFT);
     }
 }

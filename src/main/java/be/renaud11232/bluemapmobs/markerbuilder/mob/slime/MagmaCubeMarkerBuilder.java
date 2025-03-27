@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MagmaCube;
 
 public class MagmaCubeMarkerBuilder extends MobEntityMarkerBuilder<MagmaCube> {
-    public MagmaCubeMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.MAGMA_CUBE, BlueMapMobsIcon.Mob.MAGMA_CUBE);
+    public MagmaCubeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.MAGMA_CUBE, BlueMapMobsIcon.Mob.MAGMA_CUBE);
     }
 }

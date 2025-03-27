@@ -11,20 +11,20 @@ import org.bukkit.entity.Mob;
 import java.util.Optional;
 
 public abstract class MobEntityMarkerBuilder<T extends Mob> extends EntityMarkerBuilder<T> {
-    public MobEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration, Icon defaultIcon) {
-        super(config, visibilityConfiguration, defaultIcon);
+    public MobEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, BooleanConfiguration visibilityConfiguration, Icon defaultIcon) {
+        super(config, defaultConfig, visibilityConfiguration, defaultIcon);
     }
 
-    public MobEntityMarkerBuilder(FileConfiguration config, BooleanConfiguration visibilityConfiguration) {
-        super(config, visibilityConfiguration);
+    public MobEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, BooleanConfiguration visibilityConfiguration) {
+        super(config, defaultConfig, visibilityConfiguration);
     }
 
-    public MobEntityMarkerBuilder(FileConfiguration config, Icon defaultIcon) {
-        super(config, defaultIcon);
+    public MobEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig, Icon defaultIcon) {
+        super(config, defaultConfig, defaultIcon);
     }
 
-    public MobEntityMarkerBuilder(FileConfiguration config) {
-        super(config);
+    public MobEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig);
     }
 
     @Override
@@ -32,7 +32,7 @@ public abstract class MobEntityMarkerBuilder<T extends Mob> extends EntityMarker
         return super.buildDefault(mob).map(marker ->  {
             Location eyeLocation = mob.getEyeLocation();
             marker.setPosition(eyeLocation.getX(), eyeLocation.getY(), eyeLocation.getZ());
-            marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.MAX_DISTANCE.get(getConfig()));
+            marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.MAX_DISTANCE.get(getConfig(), getDefaultConfig()));
             return marker;
         });
     }

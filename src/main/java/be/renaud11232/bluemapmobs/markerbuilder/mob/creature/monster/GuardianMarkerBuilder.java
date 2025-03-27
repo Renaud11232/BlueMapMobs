@@ -9,8 +9,8 @@ import org.bukkit.entity.ElderGuardian;
 import org.bukkit.entity.Guardian;
 
 public class GuardianMarkerBuilder extends MobEntityMarkerBuilder<Guardian> {
-    public GuardianMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GUARDIAN, BlueMapMobsIcon.Mob.GUARDIAN);
-        registerMarkerBuilder(ElderGuardian.class, new ElderGuardianMarkerBuilder(config));
+    public GuardianMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.GUARDIAN, BlueMapMobsIcon.Mob.GUARDIAN);
+        registerMarkerBuilder(ElderGuardian.class, new ElderGuardianMarkerBuilder(config, defaultConfig));
     }
 }

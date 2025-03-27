@@ -9,8 +9,8 @@ import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.Slime;
 
 public class SlimeMarkerBuilder extends MobEntityMarkerBuilder<Slime> {
-    public SlimeMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SLIME, BlueMapMobsIcon.Mob.SLIME);
-        registerMarkerBuilder(MagmaCube.class, new MagmaCubeMarkerBuilder(config));
+    public SlimeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SLIME, BlueMapMobsIcon.Mob.SLIME);
+        registerMarkerBuilder(MagmaCube.class, new MagmaCubeMarkerBuilder(config, defaultConfig));
     }
 }

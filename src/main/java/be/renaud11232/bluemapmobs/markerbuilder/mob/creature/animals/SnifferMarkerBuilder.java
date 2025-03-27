@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Sniffer;
 
 public class SnifferMarkerBuilder extends MobEntityMarkerBuilder<Sniffer> {
-    public SnifferMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SNIFFER, BlueMapMobsIcon.Mob.SNIFFER);
+    public SnifferMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SNIFFER, BlueMapMobsIcon.Mob.SNIFFER);
     }
 }

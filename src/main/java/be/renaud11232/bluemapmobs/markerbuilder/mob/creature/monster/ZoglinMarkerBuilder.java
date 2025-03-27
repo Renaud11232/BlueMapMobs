@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Zoglin;
 
 public class ZoglinMarkerBuilder extends MobEntityMarkerBuilder<Zoglin> {
-    public ZoglinMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOGLIN, BlueMapMobsIcon.Mob.ZOGLIN);
+    public ZoglinMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.ZOGLIN, BlueMapMobsIcon.Mob.ZOGLIN);
     }
 }

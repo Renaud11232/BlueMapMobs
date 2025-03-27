@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Strider;
 
 public class StriderMarkerBuilder extends MobEntityMarkerBuilder<Strider> {
-    public StriderMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.STRIDER, BlueMapMobsIcon.Mob.STRIDER);
+    public StriderMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.STRIDER, BlueMapMobsIcon.Mob.STRIDER);
     }
 }

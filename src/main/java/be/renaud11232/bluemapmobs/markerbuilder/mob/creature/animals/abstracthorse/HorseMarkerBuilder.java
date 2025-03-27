@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class HorseMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Horse, Horse.Style> {
-    public HorseMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.HORSE, Horse::getStyle);
+    public HorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.HORSE, Horse::getStyle);
         registerIcon(Horse.Style.NONE, BlueMapMobsIcon.Mob.HORSE_MARKINGS_NONE);
         registerIcon(Horse.Style.WHITE, BlueMapMobsIcon.Mob.HORSE_MARKINGS_WHITE);
         registerIcon(Horse.Style.WHITEFIELD, BlueMapMobsIcon.Mob.HORSE_MARKINGS_WHITEFIELD);

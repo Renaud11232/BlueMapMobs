@@ -10,8 +10,8 @@ import org.bukkit.entity.Rabbit;
 import java.util.Optional;
 
 public class RabbitMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Rabbit, Rabbit.Type> {
-    public RabbitMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.RABBIT, Rabbit::getRabbitType);
+    public RabbitMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.RABBIT, Rabbit::getRabbitType);
         registerIcon(Rabbit.Type.GOLD, BlueMapMobsIcon.Mob.GOLD_RABBIT);
         registerIcon(Rabbit.Type.WHITE, BlueMapMobsIcon.Mob.WHITE_RABBIT);
         registerIcon(Rabbit.Type.BLACK_AND_WHITE, BlueMapMobsIcon.Mob.WHITE_SPLOTCHED_RABBIT);

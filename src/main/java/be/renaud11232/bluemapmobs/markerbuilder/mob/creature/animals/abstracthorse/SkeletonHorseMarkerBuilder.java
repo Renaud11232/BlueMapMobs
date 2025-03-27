@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.SkeletonHorse;
 
 public class SkeletonHorseMarkerBuilder extends MobEntityMarkerBuilder<SkeletonHorse> {
-    public SkeletonHorseMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SKELETON_HORSE, BlueMapMobsIcon.Mob.SKELETON_HORSE);
+    public SkeletonHorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SKELETON_HORSE, BlueMapMobsIcon.Mob.SKELETON_HORSE);
     }
 }

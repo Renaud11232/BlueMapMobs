@@ -7,7 +7,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Stray;
 
 public class StrayMarkerBuilder extends MobEntityMarkerBuilder<Stray> {
-    public StrayMarkerBuilder(FileConfiguration config) {
-        super(config, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.STRAY, BlueMapMobsIcon.Mob.STRAY);
+    public StrayMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.STRAY, BlueMapMobsIcon.Mob.STRAY);
     }
 }
