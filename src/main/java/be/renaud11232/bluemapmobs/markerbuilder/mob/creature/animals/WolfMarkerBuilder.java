@@ -1,59 +1,70 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Wolf;
 
-import java.util.AbstractMap;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
-public class WolfMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Wolf, Map.Entry<WolfMarkerBuilder.WolfMood, Wolf.Variant>> {
+public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
+    private final Map<Wolf.Variant, Icon> angryIcons;
+    private final Map<Wolf.Variant, Icon> tamedIcons;
+    private final Map<Wolf.Variant, Icon> untamedIcons;
+    
     public WolfMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WOLF, WolfMarkerBuilder::getWolfMood);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.ASHEN), BlueMapMobsIcon.Mob.ANGRY_ASHEN_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.BLACK), BlueMapMobsIcon.Mob.ANGRY_BLACK_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.CHESTNUT), BlueMapMobsIcon.Mob.ANGRY_CHESTNUT_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.PALE), BlueMapMobsIcon.Mob.ANGRY_PALE_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.RUSTY), BlueMapMobsIcon.Mob.ANGRY_RUSTY_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.SNOWY), BlueMapMobsIcon.Mob.ANGRY_SNOWY_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.SPOTTED), BlueMapMobsIcon.Mob.ANGRY_SPOTTED_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.STRIPED), BlueMapMobsIcon.Mob.ANGRY_STRIPED_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, Wolf.Variant.WOODS), BlueMapMobsIcon.Mob.ANGRY_WOODS_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.ASHEN), BlueMapMobsIcon.Mob.TAMED_ASHEN_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.BLACK), BlueMapMobsIcon.Mob.TAMED_BLACK_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.CHESTNUT), BlueMapMobsIcon.Mob.TAMED_CHESTNUT_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.PALE), BlueMapMobsIcon.Mob.TAMED_PALE_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.RUSTY), BlueMapMobsIcon.Mob.TAMED_RUSTY_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.SNOWY), BlueMapMobsIcon.Mob.TAMED_SNOWY_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.SPOTTED), BlueMapMobsIcon.Mob.TAMED_SPOTTED_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.STRIPED), BlueMapMobsIcon.Mob.TAMED_STRIPED_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.TAMED, Wolf.Variant.WOODS), BlueMapMobsIcon.Mob.TAMED_WOODS_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.ASHEN), BlueMapMobsIcon.Mob.UNTAMED_ASHEN_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.BLACK), BlueMapMobsIcon.Mob.UNTAMED_BLACK_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.CHESTNUT), BlueMapMobsIcon.Mob.UNTAMED_CHESTNUT_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.PALE), BlueMapMobsIcon.Mob.UNTAMED_PALE_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.RUSTY), BlueMapMobsIcon.Mob.UNTAMED_RUSTY_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.SNOWY), BlueMapMobsIcon.Mob.UNTAMED_SNOWY_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.SPOTTED), BlueMapMobsIcon.Mob.UNTAMED_SPOTTED_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.STRIPED), BlueMapMobsIcon.Mob.UNTAMED_STRIPED_WOLF);
-        registerIcon(new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, Wolf.Variant.WOODS), BlueMapMobsIcon.Mob.UNTAMED_WOODS_WOLF);
+        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WOLF);
+        angryIcons = new HashMap<>();
+        angryIcons.put(Wolf.Variant.ASHEN, BlueMapMobsIcon.Mob.ANGRY_ASHEN_WOLF);
+        angryIcons.put(Wolf.Variant.BLACK, BlueMapMobsIcon.Mob.ANGRY_BLACK_WOLF);
+        angryIcons.put(Wolf.Variant.CHESTNUT, BlueMapMobsIcon.Mob.ANGRY_CHESTNUT_WOLF);
+        angryIcons.put(Wolf.Variant.PALE, BlueMapMobsIcon.Mob.ANGRY_PALE_WOLF);
+        angryIcons.put(Wolf.Variant.RUSTY, BlueMapMobsIcon.Mob.ANGRY_RUSTY_WOLF);
+        angryIcons.put(Wolf.Variant.SNOWY, BlueMapMobsIcon.Mob.ANGRY_SNOWY_WOLF);
+        angryIcons.put(Wolf.Variant.SPOTTED, BlueMapMobsIcon.Mob.ANGRY_SPOTTED_WOLF);
+        angryIcons.put(Wolf.Variant.STRIPED, BlueMapMobsIcon.Mob.ANGRY_STRIPED_WOLF);
+        angryIcons.put(Wolf.Variant.WOODS, BlueMapMobsIcon.Mob.ANGRY_WOODS_WOLF);
+        tamedIcons = new HashMap<>();
+        tamedIcons.put(Wolf.Variant.ASHEN, BlueMapMobsIcon.Mob.TAMED_ASHEN_WOLF);
+        tamedIcons.put(Wolf.Variant.BLACK, BlueMapMobsIcon.Mob.TAMED_BLACK_WOLF);
+        tamedIcons.put(Wolf.Variant.CHESTNUT, BlueMapMobsIcon.Mob.TAMED_CHESTNUT_WOLF);
+        tamedIcons.put(Wolf.Variant.PALE, BlueMapMobsIcon.Mob.TAMED_PALE_WOLF);
+        tamedIcons.put(Wolf.Variant.RUSTY, BlueMapMobsIcon.Mob.TAMED_RUSTY_WOLF);
+        tamedIcons.put(Wolf.Variant.SNOWY, BlueMapMobsIcon.Mob.TAMED_SNOWY_WOLF);
+        tamedIcons.put(Wolf.Variant.SPOTTED, BlueMapMobsIcon.Mob.TAMED_SPOTTED_WOLF);
+        tamedIcons.put(Wolf.Variant.STRIPED, BlueMapMobsIcon.Mob.TAMED_STRIPED_WOLF);
+        tamedIcons.put(Wolf.Variant.WOODS, BlueMapMobsIcon.Mob.TAMED_WOODS_WOLF);
+        untamedIcons = new HashMap<>();
+        untamedIcons.put(Wolf.Variant.ASHEN, BlueMapMobsIcon.Mob.UNTAMED_ASHEN_WOLF);
+        untamedIcons.put(Wolf.Variant.BLACK, BlueMapMobsIcon.Mob.UNTAMED_BLACK_WOLF);
+        untamedIcons.put(Wolf.Variant.CHESTNUT, BlueMapMobsIcon.Mob.UNTAMED_CHESTNUT_WOLF);
+        untamedIcons.put(Wolf.Variant.PALE, BlueMapMobsIcon.Mob.UNTAMED_PALE_WOLF);
+        untamedIcons.put(Wolf.Variant.RUSTY, BlueMapMobsIcon.Mob.UNTAMED_RUSTY_WOLF);
+        untamedIcons.put(Wolf.Variant.SNOWY, BlueMapMobsIcon.Mob.UNTAMED_SNOWY_WOLF);
+        untamedIcons.put(Wolf.Variant.SPOTTED, BlueMapMobsIcon.Mob.UNTAMED_SPOTTED_WOLF);
+        untamedIcons.put(Wolf.Variant.STRIPED, BlueMapMobsIcon.Mob.UNTAMED_STRIPED_WOLF);
+        untamedIcons.put(Wolf.Variant.WOODS, BlueMapMobsIcon.Mob.UNTAMED_WOODS_WOLF);
     }
 
-    private static Map.Entry<WolfMood, Wolf.Variant> getWolfMood(Wolf wolf) {
-        if (wolf.isAngry()) {
-            return new AbstractMap.SimpleEntry<>(WolfMood.ANGRY, wolf.getVariant());
-        } else if (wolf.isTamed()) {
-            return new AbstractMap.SimpleEntry<>(WolfMood.TAMED, wolf.getVariant());
-        } else {
-            return new AbstractMap.SimpleEntry<>(WolfMood.UNTAMED, wolf.getVariant());
-        }
-    }
-
-    protected enum WolfMood {
-        ANGRY,
-        TAMED,
-        UNTAMED
+    @Override
+    public Optional<POIMarker> buildDefault(Wolf wolf) {
+        return super.buildDefault(wolf).map(marker -> {
+            Map<Wolf.Variant, Icon> icons;
+            if (wolf.isAngry()) {
+                icons = angryIcons;
+            } else if (wolf.isTamed()) {
+                icons = tamedIcons;
+            } else {
+                icons = untamedIcons;
+            }
+            Icon icon = icons.getOrDefault(wolf.getVariant(), BlueMapMobsIcon.Common.UNKNOWN);
+            marker.setIcon(icon.getPath(), icon.getAnchor());
+            return marker;
+        });
     }
 }
