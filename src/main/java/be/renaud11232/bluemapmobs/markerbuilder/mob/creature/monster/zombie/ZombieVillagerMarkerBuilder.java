@@ -3,13 +3,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.zombie;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
-import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.ZombieVillager;
 
-public class ZombieVillagerMarkerBuilder extends VariantMobEntityMarkerBuilder<ZombieVillager, Villager.Type> {
+public class ZombieVillagerMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<ZombieVillager, Villager.Type> {
     public ZombieVillagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

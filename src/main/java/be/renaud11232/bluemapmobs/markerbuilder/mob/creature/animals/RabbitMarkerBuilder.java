@@ -4,12 +4,12 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Rabbit;
 
-public class RabbitMarkerBuilder extends VariantMobEntityMarkerBuilder<Rabbit, Rabbit.Type> {
+public class RabbitMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Rabbit, Rabbit.Type> {
     public RabbitMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

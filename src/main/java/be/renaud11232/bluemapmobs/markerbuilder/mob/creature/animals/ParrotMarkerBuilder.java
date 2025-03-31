@@ -3,12 +3,12 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
-import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Parrot;
 
-public class ParrotMarkerBuilder extends VariantMobEntityMarkerBuilder<Parrot, Parrot.Variant> {
+public class ParrotMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Parrot, Parrot.Variant> {
     public ParrotMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

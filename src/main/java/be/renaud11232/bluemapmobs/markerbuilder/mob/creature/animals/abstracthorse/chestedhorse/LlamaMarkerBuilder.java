@@ -8,7 +8,7 @@ import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthor
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import de.bluecolored.bluemap.api.markers.POIMarker;
+import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Llama;
@@ -16,26 +16,10 @@ import org.bukkit.entity.TraderLlama;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.List;
-import java.util.Optional;
 
-public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Material> {
+public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Material, Llama.Color> {
     public LlamaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
-    }
-
-    //TODO: Override getStyleClasses
-    @Override
-    public Optional<POIMarker> build(Llama llama) {
-        return super.build(llama).map(marker -> {
-            String llamaColorStyle = switch (llama.getColor()) {
-                case CREAMY -> "bluemapmobs-creamy-llama";
-                case WHITE -> "bluemapmobs-white-llama";
-                case GRAY -> "bluemapmobs-gray-llama";
-                case BROWN -> "bluemapmobs-brown-llama";
-            };
-            marker.addStyleClasses(List.of("bluemapmobs-llama", llamaColorStyle));
-            return marker;
-        });
     }
 
     @Override
@@ -54,12 +38,17 @@ public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Mat
     }
 
     @Override
-    public Material getVariant(Llama llama) {
+    public Material getIconVariant(Llama llama) {
         ItemStack decor = llama.getInventory().getDecor();
         if (decor == null) {
             return null;
         }
         return decor.getType();
+    }
+
+    @Override
+    public Llama.Color getStyleClassesVariant(Llama llama) {
+        return llama.getColor();
     }
 
     @Override
@@ -80,5 +69,14 @@ public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Mat
         registry.register(Material.PURPLE_CARPET, BlueMapMobsIcon.Mob.PURPLE_LLAMA_DECOR);
         registry.register(Material.MAGENTA_CARPET, BlueMapMobsIcon.Mob.MAGENTA_LLAMA_DECOR);
         registry.register(Material.PINK_CARPET, BlueMapMobsIcon.Mob.PINK_LLAMA_DECOR);
+    }
+
+    //TODO Move constants to dedicated class
+    @Override
+    public void registerVariantStyleClasses(VariantStyleClassesRegistry<Llama.Color> registry) {
+        registry.register(Llama.Color.CREAMY, List.of("bluemapmobs-llama", "bluemapmobs-creamy-llama"));
+        registry.register(Llama.Color.WHITE, List.of("bluemapmobs-llama", "bluemapmobs-white-llama"));
+        registry.register(Llama.Color.GRAY, List.of("bluemapmobs-llama", "bluemapmobs-gray-llama"));
+        registry.register(Llama.Color.BROWN, List.of("bluemapmobs-llama", "bluemapmobs-brown-llama"));
     }
 }
