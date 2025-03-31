@@ -11,7 +11,6 @@ import org.bukkit.entity.Wolf;
 import java.util.HashMap;
 import java.util.Map;
 
-//TODO clean this ?
 public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> angryIcons;
     private final Map<Wolf.Variant, Icon> tamedIcons;
