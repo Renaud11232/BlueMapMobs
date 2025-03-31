@@ -1,18 +1,14 @@
 package be.renaud11232.bluemapmobs;
 
+import be.renaud11232.bluemapmobs.io.ConfigurationLoader;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
-import java.util.Objects;
 import java.util.stream.Stream;
 
 
@@ -40,9 +36,8 @@ public final class BlueMapMobs extends JavaPlugin {
     }
 
     private void loadDefaultConfig() {
-        InputStream resource = Objects.requireNonNull(getResource("config.yml"));
-        try (InputStreamReader reader = new InputStreamReader(resource, StandardCharsets.UTF_8)) {
-            defaultConfig = YamlConfiguration.loadConfiguration(reader);
+        try {
+            defaultConfig = new ConfigurationLoader(getResource("config.yml")).load();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
