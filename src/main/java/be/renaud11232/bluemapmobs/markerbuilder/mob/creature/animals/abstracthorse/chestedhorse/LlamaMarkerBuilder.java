@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
@@ -71,12 +72,11 @@ public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Mat
         registry.register(Material.PINK_CARPET, BlueMapMobsIcon.Mob.PINK_LLAMA_DECOR);
     }
 
-    //TODO Move constants to dedicated class
     @Override
     public void registerVariantStyleClasses(VariantStyleClassesRegistry<Llama.Color> registry) {
-        registry.register(Llama.Color.CREAMY, List.of("bluemapmobs-llama", "bluemapmobs-creamy-llama"));
-        registry.register(Llama.Color.WHITE, List.of("bluemapmobs-llama", "bluemapmobs-white-llama"));
-        registry.register(Llama.Color.GRAY, List.of("bluemapmobs-llama", "bluemapmobs-gray-llama"));
-        registry.register(Llama.Color.BROWN, List.of("bluemapmobs-llama", "bluemapmobs-brown-llama"));
+        registry.register(Llama.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.CREAMY_LLAMA));
+        registry.register(Llama.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.WHITE_LLAMA));
+        registry.register(Llama.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.GRAY_LLAMA));
+        registry.register(Llama.Color.BROWN, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.BROWN_LLAMA));
     }
 }

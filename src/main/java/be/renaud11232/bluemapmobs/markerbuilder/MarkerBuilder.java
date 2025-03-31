@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.BlueMapMobsStyle;
+import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Location;
@@ -22,7 +22,7 @@ public interface MarkerBuilder<T extends Entity> {
                         .label(entity.getName())
                         .position(location.getX(), location.getY(), location.getZ())
                         .icon(icon.getPath(), icon.getAnchor())
-                        .styleClasses(BlueMapMobsStyle.MARKER)
+                        .styleClasses(BlueMapMobsStyleClass.MARKER)
                         .build()
         );
     }

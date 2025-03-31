@@ -3,6 +3,7 @@ package be.renaud11232.bluemapmobs;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.icon.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;
+import org.bukkit.entity.TropicalFish;
 
 public final class BlueMapMobsIcon {
     public static final Icon UNKNOWN = new SimpleIcon("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12));
@@ -398,6 +399,22 @@ public final class BlueMapMobsIcon {
         @Override
         public Vector2i getAnchor() {
             return anchor;
+        }
+
+        public static Mob tropicalFish(TropicalFish tropicalFish) {
+            String bodyType = switch (tropicalFish.getPattern()) {
+                case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "A";
+                case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "B";
+            };
+            String pattern = switch (tropicalFish.getPattern()) {
+                case KOB, FLOPPER -> "1";
+                case SUNSTREAK, STRIPEY -> "2";
+                case SNOOPER, GLITTER -> "3";
+                case DASHER, BLOCKFISH -> "4";
+                case BRINELY, BETTY -> "5";
+                case SPOTTY, CLAYFISH -> "6";
+            };
+            return valueOf(String.format("TROPICAL_FISH_%s_PATTERN_%s_%s", bodyType, pattern, tropicalFish.getPatternColor().name()));
         }
     }
     public enum Vehicle implements Icon {
