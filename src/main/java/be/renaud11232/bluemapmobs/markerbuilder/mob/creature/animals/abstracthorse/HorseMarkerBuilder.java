@@ -5,34 +5,15 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import de.bluecolored.bluemap.api.markers.POIMarker;
+import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Horse;
 
 import java.util.List;
-import java.util.Optional;
 
-public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Horse.Style> {
+public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Horse.Style, Horse.Color> {
     public HorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
-    }
-
-    //TODO: Override getStyleClasses
-    @Override
-    public Optional<POIMarker> build(Horse horse) {
-        return super.build(horse).map(marker -> {
-            String horseColorClass = switch (horse.getColor()) {
-                case WHITE -> "bluemapmobs-white-horse";
-                case CREAMY -> "bluemapmobs-creamy-horse";
-                case CHESTNUT -> "bluemapmobs-chestnut-horse";
-                case BROWN -> "bluemapmobs-brown-horse";
-                case BLACK -> "bluemapmobs-black-horse";
-                case GRAY -> "bluemapmobs-gray-horse";
-                case DARK_BROWN -> "bluemapmobs-darkbrown-horse";
-            };
-            marker.addStyleClasses(List.of("bluemapmobs-horse", horseColorClass));
-            return marker;
-        });
     }
 
     @Override
@@ -41,8 +22,13 @@ public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Hor
     }
 
     @Override
-    public Horse.Style getVariant(Horse horse) {
+    public Horse.Style getIconVariant(Horse horse) {
         return horse.getStyle();
+    }
+
+    @Override
+    public Horse.Color getStyleClassesVariant(Horse horse) {
+        return horse.getColor();
     }
 
     @Override
@@ -52,5 +38,17 @@ public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Hor
         registry.register(Horse.Style.WHITEFIELD, BlueMapMobsIcon.Mob.HORSE_MARKINGS_WHITEFIELD);
         registry.register(Horse.Style.WHITE_DOTS, BlueMapMobsIcon.Mob.HORSE_MARKINGS_WHITE_DOTS);
         registry.register(Horse.Style.BLACK_DOTS, BlueMapMobsIcon.Mob.HORSE_MARKINGS_BLACK_DOTS);
+    }
+
+    //TODO Move constants to dedicated class
+    @Override
+    public void registerVariantStyleClasses(VariantStyleClassesRegistry<Horse.Color> registry) {
+        registry.register(Horse.Color.WHITE, List.of("bluemapmobs-horse", "bluemapmobs-white-horse"));
+        registry.register(Horse.Color.CREAMY, List.of("bluemapmobs-horse", "bluemapmobs-creamy-horse"));
+        registry.register(Horse.Color.CHESTNUT, List.of("bluemapmobs-horse", "bluemapmobs-chestnut-horse"));
+        registry.register(Horse.Color.BROWN, List.of("bluemapmobs-horse", "bluemapmobs-brown-horse"));
+        registry.register(Horse.Color.BLACK, List.of("bluemapmobs-horse", "bluemapmobs-black-horse"));
+        registry.register(Horse.Color.GRAY, List.of("bluemapmobs-horse", "bluemapmobs-gray-horse"));
+        registry.register(Horse.Color.DARK_BROWN, List.of("bluemapmobs-horse", "bluemapmobs-darkbrown-horse"));
     }
 }

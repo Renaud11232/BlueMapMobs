@@ -9,6 +9,7 @@ import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Entity;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
 
@@ -21,6 +22,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     @SuppressWarnings("rawtypes")
     private final Map<Class<? extends T>, MarkerBuilder> markerBuilders;
     private final Icon defaultIcon;
+    private final Collection<String> defaultStyleClasses;
 
     public EntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         this.config = config;
@@ -32,6 +34,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
         registerMarkerBuilders(registry);
         this.markerBuilders = registry.getItems();
         this.defaultIcon = getDefaultIcon();
+        this.defaultStyleClasses = getDefaultStyleClasses();
     }
 
     @Override
@@ -59,6 +62,13 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
                     if (icon != null) {
                         marker.setIcon(icon.getPath(), icon.getAnchor());
                     }
+                    Collection<String> styleClasses = getStyleClasses(entity);
+                    if (styleClasses == null) {
+                        styleClasses = defaultStyleClasses;
+                    }
+                    if (styleClasses != null) {
+                        marker.addStyleClasses(styleClasses);
+                    }
                     return marker;
                 });
     }
@@ -83,6 +93,14 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
     }
 
     public Icon getIcon(T entity) {
+        return null;
+    }
+
+    public Collection<String> getDefaultStyleClasses() {
+        return null;
+    }
+
+    public Collection<String> getStyleClasses(T entity) {
         return null;
     }
 }

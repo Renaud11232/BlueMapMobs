@@ -3,12 +3,12 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
-import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Panda;
 
-public class PandaMarkerBuilder extends VariantMobEntityMarkerBuilder<Panda, Panda.Gene> {
+public class PandaMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Panda, Panda.Gene> {
     public PandaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
