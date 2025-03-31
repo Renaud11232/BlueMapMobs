@@ -2,6 +2,7 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstractho
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
@@ -40,15 +41,14 @@ public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Hor
         registry.register(Horse.Style.BLACK_DOTS, BlueMapMobsIcon.Mob.HORSE_MARKINGS_BLACK_DOTS);
     }
 
-    //TODO Move constants to dedicated class
     @Override
     public void registerVariantStyleClasses(VariantStyleClassesRegistry<Horse.Color> registry) {
-        registry.register(Horse.Color.WHITE, List.of("bluemapmobs-horse", "bluemapmobs-white-horse"));
-        registry.register(Horse.Color.CREAMY, List.of("bluemapmobs-horse", "bluemapmobs-creamy-horse"));
-        registry.register(Horse.Color.CHESTNUT, List.of("bluemapmobs-horse", "bluemapmobs-chestnut-horse"));
-        registry.register(Horse.Color.BROWN, List.of("bluemapmobs-horse", "bluemapmobs-brown-horse"));
-        registry.register(Horse.Color.BLACK, List.of("bluemapmobs-horse", "bluemapmobs-black-horse"));
-        registry.register(Horse.Color.GRAY, List.of("bluemapmobs-horse", "bluemapmobs-gray-horse"));
-        registry.register(Horse.Color.DARK_BROWN, List.of("bluemapmobs-horse", "bluemapmobs-darkbrown-horse"));
+        registry.register(Horse.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.WHITE_HORSE));
+        registry.register(Horse.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.CREAMY_HORSE));
+        registry.register(Horse.Color.CHESTNUT, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.CHESTNUT_HORSE));
+        registry.register(Horse.Color.BROWN, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.BROWN_HORSE));
+        registry.register(Horse.Color.BLACK, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.BLACK_HORSE));
+        registry.register(Horse.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.GRAY_HORSE));
+        registry.register(Horse.Color.DARK_BROWN, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.DARKBROWN_HORSE));
     }
 }

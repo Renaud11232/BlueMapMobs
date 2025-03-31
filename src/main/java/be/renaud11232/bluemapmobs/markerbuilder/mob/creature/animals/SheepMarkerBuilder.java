@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
@@ -34,29 +35,28 @@ public class SheepMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Shee
         return sheep.getColor();
     }
 
-    //TODO Move constants to dedicated class
     @Override
     public void registerVariantStyleClasses(VariantStyleClassesRegistry<DyeColor> registry) {
-        registry.register(DyeColor.WHITE, List.of("bluemapmobs-sheep", "bluemapmobs-white-sheep"));
-        registry.register(DyeColor.ORANGE, List.of("bluemapmobs-sheep", "bluemapmobs-orange-sheep"));
-        registry.register(DyeColor.MAGENTA, List.of("bluemapmobs-sheep", "bluemapmobs-magenta-sheep"));
-        registry.register(DyeColor.LIGHT_BLUE, List.of("bluemapmobs-sheep", "bluemapmobs-lightblue-sheep"));
-        registry.register(DyeColor.YELLOW, List.of("bluemapmobs-sheep", "bluemapmobs-yellow-sheep"));
-        registry.register(DyeColor.LIME, List.of("bluemapmobs-sheep", "bluemapmobs-lime-sheep"));
-        registry.register(DyeColor.PINK, List.of("bluemapmobs-sheep", "bluemapmobs-pink-sheep"));
-        registry.register(DyeColor.GRAY, List.of("bluemapmobs-sheep", "bluemapmobs-gray-sheep"));
-        registry.register(DyeColor.LIGHT_GRAY, List.of("bluemapmobs-sheep", "bluemapmobs-lightgray-sheep"));
-        registry.register(DyeColor.CYAN, List.of("bluemapmobs-sheep", "bluemapmobs-cyan-sheep"));
-        registry.register(DyeColor.PURPLE, List.of("bluemapmobs-sheep", "bluemapmobs-purple-sheep"));
-        registry.register(DyeColor.BLUE, List.of("bluemapmobs-sheep", "bluemapmobs-blue-sheep"));
-        registry.register(DyeColor.BROWN, List.of("bluemapmobs-sheep", "bluemapmobs-brown-sheep"));
-        registry.register(DyeColor.GREEN, List.of("bluemapmobs-sheep", "bluemapmobs-green-sheep"));
-        registry.register(DyeColor.RED, List.of("bluemapmobs-sheep", "bluemapmobs-red-sheep"));
-        registry.register(DyeColor.BLACK, List.of("bluemapmobs-sheep", "bluemapmobs-black-sheep"));
+        registry.register(DyeColor.WHITE, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.WHITE_SHEEP));
+        registry.register(DyeColor.ORANGE, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.ORANGE_SHEEP));
+        registry.register(DyeColor.MAGENTA, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.MAGENTA_SHEEP));
+        registry.register(DyeColor.LIGHT_BLUE, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.LIGHTBLUE_SHEEP));
+        registry.register(DyeColor.YELLOW, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.YELLOW_SHEEP));
+        registry.register(DyeColor.LIME, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.LIME_SHEEP));
+        registry.register(DyeColor.PINK, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.PINK_SHEEP));
+        registry.register(DyeColor.GRAY, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.GRAY_SHEEP));
+        registry.register(DyeColor.LIGHT_GRAY, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.LIGHTGRAY_SHEEP));
+        registry.register(DyeColor.CYAN, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.CYAN_SHEEP));
+        registry.register(DyeColor.PURPLE, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.PURPLE_SHEEP));
+        registry.register(DyeColor.BLUE, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.BLUE_SHEEP));
+        registry.register(DyeColor.BROWN, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.BROWN_SHEEP));
+        registry.register(DyeColor.GREEN, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.GREEN_SHEEP));
+        registry.register(DyeColor.RED, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.RED_SHEEP));
+        registry.register(DyeColor.BLACK, List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.BLACK_SHEEP));
     }
 
     @Override
     public Collection<String> getDefaultStyleClasses() {
-        return List.of("bluemapmobs-sheep", "bluemapmobs-white-sheep");
+        return List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.WHITE_SHEEP);
     }
 }
