@@ -2,33 +2,38 @@ package be.renaud11232.bluemapmobs.markerbuilder.mob.creature;
 
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.*;
+import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class AnimalsMarkerBuilder extends MobEntityMarkerBuilder<Animals> {
     public AnimalsMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
-        registerMarkerBuilder(AbstractCow.class, new AbstractCowMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(AbstractHorse.class, new AbstractHorseMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Armadillo.class, new ArmadilloMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Axolotl.class, new AxolotlMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Bee.class, new BeeMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Cat.class, new CatMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Chicken.class, new ChickenMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Fox.class, new FoxMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Frog.class, new FrogMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Goat.class, new GoatMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Hoglin.class, new HoglinMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Ocelot.class, new OcelotMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Panda.class, new PandaMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Parrot.class, new ParrotMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Pig.class, new PigMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(PolarBear.class, new PolarBearMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Rabbit.class, new RabbitMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Sheep.class, new SheepMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Sniffer.class, new SnifferMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Strider.class, new StriderMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Turtle.class, new TurtleMarkerBuilder(config, defaultConfig));
-        registerMarkerBuilder(Wolf.class, new WolfMarkerBuilder(config, defaultConfig));
+    }
+
+    @Override
+    public void registerMarkerBuilders(MarkerBuilderRegistry<Animals> registry) {
+        registry.register(AbstractCow.class, new AbstractCowMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(AbstractHorse.class, new AbstractHorseMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Armadillo.class, new ArmadilloMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Axolotl.class, new AxolotlMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Bee.class, new BeeMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Cat.class, new CatMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Chicken.class, new ChickenMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Fox.class, new FoxMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Frog.class, new FrogMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Goat.class, new GoatMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Hoglin.class, new HoglinMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Ocelot.class, new OcelotMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Panda.class, new PandaMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Parrot.class, new ParrotMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Pig.class, new PigMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(PolarBear.class, new PolarBearMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Rabbit.class, new RabbitMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Sheep.class, new SheepMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Sniffer.class, new SnifferMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Strider.class, new StriderMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Turtle.class, new TurtleMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Wolf.class, new WolfMarkerBuilder(getConfig(), getDefaultConfig()));
     }
 }

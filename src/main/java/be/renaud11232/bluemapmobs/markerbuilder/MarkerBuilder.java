@@ -1,5 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsStyle;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Location;
@@ -14,14 +16,14 @@ public interface MarkerBuilder<T extends Entity> {
 
     default Optional<POIMarker> buildDefault(T entity) {
         Location location = entity.getLocation();
+        Icon icon = BlueMapMobsIcon.UNKNOWN;
         return Optional.of(
                 POIMarker.builder()
                         .label(entity.getName())
                         .position(location.getX(), location.getY(), location.getZ())
-                        .icon(getDefaultIcon().getPath(), getDefaultIcon().getAnchor())
+                        .icon(icon.getPath(), icon.getAnchor())
+                        .styleClasses(BlueMapMobsStyle.MARKER)
                         .build()
         );
     }
-
-    Icon getDefaultIcon();
 }

@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.watermob.fish;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import de.bluecolored.bluemap.api.markers.POIMarker;
@@ -10,14 +11,21 @@ import org.bukkit.entity.TropicalFish;
 import java.util.List;
 import java.util.Optional;
 
+//TODO: VariantMobEntityMarkerBuilder ?
 public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFish> {
     public TropicalFishMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TROPICAL_FISH);
+        super(config, defaultConfig);
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(TropicalFish tropicalFish) {
-        return super.buildDefault(tropicalFish).map(marker -> {
+    public BooleanConfiguration getVisibility() {
+        return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TROPICAL_FISH;
+    }
+
+    //TODO: Override getIcon and getStyleClasses
+    @Override
+    public Optional<POIMarker> build(TropicalFish tropicalFish) {
+        return super.build(tropicalFish).map(marker -> {
             String bodyType = switch (tropicalFish.getPattern()) {
                 case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
                 case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";

@@ -1,20 +1,36 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.npc.abstractvillager;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Villager;
 
-public class VillagerMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Villager, Villager.Type> {
+public class VillagerMarkerBuilder extends VariantMobEntityMarkerBuilder<Villager, Villager.Type> {
     public VillagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VILLAGER, Villager::getVillagerType);
-        registerIcon(Villager.Type.SNOW, BlueMapMobsIcon.Mob.SNOWY_VILLAGER);
-        registerIcon(Villager.Type.SWAMP, BlueMapMobsIcon.Mob.SWAMP_VILLAGER);
-        registerIcon(Villager.Type.TAIGA, BlueMapMobsIcon.Mob.TAIGA_VILLAGER);
-        registerIcon(Villager.Type.DESERT, BlueMapMobsIcon.Mob.DESERT_VILLAGER);
-        registerIcon(Villager.Type.JUNGLE, BlueMapMobsIcon.Mob.JUNGLE_VILLAGER);
-        registerIcon(Villager.Type.PLAINS, BlueMapMobsIcon.Mob.PLAINS_VILLAGER);
-        registerIcon(Villager.Type.SAVANNA, BlueMapMobsIcon.Mob.SAVANNA_VILLAGER);
+        super(config, defaultConfig);
+    }
+
+    @Override
+    public BooleanConfiguration getVisibility() {
+        return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.VILLAGER;
+    }
+
+    @Override
+    public Villager.Type getVariant(Villager villager) {
+        return villager.getVillagerType();
+    }
+
+    @Override
+    public void registerVariantIcons(VariantIconRegistry<Villager.Type> registry) {
+        registry.register(Villager.Type.SNOW, BlueMapMobsIcon.Mob.SNOWY_VILLAGER);
+        registry.register(Villager.Type.SWAMP, BlueMapMobsIcon.Mob.SWAMP_VILLAGER);
+        registry.register(Villager.Type.TAIGA, BlueMapMobsIcon.Mob.TAIGA_VILLAGER);
+        registry.register(Villager.Type.DESERT, BlueMapMobsIcon.Mob.DESERT_VILLAGER);
+        registry.register(Villager.Type.JUNGLE, BlueMapMobsIcon.Mob.JUNGLE_VILLAGER);
+        registry.register(Villager.Type.PLAINS, BlueMapMobsIcon.Mob.PLAINS_VILLAGER);
+        registry.register(Villager.Type.SAVANNA, BlueMapMobsIcon.Mob.SAVANNA_VILLAGER);
     }
 }

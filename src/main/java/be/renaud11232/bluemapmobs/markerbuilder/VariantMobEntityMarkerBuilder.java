@@ -1,13 +1,11 @@
-package be.renaud11232.bluemapmobs.markerbuilder.v2;
+package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
 
 import java.util.Map;
-import java.util.Optional;
 
 public abstract class VariantMobEntityMarkerBuilder<T extends Mob, V> extends MobEntityMarkerBuilder<T> implements VariantMarkerBuilder<T, V> {
     private final Map<V, Icon> icons;
@@ -20,13 +18,7 @@ public abstract class VariantMobEntityMarkerBuilder<T extends Mob, V> extends Mo
     }
 
     @Override
-    public Optional<POIMarker> build(T mob) {
-        return super.build(mob).map(marker -> {
-            Icon icon = icons.get(getVariant(mob));
-            if (icon != null) {
-                marker.setIcon(icon.getPath(), icon.getAnchor());
-            }
-            return marker;
-        });
+    public Icon getIcon(T mob) {
+        return icons.get(getVariant(mob));
     }
 }

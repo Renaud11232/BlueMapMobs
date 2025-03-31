@@ -1,16 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Wolf;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> angryIcons;
@@ -18,7 +17,7 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> untamedIcons;
     
     public WolfMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WOLF);
+        super(config, defaultConfig);
         angryIcons = new HashMap<>();
         angryIcons.put(Wolf.Variant.ASHEN, BlueMapMobsIcon.Mob.ANGRY_ASHEN_WOLF);
         angryIcons.put(Wolf.Variant.BLACK, BlueMapMobsIcon.Mob.ANGRY_BLACK_WOLF);
@@ -52,19 +51,20 @@ public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(Wolf wolf) {
-        return super.buildDefault(wolf).map(marker -> {
-            Map<Wolf.Variant, Icon> icons;
-            if (wolf.isAngry()) {
-                icons = angryIcons;
-            } else if (wolf.isTamed()) {
-                icons = tamedIcons;
-            } else {
-                icons = untamedIcons;
-            }
-            Icon icon = icons.getOrDefault(wolf.getVariant(), BlueMapMobsIcon.Common.UNKNOWN);
-            marker.setIcon(icon.getPath(), icon.getAnchor());
-            return marker;
-        });
+    public BooleanConfiguration getVisibility() {
+        return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.WOLF;
+    }
+
+    @Override
+    public Icon getIcon(Wolf wolf) {
+        Map<Wolf.Variant, Icon> icons;
+        if (wolf.isAngry()) {
+            icons = angryIcons;
+        } else if (wolf.isTamed()) {
+            icons = tamedIcons;
+        } else {
+            icons = untamedIcons;
+        }
+        return icons.get(wolf.getVariant());
     }
 }

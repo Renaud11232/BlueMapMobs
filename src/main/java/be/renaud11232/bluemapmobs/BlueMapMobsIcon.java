@@ -5,9 +5,7 @@ import be.renaud11232.bluemapmobs.icon.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;
 
 public final class BlueMapMobsIcon {
-    public static final class Common {
-        public static final Icon UNKNOWN = new SimpleIcon("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12));
-    }
+    public static final Icon UNKNOWN = new SimpleIcon("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12));
     public enum Mob implements Icon {
         BAT("assets/bluemapmobs/img/mobs/ambient/bat.png", new Vector2i(12, 12)),
         ALLAY("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12)),
