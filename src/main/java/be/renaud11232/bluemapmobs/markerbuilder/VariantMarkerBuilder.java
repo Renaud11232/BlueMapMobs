@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapmobs.markerbuilder.v2;
+package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.entity.Entity;

@@ -1,16 +1,32 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.markerbuilder.MappedIconMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Chicken;
 
-public class ChickenMarkerBuilder extends MappedIconMobEntityMarkerBuilder<Chicken, Chicken.Variant> {
+public class ChickenMarkerBuilder extends VariantMobEntityMarkerBuilder<Chicken, Chicken.Variant> {
     public ChickenMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CHICKEN, Chicken::getVariant);
-        registerIcon(Chicken.Variant.TEMPERATE, BlueMapMobsIcon.Mob.TEMPERATE_CHICKEN);
-        registerIcon(Chicken.Variant.COLD, BlueMapMobsIcon.Mob.COLD_CHICKEN);
-        registerIcon(Chicken.Variant.WARM, BlueMapMobsIcon.Mob.WARM_CHICKEN);
+        super(config, defaultConfig);
+    }
+
+    @Override
+    public BooleanConfiguration getVisibility() {
+        return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.CHICKEN;
+    }
+
+    @Override
+    public Chicken.Variant getVariant(Chicken chicken) {
+        return chicken.getVariant();
+    }
+
+    @Override
+    public void registerVariantIcons(VariantIconRegistry<Chicken.Variant> registry) {
+        registry.register(Chicken.Variant.TEMPERATE, BlueMapMobsIcon.Mob.TEMPERATE_CHICKEN);
+        registry.register(Chicken.Variant.COLD, BlueMapMobsIcon.Mob.COLD_CHICKEN);
+        registry.register(Chicken.Variant.WARM, BlueMapMobsIcon.Mob.WARM_CHICKEN);
     }
 }

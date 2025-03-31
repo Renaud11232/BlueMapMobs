@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.abstractskeleton;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -8,6 +10,16 @@ import org.bukkit.entity.Stray;
 
 public class StrayMarkerBuilder extends MobEntityMarkerBuilder<Stray> {
     public StrayMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig, BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.STRAY, BlueMapMobsIcon.Mob.STRAY);
+        super(config, defaultConfig);
+    }
+
+    @Override
+    public BooleanConfiguration getVisibility() {
+        return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.STRAY;
+    }
+
+    @Override
+    public Icon getDefaultIcon() {
+        return BlueMapMobsIcon.Mob.STRAY;
     }
 }
