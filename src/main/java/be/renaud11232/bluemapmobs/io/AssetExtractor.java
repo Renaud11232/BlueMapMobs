@@ -24,15 +24,8 @@ public class AssetExtractor implements AutoCloseable {
     }
 
     public void extract(boolean overwrite) throws IOException {
-        createDestinationDirectory();
         List<Path> sourceFiles = listSourceFiles();
         copyFiles(sourceFiles, overwrite);
-    }
-
-    private void createDestinationDirectory() throws IOException {
-        if (!Files.exists(destination)) {
-            Files.createDirectories(destination);
-        }
     }
 
     private List<Path> listFiles(Path absolutePath) throws IOException {
