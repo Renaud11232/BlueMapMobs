@@ -11,6 +11,7 @@ import org.bukkit.DyeColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Sheep;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -58,5 +59,15 @@ public class SheepMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Shee
     @Override
     public Collection<String> getDefaultStyleClasses() {
         return List.of(BlueMapMobsStyleClass.Mob.SHEEP, BlueMapMobsStyleClass.Mob.WHITE_SHEEP);
+    }
+
+    @Override
+    public Collection<String> getStyleClasses(Sheep sheep) {
+        Collection<String> styleClasses = super.getStyleClasses(sheep);
+        if (sheep.getName().equals("jeb_")) {
+            styleClasses = new ArrayList<>(styleClasses);
+            styleClasses.add(BlueMapMobsStyleClass.Mob.JEB_SHEEP);
+        }
+        return styleClasses;
     }
 }
