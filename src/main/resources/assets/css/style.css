@@ -96,6 +96,64 @@
     background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_pink.png");
 }
 
+@keyframes bluemapmobs-jeb-sheep-animation {
+    from {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_white.png");
+    }
+    6.25% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_orange.png");
+    }
+    12.5% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_magenta.png");
+    }
+    18.75% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_light_blue.png");
+    }
+    25% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_yellow.png");
+    }
+    31.25% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_lime.png");
+    }
+    37.5% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_pink.png");
+    }
+    43.75% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_gray.png");
+    }
+    50% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_light_gray.png");
+    }
+    56.25% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_cyan.png");
+    }
+    62.5% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_purple.png");
+    }
+    68.75% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_blue.png");
+    }
+    75% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_brown.png");
+    }
+    81.25% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_green.png");
+    }
+    87.5% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_red.png");
+    }
+    93.75% {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_black.png");
+    }
+    to {
+        background-image: url("../img/mobs/creature/animals/sheep/sheep_fur_white.png");
+    }
+}
+
+#map-container .bluemapmobs-jeb-sheep img {
+    animation: bluemapmobs-jeb-sheep-animation 20s linear infinite;
+}
+
 #map-container .bluemapmobs-white-horse img {
     background-image: url("../img/mobs/creature/animals/abstracthorse/horse/horse_white.png");
 }

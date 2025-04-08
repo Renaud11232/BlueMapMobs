@@ -23,6 +23,7 @@ public final class BlueMapMobsStyleClass {
         public static final String GREEN_SHEEP = "bluemapmobs-green-sheep";
         public static final String RED_SHEEP = "bluemapmobs-red-sheep";
         public static final String BLACK_SHEEP = "bluemapmobs-black-sheep";
+        public static final String JEB_SHEEP = "bluemapmobs-jeb-sheep";
         public static final String HORSE = "bluemapmobs-horse";
         public static final String WHITE_HORSE = "bluemapmobs-white-horse";
         public static final String CREAMY_HORSE = "bluemapmobs-creamy-horse";
