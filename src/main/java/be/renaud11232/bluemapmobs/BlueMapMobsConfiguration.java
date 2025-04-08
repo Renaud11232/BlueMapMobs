@@ -4,18 +4,18 @@ import be.renaud11232.bluemapmobs.configuration.*;
 
 public final class BlueMapMobsConfiguration {
     public static final class General {
-        public static final BooleanConfiguration OVERWRITE_ASSETS = new SimpleBooleanConfiguration("general.overwrite_assets");
-        public static final IntegerConfiguration MINIMUM_BLOCK_LIGHT = new SimpleIntegerConfiguration("general.minimum_block_light");
-        public static final IntegerConfiguration MINIMUM_SKY_LIGHT = new SimpleIntegerConfiguration("general.minimum_sky_light");
+        public static final Configuration<Boolean> OVERWRITE_ASSETS = new SimpleBooleanConfiguration("general.overwrite_assets");
+        public static final Configuration<Integer> MINIMUM_BLOCK_LIGHT = new SimpleIntegerConfiguration("general.minimum_block_light");
+        public static final Configuration<Integer> MINIMUM_SKY_LIGHT = new SimpleIntegerConfiguration("general.minimum_sky_light");
     }
     public static final class MarkerSets {
         public static final class Mobs {
-            public static final StringConfiguration KEY = new SimpleStringConfiguration("marker_sets.mobs.key");
-            public static final StringConfiguration LABEL = new SimpleStringConfiguration("marker_sets.mobs.label");
-            public static final BooleanConfiguration TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.mobs.toggleable");
-            public static final BooleanConfiguration DEFAULT_HIDDEN = new SimpleBooleanConfiguration("marker_sets.mobs.default_hidden");
+            public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.mobs.key");
+            public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.mobs.label");
+            public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.mobs.toggleable");
+            public static final Configuration<Boolean> DEFAULT_HIDDEN = new SimpleBooleanConfiguration("marker_sets.mobs.default_hidden");
             public static final class Markers {
-                public static final DoubleConfiguration MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.mobs.markers.max_distance");
+                public static final Configuration<Double> MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.mobs.markers.max_distance");
                 public enum Types implements BooleanConfiguration {
                     BAT("marker_sets.mobs.markers.types.bat"),
                     ALLAY("marker_sets.mobs.markers.types.allay"),
@@ -115,12 +115,12 @@ public final class BlueMapMobsConfiguration {
             }
         }
         public static final class Vehicles {
-            public static final StringConfiguration KEY = new SimpleStringConfiguration("marker_sets.vehicles.key");
-            public static final StringConfiguration LABEL = new SimpleStringConfiguration("marker_sets.vehicles.label");
-            public static final BooleanConfiguration TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.vehicles.toggleable");
-            public static final BooleanConfiguration DEFAULT_HIDDEN = new SimpleBooleanConfiguration("marker_sets.vehicles.default_hidden");
+            public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.vehicles.key");
+            public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.vehicles.label");
+            public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.vehicles.toggleable");
+            public static final Configuration<Boolean> DEFAULT_HIDDEN = new SimpleBooleanConfiguration("marker_sets.vehicles.default_hidden");
             public static final class Markers {
-                public static final DoubleConfiguration MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.vehicles.markers.max_distance");
+                public static final Configuration<Double> MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.vehicles.markers.max_distance");
                 public enum Types implements BooleanConfiguration {
                     BOAT("marker_sets.vehicles.markers.types.boat"),
                     CHEST_BOAT("marker_sets.vehicles.markers.types.chest_boat"),

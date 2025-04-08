@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
-import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
 import de.bluecolored.bluemap.api.markers.POIMarker;
@@ -81,7 +81,7 @@ public abstract class EntityMarkerBuilder<T extends Entity> implements MarkerBui
         return defaultConfig;
     }
 
-    public BooleanConfiguration getVisibility() {
+    public Configuration<Boolean> getVisibility() {
         return null;
     }
 

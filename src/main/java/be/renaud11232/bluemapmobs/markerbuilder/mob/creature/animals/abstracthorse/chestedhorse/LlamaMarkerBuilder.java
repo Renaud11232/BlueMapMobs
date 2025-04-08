@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse;
 
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
-import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals.abstracthorse.chestedhorse.llama.TraderLlamaMarkerBuilder;
-import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
@@ -24,7 +24,7 @@ public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Mat
     }
 
     @Override
-    public BooleanConfiguration getVisibility() {
+    public Configuration<Boolean> getVisibility() {
         return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.LLAMA;
     }
 

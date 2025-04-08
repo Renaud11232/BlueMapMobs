@@ -1,8 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
-import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
-import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -14,7 +14,7 @@ public class ParrotMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Par
     }
 
     @Override
-    public BooleanConfiguration getVisibility() {
+    public Configuration<Boolean> getVisibility() {
         return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.PARROT;
     }
 

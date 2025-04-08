@@ -1,10 +1,10 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Turtle;
 
@@ -14,7 +14,7 @@ public class TurtleMarkerBuilder extends MobEntityMarkerBuilder<Turtle> {
     }
 
     @Override
-    public BooleanConfiguration getVisibility() {
+    public Configuration<Boolean> getVisibility() {
         return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.TURTLE;
     }
 

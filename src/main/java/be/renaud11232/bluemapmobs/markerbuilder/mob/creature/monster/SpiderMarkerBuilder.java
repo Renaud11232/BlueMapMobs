@@ -1,11 +1,11 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster;
 
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.mob.creature.monster.spider.CaveSpiderMarkerBuilder;
-import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.CaveSpider;
@@ -17,7 +17,7 @@ public class SpiderMarkerBuilder extends MobEntityMarkerBuilder<Spider> {
     }
 
     @Override
-    public BooleanConfiguration getVisibility() {
+    public Configuration<Boolean> getVisibility() {
         return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SPIDER;
     }
 
