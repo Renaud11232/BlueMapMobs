@@ -1,10 +1,10 @@
 package be.renaud11232.bluemapmobs.markerbuilder.mob.creature.animals;
 
+import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
-import be.renaud11232.bluemapmobs.configuration.BooleanConfiguration;
+import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
 import org.bukkit.DyeColor;
@@ -21,7 +21,7 @@ public class SheepMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Shee
     }
 
     @Override
-    public BooleanConfiguration getVisibility() {
+    public Configuration<Boolean> getVisibility() {
         return BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.Types.SHEEP;
     }
 

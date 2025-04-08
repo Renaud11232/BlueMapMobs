@@ -8,7 +8,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
-import java.nio.file.*;
+import java.nio.file.Path;
 
 
 @SuppressWarnings("unused")
@@ -56,7 +56,8 @@ public final class BlueMapMobs extends JavaPlugin {
                     .stream()
                     .filter(f -> f.toString().toLowerCase().endsWith(".css"))
                     .map(relativeDestination::resolve)
-                    .forEach(f -> api.getWebApp().registerStyle(f.toString()));
+                    .map(Path::toString)
+                    .forEach(f -> api.getWebApp().registerStyle(f));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
