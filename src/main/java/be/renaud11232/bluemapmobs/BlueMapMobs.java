@@ -38,7 +38,7 @@ public final class BlueMapMobs extends JavaPlugin {
         try {
             defaultConfig = new ConfigurationLoader(getResource("config.yml")).load();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new BlueMapMobsException("Unable to load default configuration.", e);
         }
     }
 
@@ -59,7 +59,7 @@ public final class BlueMapMobs extends JavaPlugin {
                     .map(Path::toString)
                     .forEach(f -> api.getWebApp().registerStyle(f));
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new BlueMapMobsException("An error has occurred when preparing files.", e);
         }
     }
 }
