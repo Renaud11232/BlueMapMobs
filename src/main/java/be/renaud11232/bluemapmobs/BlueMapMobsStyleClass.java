@@ -7,7 +7,6 @@ public final class BlueMapMobsStyleClass {
     public static final String FLIP = "bluemapmobs-flip";
 
     public static final class Mob {
-        public static final String SHEEP = "bluemapmobs-sheep";
         public static final String WHITE_SHEEP = "bluemapmobs-white-sheep";
         public static final String ORANGE_SHEEP = "bluemapmobs-orange-sheep";
         public static final String MAGENTA_SHEEP = "bluemapmobs-magenta-sheep";
@@ -25,7 +24,6 @@ public final class BlueMapMobsStyleClass {
         public static final String RED_SHEEP = "bluemapmobs-red-sheep";
         public static final String BLACK_SHEEP = "bluemapmobs-black-sheep";
         public static final String JEB_SHEEP = "bluemapmobs-jeb-sheep";
-        public static final String HORSE = "bluemapmobs-horse";
         public static final String WHITE_HORSE = "bluemapmobs-white-horse";
         public static final String CREAMY_HORSE = "bluemapmobs-creamy-horse";
         public static final String CHESTNUT_HORSE = "bluemapmobs-chestnut-horse";
@@ -33,12 +31,10 @@ public final class BlueMapMobsStyleClass {
         public static final String BLACK_HORSE = "bluemapmobs-black-horse";
         public static final String GRAY_HORSE = "bluemapmobs-gray-horse";
         public static final String DARKBROWN_HORSE = "bluemapmobs-darkbrown-horse";
-        public static final String LLAMA = "bluemapmobs-llama";
         public static final String CREAMY_LLAMA = "bluemapmobs-creamy-llama";
         public static final String WHITE_LLAMA = "bluemapmobs-white-llama";
         public static final String GRAY_LLAMA = "bluemapmobs-gray-llama";
         public static final String BROWN_LLAMA = "bluemapmobs-brown-llama";
-        public static final String TROPICAL_FISH = "bluemapmobs-tropical-fish";
         public static String tropicalFish(TropicalFish tropicalFish) {
             String bodyType = switch (tropicalFish.getPattern()) {
                 case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";

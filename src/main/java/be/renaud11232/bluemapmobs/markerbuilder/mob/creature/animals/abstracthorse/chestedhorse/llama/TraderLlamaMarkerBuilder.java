@@ -35,9 +35,9 @@ public class TraderLlamaMarkerBuilder extends SingleVariantMobEntityMarkerBuilde
 
     @Override
     public void registerVariantStyleClasses(VariantStyleClassesRegistry<Llama.Color> registry) {
-        registry.register(Llama.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.CREAMY_LLAMA));
-        registry.register(Llama.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.WHITE_LLAMA));
-        registry.register(Llama.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.GRAY_LLAMA));
-        registry.register(Llama.Color.BROWN, List.of(BlueMapMobsStyleClass.Mob.LLAMA, BlueMapMobsStyleClass.Mob.BROWN_LLAMA));
+        registry.register(Llama.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.CREAMY_LLAMA));
+        registry.register(Llama.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.WHITE_LLAMA));
+        registry.register(Llama.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.GRAY_LLAMA));
+        registry.register(Llama.Color.BROWN, List.of(BlueMapMobsStyleClass.Mob.BROWN_LLAMA));
     }
 }
