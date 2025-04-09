@@ -4,6 +4,7 @@ import org.bukkit.entity.TropicalFish;
 
 public final class BlueMapMobsStyleClass {
     public static final String MARKER = "bluemapmobs-marker";
+    public static final String FLIP = "bluemapmobs-flip";
 
     public static final class Mob {
         public static final String SHEEP = "bluemapmobs-sheep";

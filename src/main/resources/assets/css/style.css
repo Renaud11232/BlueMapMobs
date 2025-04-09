@@ -9,6 +9,10 @@
     image-rendering: pixelated;
 }
 
+#map-container .bluemapmobs-flip img {
+    transform: rotate(180deg);
+}
+
 #map-container .bluemapmobs-llama img,
 #map-container .bluemapmobs-sheep img,
 #map-container .bluemapmobs-horse img,
