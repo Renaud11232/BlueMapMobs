@@ -43,12 +43,12 @@ public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Hor
 
     @Override
     public void registerVariantStyleClasses(VariantStyleClassesRegistry<Horse.Color> registry) {
-        registry.register(Horse.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.WHITE_HORSE));
-        registry.register(Horse.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.CREAMY_HORSE));
-        registry.register(Horse.Color.CHESTNUT, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.CHESTNUT_HORSE));
-        registry.register(Horse.Color.BROWN, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.BROWN_HORSE));
-        registry.register(Horse.Color.BLACK, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.BLACK_HORSE));
-        registry.register(Horse.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.GRAY_HORSE));
-        registry.register(Horse.Color.DARK_BROWN, List.of(BlueMapMobsStyleClass.Mob.HORSE, BlueMapMobsStyleClass.Mob.DARKBROWN_HORSE));
+        registry.register(Horse.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.WHITE_HORSE));
+        registry.register(Horse.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.CREAMY_HORSE));
+        registry.register(Horse.Color.CHESTNUT, List.of(BlueMapMobsStyleClass.Mob.CHESTNUT_HORSE));
+        registry.register(Horse.Color.BROWN, List.of(BlueMapMobsStyleClass.Mob.BROWN_HORSE));
+        registry.register(Horse.Color.BLACK, List.of(BlueMapMobsStyleClass.Mob.BLACK_HORSE));
+        registry.register(Horse.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.GRAY_HORSE));
+        registry.register(Horse.Color.DARK_BROWN, List.of(BlueMapMobsStyleClass.Mob.DARKBROWN_HORSE));
     }
 }

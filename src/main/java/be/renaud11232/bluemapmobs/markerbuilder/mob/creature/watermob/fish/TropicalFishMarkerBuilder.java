@@ -29,6 +29,6 @@ public class TropicalFishMarkerBuilder extends MobEntityMarkerBuilder<TropicalFi
 
     @Override
     public Collection<String> getStyleClasses(TropicalFish tropicalFish) {
-        return List.of(BlueMapMobsStyleClass.Mob.TROPICAL_FISH, BlueMapMobsStyleClass.Mob.tropicalFish(tropicalFish));
+        return List.of(BlueMapMobsStyleClass.Mob.tropicalFish(tropicalFish));
     }
 }

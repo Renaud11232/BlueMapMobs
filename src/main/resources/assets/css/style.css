@@ -7,17 +7,11 @@
     width: var(--icon-width);
     height: var(--icon-height);
     image-rendering: pixelated;
+    background-size: cover;
 }
 
 #map-container .bluemapmobs-flip img {
     transform: rotate(180deg);
-}
-
-#map-container .bluemapmobs-llama img,
-#map-container .bluemapmobs-sheep img,
-#map-container .bluemapmobs-horse img,
-#map-container .bluemapmobs-tropical-fish img {
-    background-size: cover;
 }
 
 #map-container .bluemapmobs-creamy-llama img {
