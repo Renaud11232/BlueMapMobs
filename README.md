@@ -24,7 +24,7 @@ Installing the plugin with an older version however will most likely result in a
 ## Configuration
 
 The plugin provides a few configuration options to customize the markers, or the web assets.
-All configuration values are in the standard `plugin.yml`.
+All configuration values are in the standard `config.yml`.
 The plugin is reloaded normally when BlueMap is reloaded.
 
 ## Download
