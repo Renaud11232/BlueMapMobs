@@ -145,5 +145,17 @@ public final class BlueMapMobsConfiguration {
                 }
             }
         }
+        public static final class Others {
+            public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.others.key");
+            public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.others.label");
+            public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.others.toggleable");
+            public static final Configuration<Boolean> DEFAULT_HIDDEN = new SimpleBooleanConfiguration("marker_sets.others.default_hidden");
+            public static final class Markers {
+                public static final Configuration<Double> MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.others.markers.max_distance");
+                public static final class Types {
+                    public static final Configuration<Boolean> ARMOR_STAND = new SimpleBooleanConfiguration("marker_sets.others.markers.types.armor_stand");
+                }
+            }
+        }
     }
 }
