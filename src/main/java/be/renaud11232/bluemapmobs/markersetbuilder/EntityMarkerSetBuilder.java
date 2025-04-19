@@ -13,11 +13,11 @@ public abstract class EntityMarkerSetBuilder<T extends Entity> implements Marker
         this.defaultConfig = defaultConfig;
     }
 
-    public FileConfiguration getConfig() {
+    public final FileConfiguration getConfig() {
         return this.config;
     }
 
-    public FileConfiguration getDefaultConfig() {
+    public final FileConfiguration getDefaultConfig() {
         return this.defaultConfig;
     }
 }
