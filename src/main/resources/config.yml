@@ -118,3 +118,13 @@ marker_sets:
         rideable_minecart: true
         spawner_minecart: true
         storage_minecart: true
+
+  others:
+    key: "bluemapmobs-others"
+    label: "Other entities"
+    toggleable: true
+    default_hidden: true
+    markers:
+      max_distance: 1000
+      types:
+        armor_stand: true

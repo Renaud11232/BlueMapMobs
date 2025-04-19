@@ -464,4 +464,7 @@ public final class BlueMapMobsIcon {
             return anchor;
         }
     }
+    public static final class Other {
+        public static final Icon ARMOR_STAND = new SimpleIcon("assets/bluemapmobs/img/others/livingentity/armor_stand.png", new Vector2i(12, 12));
+    }
 }
