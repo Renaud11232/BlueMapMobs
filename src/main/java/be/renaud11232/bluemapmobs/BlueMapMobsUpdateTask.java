@@ -12,7 +12,6 @@ import java.util.List;
 public class BlueMapMobsUpdateTask implements Runnable {
     private final List<WorldEntityMarkerUpdater<?>> updaters;
 
-
     public BlueMapMobsUpdateTask(BlueMapMobs plugin, BlueMapAPI api) {
         this.updaters = List.of(
                 new WorldMobMarkerUpdater(plugin, api),
