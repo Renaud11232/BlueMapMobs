@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.updater;
 
 import be.renaud11232.bluemapmobs.BlueMapMobs;
-import be.renaud11232.bluemapmobs.markerbuilder.VehicleMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.impl.VehicleMarkerBuilder;
 import be.renaud11232.bluemapmobs.markersetbuilder.VehicleMarkerSetBuilder;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;

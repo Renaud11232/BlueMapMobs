@@ -7,7 +7,7 @@ import org.bukkit.entity.Vehicle;
 
 import java.util.Optional;
 
-public class VehicleEntityMarkerBuilder<T extends Vehicle> extends EntityMarkerBuilder<T> {
+public abstract class VehicleEntityMarkerBuilder<T extends Vehicle> extends EntityMarkerBuilder<T> {
     public VehicleEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

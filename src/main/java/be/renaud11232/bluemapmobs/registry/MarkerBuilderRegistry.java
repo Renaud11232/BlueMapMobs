@@ -1,14 +1,13 @@
 package be.renaud11232.bluemapmobs.registry;
 
 import be.renaud11232.bluemapmobs.markerbuilder.MarkerBuilder;
-import org.bukkit.entity.Entity;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 @SuppressWarnings("rawtypes")
-public class MarkerBuilderRegistry<T extends Entity> {
+public class MarkerBuilderRegistry<T> {
     private final Map<Class<? extends T>, MarkerBuilder> items;
 
     public MarkerBuilderRegistry() {

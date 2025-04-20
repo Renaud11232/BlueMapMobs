@@ -7,7 +7,7 @@ import org.bukkit.entity.Entity;
 
 import java.util.Optional;
 
-public class OtherEntityMarkerBuilder<T extends Entity> extends EntityMarkerBuilder<T> {
+public abstract class OtherEntityMarkerBuilder<T extends Entity> extends EntityMarkerBuilder<T> {
     public OtherEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
