@@ -5,7 +5,6 @@ import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
 import de.bluecolored.bluemap.api.markers.POIMarker;
-import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
 
