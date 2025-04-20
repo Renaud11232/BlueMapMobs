@@ -1,23 +1,29 @@
 package be.renaud11232.bluemapmobs;
 
-import be.renaud11232.bluemapmobs.updater.WorldEntityMarkerUpdater;
-import be.renaud11232.bluemapmobs.updater.WorldMobMarkerUpdater;
-import be.renaud11232.bluemapmobs.updater.WorldOtherMarkerUpdater;
-import be.renaud11232.bluemapmobs.updater.WorldVehicleMarkerUpdater;
+import be.renaud11232.bluemapmobs.updater.WorldMarkerUpdaterBase;
+import be.renaud11232.bluemapmobs.updater.impl.WorldMobMarkerUpdater;
+import be.renaud11232.bluemapmobs.updater.impl.WorldNPCMarkerUpdater;
+import be.renaud11232.bluemapmobs.updater.impl.WorldOtherMarkerUpdater;
+import be.renaud11232.bluemapmobs.updater.impl.WorldVehicleMarkerUpdater;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class BlueMapMobsUpdateTask implements Runnable {
-    private final List<WorldEntityMarkerUpdater<?>> updaters;
+    private final List<WorldMarkerUpdaterBase<?>> updaters;
 
     public BlueMapMobsUpdateTask(BlueMapMobs plugin, BlueMapAPI api) {
-        this.updaters = new LinkedList<>();
-        this.updaters.add(new WorldMobMarkerUpdater(plugin, api));
-        this.updaters.add(new WorldVehicleMarkerUpdater(plugin, api));
-        this.updaters.add(new WorldOtherMarkerUpdater(plugin, api));
+        updaters = new LinkedList<>();
+        updaters.add(new WorldMobMarkerUpdater(plugin, api));
+        updaters.add(new WorldVehicleMarkerUpdater(plugin, api));
+        updaters.add(new WorldOtherMarkerUpdater(plugin, api));
+        Plugin citizens = plugin.getServer().getPluginManager().getPlugin("Citizens");
+        if (citizens != null && citizens.isEnabled()) {
+            updaters.add(new WorldNPCMarkerUpdater(plugin, api));
+        }
     }
 
     @Override

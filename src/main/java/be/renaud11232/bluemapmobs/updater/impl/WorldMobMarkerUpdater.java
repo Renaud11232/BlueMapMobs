@@ -1,8 +1,9 @@
-package be.renaud11232.bluemapmobs.updater;
+package be.renaud11232.bluemapmobs.updater.impl;
 
 import be.renaud11232.bluemapmobs.BlueMapMobs;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.MobMarkerBuilder;
-import be.renaud11232.bluemapmobs.markersetbuilder.MobMarkerSetBuilder;
+import be.renaud11232.bluemapmobs.markersetbuilder.impl.MobMarkerSetBuilder;
+import be.renaud11232.bluemapmobs.updater.WorldEntityMarkerUpdater;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
 import org.bukkit.entity.Mob;
@@ -16,7 +17,7 @@ public class WorldMobMarkerUpdater extends WorldEntityMarkerUpdater<Mob> {
     }
 
     @Override
-    public Collection<Mob> getEntities(World world) {
+    public Collection<Mob> getElements(World world) {
         return world.getEntitiesByClass(Mob.class);
     }
 }

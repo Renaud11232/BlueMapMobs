@@ -157,5 +157,14 @@ public final class BlueMapMobsConfiguration {
                 }
             }
         }
+        public static final class NPCs {
+            public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.npcs.key");
+            public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.npcs.label");
+            public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.npcs.toggleable");
+            public static final Configuration<Boolean> DEFAULT_HIDDEN = new SimpleBooleanConfiguration("marker_sets.npcs.default_hidden");
+            public static final class Markers {
+                public static final Configuration<Double> MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.npcs.markers.max_distance");
+            }
+        }
     }
 }

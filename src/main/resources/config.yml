@@ -128,3 +128,11 @@ marker_sets:
       max_distance: 1000
       types:
         armor_stand: true
+
+  npcs:
+    key: "bluemapmobs-npcs"
+    label: "NPCs"
+    toggleable: true
+    default_hidden: true
+    markers:
+      max_distance: 1000

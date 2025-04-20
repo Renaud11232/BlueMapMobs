@@ -1,6 +1,7 @@
-package be.renaud11232.bluemapmobs.markersetbuilder;
+package be.renaud11232.bluemapmobs.markersetbuilder.impl;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.markersetbuilder.EntityMarkerSetBuilder;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;
