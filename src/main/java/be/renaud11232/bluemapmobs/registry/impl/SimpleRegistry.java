@@ -1,4 +1,6 @@
-package be.renaud11232.bluemapmobs.registry;
+package be.renaud11232.bluemapmobs.registry.impl;
+
+import be.renaud11232.bluemapmobs.registry.Registry;
 
 import java.util.Collections;
 import java.util.HashMap;

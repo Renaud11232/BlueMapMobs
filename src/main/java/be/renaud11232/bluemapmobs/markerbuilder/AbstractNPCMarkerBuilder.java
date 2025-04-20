@@ -12,8 +12,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.Optional;
 
-public class NPCMarkerBuilderBase extends MarkerBuilderBase<NPC> {
-    public NPCMarkerBuilderBase(FileConfiguration config, FileConfiguration defaultConfig) {
+public class AbstractNPCMarkerBuilder extends AbstractMarkerBuilder<NPC> {
+    public AbstractNPCMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
 

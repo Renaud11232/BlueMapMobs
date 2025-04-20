@@ -5,8 +5,8 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.DyeColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Sheep;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class SheepMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Sheep, DyeColor> {
+public class SheepMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Sheep, DyeColor> {
 
     public SheepMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
@@ -37,7 +37,7 @@ public class SheepMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Shee
     }
 
     @Override
-    public void registerVariantStyleClasses(VariantStyleClassesRegistry<DyeColor> registry) {
+    public void registerVariantStyleClasses(Registry<DyeColor, Collection<String>> registry) {
         registry.register(DyeColor.WHITE, List.of(BlueMapMobsStyleClass.Mob.WHITE_SHEEP));
         registry.register(DyeColor.ORANGE, List.of(BlueMapMobsStyleClass.Mob.ORANGE_SHEEP));
         registry.register(DyeColor.MAGENTA, List.of(BlueMapMobsStyleClass.Mob.MAGENTA_SHEEP));

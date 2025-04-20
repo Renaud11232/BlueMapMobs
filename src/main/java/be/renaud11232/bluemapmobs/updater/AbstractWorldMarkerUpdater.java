@@ -14,14 +14,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public abstract class WorldMarkerUpdaterBase<T> implements WorldMarkerUpdater {
+public abstract class AbstractWorldMarkerUpdater<T> implements WorldMarkerUpdater {
 
     private final BlueMapMobs plugin;
     private final BlueMapAPI api;
     private final MarkerSetBuilder<T> markerSetBuilder;
     private final MarkerBuilder<T> markerBuilder;
 
-    protected WorldMarkerUpdaterBase(BlueMapMobs plugin, BlueMapAPI api, MarkerSetBuilder<T> markerSetBuilder, MarkerBuilder<T> markerBuilder) {
+    protected AbstractWorldMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api, MarkerSetBuilder<T> markerSetBuilder, MarkerBuilder<T> markerBuilder) {
         this.plugin = plugin;
         this.api = api;
         this.markerSetBuilder = markerSetBuilder;

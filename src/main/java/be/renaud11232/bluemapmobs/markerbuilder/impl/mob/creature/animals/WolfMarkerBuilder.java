@@ -4,14 +4,14 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Wolf;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class WolfMarkerBuilder extends MobEntityMarkerBuilder<Wolf> {
+public class WolfMarkerBuilder extends AbstractMobMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> angryIcons;
     private final Map<Wolf.Variant, Icon> tamedIcons;
     private final Map<Wolf.Variant, Icon> untamedIcons;

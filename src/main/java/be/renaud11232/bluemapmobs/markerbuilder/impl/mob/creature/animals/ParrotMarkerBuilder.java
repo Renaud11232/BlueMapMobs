@@ -3,12 +3,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
+import be.renaud11232.bluemapmobs.icon.Icon;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Parrot;
 
-public class ParrotMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Parrot, Parrot.Variant> {
+public class ParrotMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Parrot, Parrot.Variant> {
     public ParrotMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -24,7 +25,7 @@ public class ParrotMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Par
     }
 
     @Override
-    public void registerVariantIcons(VariantIconRegistry<Parrot.Variant> registry) {
+    public void registerVariantIcons(Registry<Parrot.Variant, Icon> registry) {
         registry.register(Parrot.Variant.RED, BlueMapMobsIcon.Mob.RED_PARROT);
         registry.register(Parrot.Variant.BLUE, BlueMapMobsIcon.Mob.BLUE_PARROT);
         registry.register(Parrot.Variant.GREEN, BlueMapMobsIcon.Mob.GREEN_PARROT);

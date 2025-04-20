@@ -1,6 +1,10 @@
 package be.renaud11232.bluemapmobs;
 
 import be.renaud11232.bluemapmobs.configuration.*;
+import be.renaud11232.bluemapmobs.configuration.impl.SimpleBooleanConfiguration;
+import be.renaud11232.bluemapmobs.configuration.impl.SimpleDoubleConfiguration;
+import be.renaud11232.bluemapmobs.configuration.impl.SimpleIntegerConfiguration;
+import be.renaud11232.bluemapmobs.configuration.impl.SimpleStringConfiguration;
 
 public final class BlueMapMobsConfiguration {
     public static final class General {

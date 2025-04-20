@@ -4,14 +4,14 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.spider.CaveSpiderMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Spider;
 
-public class SpiderMarkerBuilder extends MobEntityMarkerBuilder<Spider> {
+public class SpiderMarkerBuilder extends AbstractMobMarkerBuilder<Spider> {
     public SpiderMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

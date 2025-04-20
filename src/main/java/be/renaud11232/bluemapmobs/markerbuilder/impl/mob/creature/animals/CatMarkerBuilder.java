@@ -3,12 +3,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
+import be.renaud11232.bluemapmobs.icon.Icon;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Cat;
 
-public class CatMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Cat, Cat.Type> {
+public class CatMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Cat, Cat.Type> {
     public CatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -24,7 +25,7 @@ public class CatMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Cat, C
     }
 
     @Override
-    public void registerVariantIcons(VariantIconRegistry<Cat.Type> registry) {
+    public void registerVariantIcons(Registry<Cat.Type, Icon> registry) {
         registry.register(Cat.Type.RED, BlueMapMobsIcon.Mob.RED_CAT);
         registry.register(Cat.Type.BLACK, BlueMapMobsIcon.Mob.RED_CAT);
         registry.register(Cat.Type.TABBY, BlueMapMobsIcon.Mob.TABBY_CAT);

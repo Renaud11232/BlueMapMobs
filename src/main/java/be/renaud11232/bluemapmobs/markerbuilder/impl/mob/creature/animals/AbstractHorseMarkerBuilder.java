@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals;
 
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals.abstracthorse.*;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
-public class AbstractHorseMarkerBuilder extends MobEntityMarkerBuilder<AbstractHorse> {
+public class AbstractHorseMarkerBuilder extends AbstractMobMarkerBuilder<AbstractHorse> {
     public AbstractHorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

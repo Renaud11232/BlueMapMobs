@@ -2,14 +2,14 @@ package be.renaud11232.bluemapmobs.markerbuilder.impl.vehicle.boat;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
-import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractVehicleMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.vehicle.boat.chestboat.*;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.ChestBoat;
 import org.bukkit.entity.boat.*;
 
-public class ChestBoatMarkerBuilder extends VehicleEntityMarkerBuilder<ChestBoat> {
+public class ChestBoatMarkerBuilder extends AbstractVehicleMarkerBuilder<ChestBoat> {
     public ChestBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

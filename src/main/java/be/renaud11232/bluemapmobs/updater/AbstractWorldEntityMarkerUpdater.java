@@ -8,8 +8,8 @@ import org.bukkit.entity.Entity;
 
 import java.util.UUID;
 
-public abstract class WorldEntityMarkerUpdater<T extends Entity> extends WorldMarkerUpdaterBase<T> {
-    protected WorldEntityMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api, MarkerSetBuilder<T> markerSetBuilder, MarkerBuilder<T> markerBuilder) {
+public abstract class AbstractWorldEntityMarkerUpdater<T extends Entity> extends AbstractWorldMarkerUpdater<T> {
+    protected AbstractWorldEntityMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api, MarkerSetBuilder<T> markerSetBuilder, MarkerBuilder<T> markerBuilder) {
         super(plugin, api, markerSetBuilder, markerBuilder);
     }
     @Override

@@ -4,14 +4,14 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.guardian.ElderGuardianMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.ElderGuardian;
 import org.bukkit.entity.Guardian;
 
-public class GuardianMarkerBuilder extends MobEntityMarkerBuilder<Guardian> {
+public class GuardianMarkerBuilder extends AbstractMobMarkerBuilder<Guardian> {
     public GuardianMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

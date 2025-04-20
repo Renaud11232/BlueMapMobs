@@ -1,15 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals;
 
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals.abstractcow.CowMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals.abstractcow.MushroomCowMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.AbstractCow;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.MushroomCow;
 
-public class AbstractCowMarkerBuilder extends MobEntityMarkerBuilder<AbstractCow> {
+public class AbstractCowMarkerBuilder extends AbstractMobMarkerBuilder<AbstractCow> {
     public AbstractCowMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

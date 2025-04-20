@@ -1,17 +1,17 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature;
 
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.golem.IronGolemMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.golem.ShulkerMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.golem.SnowmanMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Golem;
 import org.bukkit.entity.IronGolem;
 import org.bukkit.entity.Shulker;
 import org.bukkit.entity.Snowman;
 
-public class GolemMarkerBuilder extends MobEntityMarkerBuilder<Golem> {
+public class GolemMarkerBuilder extends AbstractMobMarkerBuilder<Golem> {
     public GolemMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

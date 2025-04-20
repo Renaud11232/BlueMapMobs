@@ -1,17 +1,17 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.raider;
 
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.raider.illager.PillagerMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.raider.illager.SpellcasterMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.raider.illager.VindicatorMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Illager;
 import org.bukkit.entity.Pillager;
 import org.bukkit.entity.Spellcaster;
 import org.bukkit.entity.Vindicator;
 
-public class IllagerMarkerBuilder extends MobEntityMarkerBuilder<Illager> {
+public class IllagerMarkerBuilder extends AbstractMobMarkerBuilder<Illager> {
     public IllagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

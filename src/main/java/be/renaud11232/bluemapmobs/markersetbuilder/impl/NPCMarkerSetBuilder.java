@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markersetbuilder.impl;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
-import be.renaud11232.bluemapmobs.markersetbuilder.MarkerSetBuilderBase;
+import be.renaud11232.bluemapmobs.markersetbuilder.AbstractMarkerSetBuilder;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.configuration.file.FileConfiguration;
 
-public class NPCMarkerSetBuilder extends MarkerSetBuilderBase<NPC> {
+public class NPCMarkerSetBuilder extends AbstractMarkerSetBuilder<NPC> {
     public NPCMarkerSetBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

@@ -4,12 +4,12 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Rabbit;
 
-public class RabbitMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Rabbit, Rabbit.Type> {
+public class RabbitMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Rabbit, Rabbit.Type> {
     public RabbitMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -25,7 +25,7 @@ public class RabbitMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Rab
     }
 
     @Override
-    public void registerVariantIcons(VariantIconRegistry<Rabbit.Type> registry) {
+    public void registerVariantIcons(Registry<Rabbit.Type, Icon> registry) {
         registry.register(Rabbit.Type.GOLD, BlueMapMobsIcon.Mob.GOLD_RABBIT);
         registry.register(Rabbit.Type.WHITE, BlueMapMobsIcon.Mob.WHITE_RABBIT);
         registry.register(Rabbit.Type.BLACK_AND_WHITE, BlueMapMobsIcon.Mob.WHITE_SPLOTCHED_RABBIT);

@@ -5,20 +5,20 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractVariantMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals.abstracthorse.chestedhorse.llama.TraderLlamaMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
+import be.renaud11232.bluemapmobs.registry.Registry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Llama;
 import org.bukkit.entity.TraderLlama;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Collection;
 import java.util.List;
 
-public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Material, Llama.Color> {
+public class LlamaMarkerBuilder extends AbstractVariantMobMarkerBuilder<Llama, Material, Llama.Color> {
     public LlamaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -53,7 +53,7 @@ public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Mat
     }
 
     @Override
-    public void registerVariantIcons(VariantIconRegistry<Material> registry) {
+    public void registerVariantIcons(Registry<Material, Icon> registry) {
         registry.register(Material.WHITE_CARPET, BlueMapMobsIcon.Mob.WHITE_LLAMA_DECOR);
         registry.register(Material.LIGHT_GRAY_CARPET, BlueMapMobsIcon.Mob.LIGHTGRAY_LLAMA_DECOR);
         registry.register(Material.GRAY_CARPET, BlueMapMobsIcon.Mob.GRAY_LLAMA_DECOR);
@@ -73,7 +73,7 @@ public class LlamaMarkerBuilder extends VariantMobEntityMarkerBuilder<Llama, Mat
     }
 
     @Override
-    public void registerVariantStyleClasses(VariantStyleClassesRegistry<Llama.Color> registry) {
+    public void registerVariantStyleClasses(Registry<Llama.Color, Collection<String>> registry) {
         registry.register(Llama.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.CREAMY_LLAMA));
         registry.register(Llama.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.WHITE_LLAMA));
         registry.register(Llama.Color.GRAY, List.of(BlueMapMobsStyleClass.Mob.GRAY_LLAMA));

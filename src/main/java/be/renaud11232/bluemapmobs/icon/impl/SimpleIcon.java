@@ -1,5 +1,6 @@
-package be.renaud11232.bluemapmobs.icon;
+package be.renaud11232.bluemapmobs.icon.impl;
 
+import be.renaud11232.bluemapmobs.icon.Icon;
 import com.flowpowered.math.vector.Vector2i;
 
 public class SimpleIcon implements Icon {

@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs;
 
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.icon.SimpleIcon;
+import be.renaud11232.bluemapmobs.icon.impl.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;
 import org.bukkit.entity.TropicalFish;
 

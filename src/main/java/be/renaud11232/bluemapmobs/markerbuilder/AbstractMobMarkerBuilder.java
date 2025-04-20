@@ -10,8 +10,8 @@ import org.bukkit.entity.Mob;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class MobEntityMarkerBuilder<T extends Mob> extends EntityMarkerBuilder<T> {
-    public MobEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+public abstract class AbstractMobMarkerBuilder<T extends Mob> extends AbstractEntityMarkerBuilder<T> {
+    public AbstractMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
 

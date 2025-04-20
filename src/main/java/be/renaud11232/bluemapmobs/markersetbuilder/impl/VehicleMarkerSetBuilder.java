@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markersetbuilder.impl;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
-import be.renaud11232.bluemapmobs.markersetbuilder.EntityMarkerSetBuilder;
+import be.renaud11232.bluemapmobs.markersetbuilder.AbstractEntityMarkerSetBuilder;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Vehicle;
 
-public class VehicleMarkerSetBuilder extends EntityMarkerSetBuilder<Vehicle> {
+public class VehicleMarkerSetBuilder extends AbstractEntityMarkerSetBuilder<Vehicle> {
 
     public VehicleMarkerSetBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);

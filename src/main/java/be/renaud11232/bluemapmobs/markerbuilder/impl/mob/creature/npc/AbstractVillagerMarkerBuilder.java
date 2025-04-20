@@ -1,15 +1,15 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.npc;
 
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.npc.abstractvillager.VillagerMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.npc.abstractvillager.WanderingTraderMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.AbstractVillager;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.WanderingTrader;
 
-public class AbstractVillagerMarkerBuilder extends MobEntityMarkerBuilder<AbstractVillager> {
+public class AbstractVillagerMarkerBuilder extends AbstractMobMarkerBuilder<AbstractVillager> {
     public AbstractVillagerMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

@@ -4,11 +4,11 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.VehicleEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractVehicleMarkerBuilder;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.ExplosiveMinecart;
 
-public class ExplosiveMinecartMarkerBuilder extends VehicleEntityMarkerBuilder<ExplosiveMinecart> {
+public class ExplosiveMinecartMarkerBuilder extends AbstractVehicleMarkerBuilder<ExplosiveMinecart> {
     public ExplosiveMinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

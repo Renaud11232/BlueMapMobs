@@ -1,24 +1,24 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
+import be.renaud11232.bluemapmobs.registry.Registry;
+import be.renaud11232.bluemapmobs.registry.impl.SimpleRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
 
 import java.util.Collection;
 import java.util.Map;
 
-public abstract class VariantMobEntityMarkerBuilder<T extends Mob, ICON_VARIANT, STYLE_CLASSES_VARIANT> extends MobEntityMarkerBuilder<T> implements VariantMarkerBuilder<T, ICON_VARIANT, STYLE_CLASSES_VARIANT> {
+public abstract class AbstractVariantMobMarkerBuilder<T extends Mob, ICON_VARIANT, STYLE_CLASSES_VARIANT> extends AbstractMobMarkerBuilder<T> implements VariantMarkerBuilder<T, ICON_VARIANT, STYLE_CLASSES_VARIANT> {
     private final Map<ICON_VARIANT, Icon> icons;
     private final Map<STYLE_CLASSES_VARIANT, Collection<String>> styleClasses;
 
-    public VariantMobEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+    public AbstractVariantMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
-        VariantIconRegistry<ICON_VARIANT> iconRegistry = new VariantIconRegistry<>();
+        Registry<ICON_VARIANT, Icon> iconRegistry = new SimpleRegistry<>();
         registerVariantIcons(iconRegistry);
         icons = iconRegistry.getItems();
-        VariantStyleClassesRegistry<STYLE_CLASSES_VARIANT> styleClassesRegistry = new VariantStyleClassesRegistry<>();
+        Registry<STYLE_CLASSES_VARIANT, Collection<String>> styleClassesRegistry = new SimpleRegistry<>();
         registerVariantStyleClasses(styleClassesRegistry);
         styleClasses = styleClassesRegistry.getItems();
     }

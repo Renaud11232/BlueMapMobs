@@ -1,12 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.watermob;
 
-import be.renaud11232.bluemapmobs.markerbuilder.MobEntityMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.watermob.fish.*;
-import be.renaud11232.bluemapmobs.registry.MarkerBuilderRegistry;
+import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
-public class FishMarkerBuilder extends MobEntityMarkerBuilder<Fish> {
+public class FishMarkerBuilder extends AbstractMobMarkerBuilder<Fish> {
     public FishMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }

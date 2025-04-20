@@ -4,15 +4,16 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
-import be.renaud11232.bluemapmobs.markerbuilder.VariantMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
+import be.renaud11232.bluemapmobs.icon.Icon;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Horse;
 
+import java.util.Collection;
 import java.util.List;
 
-public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Horse.Style, Horse.Color> {
+public class HorseMarkerBuilder extends AbstractVariantMobMarkerBuilder<Horse, Horse.Style, Horse.Color> {
     public HorseMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -33,7 +34,7 @@ public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Hor
     }
 
     @Override
-    public void registerVariantIcons(VariantIconRegistry<Horse.Style> registry) {
+    public void registerVariantIcons(Registry<Horse.Style, Icon> registry) {
         registry.register(Horse.Style.NONE, BlueMapMobsIcon.Mob.HORSE_MARKINGS_NONE);
         registry.register(Horse.Style.WHITE, BlueMapMobsIcon.Mob.HORSE_MARKINGS_WHITE);
         registry.register(Horse.Style.WHITEFIELD, BlueMapMobsIcon.Mob.HORSE_MARKINGS_WHITEFIELD);
@@ -42,7 +43,7 @@ public class HorseMarkerBuilder extends VariantMobEntityMarkerBuilder<Horse, Hor
     }
 
     @Override
-    public void registerVariantStyleClasses(VariantStyleClassesRegistry<Horse.Color> registry) {
+    public void registerVariantStyleClasses(Registry<Horse.Color, Collection<String>> registry) {
         registry.register(Horse.Color.WHITE, List.of(BlueMapMobsStyleClass.Mob.WHITE_HORSE));
         registry.register(Horse.Color.CREAMY, List.of(BlueMapMobsStyleClass.Mob.CREAMY_HORSE));
         registry.register(Horse.Color.CHESTNUT, List.of(BlueMapMobsStyleClass.Mob.CHESTNUT_HORSE));

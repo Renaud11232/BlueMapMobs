@@ -1,14 +1,16 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
-import be.renaud11232.bluemapmobs.registry.VariantStyleClassesRegistry;
+import be.renaud11232.bluemapmobs.icon.Icon;
+import be.renaud11232.bluemapmobs.registry.Registry;
+
+import java.util.Collection;
 
 public interface VariantMarkerBuilder<T, ICON_VARIANT, STYLE_CLASSES_VARIANT> extends MarkerBuilder<T> {
     default ICON_VARIANT getIconVariant(T element) {
         return null;
     }
 
-    default void registerVariantIcons(VariantIconRegistry<ICON_VARIANT> registry){
+    default void registerVariantIcons(Registry<ICON_VARIANT, Icon> registry){
 
     }
 
@@ -16,7 +18,7 @@ public interface VariantMarkerBuilder<T, ICON_VARIANT, STYLE_CLASSES_VARIANT> ex
         return null;
     }
 
-    default void registerVariantStyleClasses(VariantStyleClassesRegistry<STYLE_CLASSES_VARIANT> registry){
+    default void registerVariantStyleClasses(Registry<STYLE_CLASSES_VARIANT, Collection<String>> registry){
 
     }
 }

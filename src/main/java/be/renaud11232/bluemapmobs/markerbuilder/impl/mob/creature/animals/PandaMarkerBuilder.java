@@ -3,12 +3,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals;
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
-import be.renaud11232.bluemapmobs.markerbuilder.SingleVariantMobEntityMarkerBuilder;
-import be.renaud11232.bluemapmobs.registry.VariantIconRegistry;
+import be.renaud11232.bluemapmobs.icon.Icon;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Panda;
 
-public class PandaMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Panda, Panda.Gene> {
+public class PandaMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Panda, Panda.Gene> {
     public PandaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -31,7 +32,7 @@ public class PandaMarkerBuilder extends SingleVariantMobEntityMarkerBuilder<Pand
     }
 
     @Override
-    public void registerVariantIcons(VariantIconRegistry<Panda.Gene> registry) {
+    public void registerVariantIcons(Registry<Panda.Gene, Icon> registry) {
         registry.register(Panda.Gene.NORMAL, BlueMapMobsIcon.Mob.NORMAL_PANDA);
         registry.register(Panda.Gene.LAZY, BlueMapMobsIcon.Mob.LAZY_PANDA);
         registry.register(Panda.Gene.WORRIED, BlueMapMobsIcon.Mob.WORRIED_PANDA);
