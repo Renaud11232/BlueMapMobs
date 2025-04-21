@@ -11,6 +11,7 @@ import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 
@@ -52,35 +53,33 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
                 .map(Map.Entry::getValue)
                 .findFirst()
                 .map(markerBuilder -> (Optional<POIMarker>) markerBuilder.build(element))
-                .orElseGet(() -> Optional.of(buildDefault()))
-                .map(marker -> {
-                    Icon icon = getIcon(element);
-                    if (icon == null) {
-                        icon = defaultIcon;
-                    }
-                    if (icon != null) {
-                        marker.setIcon(icon.getPath(), icon.getAnchor());
-                    }
-                    Collection<String> styleClasses = getStyleClasses(element);
-                    if (styleClasses == null) {
-                        styleClasses = defaultStyleClasses;
-                    }
-                    if (styleClasses != null) {
-                        marker.addStyleClasses(styleClasses);
-                    }
-                    return marker;
-                });
+                .orElseGet(() -> Optional.of(buildDefault(element)));
     }
 
-    private POIMarker buildDefault() {
-        Icon icon = BlueMapMobsIcon.UNKNOWN;
-        return POIMarker.builder()
+    private POIMarker buildDefault(T element) {
+        Icon icon = getIcon(element);
+        if (icon == null) {
+            icon = defaultIcon;
+        }
+        if (icon == null) {
+            icon = BlueMapMobsIcon.UNKNOWN;
+        }
+        Collection<String> styleClasses = getStyleClasses(element);
+        if (styleClasses == null) {
+            styleClasses = defaultStyleClasses;
+        }
+        if (styleClasses == null) {
+            styleClasses = Collections.emptyList();
+        }
+        POIMarker marker = POIMarker.builder()
                 .label(getClass().getName())
                 .detail(getClass().getName())
                 .position(0d, 0d, 0d)
                 .icon(icon.getPath(), icon.getAnchor())
                 .styleClasses(BlueMapMobsStyleClass.MARKER)
                 .build();
+        marker.addStyleClasses(styleClasses);
+        return marker;
     }
 
     public abstract Block getBlock(T element);
