@@ -14,6 +14,7 @@ public final class BlueMapMobsConfiguration {
     }
     public static final class MarkerSets {
         public static final class Mobs {
+            public static final Configuration<Boolean> ENABLED = new SimpleBooleanConfiguration("marker_sets.mobs.enabled");
             public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.mobs.key");
             public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.mobs.label");
             public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.mobs.toggleable");
@@ -119,6 +120,7 @@ public final class BlueMapMobsConfiguration {
             }
         }
         public static final class Vehicles {
+            public static final Configuration<Boolean> ENABLED = new SimpleBooleanConfiguration("marker_sets.vehicles.enabled");
             public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.vehicles.key");
             public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.vehicles.label");
             public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.vehicles.toggleable");
@@ -150,6 +152,7 @@ public final class BlueMapMobsConfiguration {
             }
         }
         public static final class Others {
+            public static final Configuration<Boolean> ENABLED = new SimpleBooleanConfiguration("marker_sets.others.enabled");
             public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.others.key");
             public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.others.label");
             public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.others.toggleable");
@@ -162,6 +165,7 @@ public final class BlueMapMobsConfiguration {
             }
         }
         public static final class NPCs {
+            public static final Configuration<Boolean> ENABLED = new SimpleBooleanConfiguration("marker_sets.npcs.enabled");
             public static final Configuration<String> KEY = new SimpleStringConfiguration("marker_sets.npcs.key");
             public static final Configuration<String> LABEL = new SimpleStringConfiguration("marker_sets.npcs.label");
             public static final Configuration<Boolean> TOGGLEABLE = new SimpleBooleanConfiguration("marker_sets.npcs.toggleable");

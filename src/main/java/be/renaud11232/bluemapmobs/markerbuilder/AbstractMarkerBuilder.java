@@ -93,7 +93,7 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
         return null;
     }
 
-    public Icon getIcon(T entity) {
+    public Icon getIcon(T element) {
         return null;
     }
 
@@ -101,7 +101,7 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
         return null;
     }
 
-    public Collection<String> getStyleClasses(T entity) {
+    public Collection<String> getStyleClasses(T element) {
         return null;
     }
 }

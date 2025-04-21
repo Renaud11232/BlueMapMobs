@@ -10,6 +10,7 @@ general:
 
 marker_sets:
   mobs:
+    enabled: true
     key: "bluemapmobs-mobs"
     label: "Mobs"
     toggleable: true
@@ -102,6 +103,7 @@ marker_sets:
         magma_cube: true
 
   vehicles:
+    enabled: true
     key: "bluemapmobs-vehicles"
     label: "Vehicles"
     toggleable: true
@@ -120,6 +122,7 @@ marker_sets:
         storage_minecart: true
 
   others:
+    enabled: true
     key: "bluemapmobs-others"
     label: "Other entities"
     toggleable: true
@@ -130,6 +133,7 @@ marker_sets:
         armor_stand: true
 
   npcs:
+    enabled: true
     key: "bluemapmobs-npcs"
     label: "NPCs"
     toggleable: true

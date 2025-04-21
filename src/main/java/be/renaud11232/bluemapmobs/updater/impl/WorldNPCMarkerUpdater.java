@@ -24,8 +24,10 @@ public class WorldNPCMarkerUpdater extends AbstractWorldMarkerUpdater<NPC> {
 
     @Override
     public Collection<NPC> getElements(World world) {
-        return StreamSupport.stream(CitizensAPI.getNPCRegistry().spliterator(), false)
+        return StreamSupport.stream(CitizensAPI.getNPCRegistries().spliterator(), false)
+                .flatMap(registry -> StreamSupport.stream(registry.spliterator(), false))
                 .filter(NPC::isSpawned)
+                .filter(npc -> npc.getEntity() != null)
                 .filter(npc -> npc.getEntity().getWorld().equals(world))
                 .toList();
     }
