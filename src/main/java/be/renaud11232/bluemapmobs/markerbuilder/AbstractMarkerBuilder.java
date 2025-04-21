@@ -18,8 +18,7 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
     private final boolean hidden;
     private final int minimumBlockLight;
     private final int minimumSkyLight;
-    @SuppressWarnings("rawtypes")
-    private final Map<Class<? extends T>, MarkerBuilder> markerBuilders;
+    private final MarkerBuilderRegistry<T> markerBuilders;
     private final Icon defaultIcon;
     private final Collection<String> defaultStyleClasses;
 
@@ -29,9 +28,8 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
         this.hidden = getVisibility() != null && !getVisibility().get(config, defaultConfig);
         this.minimumBlockLight = BlueMapMobsConfiguration.General.MINIMUM_BLOCK_LIGHT.get(config, defaultConfig);
         this.minimumSkyLight = BlueMapMobsConfiguration.General.MINIMUM_SKY_LIGHT.get(config, defaultConfig);
-        MarkerBuilderRegistry<T> registry = new MarkerBuilderRegistry<>();
-        registerMarkerBuilders(registry);
-        this.markerBuilders = registry.getItems();
+        this.markerBuilders = new MarkerBuilderRegistry<>();
+        registerMarkerBuilders(markerBuilders);
         this.defaultIcon = getDefaultIcon();
         this.defaultStyleClasses = getDefaultStyleClasses();
     }

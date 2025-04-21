@@ -2,9 +2,11 @@ package be.renaud11232.bluemapmobs.registry.impl;
 
 import be.renaud11232.bluemapmobs.markerbuilder.MarkerBuilder;
 
-import java.util.Collections;
+import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @SuppressWarnings("rawtypes")
 public class MarkerBuilderRegistry<T> {
@@ -18,7 +20,10 @@ public class MarkerBuilderRegistry<T> {
         items.put(key, value);
     }
 
-    public Map<Class<? extends T>, MarkerBuilder> getItems() {
-        return Collections.unmodifiableMap(items);
+    public Set<Map.Entry<Class<? extends T>, MarkerBuilder>> entrySet() {
+        return items.entrySet()
+                .stream()
+                .map(entry -> new AbstractMap.SimpleImmutableEntry<Class<? extends T>, MarkerBuilder>(entry.getKey(), entry.getValue()))
+                .collect(Collectors.toUnmodifiableSet());
     }
 }

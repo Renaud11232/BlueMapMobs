@@ -7,20 +7,17 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
 
 import java.util.Collection;
-import java.util.Map;
 
 public abstract class AbstractVariantMobMarkerBuilder<T extends Mob, ICON_VARIANT, STYLE_CLASSES_VARIANT> extends AbstractMobMarkerBuilder<T> implements VariantMarkerBuilder<T, ICON_VARIANT, STYLE_CLASSES_VARIANT> {
-    private final Map<ICON_VARIANT, Icon> icons;
-    private final Map<STYLE_CLASSES_VARIANT, Collection<String>> styleClasses;
+    private final Registry<ICON_VARIANT, Icon> icons;
+    private final Registry<STYLE_CLASSES_VARIANT, Collection<String>> styleClasses;
 
     public AbstractVariantMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
-        Registry<ICON_VARIANT, Icon> iconRegistry = new SimpleRegistry<>();
-        registerVariantIcons(iconRegistry);
-        icons = iconRegistry.getItems();
-        Registry<STYLE_CLASSES_VARIANT, Collection<String>> styleClassesRegistry = new SimpleRegistry<>();
-        registerVariantStyleClasses(styleClassesRegistry);
-        styleClasses = styleClassesRegistry.getItems();
+        icons = new SimpleRegistry<>();
+        styleClasses = new SimpleRegistry<>();
+        registerVariantIcons(icons);
+        registerVariantStyleClasses(styleClasses);
     }
 
     @Override

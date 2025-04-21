@@ -2,7 +2,6 @@ package be.renaud11232.bluemapmobs.registry.impl;
 
 import be.renaud11232.bluemapmobs.registry.Registry;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +18,7 @@ public class SimpleRegistry<K, V> implements Registry<K, V> {
     }
 
     @Override
-    public Map<K, V> getItems() {
-        return Collections.unmodifiableMap(items);
+    public V get(K key) {
+        return items.get(key);
     }
 }
