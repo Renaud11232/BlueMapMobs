@@ -53,10 +53,10 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
                 .map(Map.Entry::getValue)
                 .findFirst()
                 .map(markerBuilder -> (Optional<POIMarker>) markerBuilder.build(element))
-                .orElseGet(() -> Optional.of(buildDefault(element)));
+                .orElseGet(() -> doBuild(element));
     }
 
-    private POIMarker buildDefault(T element) {
+    private Optional<POIMarker> doBuild(T element) {
         Icon icon = getIcon(element);
         if (icon == null) {
             icon = defaultIcon;
@@ -79,7 +79,7 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
                 .styleClasses(BlueMapMobsStyleClass.MARKER)
                 .build();
         marker.addStyleClasses(styleClasses);
-        return marker;
+        return Optional.of(marker);
     }
 
     public abstract Block getBlock(T element);
