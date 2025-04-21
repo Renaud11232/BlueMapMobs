@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
+import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
@@ -50,7 +52,7 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
                 .map(Map.Entry::getValue)
                 .findFirst()
                 .map(markerBuilder -> (Optional<POIMarker>) markerBuilder.build(element))
-                .orElseGet(() -> buildDefault(element))
+                .orElseGet(() -> Optional.of(buildDefault()))
                 .map(marker -> {
                     Icon icon = getIcon(element);
                     if (icon == null) {
@@ -70,7 +72,15 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
                 });
     }
 
-    public abstract Optional<POIMarker> buildDefault(T element);
+    private POIMarker buildDefault() {
+        Icon icon = BlueMapMobsIcon.UNKNOWN;
+        return POIMarker.builder()
+                .label(getClass().getName())
+                .position(0d, 0d, 0d)
+                .icon(icon.getPath(), icon.getAnchor())
+                .styleClasses(BlueMapMobsStyleClass.MARKER)
+                .build();
+    }
 
     public abstract Block getBlock(T element);
 

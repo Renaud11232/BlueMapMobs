@@ -1,8 +1,5 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
-import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
-import be.renaud11232.bluemapmobs.icon.Icon;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
@@ -17,17 +14,13 @@ public abstract class AbstractEntityMarkerBuilder<T extends Entity> extends Abst
     }
 
     @Override
-    public Optional<POIMarker> buildDefault(T entity) {
-        Location location = entity.getLocation();
-        Icon icon = BlueMapMobsIcon.UNKNOWN;
-        return Optional.of(
-                POIMarker.builder()
-                        .label(entity.getName())
-                        .position(location.getX(), location.getY(), location.getZ())
-                        .icon(icon.getPath(), icon.getAnchor())
-                        .styleClasses(BlueMapMobsStyleClass.MARKER)
-                        .build()
-        );
+    public Optional<POIMarker> build(T entity) {
+        return super.build(entity).map(marker -> {
+            marker.setLabel(entity.getName());
+            Location location = entity.getLocation();
+            marker.setPosition(location.getX(), location.getY(), location.getZ());
+            return marker;
+        });
     }
 
     @Override
