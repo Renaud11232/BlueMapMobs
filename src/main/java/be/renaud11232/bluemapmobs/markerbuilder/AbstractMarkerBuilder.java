@@ -76,6 +76,7 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
         Icon icon = BlueMapMobsIcon.UNKNOWN;
         return POIMarker.builder()
                 .label(getClass().getName())
+                .detail(getClass().getName())
                 .position(0d, 0d, 0d)
                 .icon(icon.getPath(), icon.getAnchor())
                 .styleClasses(BlueMapMobsStyleClass.MARKER)

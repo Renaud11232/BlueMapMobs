@@ -18,6 +18,7 @@ public class AbstractNPCMarkerBuilder extends AbstractMarkerBuilder<NPC> {
     public Optional<POIMarker> build(NPC npc) {
         return super.build(npc).map(marker -> {
             marker.setLabel(npc.getName());
+            marker.setDetail(npc.getName());
             Location location = npc.getStoredLocation();
             marker.setPosition(location.getX(), location.getY(), location.getZ());
             marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.NPCs.Markers.MAX_DISTANCE.get(getConfig(), getDefaultConfig()));

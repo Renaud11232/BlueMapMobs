@@ -17,6 +17,7 @@ public abstract class AbstractEntityMarkerBuilder<T extends Entity> extends Abst
     public Optional<POIMarker> build(T entity) {
         return super.build(entity).map(marker -> {
             marker.setLabel(entity.getName());
+            marker.setDetail(entity.getName());
             Location location = entity.getLocation();
             marker.setPosition(location.getX(), location.getY(), location.getZ());
             return marker;
