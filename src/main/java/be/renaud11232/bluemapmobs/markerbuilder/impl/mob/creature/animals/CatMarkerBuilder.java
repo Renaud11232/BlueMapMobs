@@ -27,7 +27,7 @@ public class CatMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Cat,
     @Override
     public void registerVariantIcons(Registry<Cat.Type, Icon> registry) {
         registry.register(Cat.Type.RED, BlueMapMobsIcon.Mob.RED_CAT);
-        registry.register(Cat.Type.BLACK, BlueMapMobsIcon.Mob.RED_CAT);
+        registry.register(Cat.Type.BLACK, BlueMapMobsIcon.Mob.BLACK_CAT);
         registry.register(Cat.Type.TABBY, BlueMapMobsIcon.Mob.TABBY_CAT);
         registry.register(Cat.Type.WHITE, BlueMapMobsIcon.Mob.WHITE_CAT);
         registry.register(Cat.Type.CALICO, BlueMapMobsIcon.Mob.CALICO_CAT);
