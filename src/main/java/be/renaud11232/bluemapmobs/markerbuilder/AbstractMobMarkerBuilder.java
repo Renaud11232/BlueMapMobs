@@ -22,7 +22,7 @@ public abstract class AbstractMobMarkerBuilder<T extends Mob> extends AbstractEn
             marker.setPosition(eyeLocation.getX(), eyeLocation.getY(), eyeLocation.getZ());
             marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.Mobs.Markers.MAX_DISTANCE.get(getConfig(), getDefaultConfig()));
             if (mob.getName().equals("Dinnerbone") || mob.getName().equals("Grumm")) {
-                marker.addStyleClasses(List.of(BlueMapMobsStyleClass.FLIP));
+                marker.addStyleClasses(List.of(BlueMapMobsStyleClass.Mob.FLIP));
             }
             return marker;
         });

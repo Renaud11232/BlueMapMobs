@@ -4,9 +4,8 @@ import org.bukkit.entity.TropicalFish;
 
 public final class BlueMapMobsStyleClass {
     public static final String MARKER = "bluemapmobs-marker";
-    public static final String FLIP = "bluemapmobs-flip";
-
     public static final class Mob {
+        public static final String FLIP = "bluemapmobs-flip";
         public static final String WHITE_SHEEP = "bluemapmobs-white-sheep";
         public static final String ORANGE_SHEEP = "bluemapmobs-orange-sheep";
         public static final String MAGENTA_SHEEP = "bluemapmobs-magenta-sheep";
@@ -35,7 +34,7 @@ public final class BlueMapMobsStyleClass {
         public static final String WHITE_LLAMA = "bluemapmobs-white-llama";
         public static final String GRAY_LLAMA = "bluemapmobs-gray-llama";
         public static final String BROWN_LLAMA = "bluemapmobs-brown-llama";
-        public static String tropicalFish(TropicalFish tropicalFish) {
+        public static String tropicalFishBody(TropicalFish tropicalFish) {
             String bodyType = switch (tropicalFish.getPattern()) {
                 case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
                 case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";

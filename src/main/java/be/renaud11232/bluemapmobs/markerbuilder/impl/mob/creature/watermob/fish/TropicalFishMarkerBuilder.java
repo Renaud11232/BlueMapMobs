@@ -24,11 +24,11 @@ public class TropicalFishMarkerBuilder extends AbstractMobMarkerBuilder<Tropical
 
     @Override
     public Icon getIcon(TropicalFish tropicalFish) {
-        return BlueMapMobsIcon.Mob.tropicalFish(tropicalFish);
+        return BlueMapMobsIcon.Mob.tropicalFishPattern(tropicalFish);
     }
 
     @Override
     public Collection<String> getStyleClasses(TropicalFish tropicalFish) {
-        return List.of(BlueMapMobsStyleClass.Mob.tropicalFish(tropicalFish));
+        return List.of(BlueMapMobsStyleClass.Mob.tropicalFishBody(tropicalFish));
     }
 }

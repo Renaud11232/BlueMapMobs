@@ -7,404 +7,193 @@ import org.bukkit.entity.TropicalFish;
 
 public final class BlueMapMobsIcon {
     public static final Icon UNKNOWN = new SimpleIcon("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12));
-    public enum Mob implements Icon {
-        BAT("assets/bluemapmobs/img/mobs/ambient/bat.png", new Vector2i(12, 12)),
-        ALLAY("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12)),
-        CAMEL("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12)),
-        DONKEY("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12)),
-        LLAMA_EMPTY_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/empty.png", new Vector2i(12, 12)),
-        TRADER_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/trader_llama.png", new Vector2i(12, 12)),
-        WHITE_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/white.png", new Vector2i(12, 12)),
-        LIGHTGRAY_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/light_gray.png", new Vector2i(12, 12)),
-        GRAY_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/gray.png", new Vector2i(12, 12)),
-        BLACK_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/black.png", new Vector2i(12, 12)),
-        BROWN_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/brown.png", new Vector2i(12, 12)),
-        RED_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/red.png", new Vector2i(12, 12)),
-        ORANGE_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/orange.png", new Vector2i(12, 12)),
-        YELLOW_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/yellow.png", new Vector2i(12, 12)),
-        LIME_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/lime.png", new Vector2i(12, 12)),
-        GREEN_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/green.png", new Vector2i(12, 12)),
-        CYAN_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/cyan.png", new Vector2i(12, 12)),
-        LIGHTBLUE_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/light_blue.png", new Vector2i(12, 12)),
-        BLUE_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/blue.png", new Vector2i(12, 12)),
-        PURPLE_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/purple.png", new Vector2i(12, 12)),
-        MAGENTA_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/magenta.png", new Vector2i(12, 12)),
-        PINK_LLAMA_DECOR("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/pink.png", new Vector2i(12, 12)),
-        MULE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12)),
-        HORSE_MARKINGS_NONE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_none.png", new Vector2i(12, 12)),
-        HORSE_MARKINGS_WHITE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white.png", new Vector2i(12, 12)),
-        HORSE_MARKINGS_WHITEFIELD("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_whitefield.png", new Vector2i(12, 12)),
-        HORSE_MARKINGS_WHITE_DOTS("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white_dots.png", new Vector2i(12, 12)),
-        HORSE_MARKINGS_BLACK_DOTS("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_black_dots.png", new Vector2i(12, 12)),
-        SKELETON_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12)),
-        ZOMBIE_HORSE("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12)),
-        ARMADILLO("assets/bluemapmobs/img/mobs/creature/animals/armadillo.png", new Vector2i(12, 12)),
-        LUCY_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/lucy_axolotl.png", new Vector2i(12, 12)),
-        WILD_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/wild_axolotl.png", new Vector2i(12, 12)),
-        GOLD_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/gold_axolotl.png", new Vector2i(12, 12)),
-        CYAN_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/cyan_axolotl.png", new Vector2i(12, 12)),
-        BLUE_AXOLOTL("assets/bluemapmobs/img/mobs/creature/animals/axolotl/blue_axolotl.png", new Vector2i(12, 12)),
-        BEE("assets/bluemapmobs/img/mobs/creature/animals/bee.png", new Vector2i(12, 12)),
-        ALL_BLACK_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/all_black.png", new Vector2i(12, 12)),
-        BLACK_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/black.png", new Vector2i(12, 12)),
-        BRITISH_SHORTHAIR_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/british_shorthair.png", new Vector2i(12, 12)),
-        CALICO_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/calico.png", new Vector2i(12, 12)),
-        JELLIE_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/jellie.png", new Vector2i(12, 12)),
-        PERSIAN_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/persian.png", new Vector2i(12, 12)),
-        RAGDOLL_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/ragdoll.png", new Vector2i(12, 12)),
-        RED_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/red.png", new Vector2i(12, 12)),
-        SIAMESE_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/siamese.png", new Vector2i(12, 12)),
-        TABBY_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/tabby.png", new Vector2i(12, 12)),
-        WHITE_CAT("assets/bluemapmobs/img/mobs/creature/animals/cat/white.png", new Vector2i(12, 12)),
-        TEMPERATE_CHICKEN("assets/bluemapmobs/img/mobs/creature/animals/chicken/temperate_chicken.png", new Vector2i(12, 12)),
-        COLD_CHICKEN("assets/bluemapmobs/img/mobs/creature/animals/chicken/cold_chicken.png", new Vector2i(12, 12)),
-        WARM_CHICKEN("assets/bluemapmobs/img/mobs/creature/animals/chicken/warm_chicken.png", new Vector2i(12, 12)),
-        TEMPERATE_COW("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/cow/temperate_cow.png", new Vector2i(12, 12)),
-        COLD_COW("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/cow/cold_cow.png", new Vector2i(12, 12)),
-        WARM_COW("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/cow/warm_cow.png", new Vector2i(12, 12)),
-        RED_MOOSHROOM("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/mooshroom/red_mooshroom.png", new Vector2i(12, 12)),
-        BROWN_MOOSHROOM("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/mooshroom/brown_mooshroom.png", new Vector2i(12, 12)),
-        RED_FOX("assets/bluemapmobs/img/mobs/creature/animals/fox/red_fox.png", new Vector2i(12, 12)),
-        SNOW_FOX("assets/bluemapmobs/img/mobs/creature/animals/fox/snow_fox.png", new Vector2i(12, 12)),
-        TEMPERATE_FROG("assets/bluemapmobs/img/mobs/creature/animals/frog/temperate_frog.png", new Vector2i(12, 12)),
-        COLD_FROG("assets/bluemapmobs/img/mobs/creature/animals/frog/cold_frog.png", new Vector2i(12, 12)),
-        TROPICAL_FROG("assets/bluemapmobs/img/mobs/creature/animals/frog/tropical_frog.png", new Vector2i(12, 12)),
-        GOAT("assets/bluemapmobs/img/mobs/creature/animals/goat.png", new Vector2i(12, 12)),
-        HOGLIN("assets/bluemapmobs/img/mobs/creature/animals/hoglin.png", new Vector2i(12, 12)),
-        OCELOT("assets/bluemapmobs/img/mobs/creature/animals/ocelot.png", new Vector2i(12, 12)),
-        NORMAL_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/normal_panda.png", new Vector2i(12, 12)),
-        LAZY_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/lazy_panda.png", new Vector2i(12, 12)),
-        WORRIED_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/worried_panda.png", new Vector2i(12, 12)),
-        PLAYFUL_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/playful_panda.png", new Vector2i(12, 12)),
-        AGGRESSIVE_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/aggressive_panda.png", new Vector2i(12, 12)),
-        WEAK_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/weak_panda.png", new Vector2i(12, 12)),
-        BROWN_PANDA("assets/bluemapmobs/img/mobs/creature/animals/panda/brown_panda.png", new Vector2i(12, 12)),
-        RED_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/red_parrot.png", new Vector2i(12, 12)),
-        BLUE_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/blue_parrot.png", new Vector2i(12, 12)),
-        GREEN_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/green_parrot.png", new Vector2i(12, 12)),
-        CYAN_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/cyan_parrot.png", new Vector2i(12, 12)),
-        GRAY_PARROT("assets/bluemapmobs/img/mobs/creature/animals/parrot/gray_parrot.png", new Vector2i(12, 12)),
-        TEMPERATE_PIG("assets/bluemapmobs/img/mobs/creature/animals/pig/temperate_pig.png", new Vector2i(12, 12)),
-        COLD_PIG("assets/bluemapmobs/img/mobs/creature/animals/pig/cold_pig.png", new Vector2i(12, 12)),
-        WARM_PIG("assets/bluemapmobs/img/mobs/creature/animals/pig/warm_pig.png", new Vector2i(12, 12)),
-        POLAR_BEAR("assets/bluemapmobs/img/mobs/creature/animals/polar_bear.png", new Vector2i(12, 12)),
-        BLACK_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/black.png", new Vector2i(12, 12)),
-        BROWN_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/brown.png", new Vector2i(12, 12)),
-        GOLD_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/gold.png", new Vector2i(12, 12)),
-        SALT_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/salt.png", new Vector2i(12, 12)),
-        WHITE_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white.png", new Vector2i(12, 12)),
-        WHITE_SPLOTCHED_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white_splotched.png", new Vector2i(12, 12)),
-        TOAST_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/toast.png", new Vector2i(12, 12)),
-        CAERBANNOG_RABBIT("assets/bluemapmobs/img/mobs/creature/animals/rabbit/caerbannog.png", new Vector2i(12, 12)),
-        SHEEP("assets/bluemapmobs/img/mobs/creature/animals/sheep/sheep.png", new Vector2i(12, 12)),
-        SNIFFER("assets/bluemapmobs/img/mobs/creature/animals/sniffer.png", new Vector2i(12, 12)),
-        STRIDER("assets/bluemapmobs/img/mobs/creature/animals/strider.png", new Vector2i(12, 12)),
-        TURTLE("assets/bluemapmobs/img/mobs/creature/animals/turtle.png", new Vector2i(12, 12)),
-        ANGRY_ASHEN_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_ashen.png", new Vector2i(12, 12)),
-        ANGRY_BLACK_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_black.png", new Vector2i(12, 12)),
-        ANGRY_CHESTNUT_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_chestnut.png", new Vector2i(12, 12)),
-        ANGRY_PALE_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_pale.png", new Vector2i(12, 12)),
-        ANGRY_RUSTY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_rusty.png", new Vector2i(12, 12)),
-        ANGRY_SNOWY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_snowy.png", new Vector2i(12, 12)),
-        ANGRY_SPOTTED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_spotted.png", new Vector2i(12, 12)),
-        ANGRY_STRIPED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_striped.png", new Vector2i(12, 12)),
-        ANGRY_WOODS_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_woods.png", new Vector2i(12, 12)),
-        UNTAMED_ASHEN_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_ashen.png", new Vector2i(12, 12)),
-        UNTAMED_BLACK_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_black.png", new Vector2i(12, 12)),
-        UNTAMED_CHESTNUT_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_chestnut.png", new Vector2i(12, 12)),
-        UNTAMED_PALE_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_pale.png", new Vector2i(12, 12)),
-        UNTAMED_RUSTY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_rusty.png", new Vector2i(12, 12)),
-        UNTAMED_SNOWY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_snowy.png", new Vector2i(12, 12)),
-        UNTAMED_SPOTTED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_spotted.png", new Vector2i(12, 12)),
-        UNTAMED_STRIPED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_striped.png", new Vector2i(12, 12)),
-        UNTAMED_WOODS_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_woods.png", new Vector2i(12, 12)),
-        TAMED_ASHEN_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_ashen.png", new Vector2i(12, 12)),
-        TAMED_BLACK_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_black.png", new Vector2i(12, 12)),
-        TAMED_CHESTNUT_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_chestnut.png", new Vector2i(12, 12)),
-        TAMED_PALE_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_pale.png", new Vector2i(12, 12)),
-        TAMED_RUSTY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_rusty.png", new Vector2i(12, 12)),
-        TAMED_SNOWY_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_snowy.png", new Vector2i(12, 12)),
-        TAMED_SPOTTED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_spotted.png", new Vector2i(12, 12)),
-        TAMED_STRIPED_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_striped.png", new Vector2i(12, 12)),
-        TAMED_WOODS_WOLF("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_woods.png", new Vector2i(12, 12)),
-        IRON_GOLEM("assets/bluemapmobs/img/mobs/creature/golem/iron_golem.png", new Vector2i(12, 12)),
-        SHULKER("assets/bluemapmobs/img/mobs/creature/golem/shulker.png", new Vector2i(12, 12)),
-        SNOWMAN("assets/bluemapmobs/img/mobs/creature/golem/snowman.png", new Vector2i(12, 12)),
-        BOGGED("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/bogged.png", new Vector2i(12, 12)),
-        SKELETON("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/skeleton.png", new Vector2i(12, 12)),
-        STRAY("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/stray.png", new Vector2i(12, 12)),
-        WITHER_SKELETON("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/wither_skeleton.png", new Vector2i(12, 12)),
-        BLAZE("assets/bluemapmobs/img/mobs/creature/monster/blaze.png", new Vector2i(12, 12)),
-        BREEZE("assets/bluemapmobs/img/mobs/creature/monster/breeze.png", new Vector2i(12, 12)),
-        CREAKING("assets/bluemapmobs/img/mobs/creature/monster/creaking.png", new Vector2i(12, 12)),
-        CREEPER("assets/bluemapmobs/img/mobs/creature/monster/creeper/creeper.png", new Vector2i(12, 12)),
-        CHARGED_CREEPER("assets/bluemapmobs/img/mobs/creature/monster/creeper/charged_creeper.png", new Vector2i(12, 12)),
-        ENDERMAN("assets/bluemapmobs/img/mobs/creature/monster/enderman.png", new Vector2i(12, 12)),
-        ENDERMITE("assets/bluemapmobs/img/mobs/creature/monster/endermite.png", new Vector2i(12, 12)),
-        GIANT("assets/bluemapmobs/img/mobs/creature/monster/giant.png", new Vector2i(12, 12)),
-        GUARDIAN("assets/bluemapmobs/img/mobs/creature/monster/guardian/guardian.png", new Vector2i(12, 12)),
-        ELDER_GUARDIAN("assets/bluemapmobs/img/mobs/creature/monster/guardian/elder_guardian.png", new Vector2i(12, 12)),
-        PIGLIN("assets/bluemapmobs/img/mobs/creature/monster/piglinabstract/piglin.png", new Vector2i(12, 12)),
-        PIGLIN_BRUTE("assets/bluemapmobs/img/mobs/creature/monster/piglinabstract/piglin_brute.png", new Vector2i(12, 12)),
-        PILLAGER("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/pillager.png", new Vector2i(12, 12)),
-        EVOKER("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/spellcaster/evoker.png", new Vector2i(12, 12)),
-        ILLUSIONER("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/spellcaster/illusioner.png", new Vector2i(12, 12)),
-        VINDICATOR("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/vindicator.png", new Vector2i(12, 12)),
-        RAVAGER("assets/bluemapmobs/img/mobs/creature/monster/raider/ravager.png", new Vector2i(12, 12)),
-        WITCH("assets/bluemapmobs/img/mobs/creature/monster/raider/witch.png", new Vector2i(12, 12)),
-        SILVERFISH("assets/bluemapmobs/img/mobs/creature/monster/silverfish.png", new Vector2i(12, 12)),
-        SPIDER("assets/bluemapmobs/img/mobs/creature/monster/spider/spider.png", new Vector2i(12, 12)),
-        CAVE_SPIDER("assets/bluemapmobs/img/mobs/creature/monster/spider/cave_spider.png", new Vector2i(12, 12)),
-        VEX("assets/bluemapmobs/img/mobs/creature/monster/vex.png", new Vector2i(12, 12)),
-        WARDEN("assets/bluemapmobs/img/mobs/creature/monster/warden.png", new Vector2i(12, 12)),
-        WITHER("assets/bluemapmobs/img/mobs/creature/monster/wither.png", new Vector2i(12, 12)),
-        ZOGLIN("assets/bluemapmobs/img/mobs/creature/monster/zoglin.png", new Vector2i(12, 12)),
-        ZOMBIE("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie.png", new Vector2i(12, 12)),
-        DROWNED("assets/bluemapmobs/img/mobs/creature/monster/zombie/drowned.png", new Vector2i(12, 12)),
-        HUSK("assets/bluemapmobs/img/mobs/creature/monster/zombie/husk.png", new Vector2i(12, 12)),
-        PIG_ZOMBIE("assets/bluemapmobs/img/mobs/creature/monster/zombie/pig_zombie.png", new Vector2i(12, 12)),
-        DESERT_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/desert.png", new Vector2i(12, 12)),
-        JUNGLE_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/jungle.png", new Vector2i(12, 12)),
-        PLAINS_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/plains.png", new Vector2i(12, 12)),
-        SAVANNA_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/savanna.png", new Vector2i(12, 12)),
-        SNOWY_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/snowy.png", new Vector2i(12, 12)),
-        SWAMP_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/swamp.png", new Vector2i(12, 12)),
-        TAIGA_ZOMBIE_VILLAGER("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/taiga.png", new Vector2i(12, 12)),
-        DESERT_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/desert.png", new Vector2i(12, 12)),
-        JUNGLE_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/jungle.png", new Vector2i(12, 12)),
-        PLAINS_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/plains.png", new Vector2i(12, 12)),
-        SAVANNA_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/savanna.png", new Vector2i(12, 12)),
-        SNOWY_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/snowy.png", new Vector2i(12, 12)),
-        SWAMP_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/swamp.png", new Vector2i(12, 12)),
-        TAIGA_VILLAGER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/taiga.png", new Vector2i(12, 12)),
-        WANDERING_TRADER("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/wandering_trader.png", new Vector2i(12, 12)),
-        DOLPHIN("assets/bluemapmobs/img/mobs/creature/watermob/dolphin.png", new Vector2i(12, 12)),
-        COD("assets/bluemapmobs/img/mobs/creature/watermob/fish/cod.png", new Vector2i(12, 12)),
-        PUFFER_FISH("assets/bluemapmobs/img/mobs/creature/watermob/fish/puffer_fish.png", new Vector2i(12, 12)),
-        SALMON("assets/bluemapmobs/img/mobs/creature/watermob/fish/salmon.png", new Vector2i(12, 12)),
-        TADPOLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tadpole.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_1_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_1_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_2_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_2_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_3_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_3_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_4_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_4_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_5_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_5_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_A_PATTERN_6_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_a_pattern_6_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_1_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_1_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_2_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_2_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_3_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_3_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_4_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_4_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_5_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_5_pink.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_WHITE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_white.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_LIGHT_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_light_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_GRAY("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_gray.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_BLACK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_black.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_BROWN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_brown.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_RED("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_red.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_ORANGE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_orange.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_YELLOW("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_yellow.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_LIME("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_lime.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_GREEN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_green.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_CYAN("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_cyan.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_LIGHT_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_light_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_BLUE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_blue.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_PURPLE("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_purple.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_MAGENTA("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_magenta.png", new Vector2i(12, 12)),
-        TROPICAL_FISH_B_PATTERN_6_PINK("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_b_pattern_6_pink.png", new Vector2i(12, 12)),
-        SQUID("assets/bluemapmobs/img/mobs/creature/watermob/squid/squid.png", new Vector2i(12, 12)),
-        GLOW_SQUID("assets/bluemapmobs/img/mobs/creature/watermob/squid/glow_squid.png", new Vector2i(12, 12)),
-        ENDER_DRAGON("assets/bluemapmobs/img/mobs/ender_dragon.png", new Vector2i(12, 12)),
-        GHAST("assets/bluemapmobs/img/mobs/flying/ghast.png", new Vector2i(12, 12)),
-        PHANTOM("assets/bluemapmobs/img/mobs/flying/phantom.png", new Vector2i(12, 12)),
-        SLIME("assets/bluemapmobs/img/mobs/slime/slime.png", new Vector2i(12, 12)),
-        MAGMA_CUBE("assets/bluemapmobs/img/mobs/slime/magma_cube.png", new Vector2i(12, 12));
-
-        private final String path;
-        private final Vector2i anchor;
-
-        Mob(String path, Vector2i anchor) {
-            this.path = path;
-            this.anchor = anchor;
-        }
-
-        @Override
-        public String getPath() {
-            return path;
-        }
-
-        @Override
-        public Vector2i getAnchor() {
-            return anchor;
-        }
-
-        public static Mob tropicalFish(TropicalFish tropicalFish) {
+    public static final class Mob {
+        public static final Icon BAT = new SimpleIcon("assets/bluemapmobs/img/mobs/ambient/bat.png", new Vector2i(12, 12));
+        public static final Icon ALLAY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12));
+        public static final Icon CAMEL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12));
+        public static final Icon DONKEY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12));
+        public static final Icon LLAMA_EMPTY_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/empty.png", new Vector2i(12, 12));
+        public static final Icon TRADER_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/trader_llama.png", new Vector2i(12, 12));
+        public static final Icon WHITE_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/white.png", new Vector2i(12, 12));
+        public static final Icon LIGHTGRAY_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/light_gray.png", new Vector2i(12, 12));
+        public static final Icon GRAY_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/gray.png", new Vector2i(12, 12));
+        public static final Icon BLACK_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/black.png", new Vector2i(12, 12));
+        public static final Icon BROWN_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/brown.png", new Vector2i(12, 12));
+        public static final Icon RED_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/red.png", new Vector2i(12, 12));
+        public static final Icon ORANGE_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/orange.png", new Vector2i(12, 12));
+        public static final Icon YELLOW_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/yellow.png", new Vector2i(12, 12));
+        public static final Icon LIME_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/lime.png", new Vector2i(12, 12));
+        public static final Icon GREEN_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/green.png", new Vector2i(12, 12));
+        public static final Icon CYAN_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/cyan.png", new Vector2i(12, 12));
+        public static final Icon LIGHTBLUE_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/light_blue.png", new Vector2i(12, 12));
+        public static final Icon BLUE_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/blue.png", new Vector2i(12, 12));
+        public static final Icon PURPLE_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/purple.png", new Vector2i(12, 12));
+        public static final Icon MAGENTA_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/magenta.png", new Vector2i(12, 12));
+        public static final Icon PINK_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/pink.png", new Vector2i(12, 12));
+        public static final Icon MULE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/mule.png", new Vector2i(12, 12));
+        public static final Icon HORSE_MARKINGS_NONE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_none.png", new Vector2i(12, 12));
+        public static final Icon HORSE_MARKINGS_WHITE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white.png", new Vector2i(12, 12));
+        public static final Icon HORSE_MARKINGS_WHITEFIELD = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_whitefield.png", new Vector2i(12, 12));
+        public static final Icon HORSE_MARKINGS_WHITE_DOTS = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_white_dots.png", new Vector2i(12, 12));
+        public static final Icon HORSE_MARKINGS_BLACK_DOTS = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_black_dots.png", new Vector2i(12, 12));
+        public static final Icon SKELETON_HORSE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12));
+        public static final Icon ZOMBIE_HORSE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12));
+        public static final Icon ARMADILLO = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/armadillo.png", new Vector2i(12, 12));
+        public static final Icon LUCY_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/lucy_axolotl.png", new Vector2i(12, 12));
+        public static final Icon WILD_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/wild_axolotl.png", new Vector2i(12, 12));
+        public static final Icon GOLD_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/gold_axolotl.png", new Vector2i(12, 12));
+        public static final Icon CYAN_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/cyan_axolotl.png", new Vector2i(12, 12));
+        public static final Icon BLUE_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/blue_axolotl.png", new Vector2i(12, 12));
+        public static final Icon BEE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/bee.png", new Vector2i(12, 12));
+        public static final Icon ALL_BLACK_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/all_black.png", new Vector2i(12, 12));
+        public static final Icon BLACK_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/black.png", new Vector2i(12, 12));
+        public static final Icon BRITISH_SHORTHAIR_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/british_shorthair.png", new Vector2i(12, 12));
+        public static final Icon CALICO_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/calico.png", new Vector2i(12, 12));
+        public static final Icon JELLIE_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/jellie.png", new Vector2i(12, 12));
+        public static final Icon PERSIAN_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/persian.png", new Vector2i(12, 12));
+        public static final Icon RAGDOLL_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/ragdoll.png", new Vector2i(12, 12));
+        public static final Icon RED_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/red.png", new Vector2i(12, 12));
+        public static final Icon SIAMESE_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/siamese.png", new Vector2i(12, 12));
+        public static final Icon TABBY_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/tabby.png", new Vector2i(12, 12));
+        public static final Icon WHITE_CAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/cat/white.png", new Vector2i(12, 12));
+        public static final Icon TEMPERATE_CHICKEN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/chicken/temperate_chicken.png", new Vector2i(12, 12));
+        public static final Icon COLD_CHICKEN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/chicken/cold_chicken.png", new Vector2i(12, 12));
+        public static final Icon WARM_CHICKEN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/chicken/warm_chicken.png", new Vector2i(12, 12));
+        public static final Icon TEMPERATE_COW = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/cow/temperate_cow.png", new Vector2i(12, 12));
+        public static final Icon COLD_COW = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/cow/cold_cow.png", new Vector2i(12, 12));
+        public static final Icon WARM_COW = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/cow/warm_cow.png", new Vector2i(12, 12));
+        public static final Icon RED_MOOSHROOM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/mooshroom/red_mooshroom.png", new Vector2i(12, 12));
+        public static final Icon BROWN_MOOSHROOM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractcow/mooshroom/brown_mooshroom.png", new Vector2i(12, 12));
+        public static final Icon RED_FOX = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/fox/red_fox.png", new Vector2i(12, 12));
+        public static final Icon SNOW_FOX = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/fox/snow_fox.png", new Vector2i(12, 12));
+        public static final Icon TEMPERATE_FROG = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/frog/temperate_frog.png", new Vector2i(12, 12));
+        public static final Icon COLD_FROG = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/frog/cold_frog.png", new Vector2i(12, 12));
+        public static final Icon TROPICAL_FROG = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/frog/tropical_frog.png", new Vector2i(12, 12));
+        public static final Icon GOAT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/goat.png", new Vector2i(12, 12));
+        public static final Icon HOGLIN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/hoglin.png", new Vector2i(12, 12));
+        public static final Icon OCELOT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/ocelot.png", new Vector2i(12, 12));
+        public static final Icon NORMAL_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/normal_panda.png", new Vector2i(12, 12));
+        public static final Icon LAZY_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/lazy_panda.png", new Vector2i(12, 12));
+        public static final Icon WORRIED_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/worried_panda.png", new Vector2i(12, 12));
+        public static final Icon PLAYFUL_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/playful_panda.png", new Vector2i(12, 12));
+        public static final Icon AGGRESSIVE_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/aggressive_panda.png", new Vector2i(12, 12));
+        public static final Icon WEAK_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/weak_panda.png", new Vector2i(12, 12));
+        public static final Icon BROWN_PANDA = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/panda/brown_panda.png", new Vector2i(12, 12));
+        public static final Icon RED_PARROT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/parrot/red_parrot.png", new Vector2i(12, 12));
+        public static final Icon BLUE_PARROT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/parrot/blue_parrot.png", new Vector2i(12, 12));
+        public static final Icon GREEN_PARROT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/parrot/green_parrot.png", new Vector2i(12, 12));
+        public static final Icon CYAN_PARROT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/parrot/cyan_parrot.png", new Vector2i(12, 12));
+        public static final Icon GRAY_PARROT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/parrot/gray_parrot.png", new Vector2i(12, 12));
+        public static final Icon TEMPERATE_PIG = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/pig/temperate_pig.png", new Vector2i(12, 12));
+        public static final Icon COLD_PIG = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/pig/cold_pig.png", new Vector2i(12, 12));
+        public static final Icon WARM_PIG = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/pig/warm_pig.png", new Vector2i(12, 12));
+        public static final Icon POLAR_BEAR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/polar_bear.png", new Vector2i(12, 12));
+        public static final Icon BLACK_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/black.png", new Vector2i(12, 12));
+        public static final Icon BROWN_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/brown.png", new Vector2i(12, 12));
+        public static final Icon GOLD_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/gold.png", new Vector2i(12, 12));
+        public static final Icon SALT_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/salt.png", new Vector2i(12, 12));
+        public static final Icon WHITE_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white.png", new Vector2i(12, 12));
+        public static final Icon WHITE_SPLOTCHED_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/white_splotched.png", new Vector2i(12, 12));
+        public static final Icon TOAST_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/toast.png", new Vector2i(12, 12));
+        public static final Icon CAERBANNOG_RABBIT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/rabbit/caerbannog.png", new Vector2i(12, 12));
+        public static final Icon SHEEP = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/sheep/sheep.png", new Vector2i(12, 12));
+        public static final Icon SNIFFER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/sniffer.png", new Vector2i(12, 12));
+        public static final Icon STRIDER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/strider.png", new Vector2i(12, 12));
+        public static final Icon TURTLE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/turtle.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_ASHEN_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_ashen.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_BLACK_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_black.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_CHESTNUT_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_chestnut.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_PALE_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_pale.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_RUSTY_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_rusty.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_SNOWY_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_snowy.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_SPOTTED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_spotted.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_STRIPED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_striped.png", new Vector2i(12, 12));
+        public static final Icon ANGRY_WOODS_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/angry_woods.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_ASHEN_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_ashen.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_BLACK_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_black.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_CHESTNUT_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_chestnut.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_PALE_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_pale.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_RUSTY_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_rusty.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_SNOWY_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_snowy.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_SPOTTED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_spotted.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_STRIPED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_striped.png", new Vector2i(12, 12));
+        public static final Icon UNTAMED_WOODS_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/untamed_woods.png", new Vector2i(12, 12));
+        public static final Icon TAMED_ASHEN_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_ashen.png", new Vector2i(12, 12));
+        public static final Icon TAMED_BLACK_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_black.png", new Vector2i(12, 12));
+        public static final Icon TAMED_CHESTNUT_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_chestnut.png", new Vector2i(12, 12));
+        public static final Icon TAMED_PALE_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_pale.png", new Vector2i(12, 12));
+        public static final Icon TAMED_RUSTY_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_rusty.png", new Vector2i(12, 12));
+        public static final Icon TAMED_SNOWY_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_snowy.png", new Vector2i(12, 12));
+        public static final Icon TAMED_SPOTTED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_spotted.png", new Vector2i(12, 12));
+        public static final Icon TAMED_STRIPED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_striped.png", new Vector2i(12, 12));
+        public static final Icon TAMED_WOODS_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_woods.png", new Vector2i(12, 12));
+        public static final Icon IRON_GOLEM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/iron_golem.png", new Vector2i(12, 12));
+        public static final Icon SHULKER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/shulker.png", new Vector2i(12, 12));
+        public static final Icon SNOWMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/snowman.png", new Vector2i(12, 12));
+        public static final Icon BOGGED = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/bogged.png", new Vector2i(12, 12));
+        public static final Icon SKELETON = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/skeleton.png", new Vector2i(12, 12));
+        public static final Icon STRAY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/stray.png", new Vector2i(12, 12));
+        public static final Icon WITHER_SKELETON = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/wither_skeleton.png", new Vector2i(12, 12));
+        public static final Icon BLAZE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/blaze.png", new Vector2i(12, 12));
+        public static final Icon BREEZE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/breeze.png", new Vector2i(12, 12));
+        public static final Icon CREAKING = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/creaking.png", new Vector2i(12, 12));
+        public static final Icon CREEPER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/creeper/creeper.png", new Vector2i(12, 12));
+        public static final Icon CHARGED_CREEPER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/creeper/charged_creeper.png", new Vector2i(12, 12));
+        public static final Icon ENDERMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/enderman.png", new Vector2i(12, 12));
+        public static final Icon ENDERMITE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/endermite.png", new Vector2i(12, 12));
+        public static final Icon GIANT = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/giant.png", new Vector2i(12, 12));
+        public static final Icon GUARDIAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/guardian/guardian.png", new Vector2i(12, 12));
+        public static final Icon ELDER_GUARDIAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/guardian/elder_guardian.png", new Vector2i(12, 12));
+        public static final Icon PIGLIN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/piglinabstract/piglin.png", new Vector2i(12, 12));
+        public static final Icon PIGLIN_BRUTE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/piglinabstract/piglin_brute.png", new Vector2i(12, 12));
+        public static final Icon PILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/pillager.png", new Vector2i(12, 12));
+        public static final Icon EVOKER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/spellcaster/evoker.png", new Vector2i(12, 12));
+        public static final Icon ILLUSIONER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/spellcaster/illusioner.png", new Vector2i(12, 12));
+        public static final Icon VINDICATOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/raider/illager/vindicator.png", new Vector2i(12, 12));
+        public static final Icon RAVAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/raider/ravager.png", new Vector2i(12, 12));
+        public static final Icon WITCH = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/raider/witch.png", new Vector2i(12, 12));
+        public static final Icon SILVERFISH = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/silverfish.png", new Vector2i(12, 12));
+        public static final Icon SPIDER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/spider/spider.png", new Vector2i(12, 12));
+        public static final Icon CAVE_SPIDER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/spider/cave_spider.png", new Vector2i(12, 12));
+        public static final Icon VEX = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/vex.png", new Vector2i(12, 12));
+        public static final Icon WARDEN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/warden.png", new Vector2i(12, 12));
+        public static final Icon WITHER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/wither.png", new Vector2i(12, 12));
+        public static final Icon ZOGLIN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zoglin.png", new Vector2i(12, 12));
+        public static final Icon ZOMBIE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie.png", new Vector2i(12, 12));
+        public static final Icon DROWNED = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/drowned.png", new Vector2i(12, 12));
+        public static final Icon HUSK = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/husk.png", new Vector2i(12, 12));
+        public static final Icon PIG_ZOMBIE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/pig_zombie.png", new Vector2i(12, 12));
+        public static final Icon DESERT_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/desert.png", new Vector2i(12, 12));
+        public static final Icon JUNGLE_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/jungle.png", new Vector2i(12, 12));
+        public static final Icon PLAINS_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/plains.png", new Vector2i(12, 12));
+        public static final Icon SAVANNA_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/savanna.png", new Vector2i(12, 12));
+        public static final Icon SNOWY_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/snowy.png", new Vector2i(12, 12));
+        public static final Icon SWAMP_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/swamp.png", new Vector2i(12, 12));
+        public static final Icon TAIGA_ZOMBIE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/zombie/zombie_villager/taiga.png", new Vector2i(12, 12));
+        public static final Icon DESERT_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/desert.png", new Vector2i(12, 12));
+        public static final Icon JUNGLE_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/jungle.png", new Vector2i(12, 12));
+        public static final Icon PLAINS_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/plains.png", new Vector2i(12, 12));
+        public static final Icon SAVANNA_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/savanna.png", new Vector2i(12, 12));
+        public static final Icon SNOWY_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/snowy.png", new Vector2i(12, 12));
+        public static final Icon SWAMP_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/swamp.png", new Vector2i(12, 12));
+        public static final Icon TAIGA_VILLAGER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/villager/taiga.png", new Vector2i(12, 12));
+        public static final Icon WANDERING_TRADER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/npc/abstractvillager/wandering_trader.png", new Vector2i(12, 12));
+        public static final Icon DOLPHIN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/dolphin.png", new Vector2i(12, 12));
+        public static final Icon COD = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/fish/cod.png", new Vector2i(12, 12));
+        public static final Icon PUFFER_FISH = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/fish/puffer_fish.png", new Vector2i(12, 12));
+        public static final Icon SALMON = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/fish/salmon.png", new Vector2i(12, 12));
+        public static final Icon TADPOLE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/fish/tadpole.png", new Vector2i(12, 12));
+        public static final Icon SQUID = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/squid/squid.png", new Vector2i(12, 12));
+        public static final Icon GLOW_SQUID = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/watermob/squid/glow_squid.png", new Vector2i(12, 12));
+        public static final Icon ENDER_DRAGON = new SimpleIcon("assets/bluemapmobs/img/mobs/ender_dragon.png", new Vector2i(12, 12));
+        public static final Icon GHAST = new SimpleIcon("assets/bluemapmobs/img/mobs/flying/ghast.png", new Vector2i(12, 12));
+        public static final Icon PHANTOM = new SimpleIcon("assets/bluemapmobs/img/mobs/flying/phantom.png", new Vector2i(12, 12));
+        public static final Icon SLIME = new SimpleIcon("assets/bluemapmobs/img/mobs/slime/slime.png", new Vector2i(12, 12));
+        public static final Icon MAGMA_CUBE = new SimpleIcon("assets/bluemapmobs/img/mobs/slime/magma_cube.png", new Vector2i(12, 12));
+        public static Icon tropicalFishPattern(TropicalFish tropicalFish) {
             String bodyType = switch (tropicalFish.getPattern()) {
-                case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "A";
-                case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "B";
+                case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
+                case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";
             };
             String pattern = switch (tropicalFish.getPattern()) {
                 case KOB, FLOPPER -> "1";
@@ -414,57 +203,44 @@ public final class BlueMapMobsIcon {
                 case BRINELY, BETTY -> "5";
                 case SPOTTY, CLAYFISH -> "6";
             };
-            return valueOf(String.format("TROPICAL_FISH_%s_PATTERN_%s_%s", bodyType, pattern, tropicalFish.getPatternColor().name()));
+            return new SimpleIcon(String.format("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_%s_pattern_%s_%s.png", bodyType, pattern, tropicalFish.getPatternColor().name().toLowerCase()), new Vector2i(12, 12));
         }
     }
-    public enum Vehicle implements Icon {
-        CHEST_MINECART("assets/bluemapmobs/img/vehicles/minecart/chest_minecart.png", new Vector2i(12, 12)),
-        COMMAND_BLOCK_MINECART("assets/bluemapmobs/img/vehicles/minecart/command_block_minecart.png", new Vector2i(12, 12)),
-        FURNACE_MINECART("assets/bluemapmobs/img/vehicles/minecart/furnace_minecart.png", new Vector2i(12, 12)),
-        HOPPER_MINECART("assets/bluemapmobs/img/vehicles/minecart/hopper_minecart.png", new Vector2i(12, 12)),
-        MINECART("assets/bluemapmobs/img/vehicles/minecart/minecart.png", new Vector2i(12, 12)),
-        SPAWNER_MINECART("assets/bluemapmobs/img/vehicles/minecart/spawner_minecart.png", new Vector2i(12, 12)),
-        TNT_MINECART("assets/bluemapmobs/img/vehicles/minecart/tnt_minecart.png", new Vector2i(12, 12)),
-        ACACIA_BOAT("assets/bluemapmobs/img/vehicles/boat/acacia_boat.png", new Vector2i(12, 12)),
-        ACACIA_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/acacia_chest_boat.png", new Vector2i(12, 12)),
-        BAMBOO_CHEST_RAFT("assets/bluemapmobs/img/vehicles/boat/bamboo_chest_raft.png", new Vector2i(12, 12)),
-        BAMBOO_RAFT("assets/bluemapmobs/img/vehicles/boat/bamboo_raft.png", new Vector2i(12, 12)),
-        BIRCH_BOAT("assets/bluemapmobs/img/vehicles/boat/birch_boat.png", new Vector2i(12, 12)),
-        BIRCH_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/birch_chest_boat.png", new Vector2i(12, 12)),
-        CHERRY_BOAT("assets/bluemapmobs/img/vehicles/boat/cherry_boat.png", new Vector2i(12, 12)),
-        CHERRY_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/cherry_chest_boat.png", new Vector2i(12, 12)),
-        DARK_OAK_BOAT("assets/bluemapmobs/img/vehicles/boat/dark_oak_boat.png", new Vector2i(12, 12)),
-        DARK_OAK_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/dark_oak_chest_boat.png", new Vector2i(12, 12)),
-        JUNGLE_BOAT("assets/bluemapmobs/img/vehicles/boat/jungle_boat.png", new Vector2i(12, 12)),
-        JUNGLE_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/jungle_chest_boat.png", new Vector2i(12, 12)),
-        MANGROVE_BOAT("assets/bluemapmobs/img/vehicles/boat/mangrove_boat.png", new Vector2i(12, 12)),
-        MANGROVE_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/mangrove_chest_boat.png", new Vector2i(12, 12)),
-        OAK_BOAT("assets/bluemapmobs/img/vehicles/boat/oak_boat.png", new Vector2i(12, 12)),
-        OAK_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/oak_chest_boat.png", new Vector2i(12, 12)),
-        SPRUCE_BOAT("assets/bluemapmobs/img/vehicles/boat/spruce_boat.png", new Vector2i(12, 12)),
-        SPRUCE_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/spruce_chest_boat.png", new Vector2i(12, 12)),
-        PALE_OAK_BOAT("assets/bluemapmobs/img/vehicles/boat/pale_oak_boat.png", new Vector2i(12, 12)),
-        PALE_OAK_CHEST_BOAT("assets/bluemapmobs/img/vehicles/boat/pale_oak_chest_boat.png", new Vector2i(12, 12));
-
-        private final String path;
-        private final Vector2i anchor;
-
-        Vehicle(String path, Vector2i anchor) {
-            this.path = path;
-            this.anchor = anchor;
-        }
-
-        @Override
-        public String getPath() {
-            return path;
-        }
-
-        @Override
-        public Vector2i getAnchor() {
-            return anchor;
-        }
+    public static final class Vehicle {
+        public static final Icon CHEST_MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/chest_minecart.png", new Vector2i(12, 12));
+        public static final Icon COMMAND_BLOCK_MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/command_block_minecart.png", new Vector2i(12, 12));
+        public static final Icon FURNACE_MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/furnace_minecart.png", new Vector2i(12, 12));
+        public static final Icon HOPPER_MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/hopper_minecart.png", new Vector2i(12, 12));
+        public static final Icon MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/minecart.png", new Vector2i(12, 12));
+        public static final Icon SPAWNER_MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/spawner_minecart.png", new Vector2i(12, 12));
+        public static final Icon TNT_MINECART = new SimpleIcon("assets/bluemapmobs/img/vehicles/minecart/tnt_minecart.png", new Vector2i(12, 12));
+        public static final Icon ACACIA_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/acacia_boat.png", new Vector2i(12, 12));
+        public static final Icon ACACIA_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/acacia_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon BAMBOO_CHEST_RAFT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/bamboo_chest_raft.png", new Vector2i(12, 12));
+        public static final Icon BAMBOO_RAFT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/bamboo_raft.png", new Vector2i(12, 12));
+        public static final Icon BIRCH_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/birch_boat.png", new Vector2i(12, 12));
+        public static final Icon BIRCH_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/birch_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon CHERRY_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/cherry_boat.png", new Vector2i(12, 12));
+        public static final Icon CHERRY_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/cherry_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon DARK_OAK_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/dark_oak_boat.png", new Vector2i(12, 12));
+        public static final Icon DARK_OAK_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/dark_oak_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon JUNGLE_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/jungle_boat.png", new Vector2i(12, 12));
+        public static final Icon JUNGLE_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/jungle_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon MANGROVE_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/mangrove_boat.png", new Vector2i(12, 12));
+        public static final Icon MANGROVE_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/mangrove_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon OAK_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/oak_boat.png", new Vector2i(12, 12));
+        public static final Icon OAK_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/oak_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon SPRUCE_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/spruce_boat.png", new Vector2i(12, 12));
+        public static final Icon SPRUCE_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/spruce_chest_boat.png", new Vector2i(12, 12));
+        public static final Icon PALE_OAK_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/pale_oak_boat.png", new Vector2i(12, 12));
+        public static final Icon PALE_OAK_CHEST_BOAT = new SimpleIcon("assets/bluemapmobs/img/vehicles/boat/pale_oak_chest_boat.png", new Vector2i(12, 12));
     }
     public static final class Other {
         public static final Icon ARMOR_STAND = new SimpleIcon("assets/bluemapmobs/img/others/livingentity/armor_stand.png", new Vector2i(12, 12));
+    }
+    public static final class NPC {
+        public static Icon head(String textureId) {
+            return new SimpleIcon(String.format("https://mc-heads.net/avatar/%s/32.png", textureId), new Vector2i(12, 12));
+        }
     }
 }
