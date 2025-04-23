@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs;
 
+import org.bukkit.DyeColor;
 import org.bukkit.entity.TropicalFish;
 
 public final class BlueMapMobsStyleClass {
@@ -34,12 +35,12 @@ public final class BlueMapMobsStyleClass {
         public static final String WHITE_LLAMA = "bluemapmobs-white-llama";
         public static final String GRAY_LLAMA = "bluemapmobs-gray-llama";
         public static final String BROWN_LLAMA = "bluemapmobs-brown-llama";
-        public static String tropicalFishBody(TropicalFish tropicalFish) {
-            String bodyType = switch (tropicalFish.getPattern()) {
+        public static String tropicalFishBody(TropicalFish.Pattern pattern, DyeColor bodyColor) {
+            String bodyType = switch (pattern) {
                 case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
                 case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";
             };
-            return String.format("bluemapmobs-tropical-fish-%s-%s", bodyType, tropicalFish.getBodyColor().name().toLowerCase().replace('_', '-'));
+            return String.format("bluemapmobs-tropical-fish-body-%s-%s", bodyType, bodyColor.name().toLowerCase().replace('_', '-'));
         }
     }
 }

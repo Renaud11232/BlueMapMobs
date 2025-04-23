@@ -3,6 +3,7 @@ package be.renaud11232.bluemapmobs;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.icon.impl.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;
+import org.bukkit.DyeColor;
 import org.bukkit.entity.TropicalFish;
 
 public final class BlueMapMobsIcon {
@@ -190,20 +191,8 @@ public final class BlueMapMobsIcon {
         public static final Icon PHANTOM = new SimpleIcon("assets/bluemapmobs/img/mobs/flying/phantom.png", new Vector2i(12, 12));
         public static final Icon SLIME = new SimpleIcon("assets/bluemapmobs/img/mobs/slime/slime.png", new Vector2i(12, 12));
         public static final Icon MAGMA_CUBE = new SimpleIcon("assets/bluemapmobs/img/mobs/slime/magma_cube.png", new Vector2i(12, 12));
-        public static Icon tropicalFishPattern(TropicalFish tropicalFish) {
-            String bodyType = switch (tropicalFish.getPattern()) {
-                case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
-                case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";
-            };
-            String pattern = switch (tropicalFish.getPattern()) {
-                case KOB, FLOPPER -> "1";
-                case SUNSTREAK, STRIPEY -> "2";
-                case SNOOPER, GLITTER -> "3";
-                case DASHER, BLOCKFISH -> "4";
-                case BRINELY, BETTY -> "5";
-                case SPOTTY, CLAYFISH -> "6";
-            };
-            return new SimpleIcon(String.format("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_%s_pattern_%s_%s.png", bodyType, pattern, tropicalFish.getPatternColor().name().toLowerCase()), new Vector2i(12, 12));
+        public static Icon tropicalFishPattern(TropicalFish.Pattern pattern, DyeColor patternColor) {
+            return new SimpleIcon(String.format("assets/bluemapmobs/img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_pattern_%s_%s.png", pattern.name().toLowerCase(), patternColor.name().toLowerCase()), new Vector2i(12, 12));
         }
     }
     public static final class Vehicle {
