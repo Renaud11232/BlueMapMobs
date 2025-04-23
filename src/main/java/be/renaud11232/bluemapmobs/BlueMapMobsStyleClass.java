@@ -36,11 +36,7 @@ public final class BlueMapMobsStyleClass {
         public static final String GRAY_LLAMA = "bluemapmobs-gray-llama";
         public static final String BROWN_LLAMA = "bluemapmobs-brown-llama";
         public static String tropicalFishBody(TropicalFish.Pattern pattern, DyeColor bodyColor) {
-            String bodyType = switch (pattern) {
-                case KOB, SUNSTREAK, SNOOPER, DASHER, BRINELY, SPOTTY -> "a";
-                case FLOPPER, STRIPEY, GLITTER, BLOCKFISH, BETTY, CLAYFISH -> "b";
-            };
-            return String.format("bluemapmobs-tropical-fish-body-%s-%s", bodyType, bodyColor.name().toLowerCase().replace('_', '-'));
+            return String.format("bluemapmobs-tropical-fish-body-%s-%s", pattern.ordinal() < TropicalFish.Pattern.values().length / 2 ? "small" : "large", bodyColor.name().toLowerCase().replace('_', '-'));
         }
     }
 }
