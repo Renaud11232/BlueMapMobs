@@ -8,7 +8,7 @@ Adds markers for mobs (and also vehicles) on your [BlueMap](https://github.com/B
 
 Compatibility between versions is very hard with this plugin as new mobs are often added to the game as well as some breaking internal changes.
 
-The plugin *should* work with Minecraft version released after a given release, but new mobs and vehicles (if any) won't show properly.
+The plugin *may* work with Minecraft version released after a given release, but new mobs and vehicles (if any) won't show properly.
 
 Installing the plugin with an older version however will most likely result in an error. Please refer to the following table to find what version you should use for your server :
 
@@ -18,7 +18,7 @@ Installing the plugin with an older version however will most likely result in a
 | 1.20.6          | 1.1.0          |
 | 1.21.0 - 1.21.3 | 1.2.0          |
 | 1.21.4          | 1.3.0          |
-| 1.21.5          | 1.4.0 - 1.4.1  |
+| 1.21.5          | 1.4.0 - 1.4.2  |
 
 
 ## Configuration
