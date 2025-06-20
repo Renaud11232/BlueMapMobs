@@ -38,5 +38,7 @@ public final class BlueMapMobsStyleClass {
         public static String tropicalFishBody(TropicalFish.Pattern pattern, DyeColor bodyColor) {
             return String.format("bluemapmobs-tropical-fish-body-%s-%s", pattern.ordinal() < TropicalFish.Pattern.values().length / 2 ? "small" : "large", bodyColor.name().toLowerCase().replace('_', '-'));
         }
+        public static final String ADULT_HAPPY_GHAST = "bluemapmobs-adult-happy-ghast";
+        public static final String BABY_HAPPY_GHAST = "bluemapmobs-baby-happy-ghast";
     }
 }

@@ -307,3 +307,11 @@
 #map-container .bluemapmobs-tropical-fish-body-large-yellow img {
     background-image: url("../img/mobs/creature/watermob/fish/tropical_fish/tropical_fish_body_large_yellow.png");
 }
+
+#map-container .bluemapmobs-adult-happy-ghast img {
+    background-image: url("../img/mobs/creature/animals/happy_ghast/adult.png");
+}
+
+#map-container .bluemapmobs-baby-happy-ghast img {
+    background-image: url("../img/mobs/creature/animals/happy_ghast/baby.png");
+}

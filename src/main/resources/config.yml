@@ -38,6 +38,7 @@ marker_sets:
         fox: true
         frog: true
         goat: true
+        happy_ghast: true
         hoglin: true
         ocelot: true
         panda: true

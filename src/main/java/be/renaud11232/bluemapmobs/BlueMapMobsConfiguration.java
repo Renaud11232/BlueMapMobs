@@ -42,6 +42,7 @@ public final class BlueMapMobsConfiguration {
                     public static final Configuration<Boolean> FOX = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.fox");
                     public static final Configuration<Boolean> FROG = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.frog");
                     public static final Configuration<Boolean> GOAT = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.goat");
+                    public static final Configuration<Boolean> HAPPY_GHAST = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.happy_ghast");
                     public static final Configuration<Boolean> HOGLIN = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.hoglin");
                     public static final Configuration<Boolean> OCELOT = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.ocelot");
                     public static final Configuration<Boolean> PANDA = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.panda");
