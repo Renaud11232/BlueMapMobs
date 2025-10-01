@@ -145,9 +145,14 @@ public final class BlueMapMobsIcon {
         public static final Icon TAMED_SPOTTED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_spotted.png", new Vector2i(12, 12));
         public static final Icon TAMED_STRIPED_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_striped.png", new Vector2i(12, 12));
         public static final Icon TAMED_WOODS_WOLF = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/wolf/tamed_woods.png", new Vector2i(12, 12));
+        public static final Icon UNAFFECTED_COPPER_GOLEM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/copper_golem/unaffected.png", new Vector2i(12, 12));
+        public static final Icon EXPOSED_COPPER_GOLEM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/copper_golem/exposed.png", new Vector2i(12, 12));
+        public static final Icon WEATHERED_COPPER_GOLEM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/copper_golem/weathered.png", new Vector2i(12, 12));
+        public static final Icon OXIDIZED_COPPER_GOLEM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/copper_golem/oxidized.png", new Vector2i(12, 12));
         public static final Icon IRON_GOLEM = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/iron_golem.png", new Vector2i(12, 12));
         public static final Icon SHULKER = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/shulker.png", new Vector2i(12, 12));
-        public static final Icon SNOWMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/snowman.png", new Vector2i(12, 12));
+        public static final Icon NORMAL_SNOWMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/snowman/normal.png", new Vector2i(12, 12));
+        public static final Icon DERP_SNOWMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/snowman/derp.png", new Vector2i(12, 12));
         public static final Icon BOGGED = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/bogged.png", new Vector2i(12, 12));
         public static final Icon SKELETON = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/skeleton.png", new Vector2i(12, 12));
         public static final Icon STRAY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/stray.png", new Vector2i(12, 12));

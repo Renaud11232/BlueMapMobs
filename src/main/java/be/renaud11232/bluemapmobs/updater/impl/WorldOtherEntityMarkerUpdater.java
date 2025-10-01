@@ -8,6 +8,7 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.Mannequin;
 
 import java.util.Collection;
 
@@ -18,6 +19,9 @@ public class WorldOtherEntityMarkerUpdater extends AbstractWorldEntityMarkerUpda
 
     @Override
     public Collection<Entity> getElements(World world) {
-        return world.getEntitiesByClasses(ArmorStand.class);
+        return world.getEntitiesByClasses(
+                ArmorStand.class,
+                Mannequin.class
+        );
     }
 }

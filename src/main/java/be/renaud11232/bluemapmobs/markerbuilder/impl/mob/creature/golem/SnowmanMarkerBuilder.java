@@ -4,11 +4,12 @@ import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
+import be.renaud11232.bluemapmobs.registry.Registry;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Snowman;
 
-public class SnowmanMarkerBuilder extends AbstractMobMarkerBuilder<Snowman> {
+public class SnowmanMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<Snowman, Boolean> {
     public SnowmanMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
         super(config, defaultConfig);
     }
@@ -19,7 +20,13 @@ public class SnowmanMarkerBuilder extends AbstractMobMarkerBuilder<Snowman> {
     }
 
     @Override
-    public Icon getDefaultIcon() {
-        return BlueMapMobsIcon.Mob.SNOWMAN;
+    public Boolean getVariant(Snowman snowman) {
+        return snowman.isDerp();
+    }
+
+    @Override
+    public void registerVariantIcons(Registry<Boolean, Icon> registry) {
+        registry.register(true, BlueMapMobsIcon.Mob.DERP_SNOWMAN);
+        registry.register(false, BlueMapMobsIcon.Mob.NORMAL_SNOWMAN);
     }
 }

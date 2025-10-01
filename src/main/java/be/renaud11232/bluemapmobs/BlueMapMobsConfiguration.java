@@ -55,6 +55,7 @@ public final class BlueMapMobsConfiguration {
                     public static final Configuration<Boolean> STRIDER = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.strider");
                     public static final Configuration<Boolean> TURTLE = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.turtle");
                     public static final Configuration<Boolean> WOLF = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.wolf");
+                    public static final Configuration<Boolean> COPPER_GOLEM = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.copper_golem");
                     public static final Configuration<Boolean> IRON_GOLEM = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.iron_golem");
                     public static final Configuration<Boolean> SHULKER = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.shulker");
                     public static final Configuration<Boolean> SNOWMAN = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.snowman");
@@ -140,6 +141,7 @@ public final class BlueMapMobsConfiguration {
                 public static final Configuration<Double> MAX_DISTANCE = new SimpleDoubleConfiguration("marker_sets.others.markers.max_distance");
                 public static final class Types {
                     public static final Configuration<Boolean> ARMOR_STAND = new SimpleBooleanConfiguration("marker_sets.others.markers.types.armor_stand");
+                    public static final Configuration<Boolean> MANNEQUIN = new SimpleBooleanConfiguration("marker_sets.others.markers.types.mannequin");
                 }
             }
         }

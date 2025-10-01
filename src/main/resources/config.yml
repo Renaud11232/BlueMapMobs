@@ -51,6 +51,7 @@ marker_sets:
         strider: true
         turtle: true
         wolf: true
+        copper_golem: true
         iron_golem: true
         shulker: true
         snowman: true
@@ -132,6 +133,7 @@ marker_sets:
       max_distance: 1000
       types:
         armor_stand: true
+        mannequin: true
 
   npcs:
     enabled: true
