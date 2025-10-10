@@ -7,6 +7,7 @@ import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.LivingEntity;
 
 import java.util.Optional;
 
@@ -20,7 +21,12 @@ public abstract class AbstractNPCMarkerBuilder extends AbstractMarkerBuilder<NPC
         return super.build(npc).map(marker -> {
             marker.setLabel(npc.getName());
             marker.setDetail(npc.getName());
-            Location location = npc.getStoredLocation();
+            Location location;
+            if (npc.getEntity() instanceof LivingEntity livingEntity) {
+                location = livingEntity.getEyeLocation();
+            } else {
+                location = npc.getStoredLocation();
+            }
             marker.setPosition(location.getX(), location.getY(), location.getZ());
             marker.setMaxDistance(BlueMapMobsConfiguration.MarkerSets.NPCs.Markers.MAX_DISTANCE.get(getConfig(), getDefaultConfig()));
             return marker;
