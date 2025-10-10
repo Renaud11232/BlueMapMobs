@@ -6,12 +6,13 @@ import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.Registry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MushroomCow;
 
 public class MushroomCowMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<MushroomCow, MushroomCow.Variant> {
-    public MushroomCowMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public MushroomCowMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

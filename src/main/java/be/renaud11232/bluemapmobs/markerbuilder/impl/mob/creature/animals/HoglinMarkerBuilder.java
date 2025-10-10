@@ -5,12 +5,13 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Hoglin;
 
 public class HoglinMarkerBuilder extends AbstractMobMarkerBuilder<Hoglin> {
-    public HoglinMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public HoglinMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

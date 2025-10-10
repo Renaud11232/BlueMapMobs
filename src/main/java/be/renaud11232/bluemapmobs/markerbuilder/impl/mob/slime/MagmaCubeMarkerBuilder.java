@@ -5,12 +5,13 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MagmaCube;
 
 public class MagmaCubeMarkerBuilder extends AbstractMobMarkerBuilder<MagmaCube> {
-    public MagmaCubeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public MagmaCubeMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

@@ -14,7 +14,7 @@ import java.util.stream.StreamSupport;
 
 public class WorldNPCMarkerUpdater extends AbstractWorldMarkerUpdater<NPC> {
     public WorldNPCMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
-        super(plugin, api, new NPCMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new NPCMarkerBuilder(plugin.getConfig(), plugin.getDefaultConfig()));
+        super(plugin, api, new NPCMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new NPCMarkerBuilder(api, plugin.getConfig(), plugin.getDefaultConfig()));
     }
 
     @Override
@@ -29,6 +29,6 @@ public class WorldNPCMarkerUpdater extends AbstractWorldMarkerUpdater<NPC> {
                 .filter(NPC::isSpawned)
                 .filter(npc -> npc.getEntity() != null)
                 .filter(npc -> npc.getEntity().getWorld().equals(world))
-                .toList();
+                .toList();//TODO: filter out hidden entities
     }
 }

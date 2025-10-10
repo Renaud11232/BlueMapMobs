@@ -5,12 +5,13 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractVehicleMarkerBuilder;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.minecart.CommandMinecart;
 
 public class CommandMinecartMarkerBuilder extends AbstractVehicleMarkerBuilder<CommandMinecart> {
-    public CommandMinecartMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public CommandMinecartMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

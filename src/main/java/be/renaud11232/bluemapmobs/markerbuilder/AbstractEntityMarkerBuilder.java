@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
@@ -9,8 +10,8 @@ import org.bukkit.entity.Entity;
 import java.util.Optional;
 
 public abstract class AbstractEntityMarkerBuilder<T extends Entity> extends AbstractMarkerBuilder<T> {
-    public AbstractEntityMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public AbstractEntityMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

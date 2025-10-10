@@ -10,12 +10,13 @@ import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.zombie
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.zombie.PigZombieMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.zombie.ZombieVillagerMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 
 public class ZombieMarkerBuilder extends AbstractMobMarkerBuilder<Zombie> {
-    public ZombieMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public ZombieMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
@@ -25,10 +26,10 @@ public class ZombieMarkerBuilder extends AbstractMobMarkerBuilder<Zombie> {
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Zombie> registry) {
-        registry.register(Drowned.class, new DrownedMarkerBuilder(getConfig(), getDefaultConfig()));
-        registry.register(Husk.class, new HuskMarkerBuilder(getConfig(), getDefaultConfig()));
-        registry.register(PigZombie.class, new PigZombieMarkerBuilder(getConfig(), getDefaultConfig()));
-        registry.register(ZombieVillager.class, new ZombieVillagerMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Drowned.class, new DrownedMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(Husk.class, new HuskMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(PigZombie.class, new PigZombieMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(ZombieVillager.class, new ZombieVillagerMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 
     @Override

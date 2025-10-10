@@ -13,7 +13,7 @@ import java.util.Collection;
 
 public class WorldVehicleMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Vehicle> {
     public WorldVehicleMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
-        super(plugin, api, new VehicleMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new VehicleMarkerBuilder(plugin.getConfig(), plugin.getDefaultConfig()));
+        super(plugin, api, new VehicleMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new VehicleMarkerBuilder(api, plugin.getConfig(), plugin.getDefaultConfig()));
     }
 
     @Override
@@ -21,6 +21,6 @@ public class WorldVehicleMarkerUpdater extends AbstractWorldEntityMarkerUpdater<
         return world.getEntitiesByClass(Vehicle.class)
                 .stream()
                 .filter(vehicle -> !(vehicle instanceof Mob))
-                .toList();
+                .toList();//TODO: filter out hidden entities
     }
 }

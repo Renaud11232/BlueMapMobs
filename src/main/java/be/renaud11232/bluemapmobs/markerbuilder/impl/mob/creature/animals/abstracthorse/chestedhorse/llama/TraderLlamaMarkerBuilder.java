@@ -7,6 +7,7 @@ import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractSingleVariantMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.Registry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Llama;
 import org.bukkit.entity.TraderLlama;
@@ -15,8 +16,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class TraderLlamaMarkerBuilder extends AbstractSingleVariantMobMarkerBuilder<TraderLlama, Llama.Color> {
-    public TraderLlamaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public TraderLlamaMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

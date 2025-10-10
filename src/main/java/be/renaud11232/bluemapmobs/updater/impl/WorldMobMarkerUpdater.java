@@ -13,11 +13,11 @@ import java.util.Collection;
 public class WorldMobMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Mob> {
 
     public WorldMobMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
-        super(plugin, api, new MobMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new MobMarkerBuilder(plugin.getConfig(), plugin.getDefaultConfig()));
+        super(plugin, api, new MobMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new MobMarkerBuilder(api, plugin.getConfig(), plugin.getDefaultConfig()));
     }
 
     @Override
     public Collection<Mob> getElements(World world) {
-        return world.getEntitiesByClass(Mob.class);
+        return world.getEntitiesByClass(Mob.class);//TODO: filter out hidden entities
     }
 }

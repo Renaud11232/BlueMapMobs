@@ -1,11 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
 
 public abstract class AbstractSingleVariantMobMarkerBuilder<T extends Mob, V> extends AbstractVariantMobMarkerBuilder<T, V, V> {
-    public AbstractSingleVariantMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public AbstractSingleVariantMobMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

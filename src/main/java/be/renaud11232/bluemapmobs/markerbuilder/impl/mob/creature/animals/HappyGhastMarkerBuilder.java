@@ -7,6 +7,7 @@ import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractVariantMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.Registry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.HappyGhast;
@@ -17,8 +18,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class HappyGhastMarkerBuilder extends AbstractVariantMobMarkerBuilder<HappyGhast, Material, Boolean> {
-    public HappyGhastMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public HappyGhastMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

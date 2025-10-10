@@ -7,13 +7,14 @@ import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.watermob.squid.GlowSquidMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.GlowSquid;
 import org.bukkit.entity.Squid;
 
 public class SquidMarkerBuilder extends AbstractMobMarkerBuilder<Squid> {
-    public SquidMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public SquidMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class SquidMarkerBuilder extends AbstractMobMarkerBuilder<Squid> {
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Squid> registry) {
-        registry.register(GlowSquid.class, new GlowSquidMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(GlowSquid.class, new GlowSquidMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 
     @Override

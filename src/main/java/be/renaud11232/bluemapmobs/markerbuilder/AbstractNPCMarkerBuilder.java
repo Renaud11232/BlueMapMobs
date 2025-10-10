@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
@@ -10,8 +11,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import java.util.Optional;
 
 public abstract class AbstractNPCMarkerBuilder extends AbstractMarkerBuilder<NPC> {
-    public AbstractNPCMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public AbstractNPCMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

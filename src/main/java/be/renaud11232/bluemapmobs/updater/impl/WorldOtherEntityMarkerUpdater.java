@@ -14,7 +14,7 @@ import java.util.Collection;
 
 public class WorldOtherEntityMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Entity> {
     public WorldOtherEntityMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
-        super(plugin, api, new OtherMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new OtherMarkerBuilder(plugin.getConfig(), plugin.getDefaultConfig()));
+        super(plugin, api, new OtherMarkerSetBuilder(plugin.getConfig(), plugin.getDefaultConfig()), new OtherMarkerBuilder(api, plugin.getConfig(), plugin.getDefaultConfig()));
     }
 
     @Override
@@ -22,6 +22,6 @@ public class WorldOtherEntityMarkerUpdater extends AbstractWorldEntityMarkerUpda
         return world.getEntitiesByClasses(
                 ArmorStand.class,
                 Mannequin.class
-        );
+        );//TODO: filter out hidden entities
     }
 }

@@ -5,6 +5,7 @@ import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Wolf;
 
@@ -16,8 +17,8 @@ public class WolfMarkerBuilder extends AbstractMobMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> tamedIcons;
     private final Map<Wolf.Variant, Icon> untamedIcons;
     
-    public WolfMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public WolfMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
         angryIcons = new HashMap<>();
         angryIcons.put(Wolf.Variant.ASHEN, BlueMapMobsIcon.Mob.ANGRY_ASHEN_WOLF);
         angryIcons.put(Wolf.Variant.BLACK, BlueMapMobsIcon.Mob.ANGRY_BLACK_WOLF);

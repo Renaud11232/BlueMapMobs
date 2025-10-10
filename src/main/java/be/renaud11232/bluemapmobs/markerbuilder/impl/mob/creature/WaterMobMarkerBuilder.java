@@ -5,6 +5,7 @@ import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.watermob.Dolph
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.watermob.FishMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.watermob.SquidMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Dolphin;
 import org.bukkit.entity.Fish;
@@ -12,14 +13,14 @@ import org.bukkit.entity.Squid;
 import org.bukkit.entity.WaterMob;
 
 public class WaterMobMarkerBuilder extends AbstractMobMarkerBuilder<WaterMob> {
-    public WaterMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public WaterMobMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<WaterMob> registry) {
-        registry.register(Dolphin.class, new DolphinMarkerBuilder(getConfig(), getDefaultConfig()));
-        registry.register(Fish.class, new FishMarkerBuilder(getConfig(), getDefaultConfig()));
-        registry.register(Squid.class, new SquidMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Dolphin.class, new DolphinMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(Fish.class, new FishMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(Squid.class, new SquidMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 }
