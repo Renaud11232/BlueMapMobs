@@ -8,9 +8,16 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Entity;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mannequin;
 
 import java.util.Collection;
+
+import static java.util.function.Predicate.not;
+
+import static java.util.function.Function.identity;
+
+import java.util.stream.Stream;
 
 public class WorldOtherEntityMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Entity> {
     public WorldOtherEntityMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
@@ -19,9 +26,17 @@ public class WorldOtherEntityMarkerUpdater extends AbstractWorldEntityMarkerUpda
 
     @Override
     public Collection<Entity> getElements(World world) {
-        return world.getEntitiesByClasses(
-                ArmorStand.class,
-                Mannequin.class
-        );//TODO: filter out hidden entities
+        return Stream.of(
+                        world.getEntitiesByClass(ArmorStand.class)
+                                .stream()
+                                .filter(ArmorStand::isVisible)
+                                .map(armorStand -> (Entity) armorStand),
+                        world.getEntitiesByClass(Mannequin.class)
+                                .stream()
+                                .filter(not(LivingEntity::isInvisible))
+                                .map(mannequin -> (Entity) mannequin)
+                )
+                .flatMap(identity())
+                .toList();
     }
 }

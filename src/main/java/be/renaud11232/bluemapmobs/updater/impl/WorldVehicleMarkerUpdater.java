@@ -10,6 +10,7 @@ import org.bukkit.entity.Mob;
 import org.bukkit.entity.Vehicle;
 
 import java.util.Collection;
+import static java.util.function.Predicate.not;
 
 public class WorldVehicleMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Vehicle> {
     public WorldVehicleMarkerUpdater(BlueMapMobs plugin, BlueMapAPI api) {
@@ -20,7 +21,7 @@ public class WorldVehicleMarkerUpdater extends AbstractWorldEntityMarkerUpdater<
     public Collection<Vehicle> getElements(World world) {
         return world.getEntitiesByClass(Vehicle.class)
                 .stream()
-                .filter(vehicle -> !(vehicle instanceof Mob))
-                .toList();//TODO: filter out hidden entities
+                .filter(not(vehicle -> vehicle instanceof Mob))
+                .toList();
     }
 }

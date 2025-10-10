@@ -8,8 +8,10 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.World;
+import org.bukkit.entity.LivingEntity;
 
 import java.util.*;
+import static java.util.function.Predicate.not;
 import java.util.stream.StreamSupport;
 
 public class WorldNPCMarkerUpdater extends AbstractWorldMarkerUpdater<NPC> {
@@ -27,8 +29,9 @@ public class WorldNPCMarkerUpdater extends AbstractWorldMarkerUpdater<NPC> {
         return StreamSupport.stream(CitizensAPI.getNPCRegistries().spliterator(), false)
                 .flatMap(registry -> StreamSupport.stream(registry.spliterator(), false))
                 .filter(NPC::isSpawned)
-                .filter(npc -> npc.getEntity() != null)
+                .filter(not(npc -> npc.getEntity() == null))
                 .filter(npc -> npc.getEntity().getWorld().equals(world))
-                .toList();//TODO: filter out hidden entities
+                .filter(not(npc -> npc.getEntity() instanceof LivingEntity livingEntity && livingEntity.isInvisible()))
+                .toList();
     }
 }

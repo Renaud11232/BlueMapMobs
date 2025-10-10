@@ -6,9 +6,12 @@ import be.renaud11232.bluemapmobs.markersetbuilder.impl.MobMarkerSetBuilder;
 import be.renaud11232.bluemapmobs.updater.AbstractWorldEntityMarkerUpdater;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Mob;
 
 import java.util.Collection;
+
+import static java.util.function.Predicate.not;
 
 public class WorldMobMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Mob> {
 
@@ -18,6 +21,9 @@ public class WorldMobMarkerUpdater extends AbstractWorldEntityMarkerUpdater<Mob>
 
     @Override
     public Collection<Mob> getElements(World world) {
-        return world.getEntitiesByClass(Mob.class);//TODO: filter out hidden entities
+        return world.getEntitiesByClass(Mob.class)
+                .stream()
+                .filter(not(LivingEntity::isInvisible))
+                .toList();
     }
 }
