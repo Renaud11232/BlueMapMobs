@@ -1,13 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder.impl.other.livingentity;
 
 import be.renaud11232.bluemapmobs.BlueMapMobsConfiguration;
+import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractOtherEntityMarkerBuilder;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mannequin;
-import org.bukkit.profile.PlayerProfile;
 
 public class MannequinMarkerBuilder extends AbstractOtherEntityMarkerBuilder<Mannequin> {
     public MannequinMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
@@ -20,17 +20,25 @@ public class MannequinMarkerBuilder extends AbstractOtherEntityMarkerBuilder<Man
     }
 
     @Override
-    public Icon getDefaultIcon() {
-        return super.getDefaultIcon();//TODO
-    }
-
-    @Override
     public Icon getIcon(Mannequin mannequin) {
-        PlayerProfile profile = mannequin.getPlayerProfile();
+        //TODO
+        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
+        /*PlayerProfile profile = mannequin.getPlayerProfile();
         if (profile == null) {
-            return null;
+            return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
         }
-        System.out.println(profile);
-        return super.getIcon(mannequin);//TODO
+        PlayerSkinPatch skinPatch = profile.getSkinPatch();
+        if (skinPatch.getTexturePatch() != null) {
+            return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
+        }
+        UUID profileId = profile.getUniqueId();
+        if (profileId != null) {
+            try {
+                return BlueMapMobsIcon.Other.profileHead(profileId, getAPI().getWebApp().getWebRoot());
+            } catch (IOException e) {
+                return null;
+            }
+        }
+        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;*/
     }
 }
