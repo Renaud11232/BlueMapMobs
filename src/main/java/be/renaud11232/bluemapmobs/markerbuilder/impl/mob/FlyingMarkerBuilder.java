@@ -4,19 +4,20 @@ import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.flying.GhastMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.flying.PhantomMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Flying;
 import org.bukkit.entity.Ghast;
 import org.bukkit.entity.Phantom;
 
 public class FlyingMarkerBuilder extends AbstractMobMarkerBuilder<Flying> {
-    public FlyingMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public FlyingMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Flying> registry) {
-        registry.register(Ghast.class, new GhastMarkerBuilder(getConfig(), getDefaultConfig()));
-        registry.register(Phantom.class, new PhantomMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(Ghast.class, new GhastMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(Phantom.class, new PhantomMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 }

@@ -7,13 +7,14 @@ import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.slime.MagmaCubeMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.MagmaCube;
 import org.bukkit.entity.Slime;
 
 public class SlimeMarkerBuilder extends AbstractMobMarkerBuilder<Slime> {
-    public SlimeMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public SlimeMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class SlimeMarkerBuilder extends AbstractMobMarkerBuilder<Slime> {
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Slime> registry) {
-        registry.register(MagmaCube.class, new MagmaCubeMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(MagmaCube.class, new MagmaCubeMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 
     @Override

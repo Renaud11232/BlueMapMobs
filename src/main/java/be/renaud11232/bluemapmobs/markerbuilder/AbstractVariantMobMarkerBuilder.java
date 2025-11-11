@@ -3,6 +3,7 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.registry.Registry;
 import be.renaud11232.bluemapmobs.registry.impl.SimpleRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Mob;
 
@@ -12,8 +13,8 @@ public abstract class AbstractVariantMobMarkerBuilder<T extends Mob, ICON_VARIAN
     private final Registry<ICON_VARIANT, Icon> icons;
     private final Registry<STYLE_CLASSES_VARIANT, Collection<String>> styleClasses;
 
-    public AbstractVariantMobMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public AbstractVariantMobMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
         icons = new SimpleRegistry<>();
         styleClasses = new SimpleRegistry<>();
         registerVariantIcons(icons);

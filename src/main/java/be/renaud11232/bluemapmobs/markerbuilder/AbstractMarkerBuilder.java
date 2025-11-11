@@ -6,6 +6,7 @@ import be.renaud11232.bluemapmobs.BlueMapMobsStyleClass;
 import be.renaud11232.bluemapmobs.configuration.Configuration;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -16,6 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
+    private final BlueMapAPI api;
     private final FileConfiguration config;
     private final FileConfiguration defaultConfig;
     private final boolean hidden;
@@ -25,7 +27,8 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
     private final Icon defaultIcon;
     private final Collection<String> defaultStyleClasses;
 
-    public AbstractMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
+    public AbstractMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        this.api = api;
         this.config = config;
         this.defaultConfig = defaultConfig;
         this.hidden = getVisibility() != null && !getVisibility().get(config, defaultConfig);
@@ -83,6 +86,10 @@ public abstract class AbstractMarkerBuilder<T> implements MarkerBuilder<T> {
     }
 
     public abstract Block getBlock(T element);
+
+    public final BlueMapAPI getAPI() {
+        return this.api;
+    }
 
     public final FileConfiguration getConfig() {
         return config;

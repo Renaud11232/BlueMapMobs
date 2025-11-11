@@ -9,6 +9,7 @@ import be.renaud11232.bluemapmobs.markerbuilder.AbstractVariantMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.animals.abstracthorse.chestedhorse.llama.TraderLlamaMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.Registry;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Llama;
@@ -19,8 +20,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class LlamaMarkerBuilder extends AbstractVariantMobMarkerBuilder<Llama, Material, Llama.Color> {
-    public LlamaMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public LlamaMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
@@ -30,7 +31,7 @@ public class LlamaMarkerBuilder extends AbstractVariantMobMarkerBuilder<Llama, M
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Llama> registry) {
-        registry.register(TraderLlama.class, new TraderLlamaMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(TraderLlama.class, new TraderLlamaMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 
     @Override

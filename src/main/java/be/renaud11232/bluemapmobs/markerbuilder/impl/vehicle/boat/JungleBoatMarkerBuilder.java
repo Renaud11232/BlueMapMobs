@@ -3,12 +3,13 @@ package be.renaud11232.bluemapmobs.markerbuilder.impl.vehicle.boat;
 import be.renaud11232.bluemapmobs.BlueMapMobsIcon;
 import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractVehicleMarkerBuilder;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.boat.JungleBoat;
 
 public class JungleBoatMarkerBuilder extends AbstractVehicleMarkerBuilder<JungleBoat> {
-    public JungleBoatMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public JungleBoatMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override

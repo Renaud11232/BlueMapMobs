@@ -7,13 +7,14 @@ import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.guardian.ElderGuardianMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.ElderGuardian;
 import org.bukkit.entity.Guardian;
 
 public class GuardianMarkerBuilder extends AbstractMobMarkerBuilder<Guardian> {
-    public GuardianMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public GuardianMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class GuardianMarkerBuilder extends AbstractMobMarkerBuilder<Guardian> {
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Guardian> registry) {
-        registry.register(ElderGuardian.class, new ElderGuardianMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(ElderGuardian.class, new ElderGuardianMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 
     @Override

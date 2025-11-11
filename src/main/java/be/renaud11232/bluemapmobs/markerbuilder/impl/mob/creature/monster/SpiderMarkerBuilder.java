@@ -7,13 +7,14 @@ import be.renaud11232.bluemapmobs.icon.Icon;
 import be.renaud11232.bluemapmobs.markerbuilder.AbstractMobMarkerBuilder;
 import be.renaud11232.bluemapmobs.markerbuilder.impl.mob.creature.monster.spider.CaveSpiderMarkerBuilder;
 import be.renaud11232.bluemapmobs.registry.impl.MarkerBuilderRegistry;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.CaveSpider;
 import org.bukkit.entity.Spider;
 
 public class SpiderMarkerBuilder extends AbstractMobMarkerBuilder<Spider> {
-    public SpiderMarkerBuilder(FileConfiguration config, FileConfiguration defaultConfig) {
-        super(config, defaultConfig);
+    public SpiderMarkerBuilder(BlueMapAPI api, FileConfiguration config, FileConfiguration defaultConfig) {
+        super(api, config, defaultConfig);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class SpiderMarkerBuilder extends AbstractMobMarkerBuilder<Spider> {
 
     @Override
     public void registerMarkerBuilders(MarkerBuilderRegistry<Spider> registry) {
-        registry.register(CaveSpider.class, new CaveSpiderMarkerBuilder(getConfig(), getDefaultConfig()));
+        registry.register(CaveSpider.class, new CaveSpiderMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
     }
 
     @Override
