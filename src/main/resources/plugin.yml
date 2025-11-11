@@ -1,7 +1,7 @@
 name: BlueMapMobs
 version: '${project.version}'
 main: be.renaud11232.bluemapmobs.BlueMapMobs
-api-version: '1.21.6'
+api-version: '1.21.10'
 depend:
   - BlueMap
 softdepend:
