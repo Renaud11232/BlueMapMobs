@@ -10,8 +10,7 @@ jobs:
     name: Extract version from git tag
     runs-on: ubuntu-latest
     steps:
-      - name: Get version from git tag
-        id: version
+      - id: version
         run: echo "version=$(echo $GITHUB_REF | sed 's/refs\/tags\///')" | tee -a $GITHUB_OUTPUT
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -26,8 +25,8 @@ jobs:
           distribution: temurin
           java-version: 21
       - run: mvn versions:set -DnewVersion=${{ needs.version.outputs.version }} -DgenerateBackupPoms=false
-      - run: mvn package -P spigot
-      - run: mvn package -P paper
+      - run: mvn clean package -P spigot
+      - run: mvn clean package -P paper
       - uses: actions/upload-artifact@v4
         with:
           name: build
