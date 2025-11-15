@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>be.renaud11232</groupId>
-    <artifactId>bluemapmobs</artifactId>
+    <artifactId>bluemapmobs-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -137,9 +137,9 @@
     </dependencyManagement>
 
     <modules>
-        <module>bluemapmobs-base</module>
+        <module>bluemapmobs-core</module>
         <module>bluemapmobs-spigot</module>
         <module>bluemapmobs-paper</module>
-        <module>bluemapmobs-plugin</module>
+        <module>bluemapmobs</module>
     </modules>
 </project>

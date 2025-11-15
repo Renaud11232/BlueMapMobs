@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>be.renaud11232</groupId>
-        <artifactId>bluemapmobs</artifactId>
+        <artifactId>bluemapmobs-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -31,7 +31,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemapmobs-base</artifactId>
+            <artifactId>bluemapmobs-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>

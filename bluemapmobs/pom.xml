@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>be.renaud11232</groupId>
-        <artifactId>bluemapmobs</artifactId>
+        <artifactId>bluemapmobs-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bluemapmobs-plugin</artifactId>
+    <artifactId>bluemapmobs</artifactId>
 
     <url>${project.parent.url}</url>
 
@@ -30,7 +30,7 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
-        <finalName>${project.parent.artifactId}-${project.version}${platform.jar.suffix}</finalName>
+        <finalName>${project.artifactId}-${project.version}${platform.jar.suffix}</finalName>
     </build>
 
     <dependencies>
@@ -49,7 +49,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemapmobs-base</artifactId>
+            <artifactId>bluemapmobs-core</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
