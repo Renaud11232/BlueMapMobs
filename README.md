@@ -12,14 +12,15 @@ The plugin *may* work with Minecraft version released after a given release, but
 
 Installing the plugin with an older version however will most likely result in an error. Please refer to the following table to find what version you should use for your server :
 
-| Server version  | Plugin version |
-|-----------------|----------------|
-| 1.20.4 - 1.20.5 | 1.0.0          |
-| 1.20.6          | 1.1.0          |
-| 1.21.0 - 1.21.3 | 1.2.0          |
-| 1.21.4          | 1.3.0          |
-| 1.21.5          | 1.4.0 - 1.4.2  |
-| 1.21.6 - 1.21.8 | 1.5.0 - 1.5.1  |
+| Server version   | Plugin version |
+|------------------|----------------|
+| 1.20.4 - 1.20.5  | 1.0.0          |
+| 1.20.6           | 1.1.0          |
+| 1.21.0 - 1.21.3  | 1.2.0          |
+| 1.21.4           | 1.3.0          |
+| 1.21.5           | 1.4.0 - 1.4.2  |
+| 1.21.6 - 1.21.8  | 1.5.0 - 1.5.1  |
+| 1.21.9 - 1.21.10 | 1.6.0          |
 
 
 ## Configuration
@@ -31,6 +32,7 @@ The plugin is reloaded normally when BlueMap is reloaded.
 ## Download
 
 The plugin `.jar` can be downloaded via the [Releases](https://github.com/Renaud11232/BlueMapMobs/releases) page.
+Starting with version 1.6.0, you must pick the plugin file that matches your server depending if you are using Spigot or Paper.
 
 ## Need help ?
 
