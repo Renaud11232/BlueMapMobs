@@ -50,12 +50,12 @@
         <dependency>
             <groupId>be.renaud11232</groupId>
             <artifactId>bluemapmobs-core</artifactId>
-            <version>${project.parent.version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
             <artifactId>${platform.implementation}</artifactId>
-            <version>${project.parent.version}</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
