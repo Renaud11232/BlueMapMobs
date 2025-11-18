@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs;
 
 import be.renaud11232.bluemapmobs.icon.Icon;
-import be.renaud11232.bluemapmobs.icon.PlayerTextureIcon;
+import be.renaud11232.bluemapmobs.icon.TextureIcon;
 import be.renaud11232.bluemapmobs.icon.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;
 import org.bukkit.DyeColor;
@@ -9,7 +9,6 @@ import org.bukkit.entity.TropicalFish;
 
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.UUID;
 
 public final class BlueMapMobsIcon {
     public static final Icon UNKNOWN = new SimpleIcon("assets/bluemapmobs/img/unknown.png", new Vector2i(12, 12));
@@ -254,9 +253,6 @@ public final class BlueMapMobsIcon {
     public static final class Other {
         public static final Icon ARMOR_STAND = new SimpleIcon("assets/bluemapmobs/img/others/livingentity/armor_stand.png", new Vector2i(12, 12));
         public static final Icon DEFAULT_MANNEQUIN = new SimpleIcon("assets/bluemapmobs/img/others/livingentity/mannequin/default.png", new Vector2i(12, 12));
-        public static Icon profileHead(UUID profileId, Path webroot) throws IOException {
-            return new PlayerTextureIcon("assets/bluemapmobs/img/others/livingentity/mannequin/profile/{id}.png", new Vector2i(12, 12), profileId, webroot);
-        }
     }
     public static final class NPC {
         public static final Icon ALEX = new SimpleIcon("assets/bluemapmobs/img/npc/alex.png", new Vector2i(12, 12));
@@ -268,8 +264,8 @@ public final class BlueMapMobsIcon {
         public static final Icon STEVE = new SimpleIcon("assets/bluemapmobs/img/npc/steve.png", new Vector2i(12, 12));
         public static final Icon SUNNY = new SimpleIcon("assets/bluemapmobs/img/npc/sunny.png", new Vector2i(12, 12));
         public static final Icon ZURI = new SimpleIcon("assets/bluemapmobs/img/npc/zuri.png", new Vector2i(12, 12));
-        public static Icon head(String texture, Path webroot) throws IOException {
-            return new PlayerTextureIcon("assets/bluemapmobs/img/npc/texture/{id}.png", new Vector2i(12, 12), texture, webroot);
+        public static Icon head(Path webroot, String texture) throws IOException {
+            return new TextureIcon(webroot, texture, "assets/bluemapmobs/img/npc/texture/{id}.png", new Vector2i(12, 12));
         }
     }
 }
