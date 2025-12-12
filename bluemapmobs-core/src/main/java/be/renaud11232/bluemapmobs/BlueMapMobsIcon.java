@@ -15,7 +15,8 @@ public final class BlueMapMobsIcon {
     public static final class Mob {
         public static final Icon BAT = new SimpleIcon("assets/bluemapmobs/img/mobs/ambient/bat.png", new Vector2i(12, 12));
         public static final Icon ALLAY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/allay.png", new Vector2i(12, 12));
-        public static final Icon CAMEL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel.png", new Vector2i(12, 12));
+        public static final Icon CAMEL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel/camel.png", new Vector2i(12, 12));
+        public static final Icon CAMEL_HUSK = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/camel/camel_husk.png", new Vector2i(12, 12));
         public static final Icon DONKEY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/donkey.png", new Vector2i(12, 12));
         public static final Icon LLAMA_EMPTY_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/empty.png", new Vector2i(12, 12));
         public static final Icon TRADER_LLAMA_DECOR = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/chestedhorse/llama/decor/trader_llama.png", new Vector2i(12, 12));
@@ -43,6 +44,9 @@ public final class BlueMapMobsIcon {
         public static final Icon HORSE_MARKINGS_BLACK_DOTS = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/horse/horse_markings_black_dots.png", new Vector2i(12, 12));
         public static final Icon SKELETON_HORSE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/skeleton_horse.png", new Vector2i(12, 12));
         public static final Icon ZOMBIE_HORSE = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstracthorse/zombie_horse.png", new Vector2i(12, 12));
+        public static final Icon NAUTILUS = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractnautilus/nautilus.png", new Vector2i(12, 12));
+        public static final Icon TEMPERATE_ZOMBIE_NAUTILUS = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractnautilus/zombie_nautilus/temperate.png", new Vector2i(12, 12));
+        public static final Icon WARM_ZOMBIE_NAUTILUS = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/abstractnautilus/zombie_nautilus/warm.png", new Vector2i(12, 12));
         public static final Icon ARMADILLO = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/armadillo.png", new Vector2i(12, 12));
         public static final Icon LUCY_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/lucy_axolotl.png", new Vector2i(12, 12));
         public static final Icon WILD_AXOLOTL = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/animals/axolotl/wild_axolotl.png", new Vector2i(12, 12));
@@ -158,6 +162,7 @@ public final class BlueMapMobsIcon {
         public static final Icon NORMAL_SNOWMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/snowman/normal.png", new Vector2i(12, 12));
         public static final Icon DERP_SNOWMAN = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/golem/snowman/derp.png", new Vector2i(12, 12));
         public static final Icon BOGGED = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/bogged.png", new Vector2i(12, 12));
+        public static final Icon PARCHED = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/parched.png", new Vector2i(12, 12));
         public static final Icon SKELETON = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/skeleton.png", new Vector2i(12, 12));
         public static final Icon STRAY = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/stray.png", new Vector2i(12, 12));
         public static final Icon WITHER_SKELETON = new SimpleIcon("assets/bluemapmobs/img/mobs/creature/monster/abstractskeleton/wither_skeleton.png", new Vector2i(12, 12));

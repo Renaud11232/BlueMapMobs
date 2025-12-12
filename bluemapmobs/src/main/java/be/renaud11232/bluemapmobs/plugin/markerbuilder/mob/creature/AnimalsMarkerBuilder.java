@@ -16,6 +16,7 @@ public class AnimalsMarkerBuilder extends AbstractMobMarkerBuilder<Animals> {
     public void registerMarkerBuilders(MarkerBuilderRegistry<Animals> registry) {
         registry.register(AbstractCow.class, new AbstractCowMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
         registry.register(AbstractHorse.class, new AbstractHorseMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
+        registry.register(AbstractNautilus.class, new AbstractNautilusMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
         registry.register(Armadillo.class, new ArmadilloMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
         registry.register(Axolotl.class, new AxolotlMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));
         registry.register(Bee.class, new BeeMarkerBuilder(getAPI(), getConfig(), getDefaultConfig()));

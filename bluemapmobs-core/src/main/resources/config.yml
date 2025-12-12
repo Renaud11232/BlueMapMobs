@@ -21,6 +21,7 @@ marker_sets:
         bat: true
         allay: true
         camel: true
+        camel_husk: true
         donkey: true
         llama: true
         trader_llama: true
@@ -28,6 +29,8 @@ marker_sets:
         horse: true
         skeleton_horse: true
         zombie_horse: true
+        nautilus: true
+        zombie_nautilus: true
         armadillo: true
         axolotl: true
         bee: true
@@ -56,6 +59,7 @@ marker_sets:
         shulker: true
         snowman: true
         bogged: true
+        parched: true
         skeleton: true
         stray: true
         wither_skeleton: true

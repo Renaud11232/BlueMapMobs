@@ -21,6 +21,7 @@ public final class BlueMapMobsConfiguration {
                     public static final Configuration<Boolean> BAT = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.bat");
                     public static final Configuration<Boolean> ALLAY = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.allay");
                     public static final Configuration<Boolean> CAMEL = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.camel");
+                    public static final Configuration<Boolean> CAMEL_HUSK = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.camel_husk");
                     public static final Configuration<Boolean> DONKEY = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.donkey");
                     public static final Configuration<Boolean> LLAMA = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.llama");
                     public static final Configuration<Boolean> TRADER_LLAMA = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.trader_llama");
@@ -28,6 +29,8 @@ public final class BlueMapMobsConfiguration {
                     public static final Configuration<Boolean> HORSE = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.horse");
                     public static final Configuration<Boolean> SKELETON_HORSE = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.skeleton_horse");
                     public static final Configuration<Boolean> ZOMBIE_HORSE = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.zombie_horse");
+                    public static final Configuration<Boolean> NAUTILUS = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.nautilus");
+                    public static final Configuration<Boolean> ZOMBIE_NAUTILUS = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.zombie_nautilus");
                     public static final Configuration<Boolean> ARMADILLO = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.armadillo");
                     public static final Configuration<Boolean> AXOLOTL = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.axolotl");
                     public static final Configuration<Boolean> BEE = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.bee");
@@ -56,6 +59,7 @@ public final class BlueMapMobsConfiguration {
                     public static final Configuration<Boolean> SHULKER = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.shulker");
                     public static final Configuration<Boolean> SNOWMAN = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.snowman");
                     public static final Configuration<Boolean> BOGGED = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.bogged");
+                    public static final Configuration<Boolean> PARCHED = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.parched");
                     public static final Configuration<Boolean> SKELETON = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.skeleton");
                     public static final Configuration<Boolean> STRAY = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.stray");
                     public static final Configuration<Boolean> WITHER_SKELETON = new SimpleBooleanConfiguration("marker_sets.mobs.markers.types.wither_skeleton");
