@@ -21,6 +21,7 @@ Installing the plugin with an older version however will most likely result in a
 | 1.21.5           | 1.4.0 - 1.4.2  |
 | 1.21.6 - 1.21.8  | 1.5.0 - 1.5.1  |
 | 1.21.9 - 1.21.10 | 1.6.0          |
+| 1.21.11          | 1.7.0          |
 
 
 ## Configuration
