@@ -20,25 +20,13 @@ public class MannequinMarkerBuilder extends AbstractOtherEntityMarkerBuilder<Man
     }
 
     @Override
+    public Icon getDefaultIcon() {
+        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
+    }
+
+    @Override
     public Icon getIcon(Mannequin mannequin) {
         //TODO
-        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
-        /*PlayerProfile profile = mannequin.getPlayerProfile();
-        if (profile == null) {
-            return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
-        }
-        PlayerSkinPatch skinPatch = profile.getSkinPatch();
-        if (skinPatch.getTexturePatch() != null) {
-            return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
-        }
-        UUID profileId = profile.getUniqueId();
-        if (profileId != null) {
-            try {
-                return BlueMapMobsIcon.Other.profileHead(profileId, getAPI().getWebApp().getWebRoot());
-            } catch (IOException e) {
-                return null;
-            }
-        }
-        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;*/
+        return null;
     }
 }

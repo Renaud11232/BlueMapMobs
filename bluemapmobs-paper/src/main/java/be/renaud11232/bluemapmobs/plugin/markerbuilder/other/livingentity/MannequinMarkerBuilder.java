@@ -20,8 +20,13 @@ public class MannequinMarkerBuilder extends AbstractOtherEntityMarkerBuilder<Man
     }
 
     @Override
+    public Icon getDefaultIcon() {
+        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
+    }
+
+    @Override
     public Icon getIcon(Mannequin mannequin) {
         //TODO
-        return BlueMapMobsIcon.Other.DEFAULT_MANNEQUIN;
+        return null;
     }
 }
