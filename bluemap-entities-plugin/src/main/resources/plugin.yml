@@ -1,0 +1,10 @@
+name: BlueMapEntities
+version: '${project.version}'
+main: be.renaud11232.bluemapentities.plugin.BlueMapEntities
+api-version: '${net.minecraft.target.version}'
+depend:
+  - BlueMap
+authors:
+  - Renaud11232
+description: '${project.description}'
+website: '${project.url}'

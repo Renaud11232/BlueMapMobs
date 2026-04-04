@@ -141,5 +141,8 @@
         <module>bluemapmobs-spigot</module>
         <module>bluemapmobs-paper</module>
         <module>bluemapmobs</module>
+        <module>bluemap-entities</module>
+        <module>bluemap-entities-plugin</module>
+        <module>bluemap-citizens</module>
     </modules>
 </project>
