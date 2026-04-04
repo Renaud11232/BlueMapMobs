@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapcitizens;
 
-import be.renaud11232.bluemapentities.Entity;
+import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.Module;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
@@ -20,7 +20,7 @@ public class CitizensModule implements Module {
                 .filter(not(npc -> npc.getEntity() == null))
                 .filter(npc -> npc.getEntity().getWorld().equals(world))
                 .filter(not(npc -> npc.getEntity() instanceof LivingEntity livingEntity && livingEntity.isInvisible()))
-                .map(be.renaud11232.bluemapcitizens.NPC::new)
+                .map(CitizensNPC::new)
                 .toList();
     }
 

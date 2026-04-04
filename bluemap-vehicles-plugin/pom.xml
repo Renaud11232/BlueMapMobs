@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bluemap-entities-plugin</artifactId>
+    <artifactId>bluemap-vehicles-plugin</artifactId>
 
     <build>
         <plugins>
@@ -17,31 +17,22 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-            </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>de.bluecolored</groupId>
-            <artifactId>bluemap-api</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemap-entities</artifactId>
+            <artifactId>bluemap-entities-plugin</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>be.renaud11232</groupId>
+            <artifactId>bluemap-vehicles</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

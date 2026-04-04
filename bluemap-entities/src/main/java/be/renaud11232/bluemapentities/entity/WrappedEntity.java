@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapentities;
+package be.renaud11232.bluemapentities.entity;
 
 public abstract class WrappedEntity<T> implements Entity {
     protected final T wrapped;

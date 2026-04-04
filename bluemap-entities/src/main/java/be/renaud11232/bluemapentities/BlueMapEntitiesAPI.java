@@ -25,7 +25,7 @@ public abstract class BlueMapEntitiesAPI {
     public abstract Collection<?> getWorlds();
 
     public void registerModule(Module module) {
-        this.modules.addFirst(module);
+        this.modules.add(module);
     }
 
     public void update() {

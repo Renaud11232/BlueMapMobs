@@ -144,5 +144,7 @@
         <module>bluemap-entities</module>
         <module>bluemap-entities-plugin</module>
         <module>bluemap-citizens</module>
+        <module>bluemap-vehicles</module>
+        <module>bluemap-vehicles-plugin</module>
     </modules>
 </project>

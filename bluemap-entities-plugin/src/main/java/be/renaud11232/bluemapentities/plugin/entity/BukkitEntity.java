@@ -1,14 +1,14 @@
-package be.renaud11232.bluemapcitizens;
+package be.renaud11232.bluemapentities.plugin.entity;
 
 import be.renaud11232.bluemapentities.Position;
-import be.renaud11232.bluemapentities.WrappedEntity;
+import be.renaud11232.bluemapentities.entity.WrappedEntity;
 import org.bukkit.Location;
-import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Entity;
 
 import java.util.UUID;
 
-public class NPC extends WrappedEntity<net.citizensnpcs.api.npc.NPC> {
-    public NPC(net.citizensnpcs.api.npc.NPC wrapped) {
+public abstract class BukkitEntity<T extends Entity> extends WrappedEntity<T> {
+    public BukkitEntity(T wrapped) {
         super(wrapped);
     }
 
@@ -24,12 +24,7 @@ public class NPC extends WrappedEntity<net.citizensnpcs.api.npc.NPC> {
 
     @Override
     public Position getPosition() {
-        Location location;
-        if (wrapped.getEntity() instanceof LivingEntity livingEntity) {
-            location = livingEntity.getEyeLocation();
-        } else {
-            location = wrapped.getStoredLocation();
-        }
+        Location location = wrapped.getLocation();
         return new Position(
                 location.getX(),
                 location.getY(),
