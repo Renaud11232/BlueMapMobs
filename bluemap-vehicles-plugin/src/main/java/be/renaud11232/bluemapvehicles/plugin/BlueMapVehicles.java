@@ -7,7 +7,7 @@ public class BlueMapVehicles extends JavaPlugin {
     @Override
     public void onEnable() {
         BlueMapEntitiesAPI.onEnable(api -> {
-            api.registerModule(new BukkitVehiclesModule());
+            api.registerModule(new BukkitVehiclesModule(api));
         });
     }
 }

@@ -7,7 +7,7 @@ public class BlueMapCitizens extends JavaPlugin {
     @Override
     public void onEnable() {
         BlueMapEntitiesAPI.onEnable(api -> {
-            api.registerModule(new CitizensModule());
+            api.registerModule(new CitizensModule(api));
         });
     }
 }
