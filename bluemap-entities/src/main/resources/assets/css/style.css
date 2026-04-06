@@ -1,0 +1,13 @@
+.bluemapentities-marker {
+    --bluemapmobs-icon-width: 24px;
+    --bluemapmobs-icon-height: 24px;
+}
+
+#map-container .bluemapentities-marker img {
+    --bluemapentities-icon-transform: translate(-50%, -50%);
+    width: var(--bluemapentities-icon-width);
+    height: var(--bluemapentities-icon-height);
+    image-rendering: pixelated;
+    background-size: cover;
+    transform: var(--bluemapentities-icon-transform) !important;
+}

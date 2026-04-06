@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapvehicles.plugin;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapvehicles.VehicleModule;
+import be.renaud11232.bluemapvehicles.VehiclesModule;
 import org.bukkit.World;
 import org.bukkit.entity.Mob;
 import org.bukkit.entity.Vehicle;
@@ -10,7 +10,7 @@ import java.util.Collection;
 
 import static java.util.function.Predicate.not;
 
-public class BukkitVehiclesModule extends VehicleModule<Vehicle> {
+public class BukkitVehiclesModule extends VehiclesModule<Vehicle> {
 
     public BukkitVehiclesModule(BlueMapEntitiesAPI api) {
         super(api, new BukkitVehicleConverter());

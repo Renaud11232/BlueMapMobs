@@ -1,5 +1,9 @@
-package be.renaud11232.bluemapentities;
+package be.renaud11232.bluemapentities.module;
 
+import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.EntityConverter;
+import be.renaud11232.bluemapentities.MarkerBuilder;
+import be.renaud11232.bluemapentities.MarkerSetBuilder;
 import be.renaud11232.bluemapentities.entity.Entity;
 import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;

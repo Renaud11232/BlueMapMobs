@@ -1,7 +1,11 @@
 package be.renaud11232.bluemapentities;
 
+import be.renaud11232.bluemapentities.io.AssetExtractor;
+import be.renaud11232.bluemapentities.module.Module;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Consumer;
 
@@ -11,11 +15,12 @@ public abstract class BlueMapEntitiesAPI {
     private static final LinkedHashSet<Consumer<BlueMapEntitiesAPI>> ON_DISABLE_CONSUMERS = new LinkedHashSet<>();
 
     private final BlueMapAPI api;
-    private final List<Module> modules;
+    private final List<Module<?>> modules;
 
     protected BlueMapEntitiesAPI(BlueMapAPI api) {
         this.api = api;
         this.modules = new LinkedList<>();
+        extractAssets(getClass(), "assets", Path.of("assets").resolve("bluemap-entities"));
     }
 
     public BlueMapAPI getBlueMap() {
@@ -24,8 +29,24 @@ public abstract class BlueMapEntitiesAPI {
 
     public abstract Collection<?> getWorlds();
 
-    public void registerModule(Module module) {
+    public void registerModule(be.renaud11232.bluemapentities.module.Module<?> module) {
+        extractAssets(module.getClass(), module.getAssetSourcePath(), Path.of("assets").resolve("bluemap-entities").resolve("modules").resolve(module.getAssetDirectoryName()));
         this.modules.add(module);
+    }
+
+    private void extractAssets(Class<?> clazz, String sourceDirName, Path relativeDestination) {
+        Path destination = api.getWebApp().getWebRoot().resolve(relativeDestination);
+        try (AssetExtractor assetExtractor = new AssetExtractor(clazz, sourceDirName, destination)) {
+            assetExtractor.extract();
+            assetExtractor.listDestinationFiles()
+                    .stream()
+                    .filter(f -> f.toString().toLowerCase().endsWith(".css"))
+                    .map(relativeDestination::resolve)
+                    .map(Path::toString)
+                    .forEach(f -> api.getWebApp().registerStyle(f));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void update() {
