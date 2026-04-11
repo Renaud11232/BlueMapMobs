@@ -41,7 +41,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemap-entities</artifactId>
+            <artifactId>bluemap-entities-api</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

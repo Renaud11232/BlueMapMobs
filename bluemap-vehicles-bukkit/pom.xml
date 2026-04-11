@@ -43,7 +43,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemap-vehicles</artifactId>
+            <artifactId>bluemap-vehicles-api</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
