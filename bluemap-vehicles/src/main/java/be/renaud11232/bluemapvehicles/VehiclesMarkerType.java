@@ -2,7 +2,7 @@ package be.renaud11232.bluemapvehicles;
 
 import be.renaud11232.bluemapentities.MarkerType;
 
-public enum VehicleMarkerType implements MarkerType {
+public enum VehiclesMarkerType implements MarkerType {
     ACACIA_BOAT,
     ACACIA_CHEST_BOAT,
     BAMBOO_CHEST_RAFT,

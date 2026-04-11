@@ -1,5 +1,5 @@
 marker_sets:
-  - id: "bluemapentities-npc"
+  - id: "bluemapentities-npcs"
     label: "NPCs"
     toggleable: true
     default_hidden: true

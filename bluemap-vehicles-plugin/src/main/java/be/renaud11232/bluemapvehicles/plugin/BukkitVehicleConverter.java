@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapvehicles.plugin;
 
 import be.renaud11232.bluemapentities.EntityConverter;
-import be.renaud11232.bluemapvehicles.plugin.entities.UnsupportedBukkitVehicle;
+import be.renaud11232.bluemapvehicles.plugin.entities.UnknownBukkitVehicle;
 import be.renaud11232.bluemapvehicles.plugin.entities.boat.*;
 import be.renaud11232.bluemapvehicles.plugin.entities.minecart.*;
 import org.bukkit.entity.Vehicle;
@@ -41,7 +41,7 @@ public class BukkitVehicleConverter implements EntityConverter<Vehicle, be.renau
             case SpawnerMinecart spawnerMinecart -> new BukkitSpawnerMinecart(spawnerMinecart);
             case StorageMinecart storageMinecart -> new BukkitStorageMinecart(storageMinecart);
 
-            default -> new UnsupportedBukkitVehicle(vehicle);
+            default -> new UnknownBukkitVehicle(vehicle);
         };
     }
 }

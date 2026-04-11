@@ -13,12 +13,12 @@ public class CitizensMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Citi
     }
 
     @Override
-    public Integer getVariant(CitizensNPC entity) {
+    protected Integer getVariant(CitizensNPC entity) {
         return Math.floorMod(entity.getUUID().hashCode(), 9);
     }
 
     @Override
-    public void registerVariantIcons() {
+    protected void registerVariantIcons() {
         registerVariantIcon(0, CitizensIcon.ALEX);
         registerVariantIcon(1, CitizensIcon.ARI);
         registerVariantIcon(2, CitizensIcon.EFE);
@@ -31,7 +31,7 @@ public class CitizensMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Citi
     }
 
     @Override
-    public Icon getIcon(CitizensNPC entity) {
+    protected Icon getIcon(CitizensNPC entity) {
         SkinTrait skinTrait = entity.getSkinTrait();
         if (skinTrait == null || skinTrait.getTexture() == null) {
             return super.getIcon(entity);

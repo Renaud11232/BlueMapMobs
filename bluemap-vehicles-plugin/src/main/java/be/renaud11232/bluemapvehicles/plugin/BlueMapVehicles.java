@@ -7,8 +7,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class BlueMapVehicles extends JavaPlugin {
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         BlueMapEntitiesAPI.onEnable(api -> {
-            api.registerModule(new BukkitVehiclesModule(api, getConfig().getObject("", BukkitModuleConfiguration.class)));
+            getLogger().info("Enabling BlueMapVehicles...");
+            reloadConfig();
+            api.registerModule(new BukkitVehiclesModule(api, BukkitModuleConfiguration.deserialize(getConfig().getValues(true))));
         });
     }
 }

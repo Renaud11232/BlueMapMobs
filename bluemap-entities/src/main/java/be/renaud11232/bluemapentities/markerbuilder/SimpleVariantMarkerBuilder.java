@@ -8,7 +8,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class SimpleVariantMarkerBuilder<T extends Entity, ICON_VARIANT, STYLE_CLASSES_VARIANT> extends SimpleMarkerBuilder<T> implements VariantMarkerBuilder<T, ICON_VARIANT, STYLE_CLASSES_VARIANT> {
+public abstract class SimpleVariantMarkerBuilder<T extends Entity, ICON_VARIANT, STYLE_CLASSES_VARIANT> extends SimpleMarkerBuilder<T> {
     private final Map<ICON_VARIANT, Icon> icons;
     private final Map<STYLE_CLASSES_VARIANT, Collection<String>> styleClasses;
 
@@ -20,23 +20,31 @@ public abstract class SimpleVariantMarkerBuilder<T extends Entity, ICON_VARIANT,
         registerVariantStyleClasses();
     }
 
-    @Override
-    public void registerVariantIcon(ICON_VARIANT v, Icon icon) {
+    protected abstract ICON_VARIANT getIconVariant(T entity);
+
+    protected void registerVariantIcons() {
+    }
+
+    protected void registerVariantIcon(ICON_VARIANT v, Icon icon) {
         icons.put(v, icon);
     }
 
-    @Override
-    public void registerVariantStyleClass(STYLE_CLASSES_VARIANT v, Collection<String> styleClasses) {
+    protected abstract STYLE_CLASSES_VARIANT getStyleClassesVariant(T entity);
+
+    protected void registerVariantStyleClasses() {
+    }
+
+    protected void registerVariantStyleClass(STYLE_CLASSES_VARIANT v, Collection<String> styleClasses) {
         this.styleClasses.put(v, styleClasses);
     }
 
     @Override
-    public Icon getIcon(T entity) {
+    protected Icon getIcon(T entity) {
         return icons.get(getIconVariant(entity));
     }
 
     @Override
-    public Collection<String> getStyleClasses(T entity) {
+    protected Collection<String> getStyleClasses(T entity) {
         return styleClasses.get(getStyleClassesVariant(entity));
     }
 }

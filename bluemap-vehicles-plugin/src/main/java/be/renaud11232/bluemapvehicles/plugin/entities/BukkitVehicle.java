@@ -1,14 +1,14 @@
-package be.renaud11232.bluemapentities.plugin.entity;
+package be.renaud11232.bluemapvehicles.plugin.entities;
 
 import be.renaud11232.bluemapentities.Position;
 import be.renaud11232.bluemapentities.Wrapper;
+import be.renaud11232.bluemapvehicles.entities.Vehicle;
 import org.bukkit.Location;
-import org.bukkit.entity.Entity;
 
 import java.util.UUID;
 
-public abstract class BukkitEntity<T extends Entity> extends Wrapper<T> implements be.renaud11232.bluemapentities.entity.Entity {
-    public BukkitEntity(T wrapped) {
+public abstract class BukkitVehicle<T extends org.bukkit.entity.Vehicle> extends Wrapper<T> implements Vehicle {
+    public BukkitVehicle(T wrapped) {
         super(wrapped);
     }
 

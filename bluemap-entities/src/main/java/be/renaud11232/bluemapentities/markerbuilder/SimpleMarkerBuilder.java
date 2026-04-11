@@ -7,9 +7,10 @@ import de.bluecolored.bluemap.api.markers.POIMarker;
 
 import java.util.*;
 
+@SuppressWarnings("rawtypes")
 public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBuilder<T> {
     private final BlueMapEntitiesAPI api;
-    private final Map<String, MarkerBuilder<? super T>> registry;
+    private final Map<String, MarkerBuilder> registry;
     private final Icon defaultIcon;
     private final Collection<String> defaultStyleClasses;
 
@@ -21,17 +22,18 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
         registerMarkerBuilders();
     }
 
-    public void registerMarkerBuilders() {
+    protected void registerMarkerBuilders() {
 
     }
 
-    public void register(MarkerType type, MarkerBuilder<? super T> markerBuilder) {
+    protected void register(MarkerType type, MarkerBuilder<? extends T> markerBuilder) {
         registry.put(type.getName(), markerBuilder);
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public Optional<POIMarker> build(T entity) {
-        MarkerBuilder<? super T> markerBuilder = registry.get(entity.getMarkerType().getName());
+        MarkerBuilder markerBuilder = registry.get(entity.getMarkerType().getName());
         if (markerBuilder == null) {
             return doBuild(entity);
         }
@@ -68,23 +70,23 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
         return Optional.of(marker);
     }
 
-    public Icon getDefaultIcon() {
+    protected Icon getDefaultIcon() {
         return null;
     }
 
-    public Icon getIcon(T entity) {
+    protected Icon getIcon(T entity) {
         return null;
     }
 
-    public Collection<String> getDefaultStyleClasses() {
+    protected Collection<String> getDefaultStyleClasses() {
         return null;
     }
 
-    public Collection<String> getStyleClasses(T entity) {
+    protected Collection<String> getStyleClasses(T entity) {
         return null;
     }
 
-    public BlueMapEntitiesAPI getAPI() {
+    protected BlueMapEntitiesAPI getAPI() {
         return api;
     }
 }
