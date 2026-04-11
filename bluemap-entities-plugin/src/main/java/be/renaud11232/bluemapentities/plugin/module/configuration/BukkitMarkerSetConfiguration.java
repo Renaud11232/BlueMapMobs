@@ -2,13 +2,10 @@ package be.renaud11232.bluemapentities.plugin.module.configuration;
 
 import be.renaud11232.bluemapentities.module.configuration.MarkerConfiguration;
 import be.renaud11232.bluemapentities.module.configuration.MarkerSetConfiguration;
-import org.bukkit.configuration.serialization.ConfigurationSerializable;
-import org.bukkit.configuration.serialization.SerializableAs;
 
 import java.util.*;
 
-@SerializableAs("MarkerSetConfiguration")
-public class BukkitMarkerSetConfiguration implements MarkerSetConfiguration, ConfigurationSerializable {
+public class BukkitMarkerSetConfiguration implements MarkerSetConfiguration {
     private final String id;
     private final String label;
     private final Boolean toggleable;
@@ -44,27 +41,11 @@ public class BukkitMarkerSetConfiguration implements MarkerSetConfiguration, Con
     }
 
     @Override
-    public List<? extends MarkerConfiguration> getMarkers() {
-        return markers == null ? List.of() : markers;
+    public List<MarkerConfiguration> getMarkers() {
+        return markers == null ? Collections.emptyList() : markers.stream().map(m -> (MarkerConfiguration) m).toList();
     }
 
-    @Override
-    public Map<String, Object> serialize() {
-        Map<String, Object> result = new LinkedHashMap<>();
-        result.put("id", id);
-        result.put("label", label);
-        if (toggleable != null) {
-            result.put("toggleable", toggleable);
-        }
-        if (hiddenByDefault != null) {
-            result.put("default_hidden", hiddenByDefault);
-        }
-        if (markers != null) {
-            result.put("markers", markers.stream().map(BukkitMarkerConfiguration::serialize).toList());
-        }
-        return result;
-    }
-
+    @SuppressWarnings("unchecked")
     public static BukkitMarkerSetConfiguration deserialize(Map<String, Object> args) {
         String id = (String) args.get("id");
         String label = (String) args.get("label");

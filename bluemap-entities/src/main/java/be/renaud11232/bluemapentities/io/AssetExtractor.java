@@ -40,6 +40,9 @@ public class AssetExtractor implements AutoCloseable {
 
     private void copyFiles(List<Path> sourceFiles) throws IOException {
         CopyOption[] options = new CopyOption[]{StandardCopyOption.REPLACE_EXISTING};
+        if (!Files.exists(destination)) {
+            Files.createDirectories(destination);
+        }
         for (Path sourceFile : sourceFiles) {
             try {
                 Files.copy(sourceDirectory.resolve(sourceFile), destination.resolve(sourceFile.toString()), options);

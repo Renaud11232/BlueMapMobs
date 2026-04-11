@@ -1,9 +1,11 @@
 package be.renaud11232.bluemapcitizens;
 
+import be.renaud11232.bluemapentities.MarkerType;
 import be.renaud11232.bluemapentities.Position;
 import be.renaud11232.bluemapentities.Wrapper;
 import be.renaud11232.bluemapentities.entity.Entity;
 import net.citizensnpcs.api.npc.NPC;
+import net.citizensnpcs.trait.SkinTrait;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
 
@@ -16,7 +18,7 @@ public class CitizensNPC extends Wrapper<NPC> implements Entity {
 
     @Override
     public UUID getUUID() {
-        return wrapped.getUniqueId();
+        return wrapped.getMinecraftUniqueId();
     }
 
     @Override
@@ -40,7 +42,21 @@ public class CitizensNPC extends Wrapper<NPC> implements Entity {
     }
 
     @Override
-    public String getMarkerType() {
-        return "npc";
+    public MarkerType getMarkerType() {
+        return CitizensMarkerType.NPC;
+    }
+
+    @Override
+    public int getBlockLightLevel() {
+        return wrapped.getStoredLocation().getBlock().getLightFromBlocks();
+    }
+
+    @Override
+    public int getSkyLightLevel() {
+        return wrapped.getStoredLocation().getBlock().getLightFromSky();
+    }
+
+    public SkinTrait getSkinTrait() {
+        return wrapped.getTraitNullable(SkinTrait.class);
     }
 }

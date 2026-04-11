@@ -1,14 +1,10 @@
 package be.renaud11232.bluemapentities.plugin;
 
 import be.renaud11232.bluemapentities.GeneralConfiguration;
-import org.bukkit.configuration.serialization.ConfigurationSerializable;
-import org.bukkit.configuration.serialization.SerializableAs;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 
-@SerializableAs("GeneralConfiguration")
-public class BukkitGeneralConfiguration implements GeneralConfiguration, ConfigurationSerializable {
+public class BukkitGeneralConfiguration implements GeneralConfiguration {
     private final Integer minimumBlockLight;
     private final Integer minimumSkyLight;
 
@@ -25,18 +21,6 @@ public class BukkitGeneralConfiguration implements GeneralConfiguration, Configu
     @Override
     public int getMinimumSkyLight() {
         return minimumSkyLight == null ? 1 : minimumSkyLight;
-    }
-
-    @Override
-    public Map<String, Object> serialize() {
-        Map<String, Object> result = new LinkedHashMap<>();
-        if (minimumBlockLight != null) {
-            result.put("minimum_block_light", minimumBlockLight);
-        }
-        if (minimumSkyLight != null) {
-            result.put("minimum_sky_light", minimumSkyLight);
-        }
-        return result;
     }
 
     public static BukkitGeneralConfiguration deserialize(Map<String, Object> args) {

@@ -126,7 +126,7 @@ public abstract class BlueMapEntitiesAPI {
         }
         RuntimeException e = exceptions.getFirst();
         for (int i = 1; i < exceptions.size(); i++) {
-            e.addSuppressed(exceptions.get(i));;
+            e.addSuppressed(exceptions.get(i));
         }
         throw e;
     }

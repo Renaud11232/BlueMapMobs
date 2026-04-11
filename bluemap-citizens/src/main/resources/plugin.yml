@@ -4,6 +4,7 @@ main: be.renaud11232.bluemapcitizens.BlueMapCitizens
 api-version: '${net.minecraft.target.version}'
 depend:
   - BlueMapEntities
+  - Citizens
 authors:
   - Renaud11232
 description: '${project.description}'

@@ -1,8 +1,8 @@
 marker_sets:
-  - id: "bme-npc"
+  - id: "bluemapentities-npc"
     label: "NPCs"
     toggleable: true
     default_hidden: true
     markers:
-      - type: npc
+      - type: "*"
         max_distance: 1000

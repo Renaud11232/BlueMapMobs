@@ -7,5 +7,5 @@ public interface MarkerSetConfiguration {
     String getLabel();
     boolean isToggleable();
     boolean isHiddenByDefault();
-    List<? extends MarkerConfiguration> getMarkers();
+    List<MarkerConfiguration> getMarkers();
 }

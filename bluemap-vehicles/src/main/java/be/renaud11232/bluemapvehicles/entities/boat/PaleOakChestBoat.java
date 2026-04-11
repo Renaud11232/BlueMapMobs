@@ -1,10 +1,12 @@
 package be.renaud11232.bluemapvehicles.entities.boat;
 
+import be.renaud11232.bluemapentities.MarkerType;
+import be.renaud11232.bluemapvehicles.VehicleMarkerType;
 import be.renaud11232.bluemapvehicles.entities.ChestBoat;
 
 public interface PaleOakChestBoat extends ChestBoat {
     @Override
-    default String getMarkerType() {
-        return "pale_oak_chest_boat";
+    default MarkerType getMarkerType() {
+        return VehicleMarkerType.PALE_OAK_CHEST_BOAT;
     }
 }

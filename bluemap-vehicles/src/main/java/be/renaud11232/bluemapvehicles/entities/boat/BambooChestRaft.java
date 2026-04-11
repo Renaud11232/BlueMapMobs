@@ -1,10 +1,12 @@
 package be.renaud11232.bluemapvehicles.entities.boat;
 
+import be.renaud11232.bluemapentities.MarkerType;
+import be.renaud11232.bluemapvehicles.VehicleMarkerType;
 import be.renaud11232.bluemapvehicles.entities.ChestBoat;
 
 public interface BambooChestRaft extends ChestBoat {
     @Override
-    default String getMarkerType() {
-        return "bamboo_chest_raft";
+    default MarkerType getMarkerType() {
+        return VehicleMarkerType.BAMBOO_CHEST_RAFT;
     }
 }

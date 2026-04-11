@@ -29,6 +29,7 @@
             <groupId>be.renaud11232</groupId>
             <artifactId>bluemap-entities-plugin</artifactId>
             <version>${project.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>

@@ -31,4 +31,14 @@ public abstract class BukkitEntity<T extends Entity> extends Wrapper<T> implemen
                 location.getZ()
         );
     }
+
+    @Override
+    public int getBlockLightLevel() {
+        return wrapped.getLocation().getBlock().getLightFromBlocks();
+    }
+
+    @Override
+    public int getSkyLightLevel() {
+        return wrapped.getLocation().getBlock().getLightFromSky();
+    }
 }

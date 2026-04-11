@@ -1,10 +1,12 @@
 package be.renaud11232.bluemapvehicles.entities.boat;
 
+import be.renaud11232.bluemapentities.MarkerType;
+import be.renaud11232.bluemapvehicles.VehicleMarkerType;
 import be.renaud11232.bluemapvehicles.entities.Boat;
 
 public interface MangroveBoat extends Boat {
     @Override
-    default String getMarkerType() {
-        return "mangrove_boat";
+    default MarkerType getMarkerType() {
+        return VehicleMarkerType.MANGROVE_BOAT;
     }
 }

@@ -9,8 +9,9 @@ public class BlueMapCitizens extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         BlueMapEntitiesAPI.onEnable(api -> {
+            getLogger().info("Enabling BlueMapCitizens...");
             reloadConfig();
-            api.registerModule(new CitizensModule(api, getConfig().getObject("", BukkitModuleConfiguration.class)));
+            api.registerModule(new CitizensModule(api, BukkitModuleConfiguration.deserialize(getConfig().getValues(true))));
         });
     }
 }
