@@ -15,10 +15,12 @@ public abstract class BlueMapEntitiesAPI {
     private static final LinkedHashSet<Consumer<BlueMapEntitiesAPI>> ON_DISABLE_CONSUMERS = new LinkedHashSet<>();
 
     private final BlueMapAPI api;
-    private final List<Module<?>> modules;
+    private final GeneralConfiguration configuration;
+    private final List<Module> modules;
 
-    protected BlueMapEntitiesAPI(BlueMapAPI api) {
+    protected BlueMapEntitiesAPI(BlueMapAPI api, GeneralConfiguration configuration) {
         this.api = api;
+        this.configuration = configuration;
         this.modules = new LinkedList<>();
         extractAssets(getClass(), "assets", Path.of("assets").resolve("bluemap-entities"));
     }
@@ -29,7 +31,11 @@ public abstract class BlueMapEntitiesAPI {
 
     public abstract Collection<?> getWorlds();
 
-    public void registerModule(be.renaud11232.bluemapentities.module.Module<?> module) {
+    public GeneralConfiguration getConfiguration() {
+        return configuration;
+    }
+
+    public void registerModule(Module module) {
         extractAssets(module.getClass(), module.getAssetSourcePath(), Path.of("assets").resolve("bluemap-entities").resolve("modules").resolve(module.getAssetDirectoryName()));
         this.modules.add(module);
     }

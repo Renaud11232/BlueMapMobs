@@ -8,4 +8,5 @@ public interface Entity {
     UUID getUUID();
     String getName();
     Position getPosition();
+    String getMarkerType();
 }

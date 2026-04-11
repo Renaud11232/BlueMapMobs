@@ -1,13 +1,16 @@
 package be.renaud11232.bluemapcitizens;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.plugin.module.configuration.BukkitModuleConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BlueMapCitizens extends JavaPlugin {
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         BlueMapEntitiesAPI.onEnable(api -> {
-            api.registerModule(new CitizensModule(api));
+            reloadConfig();
+            api.registerModule(new CitizensModule(api, getConfig().getObject("", BukkitModuleConfiguration.class)));
         });
     }
 }

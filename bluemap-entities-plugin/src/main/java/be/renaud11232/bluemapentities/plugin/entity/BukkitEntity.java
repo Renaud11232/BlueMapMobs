@@ -1,13 +1,13 @@
 package be.renaud11232.bluemapentities.plugin.entity;
 
 import be.renaud11232.bluemapentities.Position;
-import be.renaud11232.bluemapentities.entity.WrappedEntity;
+import be.renaud11232.bluemapentities.Wrapper;
 import org.bukkit.Location;
 import org.bukkit.entity.Entity;
 
 import java.util.UUID;
 
-public abstract class BukkitEntity<T extends Entity> extends WrappedEntity<T> {
+public abstract class BukkitEntity<T extends Entity> extends Wrapper<T> implements be.renaud11232.bluemapentities.entity.Entity {
     public BukkitEntity(T wrapped) {
         super(wrapped);
     }

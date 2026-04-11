@@ -26,6 +26,10 @@
             <artifactId>spigot-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>de.bluecolored</groupId>
+            <artifactId>bluemap-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>be.renaud11232</groupId>
             <artifactId>bluemap-entities-plugin</artifactId>
             <version>${project.version}</version>

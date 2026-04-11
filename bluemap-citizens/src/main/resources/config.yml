@@ -1,0 +1,8 @@
+marker_sets:
+  - id: "bme-npc"
+    label: "NPCs"
+    toggleable: true
+    default_hidden: true
+    markers:
+      - type: npc
+        max_distance: 1000

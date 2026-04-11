@@ -1,14 +1,15 @@
 package be.renaud11232.bluemapcitizens;
 
 import be.renaud11232.bluemapentities.Position;
-import be.renaud11232.bluemapentities.entity.WrappedEntity;
+import be.renaud11232.bluemapentities.Wrapper;
+import be.renaud11232.bluemapentities.entity.Entity;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
 
 import java.util.UUID;
 
-public class CitizensNPC extends WrappedEntity<NPC> {
+public class CitizensNPC extends Wrapper<NPC> implements Entity {
     public CitizensNPC(NPC wrapped) {
         super(wrapped);
     }
@@ -36,5 +37,10 @@ public class CitizensNPC extends WrappedEntity<NPC> {
                 location.getY(),
                 location.getZ()
         );
+    }
+
+    @Override
+    public String getMarkerType() {
+        return "npc";
     }
 }

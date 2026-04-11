@@ -1,12 +1,7 @@
 package be.renaud11232.bluemapentities.module;
 
-import be.renaud11232.bluemapentities.entity.Entity;
-
-import java.util.Collection;
-
-public interface Module<T extends Entity> {
-    Collection<T> getEntities(Object world);
-    void update(Object world);
+public interface Module {
     String getAssetDirectoryName();
     String getAssetSourcePath();
+    void update(Object world);
 }
