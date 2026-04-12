@@ -75,7 +75,7 @@ public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
         register(MobsMarkerType.SHULKER, new ShulkerMarkerBuilder(getAPI()));
         register(MobsMarkerType.SILVERFISH, new SilverfishMarkerBuilder(getAPI()));
         register(MobsMarkerType.SKELETON, new SkeletonMarkerBuilder(getAPI()));
-        register(MobsMarkerType.SKELETON_HORSE, new SkeletonMarkerBuilder(getAPI()));
+        register(MobsMarkerType.SKELETON_HORSE, new SkeletonHorseMarkerBuilder(getAPI()));
         register(MobsMarkerType.SLIME, new SlimeMarkerBuilder(getAPI()));
         register(MobsMarkerType.SNIFFER, new SnifferMarkerBuilder(getAPI()));
         register(MobsMarkerType.SNOWMAN, new SnowmanMarkerBuilder(getAPI()));

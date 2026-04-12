@@ -18,6 +18,6 @@ public interface Rabbit extends Animal {
         BLACK_AND_WHITE,
         GOLD,
         SALT_AND_PEPPER,
-        THE_KILLER_BUNNY;
+        THE_KILLER_BUNNY
     }
 }

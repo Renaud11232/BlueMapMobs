@@ -36,6 +36,6 @@ public interface Llama extends ChestedHorse {
         CREAMY,
         WHITE,
         BROWN,
-        GRAY;
+        GRAY
     }
 }
