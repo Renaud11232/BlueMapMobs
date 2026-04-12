@@ -1,6 +1,6 @@
 name: BlueMapCitizens
 version: '${project.version}'
-main: be.renaud11232.bluemapcitizens.BlueMapCitizens
+main: be.renaud11232.bluemapcitizens.plugin.BlueMapCitizens
 api-version: '${net.minecraft.target.version}'
 depend:
   - BlueMapEntities

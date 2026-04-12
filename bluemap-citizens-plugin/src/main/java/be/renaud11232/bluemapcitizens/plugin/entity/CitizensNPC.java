@@ -1,6 +1,6 @@
-package be.renaud11232.bluemapcitizens.entity;
+package be.renaud11232.bluemapcitizens.plugin.entity;
 
-import be.renaud11232.bluemapcitizens.CitizensMarkerType;
+import be.renaud11232.bluemapcitizens.plugin.CitizensMarkerType;
 import be.renaud11232.bluemapentities.MarkerType;
 import be.renaud11232.bluemapentities.Position;
 import be.renaud11232.bluemapentities.Wrapper;

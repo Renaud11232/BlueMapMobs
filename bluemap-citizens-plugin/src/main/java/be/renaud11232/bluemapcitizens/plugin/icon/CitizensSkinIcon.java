@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapcitizens.icon;
+package be.renaud11232.bluemapcitizens.plugin.icon;
 
 import be.renaud11232.bluemapentities.icon.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;

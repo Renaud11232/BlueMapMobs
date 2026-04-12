@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapcitizens;
+package be.renaud11232.bluemapcitizens.plugin;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.plugin.module.configuration.BukkitModuleConfiguration;

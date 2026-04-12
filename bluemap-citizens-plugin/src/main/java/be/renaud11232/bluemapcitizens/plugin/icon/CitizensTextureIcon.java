@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapcitizens.icon;
+package be.renaud11232.bluemapcitizens.plugin.icon;
 
 import com.flowpowered.math.vector.Vector2i;
 import com.google.gson.JsonParser;

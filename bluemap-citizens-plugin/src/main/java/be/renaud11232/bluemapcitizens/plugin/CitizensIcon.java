@@ -1,6 +1,6 @@
-package be.renaud11232.bluemapcitizens;
+package be.renaud11232.bluemapcitizens.plugin;
 
-import be.renaud11232.bluemapcitizens.icon.CitizensTextureIcon;
+import be.renaud11232.bluemapcitizens.plugin.icon.CitizensTextureIcon;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapentities.icon.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;

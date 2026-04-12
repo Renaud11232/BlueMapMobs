@@ -1,7 +1,7 @@
-package be.renaud11232.bluemapcitizens;
+package be.renaud11232.bluemapcitizens.plugin;
 
-import be.renaud11232.bluemapcitizens.entity.CitizensNPC;
-import be.renaud11232.bluemapcitizens.markerbuilder.CitizensMarkerBuilder;
+import be.renaud11232.bluemapcitizens.plugin.entity.CitizensNPC;
+import be.renaud11232.bluemapcitizens.plugin.markerbuilder.CitizensMarkerBuilder;
 import be.renaud11232.bluemapentities.*;
 import be.renaud11232.bluemapentities.module.SimpleModule;
 import be.renaud11232.bluemapentities.plugin.module.configuration.BukkitModuleConfiguration;

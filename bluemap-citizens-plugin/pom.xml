@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bluemap-citizens-bukkit</artifactId>
+    <artifactId>bluemap-citizens-plugin</artifactId>
 
     <build>
         <plugins>
@@ -45,7 +45,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemap-entities-bukkit</artifactId>
+            <artifactId>bluemap-entities-plugin</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>

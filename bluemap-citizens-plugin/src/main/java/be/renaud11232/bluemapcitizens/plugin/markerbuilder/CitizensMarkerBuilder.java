@@ -1,7 +1,7 @@
-package be.renaud11232.bluemapcitizens.markerbuilder;
+package be.renaud11232.bluemapcitizens.plugin.markerbuilder;
 
-import be.renaud11232.bluemapcitizens.CitizensIcon;
-import be.renaud11232.bluemapcitizens.entity.CitizensNPC;
+import be.renaud11232.bluemapcitizens.plugin.CitizensIcon;
+import be.renaud11232.bluemapcitizens.plugin.entity.CitizensNPC;
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
