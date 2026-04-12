@@ -1,5 +1,7 @@
 package be.renaud11232.bluemapcitizens;
 
+import be.renaud11232.bluemapcitizens.entity.CitizensNPC;
+import be.renaud11232.bluemapcitizens.markerbuilder.CitizensMarkerBuilder;
 import be.renaud11232.bluemapentities.*;
 import be.renaud11232.bluemapentities.module.SimpleModule;
 import be.renaud11232.bluemapentities.plugin.module.configuration.BukkitModuleConfiguration;
@@ -34,7 +36,7 @@ public class CitizensModule extends SimpleModule<NPC, CitizensNPC> {
     }
 
     @Override
-    public String getAssetSourcePath() {
+    public String getModuleIdentifier() {
         return "assets";
     }
 }

@@ -1,16 +1,16 @@
 package be.renaud11232.bluemapvehicles.plugin;
 
 import be.renaud11232.bluemapentities.EntityConverter;
-import be.renaud11232.bluemapvehicles.plugin.entities.UnknownBukkitVehicle;
-import be.renaud11232.bluemapvehicles.plugin.entities.boat.*;
-import be.renaud11232.bluemapvehicles.plugin.entities.minecart.*;
+import be.renaud11232.bluemapvehicles.plugin.entity.UnknownBukkitVehicle;
+import be.renaud11232.bluemapvehicles.plugin.entity.boat.*;
+import be.renaud11232.bluemapvehicles.plugin.entity.minecart.*;
 import org.bukkit.entity.Vehicle;
 import org.bukkit.entity.boat.*;
 import org.bukkit.entity.minecart.*;
 
-public class BukkitVehicleConverter implements EntityConverter<Vehicle, be.renaud11232.bluemapvehicles.entities.Vehicle> {
+public class BukkitVehicleConverter implements EntityConverter<Vehicle, be.renaud11232.bluemapvehicles.entity.Vehicle> {
     @Override
-    public be.renaud11232.bluemapvehicles.entities.Vehicle convert(Vehicle vehicle) {
+    public be.renaud11232.bluemapvehicles.entity.Vehicle convert(Vehicle vehicle) {
         return switch (vehicle) {
             case AcaciaChestBoat acaciaChestBoat -> new BukkitAcaciaChestBoat(acaciaChestBoat);
             case AcaciaBoat acaciaBoat -> new BukkitAcaciaBoat(acaciaBoat);

@@ -4,7 +4,7 @@ import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapvehicles.VehiclesIcon;
-import be.renaud11232.bluemapvehicles.entities.minecart.PoweredMinecart;
+import be.renaud11232.bluemapvehicles.entity.minecart.PoweredMinecart;
 
 public class PoweredMinecartMarkerBuilder extends SimpleMarkerBuilder<PoweredMinecart> {
     public PoweredMinecartMarkerBuilder(BlueMapEntitiesAPI api) {

@@ -4,7 +4,7 @@ import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapvehicles.VehiclesIcon;
-import be.renaud11232.bluemapvehicles.entities.boat.DarkOakChestBoat;
+import be.renaud11232.bluemapvehicles.entity.boat.DarkOakChestBoat;
 
 public class DarkOakChestBoatMarkerBuilder extends SimpleMarkerBuilder<DarkOakChestBoat> {
     public DarkOakChestBoatMarkerBuilder(BlueMapEntitiesAPI api) {

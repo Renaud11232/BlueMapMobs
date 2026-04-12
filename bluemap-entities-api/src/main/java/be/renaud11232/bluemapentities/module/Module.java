@@ -2,6 +2,6 @@ package be.renaud11232.bluemapentities.module;
 
 public interface Module {
     String getAssetDirectoryName();
-    String getAssetSourcePath();
+    String getModuleIdentifier();
     void update(Object world);
 }

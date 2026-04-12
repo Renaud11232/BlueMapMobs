@@ -3,7 +3,7 @@ package be.renaud11232.bluemapvehicles.markerbuilder;
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapvehicles.VehiclesMarkerType;
-import be.renaud11232.bluemapvehicles.entities.Vehicle;
+import be.renaud11232.bluemapvehicles.entity.Vehicle;
 import be.renaud11232.bluemapvehicles.markerbuilder.boat.*;
 import be.renaud11232.bluemapvehicles.markerbuilder.minecart.*;
 

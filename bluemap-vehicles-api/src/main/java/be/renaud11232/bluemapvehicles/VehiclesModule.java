@@ -3,7 +3,7 @@ package be.renaud11232.bluemapvehicles;
 import be.renaud11232.bluemapentities.*;
 import be.renaud11232.bluemapentities.module.SimpleModule;
 import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
-import be.renaud11232.bluemapvehicles.entities.Vehicle;
+import be.renaud11232.bluemapvehicles.entity.Vehicle;
 import be.renaud11232.bluemapvehicles.markerbuilder.VehiclesMarkerBuilder;
 
 public abstract class VehiclesModule<T> extends SimpleModule<T, Vehicle> {
@@ -12,7 +12,7 @@ public abstract class VehiclesModule<T> extends SimpleModule<T, Vehicle> {
     }
 
     @Override
-    public String getAssetSourcePath() {
+    public String getModuleIdentifier() {
         return "assets";
     }
 
