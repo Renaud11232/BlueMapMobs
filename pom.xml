@@ -25,30 +25,6 @@
         <net.citizensnpcs.citizens-main.version>2.0.41-SNAPSHOT</net.citizensnpcs.citizens-main.version>
     </properties>
 
-    <profiles>
-        <profile>
-            <id>spigot</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <platform.dependency.groupId>org.spigotmc</platform.dependency.groupId>
-                <platform.dependency.artifactId>spigot-api</platform.dependency.artifactId>
-                <platform.implementation>bluemapmobs-spigot</platform.implementation>
-                <platform.jar.suffix>-spigot</platform.jar.suffix>
-            </properties>
-        </profile>
-        <profile>
-            <id>paper</id>
-            <properties>
-                <platform.dependency.groupId>io.papermc.paper</platform.dependency.groupId>
-                <platform.dependency.artifactId>paper-api</platform.dependency.artifactId>
-                <platform.implementation>bluemapmobs-paper</platform.implementation>
-                <platform.jar.suffix>-paper</platform.jar.suffix>
-            </properties>
-        </profile>
-    </profiles>
-
     <build>
         <pluginManagement>
             <plugins>
@@ -137,10 +113,6 @@
     </dependencyManagement>
 
     <modules>
-        <module>bluemapmobs-core</module>
-        <module>bluemapmobs-spigot</module>
-        <module>bluemapmobs-paper</module>
-        <module>bluemapmobs</module>
         <module>bluemap-entities-api</module>
         <module>bluemap-entities-plugin</module>
         <module>bluemap-citizens-plugin</module>
