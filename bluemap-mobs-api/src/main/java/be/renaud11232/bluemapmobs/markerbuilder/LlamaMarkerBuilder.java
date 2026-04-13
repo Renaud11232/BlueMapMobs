@@ -32,7 +32,7 @@ public class LlamaMarkerBuilder extends SimpleVariantMarkerBuilder<Llama, Llama.
     @Override
     protected void registerVariantIcons() {
         registerVariantIcon(Llama.Carpet.WHITE, MobsIcon.WHITE_LLAMA_DECOR);
-        registerVariantIcon(Llama.Carpet.LIGHT_GRAY, MobsIcon.LIGHTGRAY_LLAMA_DECOR);
+        registerVariantIcon(Llama.Carpet.LIGHT_GRAY, MobsIcon.LIGHT_GRAY_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.GRAY, MobsIcon.GRAY_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.BLACK, MobsIcon.BLACK_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.BROWN, MobsIcon.BROWN_LLAMA_DECOR);
@@ -42,7 +42,7 @@ public class LlamaMarkerBuilder extends SimpleVariantMarkerBuilder<Llama, Llama.
         registerVariantIcon(Llama.Carpet.LIME, MobsIcon.LIME_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.GREEN, MobsIcon.GREEN_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.CYAN, MobsIcon.CYAN_LLAMA_DECOR);
-        registerVariantIcon(Llama.Carpet.LIGHT_BLUE, MobsIcon.LIGHTBLUE_LLAMA_DECOR);
+        registerVariantIcon(Llama.Carpet.LIGHT_BLUE, MobsIcon.LIGHT_BLUE_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.BLUE, MobsIcon.BLUE_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.PURPLE, MobsIcon.PURPLE_LLAMA_DECOR);
         registerVariantIcon(Llama.Carpet.MAGENTA, MobsIcon.MAGENTA_LLAMA_DECOR);

@@ -31,12 +31,12 @@ public class SheepMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Sheep, 
         registerVariantStyleClass(Sheep.Color.WHITE, List.of(MobsStyleClass.WHITE_SHEEP));
         registerVariantStyleClass(Sheep.Color.ORANGE, List.of(MobsStyleClass.ORANGE_SHEEP));
         registerVariantStyleClass(Sheep.Color.MAGENTA, List.of(MobsStyleClass.MAGENTA_SHEEP));
-        registerVariantStyleClass(Sheep.Color.LIGHT_BLUE, List.of(MobsStyleClass.LIGHTBLUE_SHEEP));
+        registerVariantStyleClass(Sheep.Color.LIGHT_BLUE, List.of(MobsStyleClass.LIGHT_BLUE_SHEEP));
         registerVariantStyleClass(Sheep.Color.YELLOW, List.of(MobsStyleClass.YELLOW_SHEEP));
         registerVariantStyleClass(Sheep.Color.LIME, List.of(MobsStyleClass.LIME_SHEEP));
         registerVariantStyleClass(Sheep.Color.PINK, List.of(MobsStyleClass.PINK_SHEEP));
         registerVariantStyleClass(Sheep.Color.GRAY, List.of(MobsStyleClass.GRAY_SHEEP));
-        registerVariantStyleClass(Sheep.Color.LIGHT_GRAY, List.of(MobsStyleClass.LIGHTGRAY_SHEEP));
+        registerVariantStyleClass(Sheep.Color.LIGHT_GRAY, List.of(MobsStyleClass.LIGHT_GRAY_SHEEP));
         registerVariantStyleClass(Sheep.Color.CYAN, List.of(MobsStyleClass.CYAN_SHEEP));
         registerVariantStyleClass(Sheep.Color.PURPLE, List.of(MobsStyleClass.PURPLE_SHEEP));
         registerVariantStyleClass(Sheep.Color.BLUE, List.of(MobsStyleClass.BLUE_SHEEP));

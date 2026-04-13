@@ -40,6 +40,6 @@ public class HorseMarkerBuilder extends SimpleVariantMarkerBuilder<Horse, Horse.
         registerVariantStyleClass(Horse.Color.BROWN, List.of(MobsStyleClass.BROWN_HORSE));
         registerVariantStyleClass(Horse.Color.BLACK, List.of(MobsStyleClass.BLACK_HORSE));
         registerVariantStyleClass(Horse.Color.GRAY, List.of(MobsStyleClass.GRAY_HORSE));
-        registerVariantStyleClass(Horse.Color.DARK_BROWN, List.of(MobsStyleClass.DARKBROWN_HORSE));
+        registerVariantStyleClass(Horse.Color.DARK_BROWN, List.of(MobsStyleClass.DARK_BROWN_HORSE));
     }
 }

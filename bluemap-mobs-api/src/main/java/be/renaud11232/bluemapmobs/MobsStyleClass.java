@@ -7,12 +7,12 @@ public class MobsStyleClass {
     public static final String WHITE_SHEEP = "bluemapmobs-white-sheep";
     public static final String ORANGE_SHEEP = "bluemapmobs-orange-sheep";
     public static final String MAGENTA_SHEEP = "bluemapmobs-magenta-sheep";
-    public static final String LIGHTBLUE_SHEEP = "bluemapmobs-lightblue-sheep";
+    public static final String LIGHT_BLUE_SHEEP = "bluemapmobs-lightblue-sheep";
     public static final String YELLOW_SHEEP = "bluemapmobs-yellow-sheep";
     public static final String LIME_SHEEP = "bluemapmobs-lime-sheep";
     public static final String PINK_SHEEP = "bluemapmobs-pink-sheep";
     public static final String GRAY_SHEEP = "bluemapmobs-gray-sheep";
-    public static final String LIGHTGRAY_SHEEP = "bluemapmobs-lightgray-sheep";
+    public static final String LIGHT_GRAY_SHEEP = "bluemapmobs-lightgray-sheep";
     public static final String CYAN_SHEEP = "bluemapmobs-cyan-sheep";
     public static final String PURPLE_SHEEP = "bluemapmobs-purple-sheep";
     public static final String BLUE_SHEEP = "bluemapmobs-blue-sheep";
@@ -27,7 +27,7 @@ public class MobsStyleClass {
     public static final String BROWN_HORSE = "bluemapmobs-brown-horse";
     public static final String BLACK_HORSE = "bluemapmobs-black-horse";
     public static final String GRAY_HORSE = "bluemapmobs-gray-horse";
-    public static final String DARKBROWN_HORSE = "bluemapmobs-darkbrown-horse";
+    public static final String DARK_BROWN_HORSE = "bluemapmobs-darkbrown-horse";
     public static final String CREAMY_LLAMA = "bluemapmobs-creamy-llama";
     public static final String WHITE_LLAMA = "bluemapmobs-white-llama";
     public static final String GRAY_LLAMA = "bluemapmobs-gray-llama";

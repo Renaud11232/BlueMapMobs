@@ -32,7 +32,7 @@ public class HappyGhastMarkerBuilder extends SimpleVariantMarkerBuilder<HappyGha
     @Override
     protected void registerVariantIcons() {
         registerVariantIcon(HappyGhast.Harness.WHITE, MobsIcon.WHITE_HAPPY_GHAST_HARNESS);
-        registerVariantIcon(HappyGhast.Harness.LIGHT_GRAY, MobsIcon.LIGHTGRAY_HAPPY_GHAST_HARNESS);
+        registerVariantIcon(HappyGhast.Harness.LIGHT_GRAY, MobsIcon.LIGHT_GRAY_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.GRAY, MobsIcon.GRAY_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.BLACK, MobsIcon.BLACK_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.BROWN, MobsIcon.BROWN_HAPPY_GHAST_HARNESS);
@@ -42,7 +42,7 @@ public class HappyGhastMarkerBuilder extends SimpleVariantMarkerBuilder<HappyGha
         registerVariantIcon(HappyGhast.Harness.LIME, MobsIcon.LIME_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.GREEN, MobsIcon.GREEN_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.CYAN, MobsIcon.CYAN_HAPPY_GHAST_HARNESS);
-        registerVariantIcon(HappyGhast.Harness.LIGHT_BLUE, MobsIcon.LIGHTBLUE_HAPPY_GHAST_HARNESS);
+        registerVariantIcon(HappyGhast.Harness.LIGHT_BLUE, MobsIcon.LIGHT_BLUE_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.BLUE, MobsIcon.BLUE_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.PURPLE, MobsIcon.PURPLE_HAPPY_GHAST_HARNESS);
         registerVariantIcon(HappyGhast.Harness.MAGENTA, MobsIcon.MAGENTA_HAPPY_GHAST_HARNESS);
