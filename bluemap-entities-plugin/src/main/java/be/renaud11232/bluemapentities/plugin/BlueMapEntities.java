@@ -14,7 +14,11 @@ public class BlueMapEntities extends JavaPlugin {
         BlueMapAPI.onEnable(api -> {
             getLogger().info("Enabling BlueMapEntities API...");
             reloadConfig();
-            this.api = new BukkitBlueMapEntitiesAPI(api, BukkitGeneralConfiguration.deserialize(getConfig().getValues(true)));
+            this.api = new BukkitBlueMapEntitiesAPI(
+                    api,
+                    BukkitGeneralConfiguration.deserialize(getConfig().getValues(true)),
+                    getLogger()
+            );
             BlueMapEntitiesAPI.enable(this.api);
             getLogger().info("Scheduling update task...");
             Bukkit.getScheduler().runTaskTimer(this, this.api::update, 0, 200);

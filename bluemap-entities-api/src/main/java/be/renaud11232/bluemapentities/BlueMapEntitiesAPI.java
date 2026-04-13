@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public abstract class BlueMapEntitiesAPI {
     private static BlueMapEntitiesAPI INSTANCE;
@@ -17,11 +19,13 @@ public abstract class BlueMapEntitiesAPI {
     private final BlueMapAPI api;
     private final GeneralConfiguration configuration;
     private final List<Module> modules;
+    private final Logger logger;
 
-    protected BlueMapEntitiesAPI(BlueMapAPI api, GeneralConfiguration configuration) {
+    protected BlueMapEntitiesAPI(BlueMapAPI api, GeneralConfiguration configuration, Logger logger) {
         this.api = api;
         this.configuration = configuration;
         this.modules = new LinkedList<>();
+        this.logger = logger;
         extractAssets(getClass(), "assets", Path.of("assets").resolve("bluemap-entities"));
     }
 
@@ -56,7 +60,13 @@ public abstract class BlueMapEntitiesAPI {
     }
 
     public void update() {
-        getWorlds().forEach(world -> modules.forEach(module -> module.update(world)));
+        getWorlds().forEach(world -> modules.forEach(module -> {
+            try {
+                module.update(world);
+            } catch (Throwable t) {
+                logger.log(Level.SEVERE, "Error while updating markers of module '" + module.getModuleIdentifier() + "' for world '" + world.toString() + "'", t);
+            }
+        }));
     }
 
     public static synchronized Optional<BlueMapEntitiesAPI> getInstance() {

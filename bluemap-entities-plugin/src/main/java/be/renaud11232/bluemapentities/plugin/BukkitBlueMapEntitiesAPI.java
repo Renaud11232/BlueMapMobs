@@ -6,10 +6,11 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
 
 import java.util.Collection;
+import java.util.logging.Logger;
 
 public class BukkitBlueMapEntitiesAPI extends BlueMapEntitiesAPI {
-    public BukkitBlueMapEntitiesAPI(BlueMapAPI api, GeneralConfiguration configuration) {
-        super(api, configuration);
+    public BukkitBlueMapEntitiesAPI(BlueMapAPI api, GeneralConfiguration configuration, Logger logger) {
+        super(api, configuration, logger);
     }
 
     @Override
