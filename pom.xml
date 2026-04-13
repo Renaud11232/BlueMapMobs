@@ -147,5 +147,8 @@
         <module>bluemap-vehicles-api</module>
         <module>bluemap-vehicles-plugin</module>
         <module>bluemap-mobs-api</module>
+        <module>bluemap-mobs-plugin-common</module>
+        <module>bluemap-mobs-spigot</module>
+        <module>bluemap-mobs-paper</module>
     </modules>
 </project>

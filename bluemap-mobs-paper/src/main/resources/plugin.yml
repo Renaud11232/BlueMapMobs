@@ -1,0 +1,10 @@
+name: BlueMapMobs
+version: '${project.version}'
+main: be.renaud11232.bluemapmobs.plugin.paper.BlueMapMobs
+api-version: '${net.minecraft.target.version}'
+depend:
+  - BlueMapEntities
+authors:
+  - Renaud11232
+description: '${project.description}'
+website: '${project.url}'

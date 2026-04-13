@@ -1,0 +1,8 @@
+marker_sets:
+  - id: "bluemapentities-mobs"
+    label: "Mobs"
+    toggleable: true
+    default_hidden: true
+    markers:
+      - type: "*"
+        max_distance: 1000

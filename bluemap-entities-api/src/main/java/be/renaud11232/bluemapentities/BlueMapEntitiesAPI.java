@@ -36,7 +36,7 @@ public abstract class BlueMapEntitiesAPI {
     }
 
     public void registerModule(Module module) {
-        extractAssets(module.getClass(), module.getModuleIdentifier(), Path.of("assets").resolve("bluemap-entities").resolve("modules").resolve(module.getAssetDirectoryName()));
+        extractAssets(module.getClass(), module.getAssetDirectoryName(), Path.of("assets").resolve("bluemap-entities").resolve("modules").resolve(module.getModuleIdentifier()));
         this.modules.add(module);
     }
 

@@ -13,11 +13,11 @@ public abstract class VehiclesModule<T> extends SimpleModule<T, Vehicle> {
 
     @Override
     public String getModuleIdentifier() {
-        return "assets";
+        return "vehicles";
     }
 
     @Override
     public String getAssetDirectoryName() {
-        return "vehicles";
+        return "assets";
     }
 }

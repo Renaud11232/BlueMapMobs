@@ -34,6 +34,7 @@ public abstract class SimpleModule<SOURCE_TYPE, TARGET_TYPE extends Entity> impl
                 .toList();
         Map<String, List<TARGET_TYPE>> entitiesByType = allEntities.stream()
                 .collect(Collectors.groupingBy(e -> e.getMarkerType().getName()));
+        //TODO: Clean this mess
         configuration.getMarkerSets()
                 .forEach(markerSetConfig -> {
                     Map<String, Marker> markers = new HashMap<>();

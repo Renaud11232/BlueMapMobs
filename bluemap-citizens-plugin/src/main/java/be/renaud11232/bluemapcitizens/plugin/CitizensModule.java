@@ -20,7 +20,7 @@ public class CitizensModule extends SimpleModule<NPC, CitizensNPC> {
     }
 
     @Override
-    protected Collection<NPC> getEntities(Object world) {
+    protected Collection<? extends NPC> getEntities(Object world) {
         return StreamSupport.stream(CitizensAPI.getNPCRegistries().spliterator(), false)
                 .flatMap(registry -> StreamSupport.stream(registry.spliterator(), false))
                 .filter(NPC::isSpawned)
@@ -32,11 +32,11 @@ public class CitizensModule extends SimpleModule<NPC, CitizensNPC> {
 
     @Override
     public String getAssetDirectoryName() {
-        return "citizens";
+        return "assets";
     }
 
     @Override
     public String getModuleIdentifier() {
-        return "assets";
+        return "citizens";
     }
 }

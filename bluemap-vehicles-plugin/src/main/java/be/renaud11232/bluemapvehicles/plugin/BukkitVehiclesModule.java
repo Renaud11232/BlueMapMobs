@@ -18,7 +18,7 @@ public class BukkitVehiclesModule extends VehiclesModule<Vehicle> {
     }
 
     @Override
-    protected Collection<Vehicle> getEntities(Object world) {
+    protected Collection<? extends Vehicle> getEntities(Object world) {
         return ((World) world).getEntitiesByClass(Vehicle.class)
                 .stream()
                 .filter(not(vehicle -> vehicle instanceof Mob))
