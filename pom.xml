@@ -150,5 +150,7 @@
         <module>bluemap-mobs-plugin-common</module>
         <module>bluemap-mobs-spigot</module>
         <module>bluemap-mobs-paper</module>
+        <module>bluemap-others-api</module>
+        <module>bluemap-others-plugin</module>
     </modules>
 </project>
