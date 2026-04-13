@@ -13,16 +13,16 @@
     <url>https://github.com/Renaud11232/BlueMapMobs</url>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.apache.maven.plugins.maven-compiler-plugin.version>3.14.1</org.apache.maven.plugins.maven-compiler-plugin.version>
-        <org.apache.maven.plugins.maven-shade-plugin.version>3.6.1</org.apache.maven.plugins.maven-shade-plugin.version>
-        <net.minecraft.target.version>1.21.11</net.minecraft.target.version>
-        <net.minecraft.build.version>1.21.11</net.minecraft.build.version>
+        <org.apache.maven.plugins.maven-compiler-plugin.version>3.15.0</org.apache.maven.plugins.maven-compiler-plugin.version>
+        <org.apache.maven.plugins.maven-shade-plugin.version>3.6.2</org.apache.maven.plugins.maven-shade-plugin.version>
+        <net.minecraft.target.version>26.1.2</net.minecraft.target.version>
+        <net.minecraft.build.version>26.1.2</net.minecraft.build.version>
         <org.spigotmc.spigot-api.version>${net.minecraft.build.version}-R0.1-SNAPSHOT</org.spigotmc.spigot-api.version>
-        <io.papermc.paper.paper-api.version>${net.minecraft.build.version}-R0.1-SNAPSHOT</io.papermc.paper.paper-api.version>
-        <de.bluecolored.bluemap-api.version>2.7.7</de.bluecolored.bluemap-api.version>
-        <net.citizensnpcs.citizens-main.version>2.0.41-SNAPSHOT</net.citizensnpcs.citizens-main.version>
+        <io.papermc.paper.paper-api.version>[${net.minecraft.build.version}.build,)</io.papermc.paper.paper-api.version>
+        <de.bluecolored.bluemap-api.version>2.7.8</de.bluecolored.bluemap-api.version>
+        <net.citizensnpcs.citizens-main.version>2.0.42-SNAPSHOT</net.citizensnpcs.citizens-main.version>
     </properties>
 
     <build>
