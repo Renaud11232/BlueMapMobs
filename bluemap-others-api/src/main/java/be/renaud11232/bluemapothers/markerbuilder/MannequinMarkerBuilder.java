@@ -13,6 +13,6 @@ public class MannequinMarkerBuilder extends SimpleMarkerBuilder<Mannequin> {
 
     @Override
     protected Icon getDefaultIcon() {
-        return OthersIcon.MANNEQUIN;
+        return OthersIcon.MANNEQUIN;//TODO: Handle custom textures
     }
 }

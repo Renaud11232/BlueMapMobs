@@ -123,6 +123,8 @@
         <module>bluemap-mobs-spigot</module>
         <module>bluemap-mobs-paper</module>
         <module>bluemap-others-api</module>
-        <module>bluemap-others-plugin</module>
+        <module>bluemap-others-plugin-common</module>
+        <module>bluemap-others-spigot</module>
+        <module>bluemap-others-paper</module>
     </modules>
 </project>
