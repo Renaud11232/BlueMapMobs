@@ -3,7 +3,7 @@ package be.renaud11232.bluemapmobs.plugin.common.entity;
 import be.renaud11232.bluemapmobs.entity.Villager;
 import be.renaud11232.bluemapmobs.entity.ZombieVillager;
 
-public class BukkitZombieVillager extends BukkitMob<org.bukkit.entity.ZombieVillager> implements ZombieVillager {
+public class BukkitZombieVillager extends BukkitAgeable<org.bukkit.entity.ZombieVillager> implements ZombieVillager {
     public BukkitZombieVillager(org.bukkit.entity.ZombieVillager wrapped) {
         super(wrapped);
     }

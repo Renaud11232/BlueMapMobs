@@ -10,10 +10,6 @@ import be.renaud11232.bluemapvehicles.markerbuilder.minecart.*;
 public class VehiclesMarkerBuilder extends SimpleMarkerBuilder<Vehicle> {
     public VehiclesMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-    }
-
-    @Override
-    protected void registerMarkerBuilders() {
         register(VehiclesMarkerType.ACACIA_BOAT, new AcaciaBoatMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.ACACIA_CHEST_BOAT, new AcaciaChestBoatMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.BAMBOO_RAFT, new BambooRaftMarkerBuilder(getAPI()));
@@ -34,7 +30,6 @@ public class VehiclesMarkerBuilder extends SimpleMarkerBuilder<Vehicle> {
         register(VehiclesMarkerType.PALE_OAK_CHEST_BOAT, new PaleOakChestBoatMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.SPRUCE_BOAT, new SpruceBoatMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.SPRUCE_CHEST_BOAT, new SpruceChestBoatMarkerBuilder(getAPI()));
-
         register(VehiclesMarkerType.COMMAND_MINECART, new CommandMinecartMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.EXPLOSIVE_MINECART, new ExplosiveMinecartMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.HOPPER_MINECART, new HopperMinecartMarkerBuilder(getAPI()));

@@ -4,6 +4,10 @@ import be.renaud11232.bluemapmobs.entity.TropicalFish;
 
 public class MobsStyleClass {
     public static final String FLIP = "bluemapmobs-flip";
+    public static final String BEE = "bluemapmobs-bee";
+    public static final String BEE_ANGRY = "bluemapmobs-bee-angry";
+    public static final String BEE_BABY = "bluemapmobs-bee-baby";
+    public static final String BEE_BABY_ANGRY = "bluemapmobs-bee-baby-angry";
     public static final String WHITE_SHEEP = "bluemapmobs-white-sheep";
     public static final String ORANGE_SHEEP = "bluemapmobs-orange-sheep";
     public static final String MAGENTA_SHEEP = "bluemapmobs-magenta-sheep";

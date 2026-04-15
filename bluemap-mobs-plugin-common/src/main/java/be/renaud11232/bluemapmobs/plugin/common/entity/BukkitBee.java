@@ -6,4 +6,14 @@ public class BukkitBee extends BukkitAgeable<org.bukkit.entity.Bee> implements B
     public BukkitBee(org.bukkit.entity.Bee wrapped) {
         super(wrapped);
     }
+
+    @Override
+    public boolean hasNectar() {
+        return wrapped.hasNectar();
+    }
+
+    @Override
+    public int getAnger() {
+        return wrapped.getAnger();
+    }
 }

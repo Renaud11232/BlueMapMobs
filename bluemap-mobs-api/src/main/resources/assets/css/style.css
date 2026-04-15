@@ -2,137 +2,153 @@
     --bluemapmobs-icon-transform: translate(-50%, -50%) rotate(180deg);
 }
 
+#map-container .bluemapmobs-bee img {
+    background-image: url("../img/bee/bee.png");
+}
+
+#map-container .bluemapmobs-bee-angry img {
+    background-image: url("../img/bee/bee_angry.png");
+}
+
+#map-container .bluemapmobs-bee-baby img {
+    background-image: url("../img/bee/bee_baby.png");
+}
+
+#map-container .bluemapmobs-bee-baby-angry img {
+    background-image: url("../img/bee/bee_baby_angry.png");
+}
+
 #map-container .bluemapmobs-creamy-llama img {
-    background-image: url("../img/creature/animals/abstracthorse/chestedhorse/llama/creamy_llama.png");
+    background-image: url("../img/llama/creamy_llama.png");
 }
 
 #map-container .bluemapmobs-white-llama img {
-    background-image: url("../img/creature/animals/abstracthorse/chestedhorse/llama/white_llama.png");
+    background-image: url("../img/llama/white_llama.png");
 }
 
 #map-container .bluemapmobs-gray-llama img {
-    background-image: url("../img/creature/animals/abstracthorse/chestedhorse/llama/gray_llama.png");
+    background-image: url("../img/llama/gray_llama.png");
 }
 
 #map-container .bluemapmobs-brown-llama img {
-    background-image: url("../img/creature/animals/abstracthorse/chestedhorse/llama/brown_llama.png");
+    background-image: url("../img/llama/brown_llama.png");
 }
 
 #map-container .bluemapmobs-white-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_white.png");
+    background-image: url("../img/sheep/sheep_fur_white.png");
 }
 
 #map-container .bluemapmobs-lightgray-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_light_gray.png");
+    background-image: url("../img/sheep/sheep_fur_light_gray.png");
 }
 
 #map-container .bluemapmobs-gray-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_gray.png");
+    background-image: url("../img/sheep/sheep_fur_gray.png");
 }
 
 #map-container .bluemapmobs-black-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_black.png");
+    background-image: url("../img/sheep/sheep_fur_black.png");
 }
 
 #map-container .bluemapmobs-brown-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_brown.png");
+    background-image: url("../img/sheep/sheep_fur_brown.png");
 }
 
 #map-container .bluemapmobs-red-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_red.png");
+    background-image: url("../img/sheep/sheep_fur_red.png");
 }
 
 #map-container .bluemapmobs-orange-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_orange.png");
+    background-image: url("../img/sheep/sheep_fur_orange.png");
 }
 
 #map-container .bluemapmobs-yellow-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_yellow.png");
+    background-image: url("../img/sheep/sheep_fur_yellow.png");
 }
 
 #map-container .bluemapmobs-lime-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_lime.png");
+    background-image: url("../img/sheep/sheep_fur_lime.png");
 }
 
 #map-container .bluemapmobs-green-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_green.png");
+    background-image: url("../img/sheep/sheep_fur_green.png");
 }
 
 #map-container .bluemapmobs-cyan-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_cyan.png");
+    background-image: url("../img/sheep/sheep_fur_cyan.png");
 }
 
 #map-container .bluemapmobs-lightblue-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_light_blue.png");
+    background-image: url("../img/sheep/sheep_fur_light_blue.png");
 }
 
 #map-container .bluemapmobs-blue-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_blue.png");
+    background-image: url("../img/sheep/sheep_fur_blue.png");
 }
 
 #map-container .bluemapmobs-purple-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_purple.png");
+    background-image: url("../img/sheep/sheep_fur_purple.png");
 }
 
 #map-container .bluemapmobs-magenta-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_magenta.png");
+    background-image: url("../img/sheep/sheep_fur_magenta.png");
 }
 
 #map-container .bluemapmobs-pink-sheep img {
-    background-image: url("../img/creature/animals/sheep/sheep_fur_pink.png");
+    background-image: url("../img/sheep/sheep_fur_pink.png");
 }
 
 @keyframes bluemapmobs-jeb-sheep-animation {
     from {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_white.png");
+        background-image: url("../img/sheep/sheep_fur_white.png");
     }
     6.25% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_orange.png");
+        background-image: url("../img/sheep/sheep_fur_orange.png");
     }
     12.5% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_magenta.png");
+        background-image: url("../img/sheep/sheep_fur_magenta.png");
     }
     18.75% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_light_blue.png");
+        background-image: url("../img/sheep/sheep_fur_light_blue.png");
     }
     25% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_yellow.png");
+        background-image: url("../img/sheep/sheep_fur_yellow.png");
     }
     31.25% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_lime.png");
+        background-image: url("../img/sheep/sheep_fur_lime.png");
     }
     37.5% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_pink.png");
+        background-image: url("../img/sheep/sheep_fur_pink.png");
     }
     43.75% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_gray.png");
+        background-image: url("../img/sheep/sheep_fur_gray.png");
     }
     50% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_light_gray.png");
+        background-image: url("../img/sheep/sheep_fur_light_gray.png");
     }
     56.25% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_cyan.png");
+        background-image: url("../img/sheep/sheep_fur_cyan.png");
     }
     62.5% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_purple.png");
+        background-image: url("../img/sheep/sheep_fur_purple.png");
     }
     68.75% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_blue.png");
+        background-image: url("../img/sheep/sheep_fur_blue.png");
     }
     75% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_brown.png");
+        background-image: url("../img/sheep/sheep_fur_brown.png");
     }
     81.25% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_green.png");
+        background-image: url("../img/sheep/sheep_fur_green.png");
     }
     87.5% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_red.png");
+        background-image: url("../img/sheep/sheep_fur_red.png");
     }
     93.75% {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_black.png");
+        background-image: url("../img/sheep/sheep_fur_black.png");
     }
     to {
-        background-image: url("../img/creature/animals/sheep/sheep_fur_white.png");
+        background-image: url("../img/sheep/sheep_fur_white.png");
     }
 }
 
@@ -141,165 +157,165 @@
 }
 
 #map-container .bluemapmobs-white-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_white.png");
+    background-image: url("../img/abstracthorse/horse/horse_white.png");
 }
 
 #map-container .bluemapmobs-creamy-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_creamy.png");
+    background-image: url("../img/abstracthorse/horse/horse_creamy.png");
 }
 
 #map-container .bluemapmobs-chestnut-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_chestnut.png");
+    background-image: url("../img/abstracthorse/horse/horse_chestnut.png");
 }
 
 #map-container .bluemapmobs-brown-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_brown.png");
+    background-image: url("../img/abstracthorse/horse/horse_brown.png");
 }
 
 #map-container .bluemapmobs-black-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_black.png");
+    background-image: url("../img/abstracthorse/horse/horse_black.png");
 }
 
 #map-container .bluemapmobs-gray-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_gray.png");
+    background-image: url("../img/abstracthorse/horse/horse_gray.png");
 }
 
 #map-container .bluemapmobs-darkbrown-horse img {
-    background-image: url("../img/creature/animals/abstracthorse/horse/horse_darkbrown.png");
+    background-image: url("../img/abstracthorse/horse/horse_darkbrown.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-black img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_black.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_black.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-blue img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_blue.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_blue.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-brown img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_brown.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_brown.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-cyan img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_cyan.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_cyan.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-gray img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_gray.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_gray.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-green img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_green.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_green.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-light-blue img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_light_blue.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_light_blue.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-light-gray img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_light_gray.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_light_gray.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-lime img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_lime.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_lime.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-magenta img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_magenta.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_magenta.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-orange img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_orange.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_orange.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-pink img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_pink.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_pink.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-purple img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_purple.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_purple.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-red img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_red.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_red.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-white img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_white.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_white.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-yellow img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_small_yellow.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_small_yellow.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-black img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_black.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_black.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-blue img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_blue.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_blue.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-brown img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_brown.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_brown.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-cyan img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_cyan.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_cyan.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-gray img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_gray.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_gray.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-green img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_green.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_green.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-light-blue img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_light_blue.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_light_blue.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-light-gray img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_light_gray.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_light_gray.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-lime img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_lime.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_lime.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-magenta img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_magenta.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_magenta.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-orange img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_orange.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_orange.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-pink img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_pink.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_pink.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-purple img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_purple.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_purple.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-red img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_red.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_red.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-white img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_white.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_white.png");
 }
 
 #map-container .bluemapmobs-tropical-fish-body-large-yellow img {
-    background-image: url("../img/creature/watermob/fish/tropical_fish/tropical_fish_body_large_yellow.png");
+    background-image: url("../img/tropical_fish/tropical_fish_body_large_yellow.png");
 }
 
 #map-container .bluemapmobs-adult-happy-ghast img {
-    background-image: url("../img/creature/animals/happy_ghast/adult.png");
+    background-image: url("../img/happy_ghast/adult.png");
 }
 
 #map-container .bluemapmobs-baby-happy-ghast img {
-    background-image: url("../img/creature/animals/happy_ghast/baby.png");
+    background-image: url("../img/happy_ghast/baby.png");
 }

@@ -8,4 +8,5 @@ public interface Strider extends Animal {
     default MarkerType getMarkerType() {
         return MobsMarkerType.STRIDER;
     }
+    boolean isShivering();
 }

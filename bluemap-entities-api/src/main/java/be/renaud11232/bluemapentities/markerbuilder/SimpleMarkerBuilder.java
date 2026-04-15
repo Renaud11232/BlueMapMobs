@@ -19,11 +19,6 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
         this.registry = new HashMap<>();
         this.defaultIcon = getDefaultIcon();
         this.defaultStyleClasses = getDefaultStyleClasses();
-        registerMarkerBuilders();
-    }
-
-    protected void registerMarkerBuilders() {
-
     }
 
     protected void register(MarkerType type, MarkerBuilder<? extends T> markerBuilder) {

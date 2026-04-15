@@ -1,13 +1,20 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Panda;
 
-public class PandaMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Panda, Panda.Gene> {
+public class PandaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Panda, Panda.Gene> {
     public PandaMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
+        registerVariantAdultIcon(Panda.Gene.NORMAL, MobsIcon.NORMAL_PANDA);
+        registerVariantAdultIcon(Panda.Gene.LAZY, MobsIcon.LAZY_PANDA);
+        registerVariantAdultIcon(Panda.Gene.WORRIED, MobsIcon.WORRIED_PANDA);
+        registerVariantAdultIcon(Panda.Gene.PLAYFUL, MobsIcon.PLAYFUL_PANDA);
+        registerVariantAdultIcon(Panda.Gene.AGGRESSIVE, MobsIcon.AGGRESSIVE_PANDA);
+        registerVariantAdultIcon(Panda.Gene.WEAK, MobsIcon.WEAK_PANDA);
+        registerVariantAdultIcon(Panda.Gene.BROWN, MobsIcon.BROWN_PANDA);
+        //TODO: add baby variants
     }
 
     @Override
@@ -20,16 +27,5 @@ public class PandaMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Panda, 
             return Panda.Gene.NORMAL;
         }
         return main;
-    }
-
-    @Override
-    protected void registerVariantIcons() {
-        registerVariantIcon(Panda.Gene.NORMAL, MobsIcon.NORMAL_PANDA);
-        registerVariantIcon(Panda.Gene.LAZY, MobsIcon.LAZY_PANDA);
-        registerVariantIcon(Panda.Gene.WORRIED, MobsIcon.WORRIED_PANDA);
-        registerVariantIcon(Panda.Gene.PLAYFUL, MobsIcon.PLAYFUL_PANDA);
-        registerVariantIcon(Panda.Gene.AGGRESSIVE, MobsIcon.AGGRESSIVE_PANDA);
-        registerVariantIcon(Panda.Gene.WEAK, MobsIcon.WEAK_PANDA);
-        registerVariantIcon(Panda.Gene.BROWN, MobsIcon.BROWN_PANDA);
     }
 }

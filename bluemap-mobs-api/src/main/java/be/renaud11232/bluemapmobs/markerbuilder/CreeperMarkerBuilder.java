@@ -8,16 +8,12 @@ import be.renaud11232.bluemapmobs.entity.Creeper;
 public class CreeperMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Creeper, Boolean> {
     public CreeperMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
+        registerVariantIcon(true, MobsIcon.CHARGED_CREEPER);
+        registerVariantIcon(false, MobsIcon.CREEPER);
     }
 
     @Override
     protected Boolean getVariant(Creeper creeper) {
         return creeper.isPowered();
-    }
-
-    @Override
-    protected void registerVariantIcons() {
-        registerVariantIcon(true, MobsIcon.CHARGED_CREEPER);
-        registerVariantIcon(false, MobsIcon.CREEPER);
     }
 }

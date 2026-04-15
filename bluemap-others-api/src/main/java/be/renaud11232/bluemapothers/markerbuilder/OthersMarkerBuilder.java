@@ -8,10 +8,6 @@ import be.renaud11232.bluemapothers.OthersMarkerType;
 public class OthersMarkerBuilder extends SimpleMarkerBuilder<Entity> {
     public OthersMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-    }
-
-    @Override
-    protected void registerMarkerBuilders() {
         register(OthersMarkerType.ARMOR_STAND, new ArmorStandMarkerBuilder(getAPI()));
         register(OthersMarkerType.MANNEQUIN, new MannequinMarkerBuilder(getAPI()));
     }

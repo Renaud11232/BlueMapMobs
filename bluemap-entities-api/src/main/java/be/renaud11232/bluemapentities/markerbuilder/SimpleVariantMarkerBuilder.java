@@ -16,14 +16,9 @@ public abstract class SimpleVariantMarkerBuilder<T extends Entity, ICON_VARIANT,
         super(api);
         this.icons = new HashMap<>();
         this.styleClasses = new HashMap<>();
-        registerVariantIcons();
-        registerVariantStyleClasses();
     }
 
     protected abstract ICON_VARIANT getIconVariant(T entity);
-
-    protected void registerVariantIcons() {
-    }
 
     protected void registerVariantIcon(ICON_VARIANT v, Icon icon) {
         icons.put(v, icon);
@@ -31,10 +26,7 @@ public abstract class SimpleVariantMarkerBuilder<T extends Entity, ICON_VARIANT,
 
     protected abstract STYLE_CLASSES_VARIANT getStyleClassesVariant(T entity);
 
-    protected void registerVariantStyleClasses() {
-    }
-
-    protected void registerVariantStyleClass(STYLE_CLASSES_VARIANT v, Collection<String> styleClasses) {
+    protected void registerVariantStyleClasses(STYLE_CLASSES_VARIANT v, Collection<String> styleClasses) {
         this.styleClasses.put(v, styleClasses);
     }
 

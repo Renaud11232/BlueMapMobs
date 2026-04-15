@@ -1,28 +1,37 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
+import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Villager;
 
-public class VillagerMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Villager, Villager.Type> {
+public class VillagerMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Villager, Villager.Type> {
     public VillagerMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
+        registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.SNOWY_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.SWAMP_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.TAIGA_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.DESERT, MobsIcon.DESERT_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.JUNGLE, MobsIcon.JUNGLE_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.PLAINS, MobsIcon.PLAINS_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.SAVANNA, MobsIcon.SAVANNA_VILLAGER);
+        //TODO: add baby variants
+    }
+
+    @Override
+    protected Icon getDefaultAdultIcon() {
+        //TODO: add default adult icon, if any
+        return super.getDefaultAdultIcon();
+    }
+
+    @Override
+    protected Icon getDefaultBabyIcon() {
+        //TODO: add default baby icon
+        return super.getDefaultBabyIcon();
     }
 
     @Override
     protected Villager.Type getVariant(Villager villager) {
         return villager.getType();
-    }
-
-    @Override
-    protected void registerVariantIcons() {
-        registerVariantIcon(Villager.Type.SNOW, MobsIcon.SNOWY_VILLAGER);
-        registerVariantIcon(Villager.Type.SWAMP, MobsIcon.SWAMP_VILLAGER);
-        registerVariantIcon(Villager.Type.TAIGA, MobsIcon.TAIGA_VILLAGER);
-        registerVariantIcon(Villager.Type.DESERT, MobsIcon.DESERT_VILLAGER);
-        registerVariantIcon(Villager.Type.JUNGLE, MobsIcon.JUNGLE_VILLAGER);
-        registerVariantIcon(Villager.Type.PLAINS, MobsIcon.PLAINS_VILLAGER);
-        registerVariantIcon(Villager.Type.SAVANNA, MobsIcon.SAVANNA_VILLAGER);
     }
 }

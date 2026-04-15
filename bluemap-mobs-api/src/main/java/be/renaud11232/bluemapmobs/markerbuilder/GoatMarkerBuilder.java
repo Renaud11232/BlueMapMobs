@@ -2,17 +2,22 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Goat;
 
-public class GoatMarkerBuilder extends SimpleMarkerBuilder<Goat> {
+public class GoatMarkerBuilder extends AgeableMarkerBuilder<Goat> {
     public GoatMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
     }
 
     @Override
-    protected Icon getDefaultIcon() {
+    protected Icon getDefaultAdultIcon() {
         return MobsIcon.GOAT;
+    }
+
+    @Override
+    protected Icon getDefaultBabyIcon() {
+        //TODO add baby icon
+        return super.getDefaultBabyIcon();
     }
 }

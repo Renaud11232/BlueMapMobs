@@ -46,7 +46,15 @@ public class MobsIcon {
     public static final Icon GOLD_AXOLOTL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/gold_axolotl.png", new Vector2i(12, 12));
     public static final Icon CYAN_AXOLOTL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/cyan_axolotl.png", new Vector2i(12, 12));
     public static final Icon BLUE_AXOLOTL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/blue_axolotl.png", new Vector2i(12, 12));
-    public static final Icon BEE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/bee.png", new Vector2i(12, 12));
+    public static final Icon AXOLOTL_LUCY_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_lucy_baby.png", new Vector2i(12, 12));
+    public static final Icon AXOLOTL_WILD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_wild_baby.png", new Vector2i(12, 12));
+    public static final Icon AXOLOTL_GOLD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_gold_baby.png", new Vector2i(12, 12));
+    public static final Icon AXOLOTL_CYAN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_cyan_baby.png", new Vector2i(12, 12));
+    public static final Icon AXOLOTL_BLUE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_blue_baby.png", new Vector2i(12, 12));
+    public static final Icon BEE_NECTAR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/bee/bee_nectar.png", new Vector2i(12, 12));
+    public static final Icon BEE_NO_NECTAR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/bee/bee_no_nectar.png", new Vector2i(12, 12));
+    public static final Icon BEE_BABY_NECTAR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/bee/bee_baby_nectar.png", new Vector2i(12, 12));
+    public static final Icon BEE_BABY_NO_NECTAR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/bee/bee_baby_no_nectar.png", new Vector2i(12, 12));
     public static final Icon ALL_BLACK_CAT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/all_black.png", new Vector2i(12, 12));
     public static final Icon BLACK_CAT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/black.png", new Vector2i(12, 12));
     public static final Icon BRITISH_SHORTHAIR_CAT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/british_shorthair.png", new Vector2i(12, 12));
@@ -184,7 +192,8 @@ public class MobsIcon {
     public static final Icon WARDEN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/warden.png", new Vector2i(12, 12));
     public static final Icon WITHER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/wither.png", new Vector2i(12, 12));
     public static final Icon ZOGLIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zoglin.png", new Vector2i(12, 12));
-    public static final Icon ZOMBIE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie/zombie.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie/zombie_baby.png", new Vector2i(12, 12));
     public static final Icon DROWNED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned.png", new Vector2i(12, 12));
     public static final Icon HUSK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/husk.png", new Vector2i(12, 12));
     public static final Icon PIG_ZOMBIE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig_zombie.png", new Vector2i(12, 12));

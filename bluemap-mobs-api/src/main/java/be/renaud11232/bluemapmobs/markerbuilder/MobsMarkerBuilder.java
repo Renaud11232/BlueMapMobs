@@ -13,10 +13,6 @@ import java.util.Optional;
 public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
     public MobsMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-    }
-
-    @Override
-    protected void registerMarkerBuilders() {
         register(MobsMarkerType.ALLAY, new AllayMarkerBuilder(getAPI()));
         register(MobsMarkerType.ARMADILLO, new ArmadilloMarkerBuilder(getAPI()));
         register(MobsMarkerType.AXOLOTL, new AxolotlMarkerBuilder(getAPI()));

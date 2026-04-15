@@ -2,17 +2,22 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Squid;
 
-public class SquidMarkerBuilder extends SimpleMarkerBuilder<Squid> {
+public class SquidMarkerBuilder extends AgeableMarkerBuilder<Squid> {
     public SquidMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
     }
 
     @Override
-    protected Icon getDefaultIcon() {
+    protected Icon getDefaultAdultIcon() {
         return MobsIcon.SQUID;
+    }
+
+    @Override
+    protected Icon getDefaultBabyIcon() {
+        //TODO: Add baby variant
+        return super.getDefaultBabyIcon();
     }
 }

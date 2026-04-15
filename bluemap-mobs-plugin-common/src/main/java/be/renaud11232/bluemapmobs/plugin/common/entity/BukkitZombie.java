@@ -2,7 +2,7 @@ package be.renaud11232.bluemapmobs.plugin.common.entity;
 
 import be.renaud11232.bluemapmobs.entity.Zombie;
 
-public class BukkitZombie extends BukkitMob<org.bukkit.entity.Zombie> implements Zombie {
+public class BukkitZombie extends BukkitAgeable<org.bukkit.entity.Zombie> implements Zombie {
     public BukkitZombie(org.bukkit.entity.Zombie wrapped) {
         super(wrapped);
     }

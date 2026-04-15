@@ -12,15 +12,6 @@ import java.io.IOException;
 public class CitizensMarkerBuilder extends SimpleSingleVariantMarkerBuilder<CitizensNPC, Integer> {
     public CitizensMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-    }
-
-    @Override
-    protected Integer getVariant(CitizensNPC entity) {
-        return Math.floorMod(entity.getUUID().hashCode(), 9);
-    }
-
-    @Override
-    protected void registerVariantIcons() {
         registerVariantIcon(0, CitizensIcon.ALEX);
         registerVariantIcon(1, CitizensIcon.ARI);
         registerVariantIcon(2, CitizensIcon.EFE);
@@ -30,6 +21,11 @@ public class CitizensMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Citi
         registerVariantIcon(6, CitizensIcon.STEVE);
         registerVariantIcon(7, CitizensIcon.SUNNY);
         registerVariantIcon(8, CitizensIcon.ZURI);
+    }
+
+    @Override
+    protected Integer getVariant(CitizensNPC entity) {
+        return Math.floorMod(entity.getUUID().hashCode(), 9);
     }
 
     @Override

@@ -6,4 +6,9 @@ public class BukkitStrider extends BukkitAgeable<org.bukkit.entity.Strider> impl
     public BukkitStrider(org.bukkit.entity.Strider wrapped) {
         super(wrapped);
     }
+
+    @Override
+    public boolean isShivering() {
+        return wrapped.isShivering();
+    }
 }
