@@ -89,6 +89,7 @@ public class MobsIcon {
     public static final Icon HAPPY_GHAST_HARNESS_PURPLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/happy_ghast/happy_ghast_harness_purple.png", new Vector2i(12, 12));
     public static final Icon HAPPY_GHAST_HARNESS_MAGENTA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/happy_ghast/happy_ghast_harness_magenta.png", new Vector2i(12, 12));
     public static final Icon HAPPY_GHAST_HARNESS_PINK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/happy_ghast/happy_ghast_harness_pink.png", new Vector2i(12, 12));
+    public static final Icon HAPPY_GHAST_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/happy_ghast/happy_ghast_baby.png", new Vector2i(12, 12));
     public static final Icon HOGLIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/hoglin.png", new Vector2i(12, 12));
     public static final Icon HORSE_MARKINGS_NONE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_none.png", new Vector2i(12, 12));
     public static final Icon HORSE_MARKINGS_WHITE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_white.png", new Vector2i(12, 12));

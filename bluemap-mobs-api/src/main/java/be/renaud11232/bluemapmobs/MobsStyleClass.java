@@ -9,7 +9,6 @@ public class MobsStyleClass {
     public static final String BEE_BABY = "bluemapmobs-bee-baby";
     public static final String BEE_ANGRY_BABY = "bluemapmobs-bee-angry-baby";
     public static final String HAPPY_GHAST = "bluemapmobs-happy-ghast";
-    public static final String HAPPY_GHAST_BABY = "bluemapmobs-happy-ghast-baby";
     public static final String HORSE_WHITE = "bluemapmobs-horse-white";
     public static final String HORSE_CREAMY = "bluemapmobs-horse-creamy";
     public static final String HORSE_CHESTNUT = "bluemapmobs-horse-chestnut";

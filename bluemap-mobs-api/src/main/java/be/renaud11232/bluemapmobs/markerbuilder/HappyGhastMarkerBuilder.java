@@ -31,18 +31,18 @@ public class HappyGhastMarkerBuilder extends AgeableSingleVariantMarkerBuilder<H
     }
 
     @Override
-    protected Icon getDefaultIcon() {
+    protected Icon getDefaultAdultIcon() {
         return MobsIcon.HAPPY_GHAST_HARNESS_NONE;
+    }
+
+    @Override
+    protected Icon getDefaultBabyIcon() {
+        return MobsIcon.HAPPY_GHAST_BABY;
     }
 
     @Override
     protected Collection<String> getDefaultAdultStyleClasses() {
         return List.of(MobsStyleClass.HAPPY_GHAST);
-    }
-
-    @Override
-    protected Collection<String> getDefaultBabyStyleClasses() {
-        return List.of(MobsStyleClass.HAPPY_GHAST_BABY);
     }
 
     @Override
