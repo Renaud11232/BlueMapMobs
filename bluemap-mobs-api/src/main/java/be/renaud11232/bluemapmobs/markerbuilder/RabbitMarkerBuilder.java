@@ -8,13 +8,13 @@ import be.renaud11232.bluemapmobs.entity.Rabbit;
 public class RabbitMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Rabbit, Rabbit.Type> {
     public RabbitMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Rabbit.Type.GOLD, MobsIcon.GOLD_RABBIT);
-        registerVariantAdultIcon(Rabbit.Type.WHITE, MobsIcon.WHITE_RABBIT);
-        registerVariantAdultIcon(Rabbit.Type.BLACK_AND_WHITE, MobsIcon.WHITE_SPLOTCHED_RABBIT);
-        registerVariantAdultIcon(Rabbit.Type.BLACK, MobsIcon.BLACK_RABBIT);
-        registerVariantAdultIcon(Rabbit.Type.BROWN, MobsIcon.BROWN_RABBIT);
-        registerVariantAdultIcon(Rabbit.Type.SALT_AND_PEPPER, MobsIcon.SALT_RABBIT);
-        registerVariantAdultIcon(Rabbit.Type.THE_KILLER_BUNNY, MobsIcon.CAERBANNOG_RABBIT);
+        registerVariantAdultIcon(Rabbit.Type.GOLD, MobsIcon.RABBIT_GOLD);
+        registerVariantAdultIcon(Rabbit.Type.WHITE, MobsIcon.RABBIT_WHITE);
+        registerVariantAdultIcon(Rabbit.Type.BLACK_AND_WHITE, MobsIcon.RABBIT_BLACK_AND_WHITE);
+        registerVariantAdultIcon(Rabbit.Type.BLACK, MobsIcon.RABBIT_BLACK);
+        registerVariantAdultIcon(Rabbit.Type.BROWN, MobsIcon.RABBIT_BROWN);
+        registerVariantAdultIcon(Rabbit.Type.SALT_AND_PEPPER, MobsIcon.RABBIT_SALT);
+        registerVariantAdultIcon(Rabbit.Type.THE_KILLER_BUNNY, MobsIcon.RABBIT_CAERBANNOG);
         //TODO: Baby variants
     }
 
@@ -26,7 +26,7 @@ public class RabbitMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Rabbi
     @Override
     protected Icon getAdultIcon(Rabbit rabbit) {
         if (rabbit.getName().equals("Toast")) {
-            return MobsIcon.TOAST_RABBIT;
+            return MobsIcon.RABBIT_TOAST;
         }
         return super.getAdultIcon(rabbit);
     }

@@ -7,9 +7,9 @@ import be.renaud11232.bluemapmobs.entity.Pig;
 public class PigMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Pig, Pig.Variant> {
     public PigMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Pig.Variant.TEMPERATE, MobsIcon.TEMPERATE_PIG);
-        registerVariantAdultIcon(Pig.Variant.COLD, MobsIcon.COLD_PIG);
-        registerVariantAdultIcon(Pig.Variant.WARM, MobsIcon.WARM_PIG);
+        registerVariantAdultIcon(Pig.Variant.TEMPERATE, MobsIcon.PIG_TEMPERATE);
+        registerVariantAdultIcon(Pig.Variant.COLD, MobsIcon.PIG_COLD);
+        registerVariantAdultIcon(Pig.Variant.WARM, MobsIcon.PIG_WARM);
         //TODO: Baby variants
     }
 

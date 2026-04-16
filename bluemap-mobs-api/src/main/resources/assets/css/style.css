@@ -14,91 +14,127 @@
     background-image: url("../img/bee/bee_baby.png");
 }
 
-#map-container .bluemapmobs-bee-baby-angry img {
-    background-image: url("../img/bee/bee_baby_angry.png");
+#map-container .bluemapmobs-bee-angry-baby img {
+    background-image: url("../img/bee/bee_angry_baby.png");
 }
 
-#map-container .bluemapmobs-creamy-llama img {
-    background-image: url("../img/llama/creamy_llama.png");
+#map-container .bluemapmobs-happy-ghast img {
+    background-image: url("../img/happy_ghast/happy_ghast.png");
 }
 
-#map-container .bluemapmobs-white-llama img {
-    background-image: url("../img/llama/white_llama.png");
+#map-container .bluemapmobs-happy-ghast-baby img {
+    background-image: url("../img/happy_ghast/happy_ghast_baby.png");
 }
 
-#map-container .bluemapmobs-gray-llama img {
-    background-image: url("../img/llama/gray_llama.png");
+#map-container .bluemapmobs-horse-white img {
+    background-image: url("../img/horse/horse_white.png");
 }
 
-#map-container .bluemapmobs-brown-llama img {
-    background-image: url("../img/llama/brown_llama.png");
+#map-container .bluemapmobs-horse-creamy img {
+    background-image: url("../img/horse/horse_creamy.png");
 }
 
-#map-container .bluemapmobs-white-sheep img {
+#map-container .bluemapmobs-horse-chestnut img {
+    background-image: url("../img/horse/horse_chestnut.png");
+}
+
+#map-container .bluemapmobs-horse-brown img {
+    background-image: url("../img/horse/horse_brown.png");
+}
+
+#map-container .bluemapmobs-horse-black img {
+    background-image: url("../img/horse/horse_black.png");
+}
+
+#map-container .bluemapmobs-horse-gray img {
+    background-image: url("../img/horse/horse_gray.png");
+}
+
+#map-container .bluemapmobs-horse-dark-brown img {
+    background-image: url("../img/horse/horse_dark_brown.png");
+}
+
+#map-container .bluemapmobs-llama-creamy img {
+    background-image: url("../img/llama/llama_creamy.png");
+}
+
+#map-container .bluemapmobs-llama-white img {
+    background-image: url("../img/llama/llama_white.png");
+}
+
+#map-container .bluemapmobs-llama-gray img {
+    background-image: url("../img/llama/llama_gray.png");
+}
+
+#map-container .bluemapmobs-llama-brown img {
+    background-image: url("../img/llama/llama_brown.png");
+}
+
+#map-container .bluemapmobs-sheep-fur-white img {
     background-image: url("../img/sheep/sheep_fur_white.png");
 }
 
-#map-container .bluemapmobs-lightgray-sheep img {
+#map-container .bluemapmobs-sheep-fur-light-gray img {
     background-image: url("../img/sheep/sheep_fur_light_gray.png");
 }
 
-#map-container .bluemapmobs-gray-sheep img {
+#map-container .bluemapmobs-sheep-fur-gray img {
     background-image: url("../img/sheep/sheep_fur_gray.png");
 }
 
-#map-container .bluemapmobs-black-sheep img {
+#map-container .bluemapmobs-sheep-fur-black img {
     background-image: url("../img/sheep/sheep_fur_black.png");
 }
 
-#map-container .bluemapmobs-brown-sheep img {
+#map-container .bluemapmobs-sheep-fur-brown img {
     background-image: url("../img/sheep/sheep_fur_brown.png");
 }
 
-#map-container .bluemapmobs-red-sheep img {
+#map-container .bluemapmobs-sheep-fur-red img {
     background-image: url("../img/sheep/sheep_fur_red.png");
 }
 
-#map-container .bluemapmobs-orange-sheep img {
+#map-container .bluemapmobs-sheep-fur-orange img {
     background-image: url("../img/sheep/sheep_fur_orange.png");
 }
 
-#map-container .bluemapmobs-yellow-sheep img {
+#map-container .bluemapmobs-sheep-fur-yellow img {
     background-image: url("../img/sheep/sheep_fur_yellow.png");
 }
 
-#map-container .bluemapmobs-lime-sheep img {
+#map-container .bluemapmobs-sheep-fur-lime img {
     background-image: url("../img/sheep/sheep_fur_lime.png");
 }
 
-#map-container .bluemapmobs-green-sheep img {
+#map-container .bluemapmobs-sheep-fur-green img {
     background-image: url("../img/sheep/sheep_fur_green.png");
 }
 
-#map-container .bluemapmobs-cyan-sheep img {
+#map-container .bluemapmobs-sheep-fur-cyan img {
     background-image: url("../img/sheep/sheep_fur_cyan.png");
 }
 
-#map-container .bluemapmobs-lightblue-sheep img {
+#map-container .bluemapmobs-sheep-fur-light-blue img {
     background-image: url("../img/sheep/sheep_fur_light_blue.png");
 }
 
-#map-container .bluemapmobs-blue-sheep img {
+#map-container .bluemapmobs-sheep-fur-blue img {
     background-image: url("../img/sheep/sheep_fur_blue.png");
 }
 
-#map-container .bluemapmobs-purple-sheep img {
+#map-container .bluemapmobs-sheep-fur-purple img {
     background-image: url("../img/sheep/sheep_fur_purple.png");
 }
 
-#map-container .bluemapmobs-magenta-sheep img {
+#map-container .bluemapmobs-sheep-fur-magenta img {
     background-image: url("../img/sheep/sheep_fur_magenta.png");
 }
 
-#map-container .bluemapmobs-pink-sheep img {
+#map-container .bluemapmobs-sheep-fur-pink img {
     background-image: url("../img/sheep/sheep_fur_pink.png");
 }
 
-@keyframes bluemapmobs-jeb-sheep-animation {
+@keyframes bluemapmobs-sheep-jeb-animation {
     from {
         background-image: url("../img/sheep/sheep_fur_white.png");
     }
@@ -152,36 +188,8 @@
     }
 }
 
-#map-container .bluemapmobs-jeb-sheep img {
-    animation: bluemapmobs-jeb-sheep-animation 20s linear infinite;
-}
-
-#map-container .bluemapmobs-white-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_white.png");
-}
-
-#map-container .bluemapmobs-creamy-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_creamy.png");
-}
-
-#map-container .bluemapmobs-chestnut-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_chestnut.png");
-}
-
-#map-container .bluemapmobs-brown-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_brown.png");
-}
-
-#map-container .bluemapmobs-black-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_black.png");
-}
-
-#map-container .bluemapmobs-gray-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_gray.png");
-}
-
-#map-container .bluemapmobs-darkbrown-horse img {
-    background-image: url("../img/abstracthorse/horse/horse_darkbrown.png");
+#map-container .bluemapmobs-sheep-fur-jeb img {
+    animation: bluemapmobs-sheep-jeb-animation 20s linear infinite;
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-black img {
@@ -310,12 +318,4 @@
 
 #map-container .bluemapmobs-tropical-fish-body-large-yellow img {
     background-image: url("../img/tropical_fish/tropical_fish_body_large_yellow.png");
-}
-
-#map-container .bluemapmobs-adult-happy-ghast img {
-    background-image: url("../img/happy_ghast/adult.png");
-}
-
-#map-container .bluemapmobs-baby-happy-ghast img {
-    background-image: url("../img/happy_ghast/baby.png");
 }

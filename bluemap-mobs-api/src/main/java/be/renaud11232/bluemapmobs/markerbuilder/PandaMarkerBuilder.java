@@ -7,13 +7,13 @@ import be.renaud11232.bluemapmobs.entity.Panda;
 public class PandaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Panda, Panda.Gene> {
     public PandaMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Panda.Gene.NORMAL, MobsIcon.NORMAL_PANDA);
-        registerVariantAdultIcon(Panda.Gene.LAZY, MobsIcon.LAZY_PANDA);
-        registerVariantAdultIcon(Panda.Gene.WORRIED, MobsIcon.WORRIED_PANDA);
-        registerVariantAdultIcon(Panda.Gene.PLAYFUL, MobsIcon.PLAYFUL_PANDA);
-        registerVariantAdultIcon(Panda.Gene.AGGRESSIVE, MobsIcon.AGGRESSIVE_PANDA);
-        registerVariantAdultIcon(Panda.Gene.WEAK, MobsIcon.WEAK_PANDA);
-        registerVariantAdultIcon(Panda.Gene.BROWN, MobsIcon.BROWN_PANDA);
+        registerVariantAdultIcon(Panda.Gene.NORMAL, MobsIcon.PANDA_NORMAL);
+        registerVariantAdultIcon(Panda.Gene.LAZY, MobsIcon.PANDA_LAZY);
+        registerVariantAdultIcon(Panda.Gene.WORRIED, MobsIcon.PANDA_WORRIED);
+        registerVariantAdultIcon(Panda.Gene.PLAYFUL, MobsIcon.PANDA_PLAYFUL);
+        registerVariantAdultIcon(Panda.Gene.AGGRESSIVE, MobsIcon.PANDA_AGGRESSIVE);
+        registerVariantAdultIcon(Panda.Gene.WEAK, MobsIcon.PANDA_WEAK);
+        registerVariantAdultIcon(Panda.Gene.BROWN, MobsIcon.PANDA_BROWN);
         //TODO: add baby variants
     }
 

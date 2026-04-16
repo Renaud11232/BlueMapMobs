@@ -11,32 +11,32 @@ import java.util.List;
 public class LlamaMarkerBuilder extends AgeableVariantMarkerBuilder<Llama, Llama.Carpet, Llama.Color> {
     public LlamaMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Llama.Carpet.WHITE, MobsIcon.WHITE_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.LIGHT_GRAY, MobsIcon.LIGHT_GRAY_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.GRAY, MobsIcon.GRAY_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.BLACK, MobsIcon.BLACK_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.BROWN, MobsIcon.BROWN_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.RED, MobsIcon.RED_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.ORANGE, MobsIcon.ORANGE_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.YELLOW, MobsIcon.YELLOW_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.LIME, MobsIcon.LIME_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.GREEN, MobsIcon.GREEN_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.CYAN, MobsIcon.CYAN_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.LIGHT_BLUE, MobsIcon.LIGHT_BLUE_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.BLUE, MobsIcon.BLUE_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.PURPLE, MobsIcon.PURPLE_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.MAGENTA, MobsIcon.MAGENTA_LLAMA_DECOR);
-        registerVariantAdultIcon(Llama.Carpet.PINK, MobsIcon.PINK_LLAMA_DECOR);
-        registerVariantAdultStyleClasses(Llama.Color.CREAMY, List.of(MobsStyleClass.CREAMY_LLAMA));
-        registerVariantAdultStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.WHITE_LLAMA));
-        registerVariantAdultStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.GRAY_LLAMA));
-        registerVariantAdultStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.BROWN_LLAMA));
+        registerVariantAdultIcon(Llama.Carpet.WHITE, MobsIcon.LLAMA_DECOR_WHITE);
+        registerVariantAdultIcon(Llama.Carpet.LIGHT_GRAY, MobsIcon.LLAMA_DECOR_LIGHT_GRAY);
+        registerVariantAdultIcon(Llama.Carpet.GRAY, MobsIcon.LLAMA_DECOR_GRAY);
+        registerVariantAdultIcon(Llama.Carpet.BLACK, MobsIcon.LLAMA_DECOR_BLACK);
+        registerVariantAdultIcon(Llama.Carpet.BROWN, MobsIcon.LLAMA_DECOR_BROWN);
+        registerVariantAdultIcon(Llama.Carpet.RED, MobsIcon.LLAMA_DECOR_RED);
+        registerVariantAdultIcon(Llama.Carpet.ORANGE, MobsIcon.LLAMA_DECOR_ORANGE);
+        registerVariantAdultIcon(Llama.Carpet.YELLOW, MobsIcon.LLAMA_DECOR_YELLOW);
+        registerVariantAdultIcon(Llama.Carpet.LIME, MobsIcon.LLAMA_DECOR_LIME);
+        registerVariantAdultIcon(Llama.Carpet.GREEN, MobsIcon.LLAMA_DECOR_GREEN);
+        registerVariantAdultIcon(Llama.Carpet.CYAN, MobsIcon.LLAMA_DECOR_CYAN);
+        registerVariantAdultIcon(Llama.Carpet.LIGHT_BLUE, MobsIcon.LLAMA_DECOR_LIGHT_BLUE);
+        registerVariantAdultIcon(Llama.Carpet.BLUE, MobsIcon.LLAMA_DECOR_BLUE);
+        registerVariantAdultIcon(Llama.Carpet.PURPLE, MobsIcon.LLAMA_DECOR_PURPLE);
+        registerVariantAdultIcon(Llama.Carpet.MAGENTA, MobsIcon.LLAMA_DECOR_MAGENTA);
+        registerVariantAdultIcon(Llama.Carpet.PINK, MobsIcon.LLAMA_DECOR_PINK);
+        registerVariantAdultStyleClasses(Llama.Color.CREAMY, List.of(MobsStyleClass.LLAMA_CREAMY));
+        registerVariantAdultStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.LLAMA_WHITE));
+        registerVariantAdultStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.LLAMA_GRAY));
+        registerVariantAdultStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.LLAMA_BROWN));
         //TODO: add baby variants
     }
 
     @Override
     protected Icon getDefaultIcon() {
-        return MobsIcon.LLAMA_EMPTY_DECOR;
+        return MobsIcon.LLAMA_DECOR_NONE;
     }
 
     @Override

@@ -9,13 +9,13 @@ import be.renaud11232.bluemapmobs.entity.ZombieVillager;
 public class ZombieVillagerMarkerBuilder extends AgeableSingleVariantMarkerBuilder<ZombieVillager, Villager.Type> {
     public ZombieVillagerMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.SNOWY_ZOMBIE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.SWAMP_ZOMBIE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.TAIGA_ZOMBIE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.DESERT, MobsIcon.DESERT_ZOMBIE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.JUNGLE, MobsIcon.JUNGLE_ZOMBIE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.PLAINS, MobsIcon.PLAINS_ZOMBIE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.SAVANNA, MobsIcon.SAVANNA_ZOMBIE_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.ZOMBIE_VILLAGER_SNOWY);
+        registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.ZOMBIE_VILLAGER_SWAMP);
+        registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.ZOMBIE_VILLAGER_TAIGA);
+        registerVariantAdultIcon(Villager.Type.DESERT, MobsIcon.ZOMBIE_VILLAGER_DESERT);
+        registerVariantAdultIcon(Villager.Type.JUNGLE, MobsIcon.ZOMBIE_VILLAGER_JUNGLE);
+        registerVariantAdultIcon(Villager.Type.PLAINS, MobsIcon.ZOMBIE_VILLAGER_PLAINS);
+        registerVariantAdultIcon(Villager.Type.SAVANNA, MobsIcon.ZOMBIE_VILLAGER_SAVANNA);
         //TODO: add baby variants
     }
 

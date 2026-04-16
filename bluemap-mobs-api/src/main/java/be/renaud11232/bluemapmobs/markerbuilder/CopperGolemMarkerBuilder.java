@@ -8,10 +8,10 @@ import be.renaud11232.bluemapmobs.entity.CopperGolem;
 public class CopperGolemMarkerBuilder extends SimpleSingleVariantMarkerBuilder<CopperGolem, CopperGolem.CopperWeatherState> {
     public CopperGolemMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantIcon(CopperGolem.CopperWeatherState.UNAFFECTED, MobsIcon.UNAFFECTED_COPPER_GOLEM);
-        registerVariantIcon(CopperGolem.CopperWeatherState.EXPOSED, MobsIcon.EXPOSED_COPPER_GOLEM);
-        registerVariantIcon(CopperGolem.CopperWeatherState.WEATHERED, MobsIcon.WEATHERED_COPPER_GOLEM);
-        registerVariantIcon(CopperGolem.CopperWeatherState.OXIDIZED, MobsIcon.OXIDIZED_COPPER_GOLEM);
+        registerVariantIcon(CopperGolem.CopperWeatherState.UNAFFECTED, MobsIcon.COPPER_GOLEM_UNAFFECTED);
+        registerVariantIcon(CopperGolem.CopperWeatherState.EXPOSED, MobsIcon.COPPER_GOLEM_EXPOSED);
+        registerVariantIcon(CopperGolem.CopperWeatherState.WEATHERED, MobsIcon.COPPER_GOLEM_WEATHERED);
+        registerVariantIcon(CopperGolem.CopperWeatherState.OXIDIZED, MobsIcon.COPPER_GOLEM_OXIDIZED);
     }
 
     @Override

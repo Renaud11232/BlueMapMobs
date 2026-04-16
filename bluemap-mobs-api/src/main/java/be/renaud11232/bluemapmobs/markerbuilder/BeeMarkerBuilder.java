@@ -11,12 +11,12 @@ public class BeeMarkerBuilder extends AgeableVariantMarkerBuilder<Bee, Boolean, 
     public BeeMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
         registerVariantAdultIcon(true, MobsIcon.BEE_NECTAR);
-        registerVariantAdultIcon(false, MobsIcon.BEE_NO_NECTAR);
+        registerVariantAdultIcon(false, MobsIcon.BEE_NECTAR_NONE);
         registerVariantAdultStyleClasses(true, List.of(MobsStyleClass.BEE_ANGRY));
         registerVariantAdultStyleClasses(false, List.of(MobsStyleClass.BEE));
-        registerVariantBabyIcon(true, MobsIcon.BEE_BABY_NECTAR);
-        registerVariantBabyIcon(false, MobsIcon.BEE_BABY_NO_NECTAR);
-        registerVariantBabyStyleClasses(true, List.of(MobsStyleClass.BEE_BABY_ANGRY));
+        registerVariantBabyIcon(true, MobsIcon.BEE_NECTAR_BABY);
+        registerVariantBabyIcon(false, MobsIcon.BEE_NECTAR_NONE_BABY);
+        registerVariantBabyStyleClasses(true, List.of(MobsStyleClass.BEE_ANGRY_BABY));
         registerVariantBabyStyleClasses(false, List.of(MobsStyleClass.BEE_BABY));
     }
 

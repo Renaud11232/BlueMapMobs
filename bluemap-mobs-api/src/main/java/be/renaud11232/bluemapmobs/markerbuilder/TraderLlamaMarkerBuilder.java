@@ -12,10 +12,10 @@ import java.util.List;
 public class TraderLlamaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<TraderLlama, Llama.Color> {
     public TraderLlamaMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultStyleClasses(Llama.Color.CREAMY, List.of(MobsStyleClass.CREAMY_LLAMA));
-        registerVariantAdultStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.WHITE_LLAMA));
-        registerVariantAdultStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.GRAY_LLAMA));
-        registerVariantAdultStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.BROWN_LLAMA));
+        registerVariantAdultStyleClasses(Llama.Color.CREAMY, List.of(MobsStyleClass.LLAMA_CREAMY));
+        registerVariantAdultStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.LLAMA_WHITE));
+        registerVariantAdultStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.LLAMA_GRAY));
+        registerVariantAdultStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.LLAMA_BROWN));
     }
 
     @Override

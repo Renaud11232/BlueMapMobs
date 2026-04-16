@@ -7,8 +7,8 @@ import be.renaud11232.bluemapmobs.entity.MushroomCow;
 public class MushroomCowMarkerBuilder extends AgeableSingleVariantMarkerBuilder<MushroomCow, MushroomCow.Variant> {
     public MushroomCowMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(MushroomCow.Variant.RED, MobsIcon.RED_MOOSHROOM);
-        registerVariantAdultIcon(MushroomCow.Variant.BROWN, MobsIcon.BROWN_MOOSHROOM);
+        registerVariantAdultIcon(MushroomCow.Variant.RED, MobsIcon.MUSHROOM_COW_RED);
+        registerVariantAdultIcon(MushroomCow.Variant.BROWN, MobsIcon.MUSHROOM_COW_BROWN);
         //TODO: Baby variants
     }
 

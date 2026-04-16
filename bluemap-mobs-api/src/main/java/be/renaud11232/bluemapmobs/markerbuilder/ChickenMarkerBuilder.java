@@ -7,9 +7,9 @@ import be.renaud11232.bluemapmobs.entity.Chicken;
 public class ChickenMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Chicken, Chicken.Variant> {
     public ChickenMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Chicken.Variant.TEMPERATE, MobsIcon.TEMPERATE_CHICKEN);
-        registerVariantAdultIcon(Chicken.Variant.COLD, MobsIcon.COLD_CHICKEN);
-        registerVariantAdultIcon(Chicken.Variant.WARM, MobsIcon.WARM_CHICKEN);
+        registerVariantAdultIcon(Chicken.Variant.TEMPERATE, MobsIcon.CHICKEN_TEMPERATE);
+        registerVariantAdultIcon(Chicken.Variant.COLD, MobsIcon.CHICKEN_COLD);
+        registerVariantAdultIcon(Chicken.Variant.WARM, MobsIcon.CHICKEN_WARM);
         //TODO: Baby variants
     }
 

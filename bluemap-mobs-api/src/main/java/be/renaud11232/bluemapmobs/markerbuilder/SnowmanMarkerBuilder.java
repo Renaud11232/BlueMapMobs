@@ -8,8 +8,8 @@ import be.renaud11232.bluemapmobs.entity.Snowman;
 public class SnowmanMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Snowman, Boolean> {
     public SnowmanMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantIcon(true, MobsIcon.DERP_SNOWMAN);
-        registerVariantIcon(false, MobsIcon.NORMAL_SNOWMAN);
+        registerVariantIcon(true, MobsIcon.SNOWMAN_DERP);
+        registerVariantIcon(false, MobsIcon.SNOWMAN);
     }
 
     @Override

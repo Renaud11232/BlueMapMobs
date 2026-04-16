@@ -13,22 +13,22 @@ import java.util.List;
 public class SheepMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Sheep, Sheep.Color> {
     public SheepMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultStyleClasses(Sheep.Color.WHITE, List.of(MobsStyleClass.WHITE_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.ORANGE, List.of(MobsStyleClass.ORANGE_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.MAGENTA, List.of(MobsStyleClass.MAGENTA_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.LIGHT_BLUE, List.of(MobsStyleClass.LIGHT_BLUE_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.YELLOW, List.of(MobsStyleClass.YELLOW_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.LIME, List.of(MobsStyleClass.LIME_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.PINK, List.of(MobsStyleClass.PINK_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.GRAY, List.of(MobsStyleClass.GRAY_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.LIGHT_GRAY, List.of(MobsStyleClass.LIGHT_GRAY_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.CYAN, List.of(MobsStyleClass.CYAN_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.PURPLE, List.of(MobsStyleClass.PURPLE_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.BLUE, List.of(MobsStyleClass.BLUE_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.BROWN, List.of(MobsStyleClass.BROWN_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.GREEN, List.of(MobsStyleClass.GREEN_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.RED, List.of(MobsStyleClass.RED_SHEEP));
-        registerVariantAdultStyleClasses(Sheep.Color.BLACK, List.of(MobsStyleClass.BLACK_SHEEP));
+        registerVariantAdultStyleClasses(Sheep.Color.WHITE, List.of(MobsStyleClass.SHEEP_WHITE));
+        registerVariantAdultStyleClasses(Sheep.Color.ORANGE, List.of(MobsStyleClass.SHEEP_ORANGE));
+        registerVariantAdultStyleClasses(Sheep.Color.MAGENTA, List.of(MobsStyleClass.SHEEP_MAGENTA));
+        registerVariantAdultStyleClasses(Sheep.Color.LIGHT_BLUE, List.of(MobsStyleClass.SHEEP_LIGHT_BLUE));
+        registerVariantAdultStyleClasses(Sheep.Color.YELLOW, List.of(MobsStyleClass.SHEEP_YELLOW));
+        registerVariantAdultStyleClasses(Sheep.Color.LIME, List.of(MobsStyleClass.SHEEP_LIME));
+        registerVariantAdultStyleClasses(Sheep.Color.PINK, List.of(MobsStyleClass.SHEEP_PINK));
+        registerVariantAdultStyleClasses(Sheep.Color.GRAY, List.of(MobsStyleClass.SHEEP_GRAY));
+        registerVariantAdultStyleClasses(Sheep.Color.LIGHT_GRAY, List.of(MobsStyleClass.SHEEP_LIGHT_GRAY));
+        registerVariantAdultStyleClasses(Sheep.Color.CYAN, List.of(MobsStyleClass.SHEEP_CYAN));
+        registerVariantAdultStyleClasses(Sheep.Color.PURPLE, List.of(MobsStyleClass.SHEEP_PURPLE));
+        registerVariantAdultStyleClasses(Sheep.Color.BLUE, List.of(MobsStyleClass.SHEEP_BLUE));
+        registerVariantAdultStyleClasses(Sheep.Color.BROWN, List.of(MobsStyleClass.SHEEP_BROWN));
+        registerVariantAdultStyleClasses(Sheep.Color.GREEN, List.of(MobsStyleClass.SHEEP_GREEN));
+        registerVariantAdultStyleClasses(Sheep.Color.RED, List.of(MobsStyleClass.SHEEP_RED));
+        registerVariantAdultStyleClasses(Sheep.Color.BLACK, List.of(MobsStyleClass.SHEEP_BLACK));
         //TODO: Add baby variants
     }
 
@@ -44,7 +44,7 @@ public class SheepMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Sheep,
 
     @Override
     protected Collection<String> getDefaultAdultStyleClasses() {
-        return List.of(MobsStyleClass.WHITE_SHEEP);
+        return List.of(MobsStyleClass.SHEEP_WHITE);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class SheepMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Sheep,
         Collection<String> styleClasses = super.getStyleClasses(sheep);
         if (sheep.getName().equals("jeb_")) {
             styleClasses = new ArrayList<>(styleClasses);
-            styleClasses.add(MobsStyleClass.JEB_SHEEP);
+            styleClasses.add(MobsStyleClass.SHEEP_JEB);
         }
         return styleClasses;
     }

@@ -8,13 +8,13 @@ import be.renaud11232.bluemapmobs.entity.Villager;
 public class VillagerMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Villager, Villager.Type> {
     public VillagerMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.SNOWY_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.SWAMP_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.TAIGA_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.DESERT, MobsIcon.DESERT_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.JUNGLE, MobsIcon.JUNGLE_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.PLAINS, MobsIcon.PLAINS_VILLAGER);
-        registerVariantAdultIcon(Villager.Type.SAVANNA, MobsIcon.SAVANNA_VILLAGER);
+        registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.VILLAGER_SNOWY);
+        registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.VILLAGER_SWAMP);
+        registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.VILLAGER_TAIGA);
+        registerVariantAdultIcon(Villager.Type.DESERT, MobsIcon.VILLAGER_DESERT);
+        registerVariantAdultIcon(Villager.Type.JUNGLE, MobsIcon.VILLAGER_JUNGLE);
+        registerVariantAdultIcon(Villager.Type.PLAINS, MobsIcon.VILLAGER_PLAINS);
+        registerVariantAdultIcon(Villager.Type.SAVANNA, MobsIcon.VILLAGER_SAVANNA);
         //TODO: add baby variants
     }
 
