@@ -28,6 +28,7 @@ public class MobsIcon {
     public static final Icon BREEZE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/breeze.png", new Vector2i(12, 12));
     public static final Icon CAMEL_HUSK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/camel_husk.png", new Vector2i(12, 12));
     public static final Icon CAMEL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/camel.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+5+5 -sample 600% \) -geometry +1+7 -composite \( ${TEXTURE}.png -crop 3x2+2+26 -sample 600% \) -geometry +7+19 -composite \( ${TEXTURE}.png -crop 1x1+2+12 -sample 600% \) -geometry +4+1 -composite \( ${TEXTURE}.png -crop 1x1+8+12 -sample 600% \) -geometry +22+1 -composite -strip ${TEXTURE}_out.png
     public static final Icon CAT_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_red.png", new Vector2i(12, 12));
     public static final Icon CAT_BLACK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_black.png", new Vector2i(12, 12));
     public static final Icon CAT_TABBY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_tabby.png", new Vector2i(12, 12));
@@ -39,6 +40,18 @@ public class MobsIcon {
     public static final Icon CAT_SIAMESE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_siamese.png", new Vector2i(12, 12));
     public static final Icon CAT_ALL_BLACK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_all_black.png", new Vector2i(12, 12));
     public static final Icon CAT_BRITISH_SHORTHAIR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_british_shorthair.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+4+4 -sample 400% \) -geometry +6+10 -composite \( ${TEXTURE}.png -crop 3x2+19+4 -sample 400% \) -geometry +10+18 -composite \( ${TEXTURE}.png -crop 1x1+20+2 -sample 400% \) -geometry +8+6 -composite \( ${TEXTURE}.png -crop 1x1+26+2 -sample 400% \) -geometry +20+6 -composite -strip ${TEXTURE}_out.png
+    public static final Icon CAT_RED_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_red_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_BLACK_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_black_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_TABBY_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_tabby_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_WHITE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_white_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_CALICO_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_calico_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_JELLIE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_jellie_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_PERSIAN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_persian_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_RAGDOLL_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_ragdoll_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_SIAMESE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_siamese_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_ALL_BLACK_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_all_black_baby.png", new Vector2i(12, 12));
+    public static final Icon CAT_BRITISH_SHORTHAIR_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_british_shorthair_baby.png", new Vector2i(12, 12));
     public static final Icon CAVE_SPIDER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cave_spider.png", new Vector2i(12, 12));
     public static final Icon CHICKEN_TEMPERATE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_temperate.png", new Vector2i(12, 12));
     public static final Icon CHICKEN_COLD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_cold.png", new Vector2i(12, 12));
@@ -121,7 +134,9 @@ public class MobsIcon {
     public static final Icon MUSHROOM_COW_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_red.png", new Vector2i(12, 12));
     public static final Icon MUSHROOM_COW_BROWN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_brown.png", new Vector2i(12, 12));
     public static final Icon NAUTILUS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+5+5 -sample 600% \) -geometry +1+7 -composite \( ${TEXTURE}.png -crop 3x2+2+26 -sample 600% \) -geometry +7+19 -composite \( ${TEXTURE}.png -crop 1x1+2+12 -sample 600% \) -geometry +4+1 -composite \( ${TEXTURE}.png -crop 1x1+8+12 -sample 600% \) -geometry +22+1 -composite -strip ${TEXTURE}_out.png
     public static final Icon OCELOT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+4+4 -sample 400% \) -geometry +6+10 -composite \( ${TEXTURE}.png -crop 3x2+19+4 -sample 400% \) -geometry +10+18 -composite \( ${TEXTURE}.png -crop 1x1+20+2 -sample 400% \) -geometry +8+6 -composite \( ${TEXTURE}.png -crop 1x1+26+2 -sample 400% \) -geometry +20+6 -composite -strip ${TEXTURE}_out.png
     public static final Icon OCELOT_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot_baby.png", new Vector2i(12, 12));
     public static final Icon PANDA_NORMAL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_normal.png", new Vector2i(12, 12));
     public static final Icon PANDA_LAZY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_lazy.png", new Vector2i(12, 12));
