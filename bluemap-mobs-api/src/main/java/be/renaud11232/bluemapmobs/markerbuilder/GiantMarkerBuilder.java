@@ -2,11 +2,10 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Giant;
 
-public class GiantMarkerBuilder extends SimpleMarkerBuilder<Giant> {
+public class GiantMarkerBuilder extends MobMarkerBuilder<Giant> {
     public GiantMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
     }

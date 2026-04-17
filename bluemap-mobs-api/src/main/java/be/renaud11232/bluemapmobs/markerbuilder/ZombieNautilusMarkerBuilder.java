@@ -1,11 +1,10 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.ZombieNautilus;
 
-public class ZombieNautilusMarkerBuilder extends SimpleSingleVariantMarkerBuilder<ZombieNautilus, ZombieNautilus.Variant> {
+public class ZombieNautilusMarkerBuilder extends MobSingleVariantMarkerBuilder<ZombieNautilus, ZombieNautilus.Variant> {
     public ZombieNautilusMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
         registerVariantIcon(ZombieNautilus.Variant.TEMPERATE, MobsIcon.ZOMBIE_NAUTILUS_TEMPERATE);

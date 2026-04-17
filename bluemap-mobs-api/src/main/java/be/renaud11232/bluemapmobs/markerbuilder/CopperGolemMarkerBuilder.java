@@ -1,11 +1,10 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.CopperGolem;
 
-public class CopperGolemMarkerBuilder extends SimpleSingleVariantMarkerBuilder<CopperGolem, CopperGolem.CopperWeatherState> {
+public class CopperGolemMarkerBuilder extends MobSingleVariantMarkerBuilder<CopperGolem, CopperGolem.CopperWeatherState> {
     public CopperGolemMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
         registerVariantIcon(CopperGolem.CopperWeatherState.UNAFFECTED, MobsIcon.COPPER_GOLEM_UNAFFECTED);

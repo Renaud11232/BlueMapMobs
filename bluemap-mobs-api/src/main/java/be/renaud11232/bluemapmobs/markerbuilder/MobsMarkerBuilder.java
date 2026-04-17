@@ -3,12 +3,7 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsMarkerType;
-import be.renaud11232.bluemapmobs.MobsStyleClass;
 import be.renaud11232.bluemapmobs.entity.Mob;
-import de.bluecolored.bluemap.api.markers.POIMarker;
-
-import java.util.List;
-import java.util.Optional;
 
 public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
     public MobsMarkerBuilder(BlueMapEntitiesAPI api) {
@@ -102,15 +97,5 @@ public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
         register(MobsMarkerType.ZOMBIE_HORSE, new ZombieHorseMarkerBuilder(getAPI()));
         register(MobsMarkerType.ZOMBIE_NAUTILUS, new ZombieNautilusMarkerBuilder(getAPI()));
         register(MobsMarkerType.ZOMBIE_VILLAGER, new ZombieVillagerMarkerBuilder(getAPI()));
-    }
-
-    @Override
-    public Optional<POIMarker> build(Mob mob) {
-        return super.build(mob).map(marker -> {
-            if (mob.getName().equals("Dinnerbone") || mob.getName().equals("Grumm")) {
-                marker.addStyleClasses(List.of(MobsStyleClass.FLIP));
-            }
-            return marker;
-        });
     }
 }

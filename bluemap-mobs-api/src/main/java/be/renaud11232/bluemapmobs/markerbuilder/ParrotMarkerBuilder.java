@@ -1,11 +1,10 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Parrot;
 
-public class ParrotMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Parrot, Parrot.Variant> {
+public class ParrotMarkerBuilder extends MobSingleVariantMarkerBuilder<Parrot, Parrot.Variant> {
     public ParrotMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
         registerVariantIcon(Parrot.Variant.RED, MobsIcon.PARROT_RED);

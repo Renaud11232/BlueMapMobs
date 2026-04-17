@@ -2,12 +2,11 @@ package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
-import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.entity.Ageable;
 
 import java.util.Collection;
 
-public abstract class AgeableMarkerBuilder<T extends Ageable> extends SimpleMarkerBuilder<T> {
+public abstract class AgeableMarkerBuilder<T extends Ageable> extends MobMarkerBuilder<T> {
     public AgeableMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
     }
