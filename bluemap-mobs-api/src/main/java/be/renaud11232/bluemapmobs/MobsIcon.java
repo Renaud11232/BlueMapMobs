@@ -121,7 +121,8 @@ public class MobsIcon {
     public static final Icon MUSHROOM_COW_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_red.png", new Vector2i(12, 12));
     public static final Icon MUSHROOM_COW_BROWN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_brown.png", new Vector2i(12, 12));
     public static final Icon NAUTILUS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus.png", new Vector2i(12, 12));
-    public static final Icon OCELOT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot.png", new Vector2i(12, 12));
+    public static final Icon OCELOT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot.png", new Vector2i(12, 12));
+    public static final Icon OCELOT_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot_baby.png", new Vector2i(12, 12));
     public static final Icon PANDA_NORMAL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_normal.png", new Vector2i(12, 12));
     public static final Icon PANDA_LAZY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_lazy.png", new Vector2i(12, 12));
     public static final Icon PANDA_WORRIED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_worried.png", new Vector2i(12, 12));

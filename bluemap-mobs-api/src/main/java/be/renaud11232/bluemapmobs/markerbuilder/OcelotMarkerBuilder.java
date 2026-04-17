@@ -17,7 +17,6 @@ public class OcelotMarkerBuilder extends AgeableMarkerBuilder<Ocelot> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Baby variant
-        return super.getDefaultBabyIcon();
+        return MobsIcon.OCELOT_BABY;
     }
 }
