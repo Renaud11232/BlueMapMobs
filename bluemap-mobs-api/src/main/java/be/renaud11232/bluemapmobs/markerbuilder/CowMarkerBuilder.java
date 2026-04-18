@@ -10,7 +10,9 @@ public class CowMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Cow, Cow
         registerVariantAdultIcon(Cow.Variant.TEMPERATE, MobsIcon.COW_TEMPERATE);
         registerVariantAdultIcon(Cow.Variant.COLD, MobsIcon.COW_COLD);
         registerVariantAdultIcon(Cow.Variant.WARM, MobsIcon.COW_WARM);
-        //TODO: Baby variants
+        registerVariantBabyIcon(Cow.Variant.TEMPERATE, MobsIcon.COW_TEMPERATE_BABY);
+        registerVariantBabyIcon(Cow.Variant.COLD, MobsIcon.COW_COLD_BABY);
+        registerVariantBabyIcon(Cow.Variant.WARM, MobsIcon.COW_WARM_BABY);
     }
 
     @Override

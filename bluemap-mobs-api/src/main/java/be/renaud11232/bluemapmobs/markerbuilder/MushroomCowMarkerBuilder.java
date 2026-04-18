@@ -9,7 +9,8 @@ public class MushroomCowMarkerBuilder extends AgeableSingleVariantMarkerBuilder<
         super(api);
         registerVariantAdultIcon(MushroomCow.Variant.RED, MobsIcon.MUSHROOM_COW_RED);
         registerVariantAdultIcon(MushroomCow.Variant.BROWN, MobsIcon.MUSHROOM_COW_BROWN);
-        //TODO: Baby variants
+        registerVariantBabyIcon(MushroomCow.Variant.RED, MobsIcon.MUSHROOM_COW_RED_BABY);
+        registerVariantBabyIcon(MushroomCow.Variant.BROWN, MobsIcon.MUSHROOM_COW_BROWN_BABY);
     }
 
     @Override

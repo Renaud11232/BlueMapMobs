@@ -10,7 +10,9 @@ public class ChickenMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Chic
         registerVariantAdultIcon(Chicken.Variant.TEMPERATE, MobsIcon.CHICKEN_TEMPERATE);
         registerVariantAdultIcon(Chicken.Variant.COLD, MobsIcon.CHICKEN_COLD);
         registerVariantAdultIcon(Chicken.Variant.WARM, MobsIcon.CHICKEN_WARM);
-        //TODO: Baby variants
+        registerVariantBabyIcon(Chicken.Variant.TEMPERATE, MobsIcon.CHICKEN_TEMPERATE_BABY);
+        registerVariantBabyIcon(Chicken.Variant.COLD, MobsIcon.CHICKEN_COLD_BABY);
+        registerVariantBabyIcon(Chicken.Variant.WARM, MobsIcon.CHICKEN_WARM_BABY);
     }
 
     @Override
