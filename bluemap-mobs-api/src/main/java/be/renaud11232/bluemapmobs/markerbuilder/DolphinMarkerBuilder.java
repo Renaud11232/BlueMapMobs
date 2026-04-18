@@ -17,7 +17,6 @@ public class DolphinMarkerBuilder extends AgeableMarkerBuilder<Dolphin> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.DOLPHIN_BABY;
     }
 }

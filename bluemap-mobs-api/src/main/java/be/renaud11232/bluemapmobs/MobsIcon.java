@@ -109,7 +109,10 @@ public class MobsIcon {
     public static final Icon CREAKING = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/creaking.png", new Vector2i(12, 12));
     public static final Icon CREEPER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/creeper/creeper.png", new Vector2i(12, 12));
     public static final Icon CREEPER_CHARGED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/creeper/creeper_charged.png", new Vector2i(12, 12));
-    public static final Icon DOLPHIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 6x7+0+6 -sample 400% \) -geometry -4+2 -composite \( ${TEXTURE}.png -crop 4x2+0+17 -sample 400% \) -geometry +20+22 -composite -strip ${TEXTURE}_out.png
+    public static final Icon DOLPHIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 4x5+0+4 -sample 400% \) -geometry +4+6 -composite \( ${TEXTURE}.png -crop 2x2+0+11 -sample 400% \) -geometry +20+18 -composite -strip ${TEXTURE}_out.png
+    public static final Icon DOLPHIN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin_baby.png", new Vector2i(12, 12));
     public static final Icon DONKEY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey.png", new Vector2i(12, 12));
     public static final Icon DROWNED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned.png", new Vector2i(12, 12));
     public static final Icon ELDER_GUARDIAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/elder_guardian.png", new Vector2i(12, 12));
