@@ -22,7 +22,18 @@ public class HorseMarkerBuilder extends AgeableVariantMarkerBuilder<Horse, Horse
         registerVariantAdultStyleClasses(Horse.Color.BLACK, List.of(MobsStyleClass.HORSE_BLACK));
         registerVariantAdultStyleClasses(Horse.Color.GRAY, List.of(MobsStyleClass.HORSE_GRAY));
         registerVariantAdultStyleClasses(Horse.Color.DARK_BROWN, List.of(MobsStyleClass.HORSE_DARK_BROWN));
-        //TODO: Add baby variants
+        registerVariantBabyIcon(Horse.Style.NONE, MobsIcon.HORSE_MARKINGS_NONE_BABY);
+        registerVariantBabyIcon(Horse.Style.WHITE, MobsIcon.HORSE_MARKINGS_WHITE_BABY);
+        registerVariantBabyIcon(Horse.Style.WHITEFIELD, MobsIcon.HORSE_MARKINGS_WHITEFIELD_BABY);
+        registerVariantBabyIcon(Horse.Style.WHITE_DOTS, MobsIcon.HORSE_MARKINGS_WHITE_DOTS_BABY);
+        registerVariantBabyIcon(Horse.Style.BLACK_DOTS, MobsIcon.HORSE_MARKINGS_BLACK_DOTS_BABY);
+        registerVariantBabyStyleClasses(Horse.Color.WHITE, List.of(MobsStyleClass.HORSE_WHITE_BABY));
+        registerVariantBabyStyleClasses(Horse.Color.CREAMY, List.of(MobsStyleClass.HORSE_CREAMY_BABY));
+        registerVariantBabyStyleClasses(Horse.Color.CHESTNUT, List.of(MobsStyleClass.HORSE_CHESTNUT_BABY));
+        registerVariantBabyStyleClasses(Horse.Color.BROWN, List.of(MobsStyleClass.HORSE_BROWN_BABY));
+        registerVariantBabyStyleClasses(Horse.Color.BLACK, List.of(MobsStyleClass.HORSE_BLACK_BABY));
+        registerVariantBabyStyleClasses(Horse.Color.GRAY, List.of(MobsStyleClass.HORSE_GRAY_BABY));
+        registerVariantBabyStyleClasses(Horse.Color.DARK_BROWN, List.of(MobsStyleClass.HORSE_DARK_BROWN_BABY));
     }
 
     @Override

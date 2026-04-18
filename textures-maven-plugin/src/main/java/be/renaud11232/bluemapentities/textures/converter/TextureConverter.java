@@ -11,10 +11,12 @@ public class TextureConverter implements Converter {
 
     public TextureConverter() {
         converters = new LinkedHashMap<>();
-        converters.put(Pattern.compile("^donkey\\.png$"), new DonkeyTextureConverter());
         converters.put(Pattern.compile("^donkey_baby\\.png$"), new DonkeyBabyTextureConverter());
-        converters.put(Pattern.compile("^mule\\.png$"), new MuleTextureConverter());
+        converters.put(Pattern.compile("^donkey\\.png$"), new DonkeyTextureConverter());
+        converters.put(Pattern.compile("^horse_.*?_baby\\.png$"), new HorseBabyTextureConverter());
+        converters.put(Pattern.compile("^horse_.*?\\.png$"), new HorseTextureConverter());
         converters.put(Pattern.compile("^mule_baby\\.png$"), new MuleBabyTextureConverter());
+        converters.put(Pattern.compile("^mule\\.png$"), new MuleTextureConverter());
     }
 
     @Override

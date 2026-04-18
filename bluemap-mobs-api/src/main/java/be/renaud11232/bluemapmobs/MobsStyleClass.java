@@ -16,6 +16,13 @@ public class MobsStyleClass {
     public static final String HORSE_BLACK = "bluemapmobs-horse-black";
     public static final String HORSE_GRAY = "bluemapmobs-horse-gray";
     public static final String HORSE_DARK_BROWN = "bluemapmobs-horse-dark-brown";
+    public static final String HORSE_WHITE_BABY = "bluemapmobs-horse-white-baby";
+    public static final String HORSE_CREAMY_BABY = "bluemapmobs-horse-creamy-baby";
+    public static final String HORSE_CHESTNUT_BABY = "bluemapmobs-horse-chestnut-baby";
+    public static final String HORSE_BROWN_BABY = "bluemapmobs-horse-brown-baby";
+    public static final String HORSE_BLACK_BABY = "bluemapmobs-horse-black-baby";
+    public static final String HORSE_GRAY_BABY = "bluemapmobs-horse-gray-baby";
+    public static final String HORSE_DARK_BROWN_BABY = "bluemapmobs-horse-dark-brown-baby";
     public static final String LLAMA_CREAMY = "bluemapmobs-llama-creamy";
     public static final String LLAMA_WHITE = "bluemapmobs-llama-white";
     public static final String LLAMA_GRAY = "bluemapmobs-llama-gray";

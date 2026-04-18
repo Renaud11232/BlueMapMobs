@@ -155,6 +155,11 @@ public class MobsIcon {
     public static final Icon HORSE_MARKINGS_WHITEFIELD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_whitefield.png", new Vector2i(12, 12));
     public static final Icon HORSE_MARKINGS_WHITE_DOTS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_white_dots.png", new Vector2i(12, 12));
     public static final Icon HORSE_MARKINGS_BLACK_DOTS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_black_dots.png", new Vector2i(12, 12));
+    public static final Icon HORSE_MARKINGS_NONE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_none_baby.png", new Vector2i(12, 12));
+    public static final Icon HORSE_MARKINGS_WHITE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_white_baby.png", new Vector2i(12, 12));
+    public static final Icon HORSE_MARKINGS_WHITEFIELD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_whitefield_baby.png", new Vector2i(12, 12));
+    public static final Icon HORSE_MARKINGS_WHITE_DOTS_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_white_dots_baby.png", new Vector2i(12, 12));
+    public static final Icon HORSE_MARKINGS_BLACK_DOTS_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/horse/horse_markings_black_dots_baby.png", new Vector2i(12, 12));
     public static final Icon HUSK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/husk.png", new Vector2i(12, 12));
     public static final Icon ILLUSIONER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/illusioner.png", new Vector2i(12, 12));
     public static final Icon IRON_GOLEM = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/iron_golem.png", new Vector2i(12, 12));

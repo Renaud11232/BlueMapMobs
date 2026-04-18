@@ -50,6 +50,34 @@
     background-image: url("../img/horse/horse_dark_brown.png");
 }
 
+#map-container .bluemapmobs-horse-white-baby img {
+    background-image: url("../img/horse/horse_white_baby.png");
+}
+
+#map-container .bluemapmobs-horse-creamy-baby img {
+    background-image: url("../img/horse/horse_creamy_baby.png");
+}
+
+#map-container .bluemapmobs-horse-chestnut-baby img {
+    background-image: url("../img/horse/horse_chestnut_baby.png");
+}
+
+#map-container .bluemapmobs-horse-brown-baby img {
+    background-image: url("../img/horse/horse_brown_baby.png");
+}
+
+#map-container .bluemapmobs-horse-black-baby img {
+    background-image: url("../img/horse/horse_black_baby.png");
+}
+
+#map-container .bluemapmobs-horse-gray-baby img {
+    background-image: url("../img/horse/horse_gray_baby.png");
+}
+
+#map-container .bluemapmobs-horse-dark-brown-baby img {
+    background-image: url("../img/horse/horse_dark_brown_baby.png");
+}
+
 #map-container .bluemapmobs-llama-creamy img {
     background-image: url("../img/llama/llama_creamy.png");
 }
