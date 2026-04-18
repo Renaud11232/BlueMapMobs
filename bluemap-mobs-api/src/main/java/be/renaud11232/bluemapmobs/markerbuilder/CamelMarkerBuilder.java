@@ -17,7 +17,6 @@ public class CamelMarkerBuilder extends AgeableMarkerBuilder<Camel> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.CAMEL_BABY;
     }
 }

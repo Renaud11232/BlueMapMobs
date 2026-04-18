@@ -26,8 +26,12 @@ public class MobsIcon {
     public static final Icon BLAZE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/blaze.png", new Vector2i(12, 12));
     public static final Icon BOGGED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/bogged.png", new Vector2i(12, 12));
     public static final Icon BREEZE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/breeze.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 7x14+21+7 -sample 200% \) -geometry +4+4 -composite \( ${TEXTURE}.png -crop 6x5+50+6 -sample 200% \) -geometry +18+4 -composite \( ${TEXTURE}.png -crop 2x2+72+0 -sample 200% -rotate 90 -flop \) -geometry +6+0 -composite -strip ${TEXTURE}_out.png
     public static final Icon CAMEL_HUSK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/camel_husk.png", new Vector2i(12, 12));
-    public static final Icon CAMEL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/camel.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 7x14+21+7 -sample 200% \) -geometry +4+4 -composite \( ${TEXTURE}.png -crop 6x5+50+6 -sample 200% \) -geometry +18+4 -composite \( ${TEXTURE}.png -crop 2x2+72+0 -sample 200% -rotate 90 -flop \) -geometry +6+0 -composite -strip ${TEXTURE}_out.png
+    public static final Icon CAMEL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/camel/camel.png", new Vector2i(12, 12));
+    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x9+0+5 -sample 200% \) -geometry +8+9 -composite \( ${TEXTURE}.png -crop 3x4+0+17 -sample 200% \) -geometry +18+9 -composite \( ${TEXTURE}.png -crop 3x2+42+0 -sample 200% -rotate 90 -flop \) -geometry +9+5 -composite -strip ${TEXTURE}_out.png
+    public static final Icon CAMEL_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/camel/camel_baby.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+5+5 -sample 600% \) -geometry +1+7 -composite \( ${TEXTURE}.png -crop 3x2+2+26 -sample 600% \) -geometry +7+19 -composite \( ${TEXTURE}.png -crop 1x1+2+12 -sample 600% \) -geometry +4+1 -composite \( ${TEXTURE}.png -crop 1x1+8+12 -sample 600% \) -geometry +22+1 -composite -strip ${TEXTURE}_out.png
     public static final Icon CAT_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cat/cat_red.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+5+5 -sample 600% \) -geometry +1+7 -composite \( ${TEXTURE}.png -crop 3x2+2+26 -sample 600% \) -geometry +7+19 -composite \( ${TEXTURE}.png -crop 1x1+2+12 -sample 600% \) -geometry +4+1 -composite \( ${TEXTURE}.png -crop 1x1+8+12 -sample 600% \) -geometry +22+1 -composite -strip ${TEXTURE}_out.png
