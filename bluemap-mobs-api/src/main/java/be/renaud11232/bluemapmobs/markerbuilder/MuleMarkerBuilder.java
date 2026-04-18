@@ -17,7 +17,6 @@ public class MuleMarkerBuilder extends AgeableMarkerBuilder<Mule> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.MULE_BABY;
     }
 }

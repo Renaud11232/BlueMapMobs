@@ -33,8 +33,7 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
                     <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
+                        <release>${java.version}</release>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -126,5 +125,6 @@
         <module>bluemap-others-plugin-common</module>
         <module>bluemap-others-spigot</module>
         <module>bluemap-others-paper</module>
+        <module>textures-maven-plugin</module>
     </modules>
 </project>

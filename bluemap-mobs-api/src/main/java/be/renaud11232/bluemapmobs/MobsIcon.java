@@ -113,7 +113,8 @@ public class MobsIcon {
     public static final Icon DOLPHIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 4x5+0+4 -sample 400% \) -geometry +4+6 -composite \( ${TEXTURE}.png -crop 2x2+0+11 -sample 400% \) -geometry +20+18 -composite -strip ${TEXTURE}_out.png
     public static final Icon DOLPHIN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin_baby.png", new Vector2i(12, 12));
-    public static final Icon DONKEY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey.png", new Vector2i(12, 12));
+    public static final Icon DONKEY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey/donkey.png", new Vector2i(12, 12));
+    public static final Icon DONKEY_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey/donkey_baby.png", new Vector2i(12, 12));
     public static final Icon DROWNED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned.png", new Vector2i(12, 12));
     public static final Icon ELDER_GUARDIAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/elder_guardian.png", new Vector2i(12, 12));
     public static final Icon ENDER_DRAGON = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ender_dragon.png", new Vector2i(12, 12));
@@ -175,7 +176,8 @@ public class MobsIcon {
     public static final Icon LLAMA_DECOR_MAGENTA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/llama/llama_decor_magenta.png", new Vector2i(12, 12));
     public static final Icon LLAMA_DECOR_PINK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/llama/llama_decor_pink.png", new Vector2i(12, 12));
     public static final Icon MAGMA_CUBE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/magma_cube.png", new Vector2i(12, 12));
-    public static final Icon MULE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mule.png", new Vector2i(12, 12));
+    public static final Icon MULE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mule/mule.png", new Vector2i(12, 12));
+    public static final Icon MULE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mule/mule_baby.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 8x8+6+6 -sample 400% \) -geometry +0+0 -composite \( ${TEXTURE}.png -crop 6x3+2+34 -sample 400% \) -geometry +4+20 -composite -strip ${TEXTURE}_out.png
     public static final Icon MUSHROOM_COW_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_red.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 8x8+6+6 -sample 400% \) -geometry +0+0 -composite \( ${TEXTURE}.png -crop 6x3+2+34 -sample 400% \) -geometry +4+20 -composite -strip ${TEXTURE}_out.png

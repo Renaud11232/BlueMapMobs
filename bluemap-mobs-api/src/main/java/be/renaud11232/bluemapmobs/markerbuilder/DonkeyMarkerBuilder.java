@@ -17,7 +17,6 @@ public class DonkeyMarkerBuilder extends AgeableMarkerBuilder<Donkey> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.DONKEY_BABY;
     }
 }
