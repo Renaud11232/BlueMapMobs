@@ -200,7 +200,8 @@ public class MobsIcon {
     public static final Icon MUSHROOM_COW_RED_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_red_baby.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 6x6+5+23 -sample 400% \) -geometry +4+4 -composite \( ${TEXTURE}.png -crop 4x3+13+30 -sample 400% \) -geometry +8+16 -composite -strip ${TEXTURE}_out.png
     public static final Icon MUSHROOM_COW_BROWN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_brown_baby.png", new Vector2i(12, 12));
-    public static final Icon NAUTILUS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus.png", new Vector2i(12, 12));
+    public static final Icon NAUTILUS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus/nautilus.png", new Vector2i(12, 12));
+    public static final Icon NAUTILUS_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus/nautilus_baby.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+5+5 -sample 600% \) -geometry +1+7 -composite \( ${TEXTURE}.png -crop 3x2+2+26 -sample 600% \) -geometry +7+19 -composite \( ${TEXTURE}.png -crop 1x1+2+12 -sample 600% \) -geometry +4+1 -composite \( ${TEXTURE}.png -crop 1x1+8+12 -sample 600% \) -geometry +22+1 -composite -strip ${TEXTURE}_out.png
     public static final Icon OCELOT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot.png", new Vector2i(12, 12));
     //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+4+4 -sample 400% \) -geometry +6+10 -composite \( ${TEXTURE}.png -crop 3x2+19+4 -sample 400% \) -geometry +10+18 -composite \( ${TEXTURE}.png -crop 1x1+20+2 -sample 400% \) -geometry +8+6 -composite \( ${TEXTURE}.png -crop 1x1+26+2 -sample 400% \) -geometry +20+6 -composite -strip ${TEXTURE}_out.png

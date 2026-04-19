@@ -17,7 +17,6 @@ public class NautilusMarkerBuilder extends AgeableMarkerBuilder<Nautilus> {
 
     @Override
     protected Icon getBabyIcon(Nautilus entity) {
-        //TODO: add baby icon
-        return super.getBabyIcon(entity);
+        return MobsIcon.NAUTILUS_BABY;
     }
 }
