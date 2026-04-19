@@ -8,6 +8,8 @@ public class MobsStyleClass {
     public static final String BEE_ANGRY = "bluemapmobs-bee-angry";
     public static final String BEE_BABY = "bluemapmobs-bee-baby";
     public static final String BEE_ANGRY_BABY = "bluemapmobs-bee-angry-baby";
+    public static final String DROWNED = "bluemapmobs-drowned";
+    public static final String DROWNED_BABY = "bluemapmobs-drowned-baby";
     public static final String HAPPY_GHAST = "bluemapmobs-happy-ghast";
     public static final String HORSE_WHITE = "bluemapmobs-horse-white";
     public static final String HORSE_CREAMY = "bluemapmobs-horse-creamy";
