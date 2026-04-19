@@ -17,7 +17,6 @@ public class HoglinMarkerBuilder extends AgeableMarkerBuilder<Hoglin> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.HOGLIN_BABY;
     }
 }
