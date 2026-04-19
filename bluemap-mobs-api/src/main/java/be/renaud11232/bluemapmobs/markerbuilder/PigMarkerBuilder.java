@@ -10,7 +10,9 @@ public class PigMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Pig, Pig
         registerVariantAdultIcon(Pig.Variant.TEMPERATE, MobsIcon.PIG_TEMPERATE);
         registerVariantAdultIcon(Pig.Variant.COLD, MobsIcon.PIG_COLD);
         registerVariantAdultIcon(Pig.Variant.WARM, MobsIcon.PIG_WARM);
-        //TODO: Baby variants
+        registerVariantBabyIcon(Pig.Variant.TEMPERATE, MobsIcon.PIG_TEMPERATE_BABY);
+        registerVariantBabyIcon(Pig.Variant.COLD, MobsIcon.PIG_COLD_BABY);
+        registerVariantBabyIcon(Pig.Variant.WARM, MobsIcon.PIG_WARM_BABY);
     }
 
     @Override
