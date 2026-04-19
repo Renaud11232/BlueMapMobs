@@ -17,7 +17,6 @@ public class GlowSquidMarkerBuilder extends AgeableMarkerBuilder<GlowSquid> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.GLOW_SQUID_BABY;
     }
 }

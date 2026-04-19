@@ -5,16 +5,6 @@ import java.awt.image.BufferedImage;
 
 public class FoxTextureConverter extends SimpleTextureConverter {
     @Override
-    protected int getExpectedTextureWidth() {
-        return 48;
-    }
-
-    @Override
-    protected int getExpectedTextureHeight() {
-        return 32;
-    }
-
-    @Override
     protected void buildGraphics(BufferedImage texture, Graphics2D icon) {
         BufferedImage face = texture.getSubimage(7, 11, 8, 6);
         BufferedImage nose = texture.getSubimage(9, 21, 4, 2);

@@ -8,16 +8,6 @@ import static be.renaud11232.bluemapentities.textures.ImageOperations.rotate;
 
 public class CamelTextureConverter extends SimpleTextureConverter {
     @Override
-    protected int getExpectedTextureWidth() {
-        return 128;
-    }
-
-    @Override
-    protected int getExpectedTextureHeight() {
-        return 128;
-    }
-
-    @Override
     protected void buildGraphics(BufferedImage texture, Graphics2D icon) {
         BufferedImage face = texture.getSubimage(21, 7, 7, 14);
         BufferedImage nose = texture.getSubimage(50, 6, 6, 5);

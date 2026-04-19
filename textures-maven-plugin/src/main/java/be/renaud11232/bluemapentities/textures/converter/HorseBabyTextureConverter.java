@@ -5,16 +5,6 @@ import java.awt.image.BufferedImage;
 
 public class HorseBabyTextureConverter extends SimpleTextureConverter {
     @Override
-    protected int getExpectedTextureWidth() {
-        return 64;
-    }
-
-    @Override
-    protected int getExpectedTextureHeight() {
-        return 64;
-    }
-
-    @Override
     protected void buildGraphics(BufferedImage texture, Graphics2D icon) {
         BufferedImage ear = texture.getSubimage(0, 1, 1, 3);
         BufferedImage face = texture.getSubimage(0, 9, 9, 4);

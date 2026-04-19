@@ -5,16 +5,6 @@ import java.awt.image.BufferedImage;
 
 public class DrownedTextureConverter extends SimpleTextureConverter {
     @Override
-    protected int getExpectedTextureWidth() {
-        return 64;
-    }
-
-    @Override
-    protected int getExpectedTextureHeight() {
-        return 64;
-    }
-
-    @Override
     protected void buildGraphics(BufferedImage texture, Graphics2D icon) {
         BufferedImage face = texture.getSubimage(8, 8, 8, 8);
         icon.drawImage(face, 0, 0, face.getWidth() * 4, face.getHeight() * 4, null);

@@ -6,16 +6,19 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.time.ZoneId;
 
 public abstract class SimpleTextureConverter implements Converter {
     @Override
     public boolean convert(Path path) throws IOException {
         BufferedImage texture;
+        BasicFileAttributes attributes = Files.readAttributes(path, BasicFileAttributes.class);
+        if (attributes.lastModifiedTime().toInstant().atZone(ZoneId.systemDefault()).getYear() != 1980) {
+            return false;
+        }
         try (var is = Files.newInputStream(path)) {
             texture = ImageIO.read(is);
-            if (texture.getWidth() != getExpectedTextureWidth() || texture.getHeight() != getExpectedTextureHeight()) {
-                return false;
-            }
         }
         BufferedImage icon = new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB);
         Graphics2D iconGraphics = icon.createGraphics();
@@ -38,10 +41,6 @@ public abstract class SimpleTextureConverter implements Converter {
         }
         return true;
     }
-
-    protected abstract int getExpectedTextureWidth();
-
-    protected abstract int getExpectedTextureHeight();
 
     protected abstract void buildGraphics(BufferedImage texture, Graphics2D icon);
 }

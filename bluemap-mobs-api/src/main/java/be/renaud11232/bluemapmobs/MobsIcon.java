@@ -133,7 +133,8 @@ public class MobsIcon {
     public static final Icon FROG_COLD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/frog/frog_cold.png", new Vector2i(12, 12));
     public static final Icon GHAST = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ghast.png", new Vector2i(12, 12));
     public static final Icon GIANT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/giant.png", new Vector2i(12, 12));
-    public static final Icon GLOW_SQUID = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/glow_squid.png", new Vector2i(12, 12));
+    public static final Icon GLOW_SQUID = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/glow_squid/glow_squid.png", new Vector2i(12, 12));
+    public static final Icon GLOW_SQUID_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/glow_squid/glow_squid_baby.png", new Vector2i(12, 12));
     public static final Icon GOAT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/goat.png", new Vector2i(12, 12));
     public static final Icon GUARDIAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/guardian.png", new Vector2i(12, 12));
     public static final Icon HAPPY_GHAST_HARNESS_NONE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/happy_ghast/happy_ghast_harness_none.png", new Vector2i(12, 12));

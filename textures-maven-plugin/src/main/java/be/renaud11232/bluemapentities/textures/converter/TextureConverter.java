@@ -21,6 +21,8 @@ public class TextureConverter implements Converter {
         converters.put(Pattern.compile("^drowned_outer_layer\\.png$"), new DrownedOuterLayerTextureConverter());
         converters.put(Pattern.compile("^fox_.*?_baby\\.png$"), new FoxBabyTextureConverter());
         converters.put(Pattern.compile("^fox_.*?\\.png$"), new FoxTextureConverter());
+        converters.put(Pattern.compile("^glow_squid_baby\\.png$"), new GlowSquidBabyTextureConverter());
+        converters.put(Pattern.compile("^glow_squid.png$"), new GlowSquidTextureConverter());
         converters.put(Pattern.compile("^horse_.*?_baby\\.png$"), new HorseBabyTextureConverter());
         converters.put(Pattern.compile("^horse_.*?\\.png$"), new HorseTextureConverter());
         converters.put(Pattern.compile("^mule_baby\\.png$"), new MuleBabyTextureConverter());
