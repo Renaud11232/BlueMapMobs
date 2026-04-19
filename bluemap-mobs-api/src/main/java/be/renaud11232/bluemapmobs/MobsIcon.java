@@ -122,6 +122,12 @@ public class MobsIcon {
     public static final Icon EVOKER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/evoker.png", new Vector2i(12, 12));
     public static final Icon FOX_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_red.png", new Vector2i(12, 12));
     public static final Icon FOX_SNOW = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_snow.png", new Vector2i(12, 12));
+    public static final Icon FOX_RED_SLEEP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_red_sleep.png", new Vector2i(12, 12));
+    public static final Icon FOX_SNOW_SLEEP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_snow_sleep.png", new Vector2i(12, 12));
+    public static final Icon FOX_RED_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_red_baby.png", new Vector2i(12, 12));
+    public static final Icon FOX_SNOW_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_snow_baby.png", new Vector2i(12, 12));
+    public static final Icon FOX_RED_SLEEP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_red_sleep_baby.png", new Vector2i(12, 12));
+    public static final Icon FOX_SNOW_SLEEP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/fox/fox_snow_sleep_baby.png", new Vector2i(12, 12));
     public static final Icon FROG_TEMPERATE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/frog/frog_temperate.png", new Vector2i(12, 12));
     public static final Icon FROG_WARM = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/frog/frog_Warm.png", new Vector2i(12, 12));
     public static final Icon FROG_COLD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/frog/frog_cold.png", new Vector2i(12, 12));

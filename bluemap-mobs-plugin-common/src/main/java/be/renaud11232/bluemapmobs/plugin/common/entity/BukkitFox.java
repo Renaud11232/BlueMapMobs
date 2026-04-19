@@ -14,4 +14,9 @@ public class BukkitFox extends BukkitAgeable<org.bukkit.entity.Fox> implements F
             case SNOW -> Type.SNOW;
         };
     }
+
+    @Override
+    public boolean isSleeping() {
+        return wrapped.isSleeping();
+    }
 }

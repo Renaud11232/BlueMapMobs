@@ -11,6 +11,8 @@ public interface Fox extends Animal {
 
     Type getType();
 
+    boolean isSleeping();
+
     enum Type {
         RED,
         SNOW
