@@ -17,7 +17,6 @@ public class HuskMarkerBuilder extends AgeableMarkerBuilder<Husk> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.HUSK_BABY;
     }
 }
