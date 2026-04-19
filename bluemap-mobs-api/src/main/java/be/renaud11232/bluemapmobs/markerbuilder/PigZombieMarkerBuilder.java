@@ -17,7 +17,6 @@ public class PigZombieMarkerBuilder extends AgeableMarkerBuilder<PigZombie> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.PIG_ZOMBIE_BABY;
     }
 }
