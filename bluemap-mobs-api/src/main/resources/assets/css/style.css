@@ -102,6 +102,22 @@
     background-image: url("../img/llama/llama_brown.png");
 }
 
+#map-container .bluemapmobs-llama-creamy-baby img {
+    background-image: url("../img/llama/llama_creamy_baby.png");
+}
+
+#map-container .bluemapmobs-llama-white-baby img {
+    background-image: url("../img/llama/llama_white_baby.png");
+}
+
+#map-container .bluemapmobs-llama-gray-baby img {
+    background-image: url("../img/llama/llama_gray_baby.png");
+}
+
+#map-container .bluemapmobs-llama-brown-baby img {
+    background-image: url("../img/llama/llama_brown_baby.png");
+}
+
 #map-container .bluemapmobs-sheep-fur-white img {
     background-image: url("../img/sheep/sheep_fur_white.png");
 }

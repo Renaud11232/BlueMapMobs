@@ -31,12 +31,20 @@ public class LlamaMarkerBuilder extends AgeableVariantMarkerBuilder<Llama, Llama
         registerVariantAdultStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.LLAMA_WHITE));
         registerVariantAdultStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.LLAMA_GRAY));
         registerVariantAdultStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.LLAMA_BROWN));
-        //TODO: add baby variants
+        registerVariantBabyStyleClasses(Llama.Color.CREAMY, List.of(MobsStyleClass.LLAMA_CREAMY_BABY));
+        registerVariantBabyStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.LLAMA_WHITE_BABY));
+        registerVariantBabyStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.LLAMA_GRAY_BABY));
+        registerVariantBabyStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.LLAMA_BROWN_BABY));
     }
 
     @Override
-    protected Icon getDefaultIcon() {
+    protected Icon getDefaultAdultIcon() {
         return MobsIcon.LLAMA_DECOR_NONE;
+    }
+
+    @Override
+    protected Icon getDefaultBabyIcon() {
+        return MobsIcon.LLAMA_DECOR_NONE_BABY;
     }
 
     @Override

@@ -29,6 +29,8 @@ public class TextureConverter implements Converter {
         converters.put(Pattern.compile("^horse_.*?\\.png$"), new HorseTextureConverter());
         converters.put(Pattern.compile("^husk_baby\\.png$"), new HuskBabyTextureConverter());
         converters.put(Pattern.compile("^husk\\.png$"), new HuskTextureConverter());
+        converters.put(Pattern.compile("^llama_.*?_baby\\.png$"), new LlamaBabyTextureConverter());
+        converters.put(Pattern.compile("^llama_.*?\\.png$"), new LlamaTextureConverter());
         converters.put(Pattern.compile("^mule_baby\\.png$"), new MuleBabyTextureConverter());
         converters.put(Pattern.compile("^mule\\.png$"), new MuleTextureConverter());
     }

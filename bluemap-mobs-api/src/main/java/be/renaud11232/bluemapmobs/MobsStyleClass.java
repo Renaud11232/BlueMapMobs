@@ -29,6 +29,10 @@ public class MobsStyleClass {
     public static final String LLAMA_WHITE = "bluemapmobs-llama-white";
     public static final String LLAMA_GRAY = "bluemapmobs-llama-gray";
     public static final String LLAMA_BROWN = "bluemapmobs-llama-brown";
+    public static final String LLAMA_CREAMY_BABY = "bluemapmobs-llama-creamy-baby";
+    public static final String LLAMA_WHITE_BABY = "bluemapmobs-llama-white-baby";
+    public static final String LLAMA_GRAY_BABY = "bluemapmobs-llama-gray-baby";
+    public static final String LLAMA_BROWN_BABY = "bluemapmobs-llama-brown-baby";
     public static final String SHEEP_WHITE = "bluemapmobs-sheep-fur-white";
     public static final String SHEEP_ORANGE = "bluemapmobs-sheep-fur-orange";
     public static final String SHEEP_MAGENTA = "bluemapmobs-sheep-fur-magenta";

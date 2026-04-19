@@ -188,6 +188,7 @@ public class MobsIcon {
     public static final Icon LLAMA_DECOR_PURPLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/llama/llama_decor_purple.png", new Vector2i(12, 12));
     public static final Icon LLAMA_DECOR_MAGENTA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/llama/llama_decor_magenta.png", new Vector2i(12, 12));
     public static final Icon LLAMA_DECOR_PINK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/llama/llama_decor_pink.png", new Vector2i(12, 12));
+    public static final Icon LLAMA_DECOR_NONE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/llama/llama_decor_none_baby.png", new Vector2i(12, 12));
     public static final Icon MAGMA_CUBE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/magma_cube.png", new Vector2i(12, 12));
     public static final Icon MULE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mule/mule.png", new Vector2i(12, 12));
     public static final Icon MULE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mule/mule_baby.png", new Vector2i(12, 12));
