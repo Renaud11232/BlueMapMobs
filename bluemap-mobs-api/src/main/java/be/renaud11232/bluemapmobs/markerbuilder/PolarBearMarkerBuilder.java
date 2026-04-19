@@ -17,7 +17,6 @@ public class PolarBearMarkerBuilder extends AgeableMarkerBuilder<PolarBear> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.POLAR_BEAR_BABY;
     }
 }
