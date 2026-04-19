@@ -14,7 +14,13 @@ public class PandaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Panda,
         registerVariantAdultIcon(Panda.Gene.AGGRESSIVE, MobsIcon.PANDA_AGGRESSIVE);
         registerVariantAdultIcon(Panda.Gene.WEAK, MobsIcon.PANDA_WEAK);
         registerVariantAdultIcon(Panda.Gene.BROWN, MobsIcon.PANDA_BROWN);
-        //TODO: add baby variants
+        registerVariantBabyIcon(Panda.Gene.NORMAL, MobsIcon.PANDA_NORMAL_BABY);
+        registerVariantBabyIcon(Panda.Gene.LAZY, MobsIcon.PANDA_LAZY_BABY);
+        registerVariantBabyIcon(Panda.Gene.WORRIED, MobsIcon.PANDA_WORRIED_BABY);
+        registerVariantBabyIcon(Panda.Gene.PLAYFUL, MobsIcon.PANDA_PLAYFUL_BABY);
+        registerVariantBabyIcon(Panda.Gene.AGGRESSIVE, MobsIcon.PANDA_AGGRESSIVE_BABY);
+        registerVariantBabyIcon(Panda.Gene.WEAK, MobsIcon.PANDA_WEAK_BABY);
+        registerVariantBabyIcon(Panda.Gene.BROWN, MobsIcon.PANDA_BROWN_BABY);
     }
 
     @Override

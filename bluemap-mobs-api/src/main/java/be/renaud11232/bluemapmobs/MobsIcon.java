@@ -213,6 +213,13 @@ public class MobsIcon {
     public static final Icon PANDA_AGGRESSIVE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_aggressive.png", new Vector2i(12, 12));
     public static final Icon PANDA_WEAK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_weak.png", new Vector2i(12, 12));
     public static final Icon PANDA_BROWN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_brown.png", new Vector2i(12, 12));
+    public static final Icon PANDA_NORMAL_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_normal_baby.png", new Vector2i(12, 12));
+    public static final Icon PANDA_LAZY_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_lazy_baby.png", new Vector2i(12, 12));
+    public static final Icon PANDA_WORRIED_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_worried_baby.png", new Vector2i(12, 12));
+    public static final Icon PANDA_PLAYFUL_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_playful_baby.png", new Vector2i(12, 12));
+    public static final Icon PANDA_AGGRESSIVE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_aggressive_baby.png", new Vector2i(12, 12));
+    public static final Icon PANDA_WEAK_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_weak_baby.png", new Vector2i(12, 12));
+    public static final Icon PANDA_BROWN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_brown_baby.png", new Vector2i(12, 12));
     public static final Icon PARCHED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/parched.png", new Vector2i(12, 12));
     public static final Icon PARROT_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/parrot/parrot_red.png", new Vector2i(12, 12));
     public static final Icon PARROT_BLUE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/parrot/parrot_blue.png", new Vector2i(12, 12));
