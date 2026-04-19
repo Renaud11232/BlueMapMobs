@@ -228,7 +228,8 @@ public class MobsIcon {
     public static final Icon PARROT_GRAY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/parrot/parrot_gray.png", new Vector2i(12, 12));
     public static final Icon PHANTOM = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/phantom.png", new Vector2i(12, 12));
     public static final Icon PIGLIN_BRUTE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/piglin_brute.png", new Vector2i(12, 12));
-    public static final Icon PIGLIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/piglin.png", new Vector2i(12, 12));
+    public static final Icon PIGLIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/piglin/piglin.png", new Vector2i(12, 12));
+    public static final Icon PIGLIN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/piglin/piglin_baby.png", new Vector2i(12, 12));
     public static final Icon PIG_TEMPERATE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig/pig_temperate.png", new Vector2i(12, 12));
     public static final Icon PIG_COLD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig/pig_cold.png", new Vector2i(12, 12));
     public static final Icon PIG_WARM = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig/pig_warm.png", new Vector2i(12, 12));

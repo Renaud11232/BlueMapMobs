@@ -37,6 +37,8 @@ public class TextureConverter implements Converter {
         converters.put(Pattern.compile("^nautilus\\.png$"), new NautilusTextureConverter());
         converters.put(Pattern.compile("^panda_.*?_baby\\.png$"), new PandaBabyTextureConverter());
         converters.put(Pattern.compile("^panda_.*?\\.png$"), new PandaTextureConverter());
+        converters.put(Pattern.compile("^piglin_baby\\.png$"), new PiglinBabyTextureConverter());
+        converters.put(Pattern.compile("^piglin\\.png$"), new PiglinTextureConverter());
     }
 
     @Override

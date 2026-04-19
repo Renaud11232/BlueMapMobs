@@ -17,7 +17,6 @@ public class PiglinMarkerBuilder extends AgeableMarkerBuilder<Piglin> {
 
     @Override
     protected Icon getBabyIcon(Piglin entity) {
-        //TODO: add baby icon
-        return super.getBabyIcon(entity);
+        return MobsIcon.PIGLIN_BABY;
     }
 }
