@@ -21,6 +21,7 @@ public abstract class SimpleTextureConverter implements Converter {
         Graphics2D iconGraphics = icon.createGraphics();
         iconGraphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
         buildGraphics(texture, iconGraphics);
+        iconGraphics.dispose();
         try (var os = Files.newOutputStream(path)) {
             ImageIO.write(icon, "png", os);
         }

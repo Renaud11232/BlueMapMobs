@@ -11,6 +11,8 @@ public class TextureConverter implements Converter {
 
     public TextureConverter() {
         converters = new LinkedHashMap<>();
+        converters.put(Pattern.compile("^camel_husk\\.png$"), new CamelHuskTextureConverter());
+        converters.put(Pattern.compile("^camel\\.png$"), new CamelTextureConverter());
         converters.put(Pattern.compile("^donkey_baby\\.png$"), new DonkeyBabyTextureConverter());
         converters.put(Pattern.compile("^donkey\\.png$"), new DonkeyTextureConverter());
         converters.put(Pattern.compile("^horse_.*?_baby\\.png$"), new HorseBabyTextureConverter());
