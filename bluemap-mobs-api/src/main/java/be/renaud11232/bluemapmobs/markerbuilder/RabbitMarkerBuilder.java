@@ -15,7 +15,13 @@ public class RabbitMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Rabbi
         registerVariantAdultIcon(Rabbit.Type.BROWN, MobsIcon.RABBIT_BROWN);
         registerVariantAdultIcon(Rabbit.Type.SALT_AND_PEPPER, MobsIcon.RABBIT_SALT);
         registerVariantAdultIcon(Rabbit.Type.THE_KILLER_BUNNY, MobsIcon.RABBIT_CAERBANNOG);
-        //TODO: Baby variants
+        registerVariantBabyIcon(Rabbit.Type.GOLD, MobsIcon.RABBIT_GOLD_BABY);
+        registerVariantBabyIcon(Rabbit.Type.WHITE, MobsIcon.RABBIT_WHITE_BABY);
+        registerVariantBabyIcon(Rabbit.Type.BLACK_AND_WHITE, MobsIcon.RABBIT_BLACK_AND_WHITE_BABY);
+        registerVariantBabyIcon(Rabbit.Type.BLACK, MobsIcon.RABBIT_BLACK_BABY);
+        registerVariantBabyIcon(Rabbit.Type.BROWN, MobsIcon.RABBIT_BROWN_BABY);
+        registerVariantBabyIcon(Rabbit.Type.SALT_AND_PEPPER, MobsIcon.RABBIT_SALT_BABY);
+        registerVariantBabyIcon(Rabbit.Type.THE_KILLER_BUNNY, MobsIcon.RABBIT_CAERBANNOG_BABY);
     }
 
     @Override
@@ -33,7 +39,9 @@ public class RabbitMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Rabbi
 
     @Override
     protected Icon getBabyIcon(Rabbit rabbit) {
-        //TODO Toast baby variant
+        if (rabbit.getName().equals("Toast")) {
+            return MobsIcon.RABBIT_TOAST_BABY;
+        }
         return super.getBabyIcon(rabbit);
     }
 }

@@ -250,6 +250,14 @@ public class MobsIcon {
     public static final Icon RABBIT_SALT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_salt.png", new Vector2i(12, 12));
     public static final Icon RABBIT_CAERBANNOG = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_caerbannog.png", new Vector2i(12, 12));
     public static final Icon RABBIT_TOAST = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_toast.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_GOLD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_gold_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_WHITE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_white_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_BLACK_AND_WHITE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_black_and_white_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_BLACK_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_black_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_BROWN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_brown_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_SALT_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_salt_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_CAERBANNOG_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_caerbannog_baby.png", new Vector2i(12, 12));
+    public static final Icon RABBIT_TOAST_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/rabbit/rabbit_toast_baby.png", new Vector2i(12, 12));
     public static final Icon RAVAGER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ravager.png", new Vector2i(12, 12));
     public static final Icon SALMON = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/salmon.png", new Vector2i(12, 12));
     public static final Icon SHEEP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sheep/sheep.png", new Vector2i(12, 12));
