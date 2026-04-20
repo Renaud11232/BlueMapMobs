@@ -17,7 +17,6 @@ public class SkeletonHorseMarkerBuilder extends AgeableMarkerBuilder<SkeletonHor
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Add baby variant
-        return super.getDefaultBabyIcon();
+        return MobsIcon.SKELETON_HORSE_BABY;
     }
 }

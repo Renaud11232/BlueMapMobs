@@ -45,6 +45,10 @@ public class TextureConverter implements Converter {
         converters.put(Pattern.compile("^pig_.*?\\.png$"), new PigTextureConverter());
         converters.put(Pattern.compile("^polar_bear_baby\\.png$"), new PolarBearBabyTextureConverter());
         converters.put(Pattern.compile("^polar_bear\\.png$"), new PolarBearTextureConverter());
+        converters.put(Pattern.compile("^skeleton_horse_baby\\.png$"), new SkeletonHorseBabyTextureConverter());
+        converters.put(Pattern.compile("^skeleton_horse\\.png$"), new SkeletonHorseTextureConverter());
+        converters.put(Pattern.compile("^zombie_horse_baby\\.png$"), new ZombieHorseBabyTextureConverter());
+        converters.put(Pattern.compile("^zombie_horse\\.png$"), new ZombieHorseTextureConverter());
     }
 
     @Override

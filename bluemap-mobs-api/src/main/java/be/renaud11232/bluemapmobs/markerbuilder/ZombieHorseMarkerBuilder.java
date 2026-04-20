@@ -17,7 +17,6 @@ public class ZombieHorseMarkerBuilder extends AgeableMarkerBuilder<ZombieHorse> 
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Add baby variant
-        return super.getDefaultBabyIcon();
+        return MobsIcon.ZOMBIE_HORSE_BABY;
     }
 }
