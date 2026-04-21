@@ -125,6 +125,6 @@
         <module>bluemap-others-plugin-common</module>
         <module>bluemap-others-spigot</module>
         <module>bluemap-others-paper</module>
-        <module>textures-maven-plugin</module>
+        <module>bluemap-entities-icon-generator</module>
     </modules>
 </project>

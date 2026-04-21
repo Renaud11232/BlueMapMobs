@@ -18,14 +18,6 @@
     background-image: url("../img/bee/bee_angry_baby.png");
 }
 
-#map-container .bluemapmobs-drowned img {
-    background-image: url("../img/drowned/drowned.png");
-}
-
-#map-container .bluemapmobs-drowned-baby img {
-    background-image: url("../img/drowned/drowned_baby.png");
-}
-
 #map-container .bluemapmobs-happy-ghast img {
     background-image: url("../img/happy_ghast/happy_ghast.png");
 }

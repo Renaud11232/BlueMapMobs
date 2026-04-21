@@ -113,8 +113,8 @@ public class MobsIcon {
     public static final Icon DOLPHIN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin_baby.png", new Vector2i(12, 12));
     public static final Icon DONKEY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey/donkey.png", new Vector2i(12, 12));
     public static final Icon DONKEY_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey/donkey_baby.png", new Vector2i(12, 12));
-    public static final Icon DROWNED_OUTER_LAYER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned/drowned_outer_layer.png", new Vector2i(12, 12));
-    public static final Icon DROWNED_OUTER_LAYER_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned/drowned_outer_layer_baby.png", new Vector2i(12, 12));
+    public static final Icon DROWNED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned/drowned.png", new Vector2i(12, 12));
+    public static final Icon DROWNED_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/drowned/drowned_baby.png", new Vector2i(12, 12));
     public static final Icon ELDER_GUARDIAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/elder_guardian.png", new Vector2i(12, 12));
     public static final Icon ENDER_DRAGON = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ender_dragon.png", new Vector2i(12, 12));
     public static final Icon ENDERMAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/enderman.png", new Vector2i(12, 12));
