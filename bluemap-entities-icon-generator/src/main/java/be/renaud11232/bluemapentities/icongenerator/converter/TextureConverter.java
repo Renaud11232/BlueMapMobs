@@ -1,5 +1,7 @@
 package be.renaud11232.bluemapentities.icongenerator.converter;
 
+import be.renaud11232.bluemapentities.icongenerator.ImageOperations;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -79,9 +81,10 @@ public abstract class TextureConverter {
     }
 
     private void convert(BiConsumer<List<BufferedImage>, List<Graphics2D>> converter, List<BufferedImage> textures, Path outDir, List<String> outputNames) throws IOException {
-        var outputs = outputNames.stream().map(_ -> new BufferedImage(32, 32, BufferedImage.TYPE_INT_ARGB)).toList();
+        var outputs = outputNames.stream().map(_ -> ImageOperations.newImage(32, 32)).toList();
         var graphics = outputs.stream().map(BufferedImage::createGraphics).toList();
         converter.accept(textures, graphics);
+        graphics.forEach(Graphics::dispose);
         for (int i = 0; i < outputs.size(); i++) {
             saveImage(outDir, outputNames.get(i), outputs.get(i));
         }

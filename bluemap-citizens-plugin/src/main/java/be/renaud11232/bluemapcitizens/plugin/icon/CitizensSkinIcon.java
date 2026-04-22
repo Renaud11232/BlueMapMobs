@@ -33,6 +33,7 @@ class CitizensSkinIcon extends SimpleIcon {
             graphics.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
             graphics.drawImage(layer1, 0, 0, 32, 32, null);
             graphics.drawImage(layer2, 0, 0, 32, 32, null);
+            graphics.dispose();
         } catch(Throwable t) {
             head = new BufferedImage(8, 8, textureImage.getType());
             layer1.copyData(head.getRaster());
