@@ -261,6 +261,7 @@ public class MobsIcon {
     public static final Icon RAVAGER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ravager.png", new Vector2i(12, 12));
     public static final Icon SALMON = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/salmon.png", new Vector2i(12, 12));
     public static final Icon SHEEP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sheep/sheep.png", new Vector2i(12, 12));
+    public static final Icon SHEEP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sheep/sheep_baby.png", new Vector2i(12, 12));
     public static final Icon SHULKER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker.png", new Vector2i(12, 12));
     public static final Icon SILVERFISH = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/silverfish.png", new Vector2i(12, 12));
     public static final Icon SKELETON_HORSE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/skeleton_horse/skeleton_horse.png", new Vector2i(12, 12));

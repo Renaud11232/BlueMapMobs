@@ -36,16 +36,15 @@ public class SheepTextureConverter extends TextureConverter {
 
         });
         registerTexturesConversions((textures, icons) -> {
-            //TODO: This can be simplified
             BufferedImage head = textures.get(0).getSubimage(8, 8, 6, 6);
             BufferedImage wool = textures.get(1).getSubimage(6, 6, 6, 6);
             BufferedImage undercoat = textures.get(2).getSubimage(8, 8, 6, 6);
-            BufferedImage face = ImageOperations.alphaMask(head, ImageOperations.invertAlpha(undercoat));
-            BufferedImage resizedFace = ImageOperations.newImage(32, 32);
-            Graphics2D resizedFaceGraphics = ImageOperations.createGraphics(resizedFace);
-            resizedFaceGraphics.drawImage(face, 4, 4, face.getWidth() * 4, face.getHeight() * 4, null);
-            resizedFaceGraphics.dispose();
-            BufferedImage woolAlphaMask = ImageOperations.invertAlpha(resizedFace);
+            BufferedImage faceAlpha = ImageOperations.alphaMask(head, ImageOperations.invertAlpha(undercoat));
+            BufferedImage resizedFaceAlpha = ImageOperations.newImage(32, 32);
+            Graphics2D resizedFaceAlphaGraphics = ImageOperations.createGraphics(resizedFaceAlpha);
+            resizedFaceAlphaGraphics.drawImage(faceAlpha, 4, 4, faceAlpha.getWidth() * 4, faceAlpha.getHeight() * 4, null);
+            resizedFaceAlphaGraphics.dispose();
+            BufferedImage woolAlpha = ImageOperations.invertAlpha(resizedFaceAlpha);
             for (int i = 0; i < icons.size(); i++) {
                 var icon = icons.get(i);
                 var color = COLORS.get(i);
@@ -59,7 +58,7 @@ public class SheepTextureConverter extends TextureConverter {
                 resizedWoolGraphics.drawImage(tintedWool, 2, 2, 28, 28, null);
                 resizedWoolGraphics.drawImage(tintedUndercoat, 4, 4, tintedUndercoat.getWidth() * 4, tintedUndercoat.getHeight() * 4, null);
                 resizedWoolGraphics.dispose();
-                icon.drawImage(ImageOperations.alphaMask(resizedWool, woolAlphaMask), 2, 2, null);
+                icon.drawImage(ImageOperations.alphaMask(resizedWool, woolAlpha), 2, 2, null);
             }
         });
         registerTextureConversion((texture, icon) -> {

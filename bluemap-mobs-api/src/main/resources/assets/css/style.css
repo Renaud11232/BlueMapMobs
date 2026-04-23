@@ -110,126 +110,248 @@
     background-image: url("../img/llama/llama_brown_baby.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-white img {
-    background-image: url("../img/sheep/sheep_fur_white.png");
+#map-container .bluemapmobs-sheep-wool-white img {
+    background-image: url("../img/sheep/sheep_wool_white.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-light-gray img {
-    background-image: url("../img/sheep/sheep_fur_light_gray.png");
+#map-container .bluemapmobs-sheep-wool-light-gray img {
+    background-image: url("../img/sheep/sheep_wool_light_gray.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-gray img {
-    background-image: url("../img/sheep/sheep_fur_gray.png");
+#map-container .bluemapmobs-sheep-wool-gray img {
+    background-image: url("../img/sheep/sheep_wool_gray.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-black img {
-    background-image: url("../img/sheep/sheep_fur_black.png");
+#map-container .bluemapmobs-sheep-wool-black img {
+    background-image: url("../img/sheep/sheep_wool_black.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-brown img {
-    background-image: url("../img/sheep/sheep_fur_brown.png");
+#map-container .bluemapmobs-sheep-wool-brown img {
+    background-image: url("../img/sheep/sheep_wool_brown.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-red img {
-    background-image: url("../img/sheep/sheep_fur_red.png");
+#map-container .bluemapmobs-sheep-wool-red img {
+    background-image: url("../img/sheep/sheep_wool_red.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-orange img {
-    background-image: url("../img/sheep/sheep_fur_orange.png");
+#map-container .bluemapmobs-sheep-wool-orange img {
+    background-image: url("../img/sheep/sheep_wool_orange.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-yellow img {
-    background-image: url("../img/sheep/sheep_fur_yellow.png");
+#map-container .bluemapmobs-sheep-wool-yellow img {
+    background-image: url("../img/sheep/sheep_wool_yellow.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-lime img {
-    background-image: url("../img/sheep/sheep_fur_lime.png");
+#map-container .bluemapmobs-sheep-wool-lime img {
+    background-image: url("../img/sheep/sheep_wool_lime.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-green img {
-    background-image: url("../img/sheep/sheep_fur_green.png");
+#map-container .bluemapmobs-sheep-wool-green img {
+    background-image: url("../img/sheep/sheep_wool_green.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-cyan img {
-    background-image: url("../img/sheep/sheep_fur_cyan.png");
+#map-container .bluemapmobs-sheep-wool-cyan img {
+    background-image: url("../img/sheep/sheep_wool_cyan.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-light-blue img {
-    background-image: url("../img/sheep/sheep_fur_light_blue.png");
+#map-container .bluemapmobs-sheep-wool-light-blue img {
+    background-image: url("../img/sheep/sheep_wool_light_blue.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-blue img {
-    background-image: url("../img/sheep/sheep_fur_blue.png");
+#map-container .bluemapmobs-sheep-wool-blue img {
+    background-image: url("../img/sheep/sheep_wool_blue.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-purple img {
-    background-image: url("../img/sheep/sheep_fur_purple.png");
+#map-container .bluemapmobs-sheep-wool-purple img {
+    background-image: url("../img/sheep/sheep_wool_purple.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-magenta img {
-    background-image: url("../img/sheep/sheep_fur_magenta.png");
+#map-container .bluemapmobs-sheep-wool-magenta img {
+    background-image: url("../img/sheep/sheep_wool_magenta.png");
 }
 
-#map-container .bluemapmobs-sheep-fur-pink img {
-    background-image: url("../img/sheep/sheep_fur_pink.png");
+#map-container .bluemapmobs-sheep-wool-pink img {
+    background-image: url("../img/sheep/sheep_wool_pink.png");
 }
 
 @keyframes bluemapmobs-sheep-jeb-animation {
     from {
-        background-image: url("../img/sheep/sheep_fur_white.png");
+        background-image: url("../img/sheep/sheep_wool_white.png");
     }
     6.25% {
-        background-image: url("../img/sheep/sheep_fur_orange.png");
+        background-image: url("../img/sheep/sheep_wool_orange.png");
     }
     12.5% {
-        background-image: url("../img/sheep/sheep_fur_magenta.png");
+        background-image: url("../img/sheep/sheep_wool_magenta.png");
     }
     18.75% {
-        background-image: url("../img/sheep/sheep_fur_light_blue.png");
+        background-image: url("../img/sheep/sheep_wool_light_blue.png");
     }
     25% {
-        background-image: url("../img/sheep/sheep_fur_yellow.png");
+        background-image: url("../img/sheep/sheep_wool_yellow.png");
     }
     31.25% {
-        background-image: url("../img/sheep/sheep_fur_lime.png");
+        background-image: url("../img/sheep/sheep_wool_lime.png");
     }
     37.5% {
-        background-image: url("../img/sheep/sheep_fur_pink.png");
+        background-image: url("../img/sheep/sheep_wool_pink.png");
     }
     43.75% {
-        background-image: url("../img/sheep/sheep_fur_gray.png");
+        background-image: url("../img/sheep/sheep_wool_gray.png");
     }
     50% {
-        background-image: url("../img/sheep/sheep_fur_light_gray.png");
+        background-image: url("../img/sheep/sheep_wool_light_gray.png");
     }
     56.25% {
-        background-image: url("../img/sheep/sheep_fur_cyan.png");
+        background-image: url("../img/sheep/sheep_wool_cyan.png");
     }
     62.5% {
-        background-image: url("../img/sheep/sheep_fur_purple.png");
+        background-image: url("../img/sheep/sheep_wool_purple.png");
     }
     68.75% {
-        background-image: url("../img/sheep/sheep_fur_blue.png");
+        background-image: url("../img/sheep/sheep_wool_blue.png");
     }
     75% {
-        background-image: url("../img/sheep/sheep_fur_brown.png");
+        background-image: url("../img/sheep/sheep_wool_brown.png");
     }
     81.25% {
-        background-image: url("../img/sheep/sheep_fur_green.png");
+        background-image: url("../img/sheep/sheep_wool_green.png");
     }
     87.5% {
-        background-image: url("../img/sheep/sheep_fur_red.png");
+        background-image: url("../img/sheep/sheep_wool_red.png");
     }
     93.75% {
-        background-image: url("../img/sheep/sheep_fur_black.png");
+        background-image: url("../img/sheep/sheep_wool_black.png");
     }
     to {
-        background-image: url("../img/sheep/sheep_fur_white.png");
+        background-image: url("../img/sheep/sheep_wool_white.png");
     }
 }
 
-#map-container .bluemapmobs-sheep-fur-jeb img {
+#map-container .bluemapmobs-sheep-wool-jeb img {
     animation: bluemapmobs-sheep-jeb-animation 20s linear infinite;
+}
+
+#map-container .bluemapmobs-sheep-wool-white-baby img {
+    background-image: url("../img/sheep/sheep_wool_white_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-light-gray-baby img {
+    background-image: url("../img/sheep/sheep_wool_light_gray_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-gray-baby img {
+    background-image: url("../img/sheep/sheep_wool_gray_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-black-baby img {
+    background-image: url("../img/sheep/sheep_wool_black_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-brown-baby img {
+    background-image: url("../img/sheep/sheep_wool_brown_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-red-baby img {
+    background-image: url("../img/sheep/sheep_wool_red_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-orange-baby img {
+    background-image: url("../img/sheep/sheep_wool_orange_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-yellow-baby img {
+    background-image: url("../img/sheep/sheep_wool_yellow_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-lime-baby img {
+    background-image: url("../img/sheep/sheep_wool_lime_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-green-baby img {
+    background-image: url("../img/sheep/sheep_wool_green_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-cyan-baby img {
+    background-image: url("../img/sheep/sheep_wool_cyan_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-light-blue-baby img {
+    background-image: url("../img/sheep/sheep_wool_light_blue_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-blue-baby img {
+    background-image: url("../img/sheep/sheep_wool_blue_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-purple-baby img {
+    background-image: url("../img/sheep/sheep_wool_purple_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-magenta-baby img {
+    background-image: url("../img/sheep/sheep_wool_magenta_baby.png");
+}
+
+#map-container .bluemapmobs-sheep-wool-pink-baby img {
+    background-image: url("../img/sheep/sheep_wool_pink_baby.png");
+}
+
+@keyframes bluemapmobs-sheep-jeb-animation-baby {
+    from {
+        background-image: url("../img/sheep/sheep_wool_white_baby.png");
+    }
+    6.25% {
+        background-image: url("../img/sheep/sheep_wool_orange_baby.png");
+    }
+    12.5% {
+        background-image: url("../img/sheep/sheep_wool_magenta_baby.png");
+    }
+    18.75% {
+        background-image: url("../img/sheep/sheep_wool_light_blue_baby.png");
+    }
+    25% {
+        background-image: url("../img/sheep/sheep_wool_yellow_baby.png");
+    }
+    31.25% {
+        background-image: url("../img/sheep/sheep_wool_lime_baby.png");
+    }
+    37.5% {
+        background-image: url("../img/sheep/sheep_wool_pink_baby.png");
+    }
+    43.75% {
+        background-image: url("../img/sheep/sheep_wool_gray_baby.png");
+    }
+    50% {
+        background-image: url("../img/sheep/sheep_wool_light_gray_baby.png");
+    }
+    56.25% {
+        background-image: url("../img/sheep/sheep_wool_cyan_baby.png");
+    }
+    62.5% {
+        background-image: url("../img/sheep/sheep_wool_purple_baby.png");
+    }
+    68.75% {
+        background-image: url("../img/sheep/sheep_wool_blue_baby.png");
+    }
+    75% {
+        background-image: url("../img/sheep/sheep_wool_brown_baby.png");
+    }
+    81.25% {
+        background-image: url("../img/sheep/sheep_wool_green_baby.png");
+    }
+    87.5% {
+        background-image: url("../img/sheep/sheep_wool_red_baby.png");
+    }
+    93.75% {
+        background-image: url("../img/sheep/sheep_wool_black_baby.png");
+    }
+    to {
+        background-image: url("../img/sheep/sheep_wool_white_baby.png");
+    }
+}
+
+#map-container .bluemapmobs-sheep-wool-jeb-baby img {
+    animation: bluemapmobs-sheep-jeb-animation-baby 20s linear infinite;
 }
 
 #map-container .bluemapmobs-tropical-fish-body-small-black img {
