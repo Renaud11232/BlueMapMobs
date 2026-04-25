@@ -17,7 +17,6 @@ public class TurtleMarkerBuilder extends AgeableMarkerBuilder<Turtle> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.TURTLE_BABY;
     }
 }

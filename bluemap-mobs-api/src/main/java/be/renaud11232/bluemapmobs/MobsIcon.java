@@ -285,7 +285,8 @@ public class MobsIcon {
     public static Icon tropicalFishPattern(TropicalFish.Pattern pattern, TropicalFish.Color patternColor) {
         return new SimpleIcon(String.format("assets/bluemap-entities/modules/mobs/img/tropical_fish/tropical_fish_pattern_%s_%s.png", pattern.name().toLowerCase(), patternColor.name().toLowerCase()), new Vector2i(12, 12));
     }
-    public static final Icon TURTLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/turtle.png", new Vector2i(12, 12));
+    public static final Icon TURTLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/turtle/turtle.png", new Vector2i(12, 12));
+    public static final Icon TURTLE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/turtle/turtle_baby.png", new Vector2i(12, 12));
     public static final Icon VEX = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/vex.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_DESERT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_desert.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_JUNGLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_jungle.png", new Vector2i(12, 12));
