@@ -70,4 +70,6 @@ public class MobsStyleClass {
     }
     public static final String VILLAGER = "bluemapmobs-villager";
     public static final String VILLAGER_BABY = "bluemapmobs-villager-baby";
+    public static final String ZOMBIE_VILLAGER = "bluemapmobs-zombie-villager";
+    public static final String ZOMBIE_VILLAGER_BABY = "bluemapmobs-zombie-villager-baby";
 }

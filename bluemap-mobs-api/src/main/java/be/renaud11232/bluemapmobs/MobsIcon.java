@@ -347,7 +347,14 @@ public class MobsIcon {
     public static final Icon ZOMBIE_VILLAGER_JUNGLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_jungle.png", new Vector2i(12, 12));
     public static final Icon ZOMBIE_VILLAGER_PLAINS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_plains.png", new Vector2i(12, 12));
     public static final Icon ZOMBIE_VILLAGER_SAVANNA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_savanna.png", new Vector2i(12, 12));
-    public static final Icon ZOMBIE_VILLAGER_SNOWY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_snowy.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_SNOW = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_snow.png", new Vector2i(12, 12));
     public static final Icon ZOMBIE_VILLAGER_SWAMP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_swamp.png", new Vector2i(12, 12));
     public static final Icon ZOMBIE_VILLAGER_TAIGA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_taiga.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_DESERT_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_desert_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_JUNGLE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_jungle_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_PLAINS_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_plains_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_SAVANNA_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_savanna_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_SNOW_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_snow_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_SWAMP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_swamp_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIE_VILLAGER_TAIGA_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_taiga_baby.png", new Vector2i(12, 12));
 }

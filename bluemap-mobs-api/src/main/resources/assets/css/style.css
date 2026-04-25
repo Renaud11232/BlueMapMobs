@@ -489,3 +489,11 @@
 #map-container .bluemapmobs-villager-baby img {
     background-image: url("../img/villager/villager_baby.png");
 }
+
+#map-container .bluemapmobs-zombie-villager img {
+    background-image: url("../img/zombie_villager/zombie_villager.png");
+}
+
+#map-container .bluemapmobs-zombie-villager-baby img {
+    background-image: url("../img/zombie_villager/zombie_villager_baby.png");
+}
