@@ -276,7 +276,10 @@ public class MobsIcon {
     public static final Icon SQUID = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/squid/squid.png", new Vector2i(12, 12));
     public static final Icon SQUID_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/squid/squid_baby.png", new Vector2i(12, 12));
     public static final Icon STRAY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/stray.png", new Vector2i(12, 12));
-    public static final Icon STRIDER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider.png", new Vector2i(12, 12));
+    public static final Icon STRIDER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider/strider.png", new Vector2i(12, 12));
+    public static final Icon STRIDER_COLD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider/strider_cold.png", new Vector2i(12, 12));
+    public static final Icon STRIDER_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider/strider_baby.png", new Vector2i(12, 12));
+    public static final Icon STRIDER_COLD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider/strider_cold_baby.png", new Vector2i(12, 12));
     public static final Icon TADPOLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/tadpole.png", new Vector2i(12, 12));
     public static final Icon TRADER_LLAMA_DECOR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/trader_llama_decor.png", new Vector2i(12, 12));
     public static Icon tropicalFishPattern(TropicalFish.Pattern pattern, TropicalFish.Color patternColor) {

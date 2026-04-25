@@ -8,8 +8,9 @@ public class StriderMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Stri
     public StriderMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
         registerVariantAdultIcon(false, MobsIcon.STRIDER);
-        //TODO: add shivering icon
-        //TODO: add baby variants
+        registerVariantAdultIcon(true, MobsIcon.STRIDER_COLD);
+        registerVariantBabyIcon(false, MobsIcon.STRIDER_BABY);
+        registerVariantBabyIcon(true, MobsIcon.STRIDER_COLD_BABY);
     }
 
     @Override
