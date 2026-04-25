@@ -17,7 +17,6 @@ public class SquidMarkerBuilder extends AgeableMarkerBuilder<Squid> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: Add baby variant
-        return super.getDefaultBabyIcon();
+        return MobsIcon.SQUID_BABY;
     }
 }

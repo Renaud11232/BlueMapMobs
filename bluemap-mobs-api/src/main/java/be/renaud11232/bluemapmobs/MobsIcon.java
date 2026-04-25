@@ -273,7 +273,8 @@ public class MobsIcon {
     public static final Icon SNOWMAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/snowman/snowman.png", new Vector2i(12, 12));
     public static final Icon SNOWMAN_DERP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/snowman/snowman_derp.png", new Vector2i(12, 12));
     public static final Icon SPIDER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/spider.png", new Vector2i(12, 12));
-    public static final Icon SQUID = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/squid.png", new Vector2i(12, 12));
+    public static final Icon SQUID = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/squid/squid.png", new Vector2i(12, 12));
+    public static final Icon SQUID_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/squid/squid_baby.png", new Vector2i(12, 12));
     public static final Icon STRAY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/stray.png", new Vector2i(12, 12));
     public static final Icon STRIDER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider.png", new Vector2i(12, 12));
     public static final Icon TADPOLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/tadpole.png", new Vector2i(12, 12));
