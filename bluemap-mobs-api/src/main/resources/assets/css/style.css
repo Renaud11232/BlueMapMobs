@@ -481,3 +481,11 @@
 #map-container .bluemapmobs-tropical-fish-body-large-yellow img {
     background-image: url("../img/tropical_fish/tropical_fish_body_large_yellow.png");
 }
+
+#map-container .bluemapmobs-villager img {
+    background-image: url("../img/villager/villager.png");
+}
+
+#map-container .bluemapmobs-villager-baby img {
+    background-image: url("../img/villager/villager_baby.png");
+}

@@ -293,9 +293,16 @@ public class MobsIcon {
     public static final Icon VILLAGER_JUNGLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_jungle.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_PLAINS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_plains.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_SAVANNA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_savanna.png", new Vector2i(12, 12));
-    public static final Icon VILLAGER_SNOWY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_snowy.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_SNOW = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_snow.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_SWAMP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_swamp.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_TAIGA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_taiga.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_DESERT_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_desert_baby.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_JUNGLE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_jungle_baby.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_PLAINS_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_plains_baby.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_SAVANNA_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_savanna_baby.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_SNOW_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_snow_baby.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_SWAMP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_swamp_baby.png", new Vector2i(12, 12));
+    public static final Icon VILLAGER_TAIGA_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_taiga_baby.png", new Vector2i(12, 12));
     public static final Icon VINDICATOR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/vindicator.png", new Vector2i(12, 12));
     public static final Icon WANDERING_TRADER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/wandering_trader.png", new Vector2i(12, 12));
     public static final Icon WARDEN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/warden.png", new Vector2i(12, 12));

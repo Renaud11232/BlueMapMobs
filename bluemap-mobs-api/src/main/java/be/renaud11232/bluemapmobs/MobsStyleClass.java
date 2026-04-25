@@ -68,4 +68,6 @@ public class MobsStyleClass {
     public static String tropicalFishBody(TropicalFish.BodyType bodyType, TropicalFish.Color bodyColor) {
         return String.format("bluemapmobs-tropical-fish-body-%s-%s", bodyType.name().toLowerCase(), bodyColor.name().toLowerCase().replace('_', '-'));
     }
+    public static final String VILLAGER = "bluemapmobs-villager";
+    public static final String VILLAGER_BABY = "bluemapmobs-villager-baby";
 }
