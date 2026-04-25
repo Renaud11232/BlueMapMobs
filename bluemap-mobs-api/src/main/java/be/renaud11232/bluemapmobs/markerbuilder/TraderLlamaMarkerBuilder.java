@@ -16,6 +16,10 @@ public class TraderLlamaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<
         registerVariantAdultStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.LLAMA_WHITE));
         registerVariantAdultStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.LLAMA_GRAY));
         registerVariantAdultStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.LLAMA_BROWN));
+        registerVariantBabyStyleClasses(Llama.Color.CREAMY, List.of(MobsStyleClass.LLAMA_CREAMY_BABY));
+        registerVariantBabyStyleClasses(Llama.Color.WHITE, List.of(MobsStyleClass.LLAMA_WHITE_BABY));
+        registerVariantBabyStyleClasses(Llama.Color.GRAY, List.of(MobsStyleClass.LLAMA_GRAY_BABY));
+        registerVariantBabyStyleClasses(Llama.Color.BROWN, List.of(MobsStyleClass.LLAMA_BROWN_BABY));
     }
 
     @Override
@@ -25,8 +29,7 @@ public class TraderLlamaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO default baby decor icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.TRADER_LLAMA_DECOR_BABY;
     }
 
     @Override

@@ -281,7 +281,8 @@ public class MobsIcon {
     public static final Icon STRIDER_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider/strider_baby.png", new Vector2i(12, 12));
     public static final Icon STRIDER_COLD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/strider/strider_cold_baby.png", new Vector2i(12, 12));
     public static final Icon TADPOLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/tadpole.png", new Vector2i(12, 12));
-    public static final Icon TRADER_LLAMA_DECOR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/trader_llama_decor.png", new Vector2i(12, 12));
+    public static final Icon TRADER_LLAMA_DECOR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/trader_llama/trader_llama_decor.png", new Vector2i(12, 12));
+    public static final Icon TRADER_LLAMA_DECOR_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/trader_llama/trader_llama_decor_baby.png", new Vector2i(12, 12));
     public static Icon tropicalFishPattern(TropicalFish.Pattern pattern, TropicalFish.Color patternColor) {
         return new SimpleIcon(String.format("assets/bluemap-entities/modules/mobs/img/tropical_fish/tropical_fish_pattern_%s_%s.png", pattern.name().toLowerCase(), patternColor.name().toLowerCase()), new Vector2i(12, 12));
     }

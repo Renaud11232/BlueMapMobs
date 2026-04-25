@@ -38,6 +38,7 @@ public class IconGenerator {
                 new SquidTextureConverter(),
                 new StriderTextureConverter(),
                 new TurtleTextureConverter(),
+                new TraderLlamaTextureConverter(),
                 new ZombieHorseTextureConverter()
         );
     }
