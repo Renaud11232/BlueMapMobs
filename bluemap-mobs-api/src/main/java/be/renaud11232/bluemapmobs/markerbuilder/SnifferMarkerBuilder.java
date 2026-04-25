@@ -17,7 +17,6 @@ public class SnifferMarkerBuilder extends AgeableMarkerBuilder<Sniffer> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.SNIFFER_BABY;
     }
 }

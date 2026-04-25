@@ -34,6 +34,7 @@ public class IconGenerator {
                 new RabbitTextureConverter(),
                 new SheepTextureConverter(),
                 new SkeletonHorseTextureConverter(),
+                new SnifferTextureConverter(),
                 new ZombieHorseTextureConverter()
         );
     }

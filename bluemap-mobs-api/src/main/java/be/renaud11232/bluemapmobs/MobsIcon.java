@@ -268,7 +268,8 @@ public class MobsIcon {
     public static final Icon SKELETON_HORSE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/skeleton_horse/skeleton_horse_baby.png", new Vector2i(12, 12));
     public static final Icon SKELETON = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/skeleton.png", new Vector2i(12, 12));
     public static final Icon SLIME = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/slime.png", new Vector2i(12, 12));
-    public static final Icon SNIFFER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sniffer.png", new Vector2i(12, 12));
+    public static final Icon SNIFFER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sniffer/sniffer.png", new Vector2i(12, 12));
+    public static final Icon SNIFFER_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sniffer/sniffer_baby.png", new Vector2i(12, 12));
     public static final Icon SNOWMAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/snowman/snowman.png", new Vector2i(12, 12));
     public static final Icon SNOWMAN_DERP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/snowman/snowman_derp.png", new Vector2i(12, 12));
     public static final Icon SPIDER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/spider.png", new Vector2i(12, 12));
