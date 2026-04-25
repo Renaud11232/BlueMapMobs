@@ -30,21 +30,16 @@ public class SheepTextureConverter extends TextureConverter {
 
     public SheepTextureConverter() {
         super();
-        registerTextureConversion((texture, icon) -> {
-            BufferedImage head = texture.getSubimage(8, 8, 6, 6);
-            icon.drawImage(head, 4, 4, head.getWidth() * 4, head.getHeight() * 4, null);
+        registerTexturesConversion((textures, icon) -> {
+            BufferedImage head = textures.get(0).getSubimage(8, 8, 6, 6);
+            BufferedImage undercoat = textures.get(1).getSubimage(8, 8, 6, 6);
+            BufferedImage face = ImageOperations.alphaMask(head, ImageOperations.invertAlpha(undercoat));
+            icon.drawImage(face, 4, 4, face.getWidth() * 4, face.getHeight() * 4, null);
 
         });
         registerTexturesConversions((textures, icons) -> {
-            BufferedImage head = textures.get(0).getSubimage(8, 8, 6, 6);
-            BufferedImage wool = textures.get(1).getSubimage(6, 6, 6, 6);
-            BufferedImage undercoat = textures.get(2).getSubimage(8, 8, 6, 6);
-            BufferedImage faceAlpha = ImageOperations.alphaMask(head, ImageOperations.invertAlpha(undercoat));
-            BufferedImage resizedFaceAlpha = ImageOperations.newImage(32, 32);
-            Graphics2D resizedFaceAlphaGraphics = ImageOperations.createGraphics(resizedFaceAlpha);
-            resizedFaceAlphaGraphics.drawImage(faceAlpha, 4, 4, faceAlpha.getWidth() * 4, faceAlpha.getHeight() * 4, null);
-            resizedFaceAlphaGraphics.dispose();
-            BufferedImage woolAlpha = ImageOperations.invertAlpha(resizedFaceAlpha);
+            BufferedImage wool = textures.get(0).getSubimage(6, 6, 6, 6);
+            BufferedImage undercoat = textures.get(1).getSubimage(8, 8, 6, 6);
             for (int i = 0; i < icons.size(); i++) {
                 var icon = icons.get(i);
                 var color = COLORS.get(i);
@@ -53,17 +48,15 @@ public class SheepTextureConverter extends TextureConverter {
                     tintedUndercoat = ImageOperations.tintRGB(undercoat, color);
                 }
                 var tintedWool = ImageOperations.tintRGB(wool, color);
-                BufferedImage resizedWool = ImageOperations.newImage(32, 32);
-                Graphics2D resizedWoolGraphics = ImageOperations.createGraphics(resizedWool);
-                resizedWoolGraphics.drawImage(tintedWool, 2, 2, 28, 28, null);
-                resizedWoolGraphics.drawImage(tintedUndercoat, 4, 4, tintedUndercoat.getWidth() * 4, tintedUndercoat.getHeight() * 4, null);
-                resizedWoolGraphics.dispose();
-                icon.drawImage(ImageOperations.alphaMask(resizedWool, woolAlpha), 2, 2, null);
+                icon.drawImage(tintedWool, 2, 2, 28, 28, null);
+                icon.drawImage(tintedUndercoat, 4, 4, tintedUndercoat.getWidth() * 4, tintedUndercoat.getHeight() * 4, null);
             }
         });
-        registerTextureConversion((texture, icon) -> {
-            BufferedImage head = texture.getSubimage(5, 5, 5, 5);
-            icon.drawImage(head, 6, 6, head.getWidth() * 4, head.getHeight() * 4, null);
+        registerTexturesConversion((textures, icon) -> {
+            BufferedImage head = textures.get(0).getSubimage(5, 5, 5, 5);
+            BufferedImage wool = textures.get(1).getSubimage(5, 5, 5, 5);
+            BufferedImage face = ImageOperations.alphaMask(head, ImageOperations.invertAlpha(wool));
+            icon.drawImage(face, 6, 6, face.getWidth() * 4, face.getHeight() * 4, null);
         });
         registerTextureConversions((texture, icons) -> {
             BufferedImage wool = texture.getSubimage(5, 5, 5, 5);
@@ -80,15 +73,15 @@ public class SheepTextureConverter extends TextureConverter {
     protected List<Map.Entry<List<Pattern>, List<String>>> getConversions() {
         return List.of(
                 Map.entry(
-                        List.of(Pattern.compile("^sheep\\.png$")),
+                        List.of(Pattern.compile("^sheep\\.png$"), Pattern.compile("^sheep_wool_undercoat\\.png$")),
                         List.of("sheep.png")
                 ),
                 Map.entry(
-                        List.of(Pattern.compile("^sheep\\.png$"), Pattern.compile("^sheep_wool\\.png$"), Pattern.compile("^sheep_wool_undercoat\\.png$")),
+                        List.of(Pattern.compile("^sheep_wool\\.png$"), Pattern.compile("^sheep_wool_undercoat\\.png$")),
                         List.of("sheep_wool_white.png", "sheep_wool_orange.png", "sheep_wool_magenta.png", "sheep_wool_light_blue.png", "sheep_wool_yellow.png", "sheep_wool_lime.png", "sheep_wool_pink.png", "sheep_wool_gray.png", "sheep_wool_light_gray.png", "sheep_wool_cyan.png", "sheep_wool_purple.png", "sheep_wool_blue.png", "sheep_wool_brown.png", "sheep_wool_green.png", "sheep_wool_red.png", "sheep_wool_black.png")
                 ),
                 Map.entry(
-                        List.of(Pattern.compile("^sheep_baby\\.png$")),
+                        List.of(Pattern.compile("^sheep_baby\\.png$"), Pattern.compile("^sheep_wool_baby\\.png$")),
                         List.of("sheep_baby.png")
                 ),
                 Map.entry(
