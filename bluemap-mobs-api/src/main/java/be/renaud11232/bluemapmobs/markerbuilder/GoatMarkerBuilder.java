@@ -17,7 +17,6 @@ public class GoatMarkerBuilder extends AgeableMarkerBuilder<Goat> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.GOAT_BABY;
     }
 }

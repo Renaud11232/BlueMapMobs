@@ -21,6 +21,7 @@ public class IconGenerator {
                 new DrownedTextureConverter(),
                 new FoxTextureConverter(),
                 new GlowSquidTextureConverter(),
+                new GoatTextureConverter(),
                 new HoglinTextureConverter(),
                 new HorseTextureConverter(),
                 new HuskTextureConverter(),
