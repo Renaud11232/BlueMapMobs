@@ -14,6 +14,7 @@ public class IconGenerator {
 
     public IconGenerator() {
         converters = List.of(
+                new ArmadilloTextureConverter(),
                 new CamelHuskTextureConverter(),
                 new CamelTextureConverter(),
                 new DonkeyTextureConverter(),

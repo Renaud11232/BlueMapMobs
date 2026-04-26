@@ -17,7 +17,6 @@ public class ArmadilloMarkerBuilder extends AgeableMarkerBuilder<Armadillo> {
 
     @Override
     protected Icon getDefaultBabyIcon() {
-        //TODO: add baby icon
-        return super.getDefaultBabyIcon();
+        return MobsIcon.ARMADILLO_BABY;
     }
 }

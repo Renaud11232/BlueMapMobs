@@ -7,7 +7,8 @@ import com.flowpowered.math.vector.Vector2i;
 
 public class MobsIcon {
     public static final Icon ALLAY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/allay.png", new Vector2i(12, 12));
-    public static final Icon ARMADILLO = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/armadillo.png", new Vector2i(12, 12));
+    public static final Icon ARMADILLO = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/armadillo/armadillo.png", new Vector2i(12, 12));
+    public static final Icon ARMADILLO_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/armadillo/armadillo_baby.png", new Vector2i(12, 12));
     public static final Icon AXOLOTL_LUCY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_lucy.png", new Vector2i(12, 12));
     public static final Icon AXOLOTL_WILD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_wild.png", new Vector2i(12, 12));
     public static final Icon AXOLOTL_GOLD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/axolotl/axolotl_gold.png", new Vector2i(12, 12));
