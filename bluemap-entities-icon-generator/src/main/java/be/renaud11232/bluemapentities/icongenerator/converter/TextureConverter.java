@@ -82,7 +82,7 @@ public abstract class TextureConverter {
 
     private void convert(BiConsumer<List<BufferedImage>, List<Graphics2D>> converter, List<BufferedImage> textures, Path outDir, List<String> outputNames) throws IOException {
         var outputs = outputNames.stream().map(_ -> ImageOperations.newImage(32, 32)).toList();
-        var graphics = outputs.stream().map(BufferedImage::createGraphics).toList();
+        var graphics = outputs.stream().map(ImageOperations::createGraphics).toList();
         converter.accept(textures, graphics);
         graphics.forEach(Graphics::dispose);
         for (int i = 0; i < outputs.size(); i++) {
