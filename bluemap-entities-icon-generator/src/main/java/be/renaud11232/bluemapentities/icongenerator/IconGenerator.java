@@ -41,6 +41,7 @@ public class IconGenerator {
                 new TraderLlamaTextureConverter(),
                 new VillagerTextureConverter(),
                 new WolfTextureConverter(),
+                new ZoglinTextureConverter(),
                 new ZombieHorseTextureConverter(),
                 new ZombieVillagerTextureConverter()
         );
