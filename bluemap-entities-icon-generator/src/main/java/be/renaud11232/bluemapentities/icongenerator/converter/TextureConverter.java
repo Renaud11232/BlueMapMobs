@@ -55,7 +55,7 @@ public abstract class TextureConverter {
                     var matcher = inputPattern.matcher(source.getFileName().toString());
                     if (matcher.matches()) {
                         List<String> groups = new ArrayList<>();
-                        for (int g = 0; g < matcher.groupCount(); g++) {
+                        for (int g = 1; g <= matcher.groupCount(); g++) {
                             groups.add(matcher.group(g));
                         }
                         matchers.put(groups, matcher);

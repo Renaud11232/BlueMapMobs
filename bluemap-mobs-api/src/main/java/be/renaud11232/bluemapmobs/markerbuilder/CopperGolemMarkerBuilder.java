@@ -7,7 +7,7 @@ import be.renaud11232.bluemapmobs.entity.CopperGolem;
 public class CopperGolemMarkerBuilder extends MobSingleVariantMarkerBuilder<CopperGolem, CopperGolem.CopperWeatherState> {
     public CopperGolemMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        registerVariantIcon(CopperGolem.CopperWeatherState.UNAFFECTED, MobsIcon.COPPER_GOLEM_UNAFFECTED);
+        registerVariantIcon(CopperGolem.CopperWeatherState.UNAFFECTED, MobsIcon.COPPER_GOLEM);
         registerVariantIcon(CopperGolem.CopperWeatherState.EXPOSED, MobsIcon.COPPER_GOLEM_EXPOSED);
         registerVariantIcon(CopperGolem.CopperWeatherState.WEATHERED, MobsIcon.COPPER_GOLEM_WEATHERED);
         registerVariantIcon(CopperGolem.CopperWeatherState.OXIDIZED, MobsIcon.COPPER_GOLEM_OXIDIZED);

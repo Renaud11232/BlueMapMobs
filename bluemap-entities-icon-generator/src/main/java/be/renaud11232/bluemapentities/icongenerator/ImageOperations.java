@@ -120,4 +120,37 @@ public class ImageOperations {
         }
         return output;
     }
+
+    public static BufferedImage difference(BufferedImage a, BufferedImage b) {
+        if (a.getWidth() != b.getWidth() || a.getHeight() != b.getHeight()) {
+            throw new IllegalArgumentException("The images must have the same dimensions");
+        }
+        var output = newImage(a.getWidth(), a.getHeight());
+        for (int x = 0; x < a.getWidth(); x++) {
+            for (int y = 0; y < a.getHeight(); y++) {
+                int colorA = a.getRGB(x, y);
+                int colorB = b.getRGB(x, y);
+                if (colorA != colorB) {
+                    output.setRGB(x, y, colorB);
+                }
+            }
+        }
+        return output;
+    }
+
+    public static BufferedImage opacity(BufferedImage image, float opacity) {
+        var output = newImage(image.getWidth(), image.getHeight());
+        for (int x = 0; x < image.getWidth(); x++) {
+            for (int y = 0; y < image.getHeight(); y++) {
+                int argb = image.getRGB(x, y);
+                int a = (argb >> 24) & 0xFF;
+                int r = (argb >> 16) & 0xFF;
+                int g = (argb >> 8) & 0xFF;
+                int b = argb & 0xFF;
+                a = Math.round(a * opacity);
+                output.setRGB(x, y, (a << 24) | (r << 16) | (g << 8) | b);
+            }
+        }
+        return output;
+    }
 }

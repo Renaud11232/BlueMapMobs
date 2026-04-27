@@ -39,11 +39,6 @@ public class IconGeneratorCommand implements Callable<Integer> {
         if (!Files.isDirectory(out)) {
             throw new RuntimeException(out + " is not a directory.");
         }
-        try (var content = Files.list(out)) {
-            if (content.findAny().isPresent()) {
-                throw new RuntimeException(out + " is not empty.");
-            }
-        }
         new IconGenerator().generate(source, out);
         return 0;
     }
