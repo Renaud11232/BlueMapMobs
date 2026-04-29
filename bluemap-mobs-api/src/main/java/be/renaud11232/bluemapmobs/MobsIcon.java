@@ -73,9 +73,7 @@ public class MobsIcon {
     public static final Icon CREAKING = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/creaking.png", new Vector2i(12, 12));
     public static final Icon CREEPER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/creeper/creeper.png", new Vector2i(12, 12));
     public static final Icon CREEPER_CHARGED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/creeper/creeper_charged.png", new Vector2i(12, 12));
-    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 6x7+0+6 -sample 400% \) -geometry -4+2 -composite \( ${TEXTURE}.png -crop 4x2+0+17 -sample 400% \) -geometry +20+22 -composite -strip ${TEXTURE}_out.png
     public static final Icon DOLPHIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin.png", new Vector2i(12, 12));
-    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 4x5+0+4 -sample 400% \) -geometry +4+6 -composite \( ${TEXTURE}.png -crop 2x2+0+11 -sample 400% \) -geometry +20+18 -composite -strip ${TEXTURE}_out.png
     public static final Icon DOLPHIN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/dolphin/dolphin_baby.png", new Vector2i(12, 12));
     public static final Icon DONKEY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey/donkey.png", new Vector2i(12, 12));
     public static final Icon DONKEY_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/donkey/donkey_baby.png", new Vector2i(12, 12));
@@ -165,9 +163,7 @@ public class MobsIcon {
     public static final Icon MUSHROOM_COW_BROWN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/mushroom_cow/mushroom_cow_brown_baby.png", new Vector2i(12, 12));
     public static final Icon NAUTILUS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus/nautilus.png", new Vector2i(12, 12));
     public static final Icon NAUTILUS_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/nautilus/nautilus_baby.png", new Vector2i(12, 12));
-    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+5+5 -sample 600% \) -geometry +1+7 -composite \( ${TEXTURE}.png -crop 3x2+2+26 -sample 600% \) -geometry +7+19 -composite \( ${TEXTURE}.png -crop 1x1+2+12 -sample 600% \) -geometry +4+1 -composite \( ${TEXTURE}.png -crop 1x1+8+12 -sample 600% \) -geometry +22+1 -composite -strip ${TEXTURE}_out.png
     public static final Icon OCELOT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot.png", new Vector2i(12, 12));
-    //magick -size 32x32 xc:none \( ${TEXTURE}.png -crop 5x4+4+4 -sample 400% \) -geometry +6+10 -composite \( ${TEXTURE}.png -crop 3x2+19+4 -sample 400% \) -geometry +10+18 -composite \( ${TEXTURE}.png -crop 1x1+20+2 -sample 400% \) -geometry +8+6 -composite \( ${TEXTURE}.png -crop 1x1+26+2 -sample 400% \) -geometry +20+6 -composite -strip ${TEXTURE}_out.png
     public static final Icon OCELOT_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/ocelot/ocelot_baby.png", new Vector2i(12, 12));
     public static final Icon PANDA_NORMAL = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_normal.png", new Vector2i(12, 12));
     public static final Icon PANDA_LAZY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/panda/panda_lazy.png", new Vector2i(12, 12));
@@ -225,7 +221,23 @@ public class MobsIcon {
     public static final Icon SALMON = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/salmon.png", new Vector2i(12, 12));
     public static final Icon SHEEP = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sheep/sheep.png", new Vector2i(12, 12));
     public static final Icon SHEEP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/sheep/sheep_baby.png", new Vector2i(12, 12));
-    public static final Icon SHULKER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker.png", new Vector2i(12, 12));
+    public static final Icon SHULKER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_WHITE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_white.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_ORANGE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_orange.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_MAGENTA = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_magenta.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_LIGHT_BLUE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_light_blue.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_YELLOW = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_yellow.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_LIME = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_lime.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_PINK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_pink.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_GRAY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_gray.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_LIGHT_GRAY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_light_gray.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_CYAN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_cyan.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_PURPLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_purple.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_BLUE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_blue.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_BROWN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_brown.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_GREEN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_green.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_RED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_red.png", new Vector2i(12, 12));
+    public static final Icon SHULKER_BLACK = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/shulker/shulker_black.png", new Vector2i(12, 12));
     public static final Icon SILVERFISH = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/silverfish.png", new Vector2i(12, 12));
     public static final Icon SKELETON_HORSE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/skeleton_horse/skeleton_horse.png", new Vector2i(12, 12));
     public static final Icon SKELETON_HORSE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/skeleton_horse/skeleton_horse_baby.png", new Vector2i(12, 12));

@@ -8,4 +8,25 @@ public interface Shulker extends Golem {
     default MarkerType getMarkerType() {
         return MobsMarkerType.SHULKER;
     }
+
+    Color getColor();
+
+    enum Color {
+        WHITE,
+        ORANGE,
+        MAGENTA,
+        LIGHT_BLUE,
+        YELLOW,
+        LIME,
+        PINK,
+        GRAY,
+        LIGHT_GRAY,
+        CYAN,
+        PURPLE,
+        BLUE,
+        BROWN,
+        GREEN,
+        RED,
+        BLACK
+    }
 }

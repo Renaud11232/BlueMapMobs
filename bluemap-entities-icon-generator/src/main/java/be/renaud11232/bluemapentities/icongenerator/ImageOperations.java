@@ -153,4 +153,16 @@ public class ImageOperations {
         }
         return output;
     }
+
+    public static BufferedImage scale(BufferedImage image, int scaleX, int scaleY) {
+        var output = newImage(image.getWidth() * scaleX, image.getHeight() * scaleY);
+        Graphics2D g2d = createGraphics(output);
+        g2d.drawImage(image, 0, 0, image.getWidth() * scaleX, image.getHeight() * scaleY, null);
+        g2d.dispose();
+        return output;
+    }
+
+    public static BufferedImage scale(BufferedImage image, int ratio) {
+        return scale(image, ratio, ratio);
+    }
 }
