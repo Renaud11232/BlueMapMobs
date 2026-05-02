@@ -94,7 +94,7 @@ public class IconGenerator {
                 new VindicatorTextureConverter(),
                 new WanderingTraderTextureConverter(),
                 new WardenTextureConverter(),
-//                new WitchTextureConverter(),
+                new WitchTextureConverter(),
                 new WitherTextureConverter(),
                 new WitherSkeletonTextureConverter(),
                 new WolfTextureConverter(),
