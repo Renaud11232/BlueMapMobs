@@ -5,6 +5,8 @@ import be.renaud11232.bluemapentities.icongenerator.converter.citizens.NPCTextur
 import be.renaud11232.bluemapentities.icongenerator.converter.mobs.*;
 import be.renaud11232.bluemapentities.icongenerator.converter.other.ArmorStandTextureConverter;
 import be.renaud11232.bluemapentities.icongenerator.converter.other.MannequinTextureConverter;
+import be.renaud11232.bluemapentities.icongenerator.converter.vehicles.BoatTextureConverter;
+import be.renaud11232.bluemapentities.icongenerator.converter.vehicles.MinecartTextureConverter;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -108,7 +110,9 @@ public class IconGenerator {
                 new ZombieVillagerTextureConverter(),
                 new NPCTextureConverter(),
                 new ArmorStandTextureConverter(),
-                new MannequinTextureConverter()
+                new MannequinTextureConverter(),
+                new BoatTextureConverter(),
+                new MinecartTextureConverter()
         );
     }
 
