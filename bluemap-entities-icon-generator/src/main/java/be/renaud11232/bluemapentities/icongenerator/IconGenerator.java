@@ -93,7 +93,7 @@ public class IconGenerator {
                 new VillagerTextureConverter(),
                 new VindicatorTextureConverter(),
                 new WanderingTraderTextureConverter(),
-//                new WardenTextureConverter(),
+                new WardenTextureConverter(),
 //                new WitchTextureConverter(),
 //                new WitherTextureConverter(),
                 new WitherSkeletonTextureConverter(),
