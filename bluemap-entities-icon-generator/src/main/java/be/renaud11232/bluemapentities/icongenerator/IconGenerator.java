@@ -101,7 +101,7 @@ public class IconGenerator {
                 new ZoglinTextureConverter(),
                 new ZombieHorseTextureConverter(),
                 new ZombieTextureConverter(),
-//                new ZombieNautilusTextureConverter(),
+                new ZombieNautilusTextureConverter(),
                 new ZombieVillagerTextureConverter()
         );
     }
