@@ -9,9 +9,9 @@ import java.util.regex.Pattern;
 public class MinecartTextureConverter extends TextureConverter {
     public MinecartTextureConverter() {
         super();
-        registerTextureConversion((texture, icon) -> {
-            icon.drawImage(texture, 0, 0, texture.getWidth() * 2, texture.getHeight() * 2, null);
-        });
+        registerTextureConversion((texture, icon) ->
+            icon.drawImage(texture, 0, 0, texture.getWidth() * 2, texture.getHeight() * 2, null)
+        );
     }
 
     @Override
