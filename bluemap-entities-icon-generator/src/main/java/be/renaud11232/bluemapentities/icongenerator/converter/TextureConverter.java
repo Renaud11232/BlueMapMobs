@@ -41,7 +41,7 @@ public abstract class TextureConverter {
     public void convert(Path sourceDir, List<Path> sources, Path outDir) throws IOException {
         Map<Path, BufferedImage> textures = new HashMap<>();
         for (var source : sources) {
-            textures.put(source, loadImage(sourceDir, source));
+            textures.put(source, ImageOperations.toARGB(loadImage(sourceDir, source)));
         }
         var conversions = getConversions();
         for (int conversionIndex = 0; conversionIndex < conversions.size(); conversionIndex++) {

@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapentities.icongenerator;
 
 import java.awt.*;
+import java.awt.color.ColorSpace;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
@@ -84,22 +85,26 @@ public class ImageOperations {
     }
 
     public static BufferedImage alphaMask(BufferedImage image, BufferedImage mask) {
-        if (image.getWidth() != mask.getWidth() || image.getHeight() != mask.getHeight()) {
-            throw new IllegalArgumentException("The image and mask must have the same dimensions");
-        }
+        return alphaMask(image, 0, 0, mask);
+    }
+
+    public static BufferedImage alphaMask(BufferedImage image, int maskX, int maskY, BufferedImage mask) {
         var output = newImage(image.getWidth(), image.getHeight());
         for (int x = 0; x < image.getWidth(); x++) {
             for (int y = 0; y < image.getHeight(); y++) {
-                int maskArgb = mask.getRGB(x, y);
-                int maskAlpha = (maskArgb >> 24) & 0xFF;
-
                 int argb = image.getRGB(x, y);
-                int a = (argb >> 24) & 0xFF;
-                int r = (argb >> 16) & 0xFF;
-                int g = (argb >> 8) & 0xFF;
-                int b = argb & 0xFF;
-                a = (a * maskAlpha) / 255;
-                output.setRGB(x, y, (a << 24) | (r << 16) | (g << 8) | b);
+                if (x >= maskX && x < maskX + mask.getWidth() && y >= maskY && y < maskY + mask.getHeight()) {
+                    int maskArgb = mask.getRGB(x - maskX, y - maskY);
+                    int maskAlpha = (maskArgb >> 24) & 0xFF;
+                    int a = (argb >> 24) & 0xFF;
+                    int r = (argb >> 16) & 0xFF;
+                    int g = (argb >> 8) & 0xFF;
+                    int b = argb & 0xFF;
+                    a = (a * maskAlpha) / 255;
+                    output.setRGB(x, y, (a << 24) | (r << 16) | (g << 8) | b);
+                } else {
+                    output.setRGB(x, y, argb);
+                }
             }
         }
         return output;
@@ -164,5 +169,27 @@ public class ImageOperations {
 
     public static BufferedImage scale(BufferedImage image, int ratio) {
         return scale(image, ratio, ratio);
+    }
+
+    public static BufferedImage toARGB(BufferedImage image) {
+        var colorSpaceType = image.getColorModel().getColorSpace().getType();
+        return switch (colorSpaceType) {
+            case ColorSpace.TYPE_RGB -> image;
+            case ColorSpace.TYPE_GRAY -> grayToARGB(image);
+            default -> throw new UnsupportedOperationException("Color space " + colorSpaceType + " not supported");
+        };
+    }
+
+    private static BufferedImage grayToARGB(BufferedImage image) {
+        var output = newImage(image.getWidth(), image.getHeight());
+        var raster = image.getRaster();
+        for (int x = 0; x < image.getWidth(); x++) {
+            for (int y = 0; y < image.getHeight(); y++) {
+                var gray = image.getRaster().getSample(x, y, 0);
+                var alpha = raster.getSample(x, y, 1);
+                output.setRGB(x, y, (alpha << 24) | (gray << 16) | (gray << 8) | gray);
+            }
+        }
+        return output;
     }
 }

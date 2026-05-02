@@ -87,7 +87,7 @@ public class IconGenerator {
                 new StriderTextureConverter(),
                 new TadpoleTextureConverter(),
                 new TraderLlamaTextureConverter(),
-//                new TropicalFishTextureConverter(),
+                new TropicalFishTextureConverter(),
                 new TurtleTextureConverter(),
 //                new VexTextureConverter(),
                 new VillagerTextureConverter(),
