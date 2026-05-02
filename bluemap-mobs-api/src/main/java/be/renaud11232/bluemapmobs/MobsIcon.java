@@ -263,7 +263,8 @@ public class MobsIcon {
     }
     public static final Icon TURTLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/turtle/turtle.png", new Vector2i(12, 12));
     public static final Icon TURTLE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/turtle/turtle_baby.png", new Vector2i(12, 12));
-    public static final Icon VEX = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/vex.png", new Vector2i(12, 12));
+    public static final Icon VEX = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/vex/vex.png", new Vector2i(12, 12));
+    public static final Icon VEX_CHARGING = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/vex/vex_charging.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_DESERT = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_desert.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_JUNGLE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_jungle.png", new Vector2i(12, 12));
     public static final Icon VILLAGER_PLAINS = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/villager/villager_plains.png", new Vector2i(12, 12));

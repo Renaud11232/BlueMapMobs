@@ -8,4 +8,6 @@ public interface Vex extends Monster {
     default MarkerType getMarkerType() {
         return MobsMarkerType.VEX;
     }
+
+    boolean isCharging();
 }
