@@ -1,7 +1,8 @@
 package be.renaud11232.bluemapentities.icongenerator;
 
 import be.renaud11232.bluemapentities.icongenerator.converter.*;
-import be.renaud11232.bluemapentities.icongenerator.converter.mob.*;
+import be.renaud11232.bluemapentities.icongenerator.converter.citizens.NPCTextureConverter;
+import be.renaud11232.bluemapentities.icongenerator.converter.mobs.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -102,7 +103,8 @@ public class IconGenerator {
                 new ZombieHorseTextureConverter(),
                 new ZombieTextureConverter(),
                 new ZombieNautilusTextureConverter(),
-                new ZombieVillagerTextureConverter()
+                new ZombieVillagerTextureConverter(),
+                new NPCTextureConverter()
         );
     }
 
