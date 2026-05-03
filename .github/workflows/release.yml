@@ -44,5 +44,5 @@ jobs:
           path: .
       - uses: svenstaro/upload-release-action@v2
         with:
-          file: "!*/target/bluemap-*{api,common}*.jar"
+          file: "*/target/bluemap-*-{bukkit,spigot,paper}-*.jar"
           file_glob: true

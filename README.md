@@ -25,6 +25,7 @@ Using an older version of Minecraft however will most likely result in an error.
 | 26.1 - 26.1.2    | 2.0.0                       |
 
 Starting with version `2.0.0`, BlueMapMobs was split into separate plugins for mobs, vehicles, NPCs and other entities.
+All other plugins rely on the base bluemap-entities plugin, so make sure it's installed.
 
 ## Configuration
 
