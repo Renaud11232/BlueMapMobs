@@ -1,39 +1,44 @@
-# BlueMapMobs
+# BlueMapEntities
 
-Adds markers for mobs (and also vehicles) on your [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap) maps.
+BlueMapEntities is a set of plugins that adds markers for various entities on your [BlueMap](https://github.com/BlueMap-Minecraft/BlueMap) maps.
 
 ![Demonstration picture](.github/assets/image.png)
 
 ## Compatibility
 
-Compatibility between versions is very hard with this plugin as new mobs are often added to the game as well as some breaking internal changes.
+Compatibility between versions is very hard as new entities are often added to the game as well as some breaking internal changes.
 
-The plugin *may* work with Minecraft version released after a given release, but new mobs and vehicles (if any) won't show properly.
+The plugins *may* work with Minecraft version released after a given release, but new entities (if any) won't show properly.
 
-Installing the plugin with an older version however will most likely result in an error. Please refer to the following table to find what version you should use for your server :
+Using an older version of Minecraft however will most likely result in an error. Please refer to the following table to find what version you should use for your server :
 
-| Server version   | Plugin version |
-|------------------|----------------|
-| 1.20.4 - 1.20.5  | 1.0.0          |
-| 1.20.6           | 1.1.0          |
-| 1.21.0 - 1.21.3  | 1.2.0          |
-| 1.21.4           | 1.3.0          |
-| 1.21.5           | 1.4.0 - 1.4.2  |
-| 1.21.6 - 1.21.8  | 1.5.0 - 1.5.1  |
-| 1.21.9 - 1.21.10 | 1.6.0          |
-| 1.21.11          | 1.7.0          |
+| Server version   | Plugin version              |
+|------------------|-----------------------------|
+| 1.20.4 - 1.20.5  | 1.0.0 (BlueMapMobs)         |
+| 1.20.6           | 1.1.0 (BlueMapMobs)         |
+| 1.21.0 - 1.21.3  | 1.2.0 (BlueMapMobs)         |
+| 1.21.4           | 1.3.0 (BlueMapMobs)         |
+| 1.21.5           | 1.4.0 - 1.4.2 (BlueMapMobs) |
+| 1.21.6 - 1.21.8  | 1.5.0 - 1.5.1 (BlueMapMobs) |
+| 1.21.9 - 1.21.10 | 1.6.0 (BlueMapMobs)         |
+| 1.21.11          | 1.7.0 (BlueMapMobs)         |
+| 26.1 - 26.1.2    | 2.0.0                       |
 
+Starting with version `2.0.0`, BlueMapMobs was split into separate plugins for mobs, vehicles, NPCs and other entities.
 
 ## Configuration
 
-The plugin provides a few configuration options to customize the markers, or the web assets.
+The plugin provides a few configuration options to customize the markers.
 All configuration values are in the standard `config.yml`.
 The plugin is reloaded normally when BlueMap is reloaded.
 
 ## Download
 
-The plugin `.jar` can be downloaded via the [Releases](https://github.com/Renaud11232/BlueMapMobs/releases) page.
-Starting with version 1.6.0, you must pick the plugin file that matches your server depending if you are using Spigot or Paper.
+The `.jar` files can be downloaded via the [Releases](https://github.com/Renaud11232/BlueMapMobs/releases) page.
+You will need to choose the correct version depending on your server software :
+* Files ending with `-bukkit` should work with all Bukkit-based servers (Paper, Spigot, Purpur, ...) 
+* Files ending with `-paper` will only work on PaperMC (and forks)
+* Files ending with `-spigot` will only work on Spigot (and forks)
 
 ## Need help ?
 

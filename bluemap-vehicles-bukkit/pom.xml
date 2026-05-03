@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bluemap-vehicles-plugin</artifactId>
+    <artifactId>bluemap-vehicles-bukkit</artifactId>
 
     <build>
         <plugins>
@@ -37,7 +37,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemap-entities-plugin</artifactId>
+            <artifactId>bluemap-entities-bukkit</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>

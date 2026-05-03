@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bluemap-entities-plugin</artifactId>
+    <artifactId>bluemap-entities-bukkit</artifactId>
 
     <build>
         <plugins>

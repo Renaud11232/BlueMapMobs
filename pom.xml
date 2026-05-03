@@ -113,10 +113,10 @@
 
     <modules>
         <module>bluemap-entities-api</module>
-        <module>bluemap-entities-plugin</module>
-        <module>bluemap-citizens-plugin</module>
+        <module>bluemap-entities-bukkit</module>
+        <module>bluemap-citizens-bukkit</module>
         <module>bluemap-vehicles-api</module>
-        <module>bluemap-vehicles-plugin</module>
+        <module>bluemap-vehicles-bukkit</module>
         <module>bluemap-mobs-api</module>
         <module>bluemap-mobs-plugin-common</module>
         <module>bluemap-mobs-spigot</module>
