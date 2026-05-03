@@ -83,10 +83,10 @@ public class WolfMarkerBuilder extends AgeableMarkerBuilder<Wolf> {
     @Override
     protected Icon getAdultIcon(Wolf wolf) {
         Map<Wolf.Variant, Icon> icons;
-        if (wolf.isAngry()) {
-            icons = angryAdultIcons;
-        } else if (wolf.isTamed()) {
+        if (wolf.isTamed()) {
             icons = tameAdultIcons;
+        } else if (wolf.isAngry()) {
+            icons = angryAdultIcons;
         } else {
             icons = adultIcons;
         }
@@ -96,10 +96,10 @@ public class WolfMarkerBuilder extends AgeableMarkerBuilder<Wolf> {
     @Override
     protected Icon getBabyIcon(Wolf wolf) {
         Map<Wolf.Variant, Icon> icons;
-        if (wolf.isAngry()) {
-            icons = angryBabyIcons;
-        } else if (wolf.isTamed()) {
+        if (wolf.isTamed()) {
             icons = tameBabyIcons;
+        } else if (wolf.isAngry()) {
+            icons = angryBabyIcons;
         } else {
             icons = babyIcons;
         }
