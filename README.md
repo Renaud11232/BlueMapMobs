@@ -29,7 +29,7 @@ All other plugins rely on the base bluemap-entities plugin, so make sure it's in
 
 ## Configuration
 
-The plugin provides a few configuration options to customize the markers.
+The plugins provide a few configuration options to customize the markers.
 All configuration values are in the standard `config.yml`.
 The plugin is reloaded normally when BlueMap is reloaded.
 
