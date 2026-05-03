@@ -61,7 +61,7 @@ public class SheepMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Sheep,
         if (sheep.getName().equals("jeb_")) {
             return List.of(MobsStyleClass.SHEEP_JEB);
         }
-        return super.getBabyStyleClasses(sheep);
+        return super.getAdultStyleClasses(sheep);
     }
 
     @Override
