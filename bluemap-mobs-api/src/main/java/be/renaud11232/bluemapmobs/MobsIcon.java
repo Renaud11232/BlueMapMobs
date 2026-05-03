@@ -58,7 +58,7 @@ public class MobsIcon {
     public static final Icon CHICKEN_WARM = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_warm.png", new Vector2i(12, 12));
     public static final Icon CHICKEN_TEMPERATE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_temperate_baby.png", new Vector2i(12, 12));
     public static final Icon CHICKEN_COLD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_cold_baby.png", new Vector2i(12, 12));
-    public static final Icon CHICKEN_WARM_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_warm_nany.png", new Vector2i(12, 12));
+    public static final Icon CHICKEN_WARM_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/chicken/chicken_warm_baby.png", new Vector2i(12, 12));
     public static final Icon COD = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/cod.png", new Vector2i(12, 12));
     public static final Icon COPPER_GOLEM = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/copper_golem/copper_golem.png", new Vector2i(12, 12));
     public static final Icon COPPER_GOLEM_EXPOSED = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/copper_golem/copper_golem_exposed.png", new Vector2i(12, 12));
