@@ -23,6 +23,7 @@
         <io.papermc.paper.paper-api.version>${net.minecraft.build.version}</io.papermc.paper.paper-api.version>
         <de.bluecolored.bluemap-api.version>2.7.8</de.bluecolored.bluemap-api.version>
         <net.citizensnpcs.citizens-main.version>2.0.42-SNAPSHOT</net.citizensnpcs.citizens-main.version>
+        <info.picocli.picocli.version>4.7.7</info.picocli.picocli.version>
     </properties>
 
     <build>
@@ -107,6 +108,11 @@
                         <artifactId>*</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>info.picocli</groupId>
+                <artifactId>picocli</artifactId>
+                <version>${info.picocli.picocli.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
