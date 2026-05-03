@@ -23,7 +23,7 @@ public class BlueMapEntities extends JavaPlugin {
             getLogger().info("Scheduling update task...");
             Bukkit.getScheduler().runTaskTimer(this, this.api::update, 0, 200);
         });
-        BlueMapAPI.onDisable(api -> {
+        BlueMapAPI.onDisable(_ -> {
             getLogger().info("Cancelling scheduled tasks...");
             Bukkit.getScheduler().cancelTasks(this);
             getLogger().info("Disabling BlueMapEntities API...");
