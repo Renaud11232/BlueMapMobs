@@ -124,11 +124,11 @@
         <module>bluemap-vehicles-api</module>
         <module>bluemap-vehicles-bukkit</module>
         <module>bluemap-mobs-api</module>
-        <module>bluemap-mobs-plugin-common</module>
+        <module>bluemap-mobs-bukkit-common</module>
         <module>bluemap-mobs-spigot</module>
         <module>bluemap-mobs-paper</module>
         <module>bluemap-others-api</module>
-        <module>bluemap-others-plugin-common</module>
+        <module>bluemap-others-bukkit-common</module>
         <module>bluemap-others-spigot</module>
         <module>bluemap-others-paper</module>
         <module>bluemap-entities-icon-generator</module>

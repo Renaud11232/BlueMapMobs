@@ -43,7 +43,7 @@
         </dependency>
         <dependency>
             <groupId>be.renaud11232</groupId>
-            <artifactId>bluemap-others-plugin-common</artifactId>
+            <artifactId>bluemap-others-bukkit-common</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

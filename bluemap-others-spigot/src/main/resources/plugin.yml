@@ -1,6 +1,6 @@
 name: BlueMapOthers
 version: '${project.version}'
-main: be.renaud11232.bluemapothers.plugin.spigot.BlueMapOthers
+main: be.renaud11232.bluemapothers.spigot.SpigotBlueMapOthers
 api-version: '${net.minecraft.target.version}'
 depend:
   - BlueMapEntities

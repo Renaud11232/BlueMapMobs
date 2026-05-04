@@ -1,6 +1,6 @@
 name: BlueMapEntities
 version: '${project.version}'
-main: be.renaud11232.bluemapentities.plugin.BlueMapEntities
+main: be.renaud11232.bluemapentities.bukkit.BukkitBlueMapEntities
 api-version: '${net.minecraft.target.version}'
 depend:
   - BlueMap

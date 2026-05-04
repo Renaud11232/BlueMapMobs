@@ -1,6 +1,6 @@
 name: BlueMapMobs
 version: '${project.version}'
-main: be.renaud11232.bluemapmobs.plugin.spigot.BlueMapMobs
+main: be.renaud11232.bluemapmobs.spigot.SpigotBlueMapMobs
 api-version: '${net.minecraft.target.version}'
 depend:
   - BlueMapEntities

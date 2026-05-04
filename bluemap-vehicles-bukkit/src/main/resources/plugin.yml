@@ -1,6 +1,6 @@
 name: BlueMapVehicles
 version: '${project.version}'
-main: be.renaud11232.bluemapvehicles.plugin.BlueMapVehicles
+main: be.renaud11232.bluemapvehicles.bukkit.BukkitBlueMapVehicles
 api-version: '${net.minecraft.target.version}'
 depend:
   - BlueMapEntities
