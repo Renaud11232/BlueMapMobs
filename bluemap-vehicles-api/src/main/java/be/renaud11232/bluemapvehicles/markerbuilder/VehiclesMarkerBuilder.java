@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapvehicles.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.DefaultMarkerType;
+import be.renaud11232.bluemapentities.markerbuilder.EmptyMarkerBuilder;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapvehicles.VehiclesMarkerType;
 import be.renaud11232.bluemapvehicles.entity.Vehicle;
@@ -37,5 +39,7 @@ public class VehiclesMarkerBuilder extends SimpleMarkerBuilder<Vehicle> {
         register(VehiclesMarkerType.RIDEABLE_MINECART, new RideableMinecartMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.SPAWNER_MINECART, new SpawnerMinecartMarkerBuilder(getAPI()));
         register(VehiclesMarkerType.STORAGE_MINECART, new StorageMinecartMarkerBuilder(getAPI()));
+
+        register(DefaultMarkerType.UNKNOWN, new EmptyMarkerBuilder<>());
     }
 }

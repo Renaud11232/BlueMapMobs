@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.DefaultMarkerType;
+import be.renaud11232.bluemapentities.markerbuilder.EmptyMarkerBuilder;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.MobsMarkerType;
 import be.renaud11232.bluemapmobs.entity.Mob;
@@ -97,5 +99,7 @@ public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
         register(MobsMarkerType.ZOMBIE_HORSE, new ZombieHorseMarkerBuilder(getAPI()));
         register(MobsMarkerType.ZOMBIE_NAUTILUS, new ZombieNautilusMarkerBuilder(getAPI()));
         register(MobsMarkerType.ZOMBIE_VILLAGER, new ZombieVillagerMarkerBuilder(getAPI()));
+
+        register(DefaultMarkerType.UNKNOWN, new EmptyMarkerBuilder<>());
     }
 }
