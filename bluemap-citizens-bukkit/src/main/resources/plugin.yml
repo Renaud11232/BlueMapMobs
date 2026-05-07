@@ -1,11 +1,11 @@
 name: BlueMapCitizens
-version: '${project.version}'
+version: '${version}'
 main: be.renaud11232.bluemapcitizens.bukkit.BlueMapCitizens
-api-version: '${net.minecraft.target.version}'
+api-version: '${apiVersion}'
 depend:
   - BlueMapEntities
   - Citizens
 authors:
   - Renaud11232
-description: '${project.description}'
-website: '${project.url}'
+description: '${description}'
+website: '${website}'

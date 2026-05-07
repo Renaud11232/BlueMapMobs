@@ -1,0 +1,16 @@
+[versions]
+bluemap = "2.7.8"
+minecraft = "[26.1, 26.2)"
+citizens = "2.0.42-SNAPSHOT"
+picocli = "4.7.7"
+shadow = "9.4.1"
+
+[libraries]
+bluemap-api = { group = "de.bluecolored", name = "bluemap-api", version.ref = "bluemap"}
+spigot-api = { group = "org.spigotmc", name = "spigot-api", version.ref = "minecraft"}
+paper-api = { group = "io.papermc.paper", name = "paper-api", version.ref = "minecraft"}
+citizens-main = { group = "net.citizensnpcs", name = "citizens-main", version.ref = "citizens"}
+picocli = { group = "info.picocli", name = "picocli", version.ref = "picocli"}
+
+[plugins]
+shadow = {id = "com.gradleup.shadow", version.ref = "shadow"}

@@ -1,10 +1,10 @@
 name: BlueMapEntities
-version: '${project.version}'
+version: '${version}'
 main: be.renaud11232.bluemapentities.bukkit.BukkitBlueMapEntities
-api-version: '${net.minecraft.target.version}'
+api-version: '${apiVersion}'
 depend:
   - BlueMap
 authors:
   - Renaud11232
-description: '${project.description}'
-website: '${project.url}'
+description: '${description}'
+website: '${website}'

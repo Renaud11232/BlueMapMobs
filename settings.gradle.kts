@@ -1,0 +1,16 @@
+rootProject.name = "bluemap-entities"
+
+include("bluemap-entities-api")
+include("bluemap-entities-bukkit")
+include("bluemap-citizens-bukkit")
+include("bluemap-vehicles-api")
+include("bluemap-vehicles-bukkit")
+include("bluemap-mobs-api")
+include("bluemap-mobs-bukkit-common")
+include("bluemap-mobs-spigot")
+include("bluemap-mobs-paper")
+include("bluemap-others-api")
+include("bluemap-others-bukkit-common")
+include("bluemap-others-spigot")
+include("bluemap-others-paper")
+include("bluemap-entities-icon-generator")

@@ -1,10 +1,10 @@
 name: BlueMapOthers
-version: '${project.version}'
+version: '${version}'
 main: be.renaud11232.bluemapothers.spigot.SpigotBlueMapOthers
-api-version: '${net.minecraft.target.version}'
+api-version: '${apiVersion}'
 depend:
   - BlueMapEntities
 authors:
   - Renaud11232
-description: '${project.description}'
-website: '${project.url}'
+description: '${description}'
+website: '${website}'
