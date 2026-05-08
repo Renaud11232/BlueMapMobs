@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: version
-        run: echo "version=$(echo $GITHUB_REF | sed 's/refs\/tags\///')" | tee -a $GITHUB_OUTPUT
+        run: cat gradle.properties | tee -a $GITHUB_OUTPUT
     outputs:
       version: ${{ steps.version.outputs.version }}
   build:
-    name: Build plugin jar
+    name: Build JARs
     runs-on: ubuntu-latest
     needs:
       - version
@@ -25,12 +25,12 @@ jobs:
         with:
           distribution: temurin
           java-version: 25
-      - run: mvn versions:set -DnewVersion=${{ needs.version.outputs.version }} -DgenerateBackupPoms=false
-      - run: mvn package
+      - uses: gradle/actions/setup-gradle@v6
+      - run: ./gradlew clean jar shadowJar
       - uses: actions/upload-artifact@v7
         with:
           name: build
-          path: "*/target/bluemap-*.jar"
+          path: "*/build/release/*.jar"
   upload_release:
     name: Upload jar to release
     runs-on: ubuntu-latest
@@ -46,5 +46,5 @@ jobs:
           path: .
       - uses: svenstaro/upload-release-action@v2
         with:
-          file: "*/target/bluemap-*-{bukkit,spigot,paper}-${{ needs.version.outputs.version }}.jar"
+          file: "**/*.jar"
           file_glob: true
