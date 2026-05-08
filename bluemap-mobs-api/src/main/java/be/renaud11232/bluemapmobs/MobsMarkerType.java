@@ -55,7 +55,6 @@ public enum MobsMarkerType implements MarkerType {
     PIG,
     PIGLIN,
     PIGLIN_BRUTE,
-    PIG_ZOMBIE,
     PILLAGER,
     POLAR_BEAR,
     PUFFER_FISH,
@@ -91,7 +90,8 @@ public enum MobsMarkerType implements MarkerType {
     ZOMBIE,
     ZOMBIE_HORSE,
     ZOMBIE_NAUTILUS,
-    ZOMBIE_VILLAGER;
+    ZOMBIE_VILLAGER,
+    ZOMBIFIED_PIGLIN;
 
     @Override
     public String getName() {

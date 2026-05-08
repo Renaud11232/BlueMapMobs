@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-public class PigZombieTextureConverter extends TextureConverter {
-    public PigZombieTextureConverter() {
+public class ZombifiedPiglinTextureConverter extends TextureConverter {
+    public ZombifiedPiglinTextureConverter() {
         super();
         registerTextureConversion((texture, icon) -> {
             BufferedImage face = texture.getSubimage(8, 8, 10, 8);
@@ -32,12 +32,12 @@ public class PigZombieTextureConverter extends TextureConverter {
     protected List<Map.Entry<List<Pattern>, List<String>>> getConversions() {
         return List.of(
                 Map.entry(
-                        List.of(Pattern.compile("^pig_zombie\\.png$")),
-                        List.of("pig_zombie.png")
+                        List.of(Pattern.compile("^zombified_piglin\\.png$")),
+                        List.of("zombified_piglin.png")
                 ),
                 Map.entry(
-                        List.of(Pattern.compile("^pig_zombie_baby\\.png$")),
-                        List.of("pig_zombie_baby.png")
+                        List.of(Pattern.compile("^zombified_piglin_baby\\.png$")),
+                        List.of("zombified_piglin_baby.png")
                 )
         );
     }

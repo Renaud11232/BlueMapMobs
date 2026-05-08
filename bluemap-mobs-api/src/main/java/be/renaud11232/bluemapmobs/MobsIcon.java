@@ -195,8 +195,6 @@ public class MobsIcon {
     public static final Icon PIG_TEMPERATE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig/pig_temperate_baby.png", new Vector2i(12, 12));
     public static final Icon PIG_COLD_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig/pig_cold_baby.png", new Vector2i(12, 12));
     public static final Icon PIG_WARM_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig/pig_warm_baby.png", new Vector2i(12, 12));
-    public static final Icon PIG_ZOMBIE = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig_zombie/pig_zombie.png", new Vector2i(12, 12));
-    public static final Icon PIG_ZOMBIE_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pig_zombie/pig_zombie_baby.png", new Vector2i(12, 12));
     public static final Icon PILLAGER = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/pillager.png", new Vector2i(12, 12));
     public static final Icon POLAR_BEAR = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/polar_bear/polar_bear.png", new Vector2i(12, 12));
     public static final Icon POLAR_BEAR_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/polar_bear/polar_bear_baby.png", new Vector2i(12, 12));
@@ -361,4 +359,6 @@ public class MobsIcon {
     public static final Icon ZOMBIE_VILLAGER_SNOW_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_snow_baby.png", new Vector2i(12, 12));
     public static final Icon ZOMBIE_VILLAGER_SWAMP_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_swamp_baby.png", new Vector2i(12, 12));
     public static final Icon ZOMBIE_VILLAGER_TAIGA_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombie_villager/zombie_villager_taiga_baby.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIFIED_PIGLIN = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombified_piglin/zombified_piglin.png", new Vector2i(12, 12));
+    public static final Icon ZOMBIFIED_PIGLIN_BABY = new SimpleIcon("assets/bluemap-entities/modules/mobs/img/zombified_piglin/zombified_piglin_baby.png", new Vector2i(12, 12));
 }

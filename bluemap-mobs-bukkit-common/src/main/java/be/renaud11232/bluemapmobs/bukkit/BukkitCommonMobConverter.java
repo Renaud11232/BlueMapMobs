@@ -60,7 +60,7 @@ public abstract class BukkitCommonMobConverter implements EntityConverter<Mob, b
             case Pig pig -> new BukkitPig(pig);
             case Piglin piglin -> new BukkitPiglin(piglin);
             case PiglinBrute piglinBrute -> new BukkitPiglinBrute(piglinBrute);
-            case PigZombie pigZombie -> new BukkitPigZombie(pigZombie);
+            case PigZombie pigZombie -> new BukkitZombifiedPiglin(pigZombie);
             case Pillager pillager -> new BukkitPillager(pillager);
             case PolarBear polarBear -> new BukkitPolarBear(polarBear);
             case PufferFish pufferFish -> new BukkitPufferFish(pufferFish);

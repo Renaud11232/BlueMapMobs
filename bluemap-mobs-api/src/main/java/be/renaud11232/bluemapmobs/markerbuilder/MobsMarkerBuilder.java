@@ -61,7 +61,6 @@ public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
         register(Pig.class, new PigMarkerBuilder(getAPI()));
         register(Piglin.class, new PiglinMarkerBuilder(getAPI()));
         register(PiglinBrute.class, new PiglinBruteMarkerBuilder(getAPI()));
-        register(PigZombie.class, new PigZombieMarkerBuilder(getAPI()));
         register(Pillager.class, new PillagerMarkerBuilder(getAPI()));
         register(PolarBear.class, new PolarBearMarkerBuilder(getAPI()));
         register(PufferFish.class, new PufferFishMarkerBuilder(getAPI()));
@@ -98,6 +97,7 @@ public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
         register(ZombieHorse.class, new ZombieHorseMarkerBuilder(getAPI()));
         register(ZombieNautilus.class, new ZombieNautilusMarkerBuilder(getAPI()));
         register(ZombieVillager.class, new ZombieVillagerMarkerBuilder(getAPI()));
+        register(ZombifiedPiglin.class, new ZombifiedPiglinMarkerBuilder(getAPI()));
 
         register(UnknownEntity.class, new EmptyMarkerBuilder<>());
     }
