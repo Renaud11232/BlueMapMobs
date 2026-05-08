@@ -10,29 +10,44 @@ import java.util.*;
 @SuppressWarnings("rawtypes")
 public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBuilder<T> {
     private final BlueMapEntitiesAPI api;
-    private final Map<String, MarkerBuilder> registry;
+    private final Map<Class<? extends Entity>, MarkerBuilder> registry;
+    private final Map<Class<? extends Entity>, Optional<MarkerBuilder>> cachedRegistry;
     private final Icon defaultIcon;
     private final Collection<String> defaultStyleClasses;
 
     public SimpleMarkerBuilder(BlueMapEntitiesAPI api) {
         this.api = api;
         this.registry = new HashMap<>();
+        this.cachedRegistry = new HashMap<>();
         this.defaultIcon = getDefaultIcon();
         this.defaultStyleClasses = getDefaultStyleClasses();
     }
 
-    protected void register(MarkerType type, MarkerBuilder<? extends T> markerBuilder) {
-        registry.put(type.getName(), markerBuilder);
+    protected <U extends Entity> void register(Class<? extends U> clazz, MarkerBuilder<? super U> markerBuilder) {
+        registry.put(clazz, markerBuilder);
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public Optional<POIMarker> build(T entity) {
-        MarkerBuilder markerBuilder = registry.get(entity.getMarkerType().getName());
-        if (markerBuilder == null) {
-            return doBuild(entity);
-        }
-        return markerBuilder.build(entity);
+        Optional<MarkerBuilder> markerBuilder = cachedRegistry.computeIfAbsent(entity.getClass(), clazz -> {
+            List<Class<?>> classes = new ArrayList<>();
+            classes.add(clazz);
+            for (int i = 0; i < classes.size(); i++) {
+                Class<?> candidate = classes.get(i);
+                if (registry.containsKey(candidate)) {
+                    return Optional.ofNullable(registry.get(candidate));
+                }
+                classes.addAll(List.of(candidate.getInterfaces()));
+                Class<?> superclass = candidate.getSuperclass();
+                if (superclass != null) {
+                    classes.add(superclass);
+                }
+            }
+            return Optional.empty();
+        });
+        return markerBuilder.map(b -> b.build(entity))
+                .orElseGet(() -> doBuild(entity));
     }
 
     private Optional<POIMarker> doBuild(T entity) {

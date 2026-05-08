@@ -1,45 +1,46 @@
 package be.renaud11232.bluemapvehicles.markerbuilder;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.DefaultMarkerType;
+import be.renaud11232.bluemapentities.entity.UnknownEntity;
 import be.renaud11232.bluemapentities.markerbuilder.EmptyMarkerBuilder;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
-import be.renaud11232.bluemapvehicles.VehiclesMarkerType;
 import be.renaud11232.bluemapvehicles.entity.Vehicle;
+import be.renaud11232.bluemapvehicles.entity.boat.*;
+import be.renaud11232.bluemapvehicles.entity.minecart.*;
 import be.renaud11232.bluemapvehicles.markerbuilder.boat.*;
 import be.renaud11232.bluemapvehicles.markerbuilder.minecart.*;
 
 public class VehiclesMarkerBuilder extends SimpleMarkerBuilder<Vehicle> {
     public VehiclesMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        register(VehiclesMarkerType.ACACIA_BOAT, new AcaciaBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.ACACIA_CHEST_BOAT, new AcaciaChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.BAMBOO_RAFT, new BambooRaftMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.BAMBOO_CHEST_RAFT, new BambooChestRaftMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.BIRCH_BOAT, new BirchBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.BIRCH_CHEST_BOAT, new BirchChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.CHERRY_BOAT, new CherryBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.CHERRY_CHEST_BOAT, new CherryChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.DARK_OAK_BOAT, new DarkOakBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.DARK_OAK_CHEST_BOAT, new DarkOakChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.JUNGLE_BOAT, new JungleBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.JUNGLE_CHEST_BOAT, new JungleChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.MANGROVE_BOAT, new MangroveBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.MANGROVE_CHEST_BOAT, new MangroveChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.OAK_BOAT, new OakBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.OAK_CHEST_BOAT, new OakChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.PALE_OAK_BOAT, new PaleOakBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.PALE_OAK_CHEST_BOAT, new PaleOakChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.SPRUCE_BOAT, new SpruceBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.SPRUCE_CHEST_BOAT, new SpruceChestBoatMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.COMMAND_MINECART, new CommandMinecartMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.EXPLOSIVE_MINECART, new ExplosiveMinecartMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.HOPPER_MINECART, new HopperMinecartMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.POWERED_MINECART, new PoweredMinecartMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.RIDEABLE_MINECART, new RideableMinecartMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.SPAWNER_MINECART, new SpawnerMinecartMarkerBuilder(getAPI()));
-        register(VehiclesMarkerType.STORAGE_MINECART, new StorageMinecartMarkerBuilder(getAPI()));
+        register(AcaciaBoat.class, new AcaciaBoatMarkerBuilder(getAPI()));
+        register(AcaciaChestBoat.class, new AcaciaChestBoatMarkerBuilder(getAPI()));
+        register(BambooRaft.class, new BambooRaftMarkerBuilder(getAPI()));
+        register(BambooChestRaft.class, new BambooChestRaftMarkerBuilder(getAPI()));
+        register(BirchBoat.class, new BirchBoatMarkerBuilder(getAPI()));
+        register(BirchChestBoat.class, new BirchChestBoatMarkerBuilder(getAPI()));
+        register(CherryBoat.class, new CherryBoatMarkerBuilder(getAPI()));
+        register(CherryChestBoat.class, new CherryChestBoatMarkerBuilder(getAPI()));
+        register(DarkOakBoat.class, new DarkOakBoatMarkerBuilder(getAPI()));
+        register(DarkOakChestBoat.class, new DarkOakChestBoatMarkerBuilder(getAPI()));
+        register(JungleBoat.class, new JungleBoatMarkerBuilder(getAPI()));
+        register(JungleChestBoat.class, new JungleChestBoatMarkerBuilder(getAPI()));
+        register(MangroveBoat.class, new MangroveBoatMarkerBuilder(getAPI()));
+        register(MangroveChestBoat.class, new MangroveChestBoatMarkerBuilder(getAPI()));
+        register(OakBoat.class, new OakBoatMarkerBuilder(getAPI()));
+        register(OakChestBoat.class, new OakChestBoatMarkerBuilder(getAPI()));
+        register(PaleOakBoat.class, new PaleOakBoatMarkerBuilder(getAPI()));
+        register(PaleOakChestBoat.class, new PaleOakChestBoatMarkerBuilder(getAPI()));
+        register(SpruceBoat.class, new SpruceBoatMarkerBuilder(getAPI()));
+        register(SpruceChestBoat.class, new SpruceChestBoatMarkerBuilder(getAPI()));
+        register(CommandMinecart.class, new CommandMinecartMarkerBuilder(getAPI()));
+        register(ExplosiveMinecart.class, new ExplosiveMinecartMarkerBuilder(getAPI()));
+        register(HopperMinecart.class, new HopperMinecartMarkerBuilder(getAPI()));
+        register(PoweredMinecart.class, new PoweredMinecartMarkerBuilder(getAPI()));
+        register(RideableMinecart.class, new RideableMinecartMarkerBuilder(getAPI()));
+        register(SpawnerMinecart.class, new SpawnerMinecartMarkerBuilder(getAPI()));
+        register(StorageMinecart.class, new StorageMinecartMarkerBuilder(getAPI()));
 
-        register(DefaultMarkerType.UNKNOWN, new EmptyMarkerBuilder<>());
+        register(UnknownEntity.class, new EmptyMarkerBuilder<>());
     }
 }
