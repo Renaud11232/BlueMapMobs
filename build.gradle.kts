@@ -16,7 +16,7 @@ allprojects {
     plugins.withType<JavaPlugin> {
         configure<JavaPluginExtension> {
             toolchain {
-                languageVersion = JavaLanguageVersion.of(Integer.valueOf(project.property("java-version").toString()))
+                languageVersion = JavaLanguageVersion.of(Integer.parseInt(project.property("java-version").toString()))
             }
         }
     }

@@ -14,7 +14,6 @@ dependencies {
     shadowInclude(project(":bluemap-others-api"))
     minecraft(libs.minecraft)
     compileOnly(libs.fabric.loader)
-    compileOnly(libs.fabric.api)
 }
 
 tasks.shadowJar {
