@@ -50,7 +50,7 @@ public abstract class SimpleModule<WORLD_TYPE, SOURCE_TYPE, TARGET_TYPE extends 
                                     .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue))
                             );
                     api.getBlueMap().getWorld(world).ifPresent(w -> w.getMaps().forEach(map -> {
-                        MarkerSet markerSet = map.getMarkerSets().computeIfAbsent(markerSetConfig.getId(), id -> buildMarkerSet(markerSetConfig));
+                        MarkerSet markerSet = map.getMarkerSets().computeIfAbsent(markerSetConfig.getId(), _ -> buildMarkerSet(markerSetConfig));
                         markerSet.getMarkers().clear();
                         markerSet.getMarkers().putAll(markers);
                     }));
