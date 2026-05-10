@@ -5,10 +5,10 @@ import be.renaud11232.bluemapentities.icon.SimpleIcon;
 import com.flowpowered.math.vector.Vector2i;
 
 public class VehiclesIcon {
+    public static final Icon CHEST_RAFT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/chest_raft.png", new Vector2i(12, 12));
+    public static final Icon RAFT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/raft.png", new Vector2i(12, 12));
     public static final Icon ACACIA_BOAT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/acacia_boat.png", new Vector2i(12, 12));
     public static final Icon ACACIA_CHEST_BOAT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/acacia_chest_boat.png", new Vector2i(12, 12));
-    public static final Icon BAMBOO_CHEST_RAFT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/bamboo_chest_raft.png", new Vector2i(12, 12));
-    public static final Icon BAMBOO_RAFT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/bamboo_raft.png", new Vector2i(12, 12));
     public static final Icon BIRCH_BOAT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/birch_boat.png", new Vector2i(12, 12));
     public static final Icon BIRCH_CHEST_BOAT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/birch_chest_boat.png", new Vector2i(12, 12));
     public static final Icon CHERRY_BOAT = new SimpleIcon("assets/bluemap-entities/modules/vehicles/img/cherry_boat.png", new Vector2i(12, 12));

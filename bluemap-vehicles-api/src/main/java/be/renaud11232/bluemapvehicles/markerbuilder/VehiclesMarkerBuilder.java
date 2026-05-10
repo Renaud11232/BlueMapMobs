@@ -13,26 +13,11 @@ import be.renaud11232.bluemapvehicles.markerbuilder.minecart.*;
 public class VehiclesMarkerBuilder extends SimpleMarkerBuilder<Vehicle> {
     public VehiclesMarkerBuilder(BlueMapEntitiesAPI api) {
         super(api);
-        register(AcaciaBoat.class, new AcaciaBoatMarkerBuilder(getAPI()));
-        register(AcaciaChestBoat.class, new AcaciaChestBoatMarkerBuilder(getAPI()));
-        register(BambooRaft.class, new BambooRaftMarkerBuilder(getAPI()));
-        register(BambooChestRaft.class, new BambooChestRaftMarkerBuilder(getAPI()));
-        register(BirchBoat.class, new BirchBoatMarkerBuilder(getAPI()));
-        register(BirchChestBoat.class, new BirchChestBoatMarkerBuilder(getAPI()));
-        register(CherryBoat.class, new CherryBoatMarkerBuilder(getAPI()));
-        register(CherryChestBoat.class, new CherryChestBoatMarkerBuilder(getAPI()));
-        register(DarkOakBoat.class, new DarkOakBoatMarkerBuilder(getAPI()));
-        register(DarkOakChestBoat.class, new DarkOakChestBoatMarkerBuilder(getAPI()));
-        register(JungleBoat.class, new JungleBoatMarkerBuilder(getAPI()));
-        register(JungleChestBoat.class, new JungleChestBoatMarkerBuilder(getAPI()));
-        register(MangroveBoat.class, new MangroveBoatMarkerBuilder(getAPI()));
-        register(MangroveChestBoat.class, new MangroveChestBoatMarkerBuilder(getAPI()));
-        register(OakBoat.class, new OakBoatMarkerBuilder(getAPI()));
-        register(OakChestBoat.class, new OakChestBoatMarkerBuilder(getAPI()));
-        register(PaleOakBoat.class, new PaleOakBoatMarkerBuilder(getAPI()));
-        register(PaleOakChestBoat.class, new PaleOakChestBoatMarkerBuilder(getAPI()));
-        register(SpruceBoat.class, new SpruceBoatMarkerBuilder(getAPI()));
-        register(SpruceChestBoat.class, new SpruceChestBoatMarkerBuilder(getAPI()));
+        register(ChestRaft.class, new ChestRaftMarkerBuilder(getAPI()));
+        register(Raft.class, new RaftMarkerBuilder(getAPI()));
+        register(RideableBoat.class, new RideableBoatMarkerBuilder(getAPI()));
+        register(RideableChestBoat.class, new RideableChestBoatMarkerBuilder(getAPI()));
+
         register(CommandMinecart.class, new CommandMinecartMarkerBuilder(getAPI()));
         register(ExplosiveMinecart.class, new ExplosiveMinecartMarkerBuilder(getAPI()));
         register(HopperMinecart.class, new HopperMinecartMarkerBuilder(getAPI()));
