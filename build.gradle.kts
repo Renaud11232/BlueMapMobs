@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.shadow) apply false
 }
 
-subprojects {
+allprojects {
     repositories {
         mavenCentral()
         maven("https://repo.bluecolored.de/releases")
@@ -16,20 +16,36 @@ subprojects {
     plugins.withType<JavaPlugin> {
         configure<JavaPluginExtension> {
             toolchain {
-                languageVersion = JavaLanguageVersion.of(25)
+                languageVersion = JavaLanguageVersion.of(Integer.valueOf(project.property("java-version").toString()))
             }
         }
+    }
+}
+
+subprojects {
+    plugins.withType<JavaPlugin> {
         tasks.withType<ProcessResources> {
             val projectVersion = project.version.toString()
             val bukkitApiVersion = project.property("bukkit-api-version").toString()
             val projectDescription = project.description.toString()
             val website = project.property("website").toString()
+            val javaVersion = project.property("java-version").toString()
             filesMatching("plugin.yml") {
                 expand(
                     "version" to projectVersion,
                     "apiVersion" to bukkitApiVersion,
                     "description" to projectDescription,
                     "website" to website
+                )
+            }
+            filesMatching("fabric.mod.json") {
+                expand(
+                    "version" to projectVersion,
+                    "description" to projectDescription,
+                    "website" to website,
+                    "fabricLoaderVersion" to libs.versions.fabric.loader.get(),
+                    "minecraftVersion" to libs.versions.minecraft.get(),
+                    "javaVersion" to javaVersion
                 )
             }
         }

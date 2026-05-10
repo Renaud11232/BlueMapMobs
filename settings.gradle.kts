@@ -1,7 +1,19 @@
+pluginManagement {
+    repositories {
+        maven {
+            name = "Fabric"
+            url = uri("https://maven.fabricmc.net/")
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = "bluemap-entities"
 
 include("bluemap-entities-api")
 include("bluemap-entities-bukkit")
+include("bluemap-entities-fabric")
 include("bluemap-citizens-bukkit")
 include("bluemap-vehicles-api")
 include("bluemap-vehicles-bukkit")
@@ -13,4 +25,5 @@ include("bluemap-others-api")
 include("bluemap-others-bukkit-common")
 include("bluemap-others-spigot")
 include("bluemap-others-paper")
+include("bluemap-others-fabric")
 include("bluemap-entities-icon-generator")

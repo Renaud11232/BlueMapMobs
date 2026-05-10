@@ -51,7 +51,7 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
     }
 
     private Optional<POIMarker> doBuild(T entity) {
-        if (entity.getBlockLightLevel() < api.getConfiguration().getMinimumBlockLight() && entity.getSkyLightLevel() < api.getConfiguration().getMinimumSkyLight()) {
+        if (entity.getBlockLightLevel() < api.getConfiguration().getGeneral().getMinimumBlockLight() && entity.getSkyLightLevel() < api.getConfiguration().getGeneral().getMinimumSkyLight()) {
             return Optional.empty();
         }
         Icon icon = getIcon(entity);

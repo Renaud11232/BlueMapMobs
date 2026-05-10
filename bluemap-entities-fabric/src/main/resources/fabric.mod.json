@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "bluemap-entities",
+	"version": "${version}",
+	"name": "BlueMapEntities",
+	"description": "${description}",
+	"authors": [
+		"Renaud11232"
+	],
+	"contact": {
+		"homepage": "${website}",
+		"sources": "${website}"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"be.renaud11232.bluemapentities.fabric.FabricBlueMapEntities"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${fabricLoaderVersion}",
+		"minecraft": ">=${minecraftVersion}",
+		"java": ">=${javaVersion}",
+		"fabric-api": "*",
+		"bluemap": "*"
+	}
+}

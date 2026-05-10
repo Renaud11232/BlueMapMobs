@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public abstract class BlueMapEntitiesAPI {
     private static BlueMapEntitiesAPI INSTANCE;
@@ -17,15 +15,13 @@ public abstract class BlueMapEntitiesAPI {
     private static final LinkedHashSet<Consumer<BlueMapEntitiesAPI>> ON_DISABLE_CONSUMERS = new LinkedHashSet<>();
 
     private final BlueMapAPI api;
-    private final GeneralConfiguration configuration;
+    private final Configuration configuration;
     private final List<Module> modules;
-    private final Logger logger;
 
-    protected BlueMapEntitiesAPI(BlueMapAPI api, GeneralConfiguration configuration, Logger logger) {
+    protected BlueMapEntitiesAPI(BlueMapAPI api, Configuration configuration) {
         this.api = api;
         this.configuration = configuration;
         this.modules = new LinkedList<>();
-        this.logger = logger;
         extractAssets(getClass(), "assets", Path.of("assets").resolve("bluemap-entities"));
     }
 
@@ -35,7 +31,7 @@ public abstract class BlueMapEntitiesAPI {
 
     public abstract Collection<?> getWorlds();
 
-    public GeneralConfiguration getConfiguration() {
+    public Configuration getConfiguration() {
         return configuration;
     }
 
@@ -60,13 +56,23 @@ public abstract class BlueMapEntitiesAPI {
     }
 
     public void update() {
-        getWorlds().forEach(world -> modules.forEach(module -> {
-            try {
-                module.update(world);
-            } catch (Throwable t) {
-                logger.log(Level.SEVERE, "Error while updating markers of module '" + module.getModuleIdentifier() + "' for world '" + world.toString() + "'", t);
+        RuntimeException exception = null;
+        for (var world : getWorlds()) {
+            for (var module : modules) {
+                try {
+                    module.update(world);
+                } catch (Throwable t) {
+                    if (exception == null) {
+                        exception = new RuntimeException(t);
+                    } else {
+                        exception.addSuppressed(t);
+                    }
+                }
             }
-        }));
+        }
+        if (exception != null) {
+            throw exception;
+        }
     }
 
     public static synchronized Optional<BlueMapEntitiesAPI> getInstance() {

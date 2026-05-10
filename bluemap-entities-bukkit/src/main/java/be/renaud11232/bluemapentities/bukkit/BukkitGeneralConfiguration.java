@@ -8,6 +8,10 @@ public class BukkitGeneralConfiguration implements GeneralConfiguration {
     private final Integer minimumBlockLight;
     private final Integer minimumSkyLight;
 
+    public BukkitGeneralConfiguration() {
+        this(null, null);
+    }
+
     public BukkitGeneralConfiguration(Integer minimumBlockLight, Integer minimumSkyLight) {
         this.minimumBlockLight = minimumBlockLight;
         this.minimumSkyLight = minimumSkyLight;
