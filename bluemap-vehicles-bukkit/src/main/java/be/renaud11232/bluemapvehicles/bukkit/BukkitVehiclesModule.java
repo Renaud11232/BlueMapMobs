@@ -11,15 +11,15 @@ import java.util.Collection;
 
 import static java.util.function.Predicate.not;
 
-public class BukkitVehiclesModule extends VehiclesModule<Vehicle> {
+public class BukkitVehiclesModule extends VehiclesModule<World, Vehicle> {
 
     public BukkitVehiclesModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration) {
-        super(api, configuration, new BukkitVehicleConverter());
+        super(api, configuration, World.class, new BukkitVehicleConverter());
     }
 
     @Override
-    protected Collection<? extends Vehicle> getEntities(Object world) {
-        return ((World) world).getEntitiesByClass(Vehicle.class)
+    protected Collection<? extends Vehicle> getEntities(World world) {
+        return world.getEntitiesByClass(Vehicle.class)
                 .stream()
                 .filter(not(vehicle -> vehicle instanceof Mob))
                 .toList();

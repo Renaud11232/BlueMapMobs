@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapothers.fabric.entity;
 
 import be.renaud11232.bluemapentities.Position;
+import be.renaud11232.bluemapentities.fabric.entity.FabricEntity;
 import be.renaud11232.bluemapothers.entity.LivingEntity;
 
 public abstract class FabricLivingEntity<T extends net.minecraft.world.entity.LivingEntity> extends FabricEntity<T> implements LivingEntity {

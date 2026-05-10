@@ -6,9 +6,9 @@ import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
 import be.renaud11232.bluemapvehicles.entity.Vehicle;
 import be.renaud11232.bluemapvehicles.markerbuilder.VehiclesMarkerBuilder;
 
-public abstract class VehiclesModule<T> extends SimpleModule<T, Vehicle> {
-    protected VehiclesModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, EntityConverter<T, Vehicle> entityConverter) {
-        super(api, configuration, entityConverter, new VehiclesMarkerBuilder(api));
+public abstract class VehiclesModule<W, T> extends SimpleModule<W, T, Vehicle> {
+    protected VehiclesModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, Class<W> worldType, EntityConverter<T, Vehicle> entityConverter) {
+        super(api, configuration, worldType, entityConverter, new VehiclesMarkerBuilder(api));
     }
 
     @Override

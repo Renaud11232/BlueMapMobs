@@ -9,13 +9,13 @@ import org.bukkit.entity.Mob;
 
 import java.util.Collection;
 
-public abstract class BukkitCommonMobsModule extends MobsModule<Mob> {
+public abstract class BukkitCommonMobsModule extends MobsModule<World, Mob> {
     protected BukkitCommonMobsModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, EntityConverter<Mob, be.renaud11232.bluemapmobs.entity.Mob> converter) {
-        super(api, configuration, converter);
+        super(api, configuration, World.class, converter);
     }
 
     @Override
-    protected Collection<? extends Mob> getEntities(Object world) {
-        return ((World) world).getEntitiesByClass(Mob.class);
+    protected Collection<? extends Mob> getEntities(World world) {
+        return world.getEntitiesByClass(Mob.class);
     }
 }

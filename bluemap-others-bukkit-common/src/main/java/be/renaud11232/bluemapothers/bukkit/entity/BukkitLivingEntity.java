@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapothers.bukkit.entity;
 
 import be.renaud11232.bluemapentities.Position;
+import be.renaud11232.bluemapentities.bukkit.entity.BukkitEntity;
 import be.renaud11232.bluemapothers.entity.LivingEntity;
 import org.bukkit.Location;
 

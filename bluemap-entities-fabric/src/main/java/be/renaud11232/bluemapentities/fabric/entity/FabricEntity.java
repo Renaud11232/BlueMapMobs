@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapothers.fabric.entity;
+package be.renaud11232.bluemapentities.fabric.entity;
 
 import be.renaud11232.bluemapentities.Position;
 import be.renaud11232.bluemapentities.Wrapper;

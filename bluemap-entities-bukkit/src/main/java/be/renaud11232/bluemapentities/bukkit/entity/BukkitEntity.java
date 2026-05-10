@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapothers.bukkit.entity;
+package be.renaud11232.bluemapentities.bukkit.entity;
 
 import be.renaud11232.bluemapentities.Position;
 import be.renaud11232.bluemapentities.Wrapper;

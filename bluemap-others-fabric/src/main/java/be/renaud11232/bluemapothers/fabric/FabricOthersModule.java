@@ -5,21 +5,21 @@ import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
 import be.renaud11232.bluemapothers.OthersModule;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.decoration.ArmorStand;
-import net.minecraft.world.entity.decoration.Mannequin;
+import net.minecraft.world.entity.EntityType;
 
 import java.util.Collection;
-import java.util.stream.StreamSupport;
+import java.util.stream.Stream;
 
-public class FabricOthersModule extends OthersModule<Entity> {
+public class FabricOthersModule extends OthersModule<ServerLevel, Entity> {
     protected FabricOthersModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration) {
-        super(api, configuration, new FabricOthersConverter());
+        super(api, configuration, ServerLevel.class, new FabricOthersConverter());
     }
 
     @Override
-    protected Collection<? extends Entity> getEntities(Object world) {
-        return StreamSupport.stream(((ServerLevel) world).getAllEntities().spliterator(), false)
-                .filter(entity -> !entity.isInvisible() && (entity instanceof ArmorStand || entity instanceof Mannequin))
-                .toList();
+    protected Collection<? extends Entity> getEntities(ServerLevel world) {
+        return Stream.concat(
+                world.getEntities(EntityType.ARMOR_STAND, e -> !e.isInvisible()).stream(),
+                world.getEntities(EntityType.MANNEQUIN, e -> !e.isInvisible()).stream()
+        ).toList();
     }
 }

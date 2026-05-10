@@ -13,23 +13,25 @@ import de.bluecolored.bluemap.api.markers.MarkerSet;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public abstract class SimpleModule<SOURCE_TYPE, TARGET_TYPE extends Entity> implements Module {
+public abstract class SimpleModule<WORLD_TYPE, SOURCE_TYPE, TARGET_TYPE extends Entity> implements Module {
     private final BlueMapEntitiesAPI api;
     private final ModuleConfiguration configuration;
+    private final Class<WORLD_TYPE> worldType;
     private final EntityConverter<SOURCE_TYPE, TARGET_TYPE> converter;
     private final MarkerBuilder<TARGET_TYPE> markerBuilder;
 
-    protected SimpleModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, EntityConverter<SOURCE_TYPE, TARGET_TYPE> converter, MarkerBuilder<TARGET_TYPE> markerBuilder) {
+    protected SimpleModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, Class<WORLD_TYPE> worldType, EntityConverter<SOURCE_TYPE, TARGET_TYPE> converter, MarkerBuilder<TARGET_TYPE> markerBuilder) {
         this.api = api;
         this.configuration = configuration;
+        this.worldType = worldType;
         this.converter = converter;
         this.markerBuilder = markerBuilder;
     }
 
-    protected abstract Collection<? extends SOURCE_TYPE> getEntities(Object world);
+    protected abstract Collection<? extends SOURCE_TYPE> getEntities(WORLD_TYPE world);
 
     public void update(Object world) {
-        List<TARGET_TYPE> allEntities = getEntities(world).stream()
+        List<TARGET_TYPE> allEntities = getEntities(worldType.cast(world)).stream()
                 .map(converter::convert)
                 .toList();
         Map<String, List<TARGET_TYPE>> entitiesByType = allEntities.stream()

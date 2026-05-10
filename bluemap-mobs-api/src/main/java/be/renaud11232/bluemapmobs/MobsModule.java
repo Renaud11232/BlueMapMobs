@@ -7,9 +7,9 @@ import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
 import be.renaud11232.bluemapmobs.entity.Mob;
 import be.renaud11232.bluemapmobs.markerbuilder.MobsMarkerBuilder;
 
-public abstract class MobsModule<T> extends SimpleModule<T, Mob> {
-    protected MobsModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, EntityConverter<T, Mob> converter) {
-        super(api, configuration, converter, new MobsMarkerBuilder(api));
+public abstract class MobsModule<W, T> extends SimpleModule<W, T, Mob> {
+    protected MobsModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, Class<W> worldType, EntityConverter<T, Mob> converter) {
+        super(api, configuration, worldType, converter, new MobsMarkerBuilder(api));
     }
 
     @Override

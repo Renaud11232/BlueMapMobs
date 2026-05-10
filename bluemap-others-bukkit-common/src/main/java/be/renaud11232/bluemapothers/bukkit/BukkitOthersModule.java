@@ -12,14 +12,14 @@ import org.bukkit.entity.Mannequin;
 
 import java.util.Collection;
 
-public abstract class BukkitOthersModule extends OthersModule<Entity> {
+public abstract class BukkitOthersModule extends OthersModule<World, Entity> {
     protected BukkitOthersModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, EntityConverter<Entity, be.renaud11232.bluemapentities.entity.Entity> converter) {
-        super(api, configuration, converter);
+        super(api, configuration, World.class, converter);
     }
 
     @Override
-    protected Collection<? extends Entity> getEntities(Object world) {
-        return ((World) world).getEntitiesByClasses(ArmorStand.class, Mannequin.class)
+    protected Collection<? extends Entity> getEntities(World world) {
+        return world.getEntitiesByClasses(ArmorStand.class, Mannequin.class)
                 .stream()
                 .filter(entity -> {
                     if (entity instanceof LivingEntity livingEntity) {

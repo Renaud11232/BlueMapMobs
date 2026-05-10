@@ -1,5 +1,6 @@
 package be.renaud11232.bluemapothers.bukkit.entity;
 
+import be.renaud11232.bluemapentities.bukkit.entity.BukkitEntity;
 import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.entity.UnknownEntity;
 

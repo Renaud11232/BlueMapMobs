@@ -7,9 +7,9 @@ import be.renaud11232.bluemapentities.module.SimpleModule;
 import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
 import be.renaud11232.bluemapothers.markerbuilder.OthersMarkerBuilder;
 
-public abstract class OthersModule<T> extends SimpleModule<T, Entity> {
-    protected OthersModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, EntityConverter<T, Entity> converter) {
-        super(api, configuration, converter, new OthersMarkerBuilder(api));
+public abstract class OthersModule<W, T> extends SimpleModule<W, T, Entity> {
+    protected OthersModule(BlueMapEntitiesAPI api, ModuleConfiguration configuration, Class<W> worldType, EntityConverter<T, Entity> converter) {
+        super(api, configuration, worldType, converter, new OthersMarkerBuilder(api));
     }
 
     @Override

@@ -7,6 +7,7 @@ import be.renaud11232.bluemapentities.module.SimpleModule;
 import be.renaud11232.bluemapentities.bukkit.module.configuration.BukkitModuleConfiguration;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
+import org.bukkit.World;
 import org.bukkit.entity.LivingEntity;
 
 import java.util.Collection;
@@ -14,13 +15,13 @@ import java.util.stream.StreamSupport;
 
 import static java.util.function.Predicate.not;
 
-public class CitizensModule extends SimpleModule<NPC, CitizensNPC> {
+public class CitizensModule extends SimpleModule<World, NPC, CitizensNPC> {
     protected CitizensModule(BlueMapEntitiesAPI api, BukkitModuleConfiguration configuration) {
-        super(api, configuration, new CitizensNPCConverter(), new CitizensMarkerBuilder(api));
+        super(api, configuration, World.class, new CitizensNPCConverter(), new CitizensMarkerBuilder(api));
     }
 
     @Override
-    protected Collection<? extends NPC> getEntities(Object world) {
+    protected Collection<? extends NPC> getEntities(World world) {
         return StreamSupport.stream(CitizensAPI.getNPCRegistries().spliterator(), false)
                 .flatMap(registry -> StreamSupport.stream(registry.spliterator(), false))
                 .filter(NPC::isSpawned)
