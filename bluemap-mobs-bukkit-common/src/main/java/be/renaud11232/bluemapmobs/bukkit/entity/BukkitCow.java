@@ -2,22 +2,24 @@ package be.renaud11232.bluemapmobs.bukkit.entity;
 
 import be.renaud11232.bluemapmobs.entity.Cow;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BukkitCow extends BukkitAgeable<org.bukkit.entity.Cow> implements Cow {
+    private static final Map<org.bukkit.entity.Cow.Variant, Variant> VARIANT_MAP = new HashMap<>();
+
     public BukkitCow(org.bukkit.entity.Cow wrapped) {
         super(wrapped);
     }
 
     @Override
     public Variant getVariant() {
-        var variant = wrapped.getVariant();
-        if (variant.equals(org.bukkit.entity.Cow.Variant.TEMPERATE)) {
-            return Cow.Variant.TEMPERATE;
-        } else if (variant.equals(org.bukkit.entity.Cow.Variant.WARM)) {
-            return Cow.Variant.WARM;
-        } else if (variant.equals(org.bukkit.entity.Cow.Variant.COLD)) {
-            return Cow.Variant.COLD;
-        } else {
-            return null;
-        }
+        return VARIANT_MAP.get(wrapped.getVariant());
+    }
+
+    static {
+        VARIANT_MAP.put(org.bukkit.entity.Cow.Variant.TEMPERATE, Variant.TEMPERATE);
+        VARIANT_MAP.put(org.bukkit.entity.Cow.Variant.WARM, Variant.WARM);
+        VARIANT_MAP.put(org.bukkit.entity.Cow.Variant.COLD, Variant.COLD);
     }
 }

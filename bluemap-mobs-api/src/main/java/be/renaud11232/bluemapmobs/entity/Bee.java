@@ -9,5 +9,5 @@ public interface Bee extends Animal {
         return MobsMarkerType.BEE;
     }
     boolean hasNectar();
-    int getAnger();
+    boolean isAngry();
 }

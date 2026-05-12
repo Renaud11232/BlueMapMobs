@@ -27,6 +27,6 @@ public class BeeMarkerBuilder extends AgeableVariantMarkerBuilder<Bee, Boolean, 
 
     @Override
     protected Boolean getStyleClassesVariant(Bee bee) {
-        return bee.getAnger() > 0;
+        return bee.isAngry();
     }
 }

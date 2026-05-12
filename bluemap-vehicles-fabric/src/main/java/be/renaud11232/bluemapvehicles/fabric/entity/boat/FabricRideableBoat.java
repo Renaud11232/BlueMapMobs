@@ -5,34 +5,30 @@ import be.renaud11232.bluemapvehicles.fabric.entity.FabricVehicle;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.vehicle.boat.Boat;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FabricRideableBoat extends FabricVehicle<Boat> implements RideableBoat {
+    private static final Map<EntityType<?>, Type> TYPE_MAP = new HashMap<>();
+
     public FabricRideableBoat(Boat wrapped) {
         super(wrapped);
     }
 
     @Override
     public Type getType() {
-        var type = wrapped.getType();
-        if (type.equals(EntityType.ACACIA_BOAT)) {
-            return Type.ACACIA;
-        } else if (type.equals(EntityType.BIRCH_BOAT)) {
-            return Type.BIRCH;
-        } else if (type.equals(EntityType.CHERRY_BOAT)) {
-            return Type.CHERRY;
-        } else if (type.equals(EntityType.DARK_OAK_BOAT)) {
-            return Type.DARK_OAK;
-        } else if (type.equals(EntityType.JUNGLE_BOAT)) {
-            return Type.JUNGLE;
-        } else if (type.equals(EntityType.MANGROVE_BOAT)) {
-            return Type.MANGROVE;
-        } else if (type.equals(EntityType.OAK_BOAT)) {
-            return Type.OAK;
-        } else if (type.equals(EntityType.PALE_OAK_BOAT)) {
-            return Type.PALE_OAK;
-        } else if (type.equals(EntityType.SPRUCE_BOAT)) {
-            return Type.SPRUCE;
-        } else {
-            return null;
-        }
+        return TYPE_MAP.get(wrapped.getType());
+    }
+
+    static {
+        TYPE_MAP.put(EntityType.ACACIA_BOAT, Type.ACACIA);
+        TYPE_MAP.put(EntityType.BIRCH_BOAT, Type.BIRCH);
+        TYPE_MAP.put(EntityType.CHERRY_BOAT, Type.CHERRY);
+        TYPE_MAP.put(EntityType.DARK_OAK_BOAT, Type.DARK_OAK);
+        TYPE_MAP.put(EntityType.JUNGLE_BOAT, Type.JUNGLE);
+        TYPE_MAP.put(EntityType.MANGROVE_BOAT, Type.MANGROVE);
+        TYPE_MAP.put(EntityType.OAK_BOAT, Type.OAK);
+        TYPE_MAP.put(EntityType.PALE_OAK_BOAT, Type.PALE_OAK);
+        TYPE_MAP.put(EntityType.SPRUCE_BOAT, Type.SPRUCE);
     }
 }

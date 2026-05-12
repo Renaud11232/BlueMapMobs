@@ -3,30 +3,28 @@ package be.renaud11232.bluemapmobs.bukkit.entity;
 import be.renaud11232.bluemapmobs.entity.Villager;
 import be.renaud11232.bluemapmobs.entity.ZombieVillager;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BukkitZombieVillager extends BukkitAgeable<org.bukkit.entity.ZombieVillager> implements ZombieVillager {
+    public static final Map<org.bukkit.entity.Villager.Type, Villager.Type> TYPE_MAP = new HashMap<>();
+
     public BukkitZombieVillager(org.bukkit.entity.ZombieVillager wrapped) {
         super(wrapped);
     }
 
     @Override
     public Villager.Type getType() {
-        var type = wrapped.getVillagerType();
-        if (type.equals(org.bukkit.entity.Villager.Type.DESERT)) {
-            return Villager.Type.DESERT;
-        } else if (type.equals(org.bukkit.entity.Villager.Type.JUNGLE)) {
-            return Villager.Type.JUNGLE;
-        } else if (type.equals(org.bukkit.entity.Villager.Type.PLAINS)) {
-            return Villager.Type.PLAINS;
-        } else if (type.equals(org.bukkit.entity.Villager.Type.SAVANNA)) {
-            return Villager.Type.SAVANNA;
-        } else if (type.equals(org.bukkit.entity.Villager.Type.SNOW)) {
-            return Villager.Type.SNOW;
-        } else if (type.equals(org.bukkit.entity.Villager.Type.SWAMP)) {
-            return Villager.Type.SWAMP;
-        } else if (type.equals(org.bukkit.entity.Villager.Type.TAIGA)) {
-            return Villager.Type.TAIGA;
-        } else {
-            return null;
-        }
+        return TYPE_MAP.get(wrapped.getVillagerType());
+    }
+
+    static {
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.DESERT, Villager.Type.DESERT);
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.JUNGLE, Villager.Type.JUNGLE);
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.PLAINS, Villager.Type.PLAINS);
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.SAVANNA, Villager.Type.SAVANNA);
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.SNOW, Villager.Type.SNOW);
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.SWAMP, Villager.Type.SWAMP);
+        TYPE_MAP.put(org.bukkit.entity.Villager.Type.TAIGA, Villager.Type.TAIGA);
     }
 }

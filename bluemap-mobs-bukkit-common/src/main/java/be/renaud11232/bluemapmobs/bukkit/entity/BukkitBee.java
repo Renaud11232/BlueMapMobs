@@ -13,7 +13,7 @@ public class BukkitBee extends BukkitAgeable<org.bukkit.entity.Bee> implements B
     }
 
     @Override
-    public int getAnger() {
-        return wrapped.getAnger();
+    public boolean isAngry() {
+        return wrapped.getAnger() > 0;
     }
 }

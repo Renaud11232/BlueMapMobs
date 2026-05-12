@@ -2,7 +2,12 @@ package be.renaud11232.bluemapmobs.bukkit.entity;
 
 import be.renaud11232.bluemapmobs.entity.Wolf;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BukkitWolf extends BukkitAgeable<org.bukkit.entity.Wolf> implements Wolf {
+    private static final Map<org.bukkit.entity.Wolf.Variant, Variant> VARIANT_MAP = new HashMap<>();
+
     public BukkitWolf(org.bukkit.entity.Wolf wrapped) {
         super(wrapped);
     }
@@ -19,27 +24,18 @@ public class BukkitWolf extends BukkitAgeable<org.bukkit.entity.Wolf> implements
 
     @Override
     public Variant getVariant() {
-        var variant = wrapped.getVariant();
-        if (variant.equals(org.bukkit.entity.Wolf.Variant.PALE)) {
-            return Variant.PALE;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.SPOTTED)) {
-            return Variant.SPOTTED;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.SNOWY)) {
-            return Variant.SNOWY;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.BLACK)) {
-            return Variant.BLACK;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.ASHEN)) {
-            return Variant.ASHEN;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.RUSTY)) {
-            return Variant.RUSTY;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.WOODS)) {
-            return Variant.WOODS;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.CHESTNUT)) {
-            return Variant.CHESTNUT;
-        } else if (variant.equals(org.bukkit.entity.Wolf.Variant.STRIPED)) {
-            return Variant.STRIPED;
-        } else {
-            return null;
-        }
+        return  VARIANT_MAP.get(wrapped.getVariant());
+    }
+
+    static {
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.PALE, Variant.PALE);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.SPOTTED, Variant.SPOTTED);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.SNOWY, Variant.SNOWY);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.BLACK, Variant.BLACK);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.ASHEN, Variant.ASHEN);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.RUSTY, Variant.RUSTY);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.WOODS, Variant.WOODS);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.CHESTNUT, Variant.CHESTNUT);
+        VARIANT_MAP.put(org.bukkit.entity.Wolf.Variant.STRIPED, Variant.STRIPED);
     }
 }
