@@ -1,21 +1,12 @@
 plugins {
-    id("java-library")
-    alias(libs.plugins.fabric.loom)
-    alias(libs.plugins.shadow)
+    `bluemap-entities-fabric-release`
 }
 
-description = "Plugin adding mob markers on your BlueMap maps"
-
-val shadowInclude: Configuration by configurations.creating
-configurations.implementation.get().extendsFrom(shadowInclude)
+project.description = project.property("bluemap-mobs-description").toString()
 
 dependencies {
     compileOnly(project(":bluemap-entities-fabric"))
-    shadowInclude(project(":bluemap-mobs-api"))
+    shadow(project(":bluemap-mobs-api"))
     minecraft(libs.minecraft)
-    compileOnly(libs.fabric.loader)
-}
-
-tasks.shadowJar {
-    configurations = listOf(shadowInclude)
+    implementation(libs.fabric.loader)
 }

@@ -1,4 +1,5 @@
 plugins {
+    `bluemap-entities-java`
     id("application")
 }
 

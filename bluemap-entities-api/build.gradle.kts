@@ -1,5 +1,5 @@
 plugins {
-    id("java-library")
+    `bluemap-entities-java`
 }
 
 dependencies{

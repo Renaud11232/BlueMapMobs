@@ -1,9 +1,8 @@
 plugins {
-    id("java")
-    alias(libs.plugins.shadow)
+    `bluemap-entities-bukkit-release`
 }
 
-description = "Plugin adding vehicle markers on your BlueMap maps"
+project.description = project.property("bluemap-vehicles-description").toString()
 
 dependencies{
     compileOnly(project(":bluemap-entities-bukkit"))

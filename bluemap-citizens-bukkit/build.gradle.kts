@@ -1,9 +1,8 @@
 plugins {
-    id("java")
-    alias(libs.plugins.shadow)
+    `bluemap-entities-bukkit-release`
 }
 
-description = "Plugin adding Citizens NPCs markers on your BlueMap maps"
+project.description = project.property("bluemap-citizens-description").toString()
 
 dependencies{
     compileOnly(project(":bluemap-entities-bukkit"))

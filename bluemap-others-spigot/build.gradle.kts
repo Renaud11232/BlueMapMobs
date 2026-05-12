@@ -1,9 +1,8 @@
 plugins {
-    id("java")
-    alias(libs.plugins.shadow)
+    `bluemap-entities-bukkit-release`
 }
 
-description = "Plugin adding markers on your BlueMap maps for other entities than mobs and vehicles"
+project.description = "Plugin adding markers on your BlueMap maps for other entities than mobs and vehicles"
 
 dependencies{
     implementation(project(":bluemap-others-bukkit-common"))

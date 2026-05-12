@@ -1,9 +1,8 @@
 plugins {
-    id("java")
-    alias(libs.plugins.shadow)
+    `bluemap-entities-bukkit-release`
 }
 
-description = "Plugin adding mob markers on your BlueMap maps"
+project.description = project.property("bluemap-mobs-description").toString()
 
 dependencies{
     implementation(project(":bluemap-mobs-bukkit-common"))

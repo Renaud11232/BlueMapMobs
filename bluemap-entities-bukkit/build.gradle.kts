@@ -1,9 +1,8 @@
 plugins {
-    id("java-library")
-    alias(libs.plugins.shadow)
+    `bluemap-entities-bukkit-release`
 }
 
-description = "Base plugin allowing to add entity markers to your BlueMap maps"
+project.description = project.property("bluemap-entities-description").toString()
 
 dependencies{
     api(project(":bluemap-entities-api"))

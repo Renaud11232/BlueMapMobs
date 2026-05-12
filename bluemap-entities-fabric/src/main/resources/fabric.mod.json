@@ -19,9 +19,9 @@
 		]
 	},
 	"depends": {
-		"fabricloader": ">=${fabricLoaderVersion}",
-		"minecraft": ">=${minecraftVersion}",
 		"java": ">=${javaVersion}",
+		"minecraft": ">=${apiVersion}",
+		"fabricloader": "*",
 		"fabric-api": "*",
 		"bluemap": "*"
 	}
