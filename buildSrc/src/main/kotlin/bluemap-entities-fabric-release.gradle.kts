@@ -33,7 +33,7 @@ tasks {
     shadowJar {
         configurations = listOf(shadow)
     }
-    register<Jar>("mergeShadowAndLoom") {
+    register<Jar>("mergeShadowJarAndJar") {
         dependsOn(shadowJar, jar)
         from (
             zipTree(shadowJar.map { it.outputs.files.singleFile }).matching {
@@ -47,6 +47,6 @@ tasks {
         destinationDirectory = project.layout.buildDirectory.dir("release")
     }
     assemble {
-        dependsOn("mergeShadowAndLoom")
+        dependsOn("mergeShadowJarAndJar")
     }
 }
