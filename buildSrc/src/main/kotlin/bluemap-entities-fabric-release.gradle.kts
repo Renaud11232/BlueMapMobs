@@ -30,9 +30,6 @@ tasks {
             )
         }
     }
-    jar {
-        archiveClassifier = "loom"
-    }
     shadowJar {
         configurations = listOf(shadow)
     }
@@ -47,6 +44,7 @@ tasks {
                 include("fabric.mod.json")
             }
         )
+        destinationDirectory = project.layout.buildDirectory.dir("release")
     }
     assemble {
         dependsOn("mergeShadowAndLoom")

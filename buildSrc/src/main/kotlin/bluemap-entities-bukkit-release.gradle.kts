@@ -18,11 +18,9 @@ tasks {
             )
         }
     }
-    jar {
-        archiveClassifier = "slim"
-    }
     shadowJar {
         archiveClassifier = ""
+        destinationDirectory = project.layout.buildDirectory.dir("release")
     }
     assemble {
         dependsOn(shadowJar)
