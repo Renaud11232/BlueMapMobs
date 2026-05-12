@@ -11,15 +11,15 @@ shadow = "9.4.1"
 fabric-loom = "1.16-SNAPSHOT"
 
 [libraries]
-bluemap-api = { group = "de.bluecolored", name = "bluemap-api", version.ref = "bluemap-api"}
+bluemap-api = { group = "de.bluecolored", name = "bluemap-api", version.ref = "bluemap-api" }
 minecraft = { group = "com.mojang", name = "minecraft", version.ref = "minecraft" }
 fabric-loader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabric-loader" }
 fabric-api = { group = "net.fabricmc.fabric-api", name = "fabric-api", version.ref = "fabric-api" }
-spigot-api = { group = "org.spigotmc", name = "spigot-api", version.ref = "spigot-api"}
-paper-api = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper-api"}
-citizens-main = { group = "net.citizensnpcs", name = "citizens-main", version.ref = "citizens-main"}
+spigot-api = { group = "org.spigotmc", name = "spigot-api", version.ref = "spigot-api" }
+paper-api = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper-api" }
+citizens-main = { group = "net.citizensnpcs", name = "citizens-main", version.ref = "citizens-main" }
 picocli = { group = "info.picocli", name = "picocli", version.ref = "picocli"}
 
 [plugins]
-shadow = {id = "com.gradleup.shadow", version.ref = "shadow"}
-fabric-loom = {id = "net.fabricmc.fabric-loom", version.ref = "fabric-loom"}
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+fabric-loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric-loom" }
