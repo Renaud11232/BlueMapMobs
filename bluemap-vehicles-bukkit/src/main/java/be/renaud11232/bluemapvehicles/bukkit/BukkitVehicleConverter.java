@@ -4,8 +4,6 @@ import be.renaud11232.bluemapentities.EntityConverter;
 import be.renaud11232.bluemapvehicles.bukkit.entity.BukkitUnknownVehicle;
 import be.renaud11232.bluemapvehicles.bukkit.entity.boat.*;
 import be.renaud11232.bluemapvehicles.bukkit.entity.minecart.*;
-import org.bukkit.entity.Boat;
-import org.bukkit.entity.ChestBoat;
 import org.bukkit.entity.Vehicle;
 import org.bukkit.entity.boat.*;
 import org.bukkit.entity.minecart.*;
@@ -24,7 +22,6 @@ public class BukkitVehicleConverter implements EntityConverter<Vehicle, be.renau
             case OakChestBoat oakChestBoat -> new BukkitRideableChestBoat(oakChestBoat);
             case PaleOakChestBoat paleOakChestBoat -> new BukkitRideableChestBoat(paleOakChestBoat);
             case SpruceChestBoat spruceChestBoat -> new BukkitRideableChestBoat(spruceChestBoat);
-            case ChestBoat chestBoat -> new BukkitRideableChestBoat(chestBoat);
             case BambooRaft bambooRaft -> new BukkitRaft(bambooRaft);
             case AcaciaBoat acaciaBoat -> new BukkitRideableBoat(acaciaBoat);
             case BirchBoat birchBoat -> new BukkitRideableBoat(birchBoat);
@@ -35,7 +32,6 @@ public class BukkitVehicleConverter implements EntityConverter<Vehicle, be.renau
             case OakBoat oakBoat -> new BukkitRideableBoat(oakBoat);
             case PaleOakBoat paleOakBoat -> new BukkitRideableBoat(paleOakBoat);
             case SpruceBoat spruceBoat -> new BukkitRideableBoat(spruceBoat);
-            case Boat boat -> new BukkitRideableBoat(boat);
 
             case CommandMinecart commandMinecart -> new BukkitCommandMinecart(commandMinecart);
             case ExplosiveMinecart explosiveMinecart -> new BukkitExplosiveMinecart(explosiveMinecart);

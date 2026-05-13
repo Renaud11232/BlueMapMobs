@@ -54,11 +54,6 @@ public class BukkitRideableChestBoat extends BukkitVehicle<ChestBoat> implements
         type = RideableBoat.Type.SPRUCE;
     }
 
-    public BukkitRideableChestBoat(ChestBoat wrapped) {
-        super(wrapped);
-        type = null;
-    }
-
     @Override
     public RideableBoat.Type getType() {
         return type;

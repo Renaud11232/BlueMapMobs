@@ -53,11 +53,6 @@ public class BukkitRideableBoat extends BukkitVehicle<Boat> implements RideableB
         type = Type.SPRUCE;
     }
 
-    public BukkitRideableBoat(Boat wrapped) {
-        super(wrapped);
-        type = null;
-    }
-
     @Override
     public Type getType() {
         return type;
