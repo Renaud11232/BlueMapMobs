@@ -15,8 +15,26 @@ public class BukkitVehicleConverter implements EntityConverter<Vehicle, be.renau
     public be.renaud11232.bluemapvehicles.entity.Vehicle convert(Vehicle vehicle) {
         return switch (vehicle) {
             case BambooChestRaft bambooChestRaft -> new BukkitChestRaft(bambooChestRaft);
+            case AcaciaChestBoat acaciaChestBoat -> new BukkitRideableChestBoat(acaciaChestBoat);
+            case BirchChestBoat birchChestBoat -> new BukkitRideableChestBoat(birchChestBoat);
+            case CherryChestBoat chestChestBoat -> new BukkitRideableChestBoat(chestChestBoat);
+            case DarkOakChestBoat darkOakChestBoat -> new BukkitRideableChestBoat(darkOakChestBoat);
+            case JungleChestBoat jungleChestBoat -> new BukkitRideableChestBoat(jungleChestBoat);
+            case MangroveChestBoat mangroveChestBoat -> new BukkitRideableChestBoat(mangroveChestBoat);
+            case OakChestBoat oakChestBoat -> new BukkitRideableChestBoat(oakChestBoat);
+            case PaleOakChestBoat paleOakChestBoat -> new BukkitRideableChestBoat(paleOakChestBoat);
+            case SpruceChestBoat spruceChestBoat -> new BukkitRideableChestBoat(spruceChestBoat);
             case ChestBoat chestBoat -> new BukkitRideableChestBoat(chestBoat);
             case BambooRaft bambooRaft -> new BukkitRaft(bambooRaft);
+            case AcaciaBoat acaciaBoat -> new BukkitRideableBoat(acaciaBoat);
+            case BirchBoat birchBoat -> new BukkitRideableBoat(birchBoat);
+            case CherryBoat cherryBoat -> new BukkitRideableBoat(cherryBoat);
+            case DarkOakBoat darkOakBoat -> new BukkitRideableBoat(darkOakBoat);
+            case JungleBoat jungleBoat -> new BukkitRideableBoat(jungleBoat);
+            case MangroveBoat mangroveBoat -> new BukkitRideableBoat(mangroveBoat);
+            case OakBoat oakBoat -> new BukkitRideableBoat(oakBoat);
+            case PaleOakBoat paleOakBoat -> new BukkitRideableBoat(paleOakBoat);
+            case SpruceBoat spruceBoat -> new BukkitRideableBoat(spruceBoat);
             case Boat boat -> new BukkitRideableBoat(boat);
 
             case CommandMinecart commandMinecart -> new BukkitCommandMinecart(commandMinecart);

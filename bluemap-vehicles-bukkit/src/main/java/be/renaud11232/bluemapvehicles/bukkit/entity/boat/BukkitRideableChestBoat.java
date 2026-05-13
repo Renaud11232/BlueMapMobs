@@ -7,23 +7,60 @@ import org.bukkit.entity.ChestBoat;
 import org.bukkit.entity.boat.*;
 
 public class BukkitRideableChestBoat extends BukkitVehicle<ChestBoat> implements RideableChestBoat {
+    private final RideableBoat.Type type;
+    
+    public BukkitRideableChestBoat(AcaciaChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.ACACIA;
+    }
+    
+    public BukkitRideableChestBoat(BirchChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.BIRCH;
+    }
+
+    public BukkitRideableChestBoat(CherryChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.CHERRY;
+    }
+
+    public BukkitRideableChestBoat(DarkOakChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.DARK_OAK;
+    }
+
+    public BukkitRideableChestBoat(JungleChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.JUNGLE;
+    }
+
+    public BukkitRideableChestBoat(MangroveChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.MANGROVE;
+    }
+
+    public BukkitRideableChestBoat(OakChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.OAK;
+    }
+
+    public BukkitRideableChestBoat(PaleOakChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.PALE_OAK;
+    }
+
+    public BukkitRideableChestBoat(SpruceChestBoat wrapped) {
+        super(wrapped);
+        type = RideableBoat.Type.SPRUCE;
+    }
+
     public BukkitRideableChestBoat(ChestBoat wrapped) {
         super(wrapped);
+        type = null;
     }
 
     @Override
     public RideableBoat.Type getType() {
-        return switch (wrapped) {
-            case AcaciaChestBoat _ -> RideableBoat.Type.ACACIA;
-            case BirchChestBoat _ -> RideableBoat.Type.BIRCH;
-            case CherryChestBoat _ -> RideableBoat.Type.CHERRY;
-            case DarkOakChestBoat _ -> RideableBoat.Type.DARK_OAK;
-            case JungleChestBoat _ -> RideableBoat.Type.JUNGLE;
-            case MangroveChestBoat _ -> RideableBoat.Type.MANGROVE;
-            case OakChestBoat _ -> RideableBoat.Type.OAK;
-            case PaleOakChestBoat _ -> RideableBoat.Type.PALE_OAK;
-            case SpruceChestBoat _ -> RideableBoat.Type.SPRUCE;
-            default -> null;
-        };
+        return type;
     }
 }
