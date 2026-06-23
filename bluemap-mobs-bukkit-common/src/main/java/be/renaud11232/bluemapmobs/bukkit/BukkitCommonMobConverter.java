@@ -79,6 +79,7 @@ public abstract class BukkitCommonMobConverter implements EntityConverter<Mob, b
             case Squid squid -> new BukkitSquid(squid);
             case Stray stray -> new BukkitStray(stray);
             case Strider strider -> new BukkitStrider(strider);
+            case SulfurCube sulfurCube -> new BukkitSulfurCube(sulfurCube);
             case Tadpole tadpole -> new BukkitTadpole(tadpole);
             case TropicalFish tropicalFish -> new BukkitTropicalFish(tropicalFish);
             case Turtle turtle -> new BukkitTurtle(turtle);

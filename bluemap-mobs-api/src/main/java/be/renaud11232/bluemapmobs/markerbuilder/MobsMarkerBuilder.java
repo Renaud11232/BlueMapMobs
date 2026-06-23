@@ -79,6 +79,7 @@ public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
         register(Squid.class, new SquidMarkerBuilder(getAPI()));
         register(Stray.class, new StrayMarkerBuilder(getAPI()));
         register(Strider.class, new StriderMarkerBuilder(getAPI()));
+        register(SulfurCube.class, new SulfurCubeMarkerBuilder(getAPI()));
         register(Tadpole.class, new TadpoleMarkerBuilder(getAPI()));
         register(TraderLlama.class, new TraderLlamaMarkerBuilder(getAPI()));
         register(TropicalFish.class, new TropicalFishMarkerBuilder(getAPI()));

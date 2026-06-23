@@ -21,21 +21,21 @@ public class FabricHappyGhast extends FabricAgeable<net.minecraft.world.entity.a
     }
     
     static {
-        HARNESS_MAP.put(Items.WHITE_HARNESS, Harness.WHITE);
-        HARNESS_MAP.put(Items.LIGHT_GRAY_HARNESS, Harness.LIGHT_GRAY);
-        HARNESS_MAP.put(Items.GRAY_HARNESS, Harness.GRAY);
-        HARNESS_MAP.put(Items.BLACK_HARNESS, Harness.BLACK);
-        HARNESS_MAP.put(Items.BROWN_HARNESS, Harness.BROWN);
-        HARNESS_MAP.put(Items.RED_HARNESS, Harness.RED);
-        HARNESS_MAP.put(Items.ORANGE_HARNESS, Harness.ORANGE);
-        HARNESS_MAP.put(Items.YELLOW_HARNESS, Harness.YELLOW);
-        HARNESS_MAP.put(Items.LIME_HARNESS, Harness.LIME);
-        HARNESS_MAP.put(Items.GREEN_HARNESS, Harness.GREEN);
-        HARNESS_MAP.put(Items.CYAN_HARNESS, Harness.CYAN);
-        HARNESS_MAP.put(Items.LIGHT_BLUE_HARNESS, Harness.LIGHT_BLUE);
-        HARNESS_MAP.put(Items.BLUE_HARNESS, Harness.BLUE);
-        HARNESS_MAP.put(Items.PURPLE_HARNESS, Harness.PURPLE);
-        HARNESS_MAP.put(Items.MAGENTA_HARNESS, Harness.MAGENTA);
-        HARNESS_MAP.put(Items.PINK_HARNESS, Harness.PINK);
+        HARNESS_MAP.put(Items.HARNESS.white(), Harness.WHITE);
+        HARNESS_MAP.put(Items.HARNESS.lightGray(), Harness.LIGHT_GRAY);
+        HARNESS_MAP.put(Items.HARNESS.gray(), Harness.GRAY);
+        HARNESS_MAP.put(Items.HARNESS.black(), Harness.BLACK);
+        HARNESS_MAP.put(Items.HARNESS.brown(), Harness.BROWN);
+        HARNESS_MAP.put(Items.HARNESS.red(), Harness.RED);
+        HARNESS_MAP.put(Items.HARNESS.orange(), Harness.ORANGE);
+        HARNESS_MAP.put(Items.HARNESS.yellow(), Harness.YELLOW);
+        HARNESS_MAP.put(Items.HARNESS.lime(), Harness.LIME);
+        HARNESS_MAP.put(Items.HARNESS.green(), Harness.GREEN);
+        HARNESS_MAP.put(Items.HARNESS.cyan(), Harness.CYAN);
+        HARNESS_MAP.put(Items.HARNESS.lightBlue(), Harness.LIGHT_BLUE);
+        HARNESS_MAP.put(Items.HARNESS.blue(), Harness.BLUE);
+        HARNESS_MAP.put(Items.HARNESS.purple(), Harness.PURPLE);
+        HARNESS_MAP.put(Items.HARNESS.magenta(), Harness.MAGENTA);
+        HARNESS_MAP.put(Items.HARNESS.pink(), Harness.PINK);
     }
 }

@@ -89,6 +89,7 @@ public class IconGenerator {
                 new SquidTextureConverter(),
                 new StrayTextureConverter(),
                 new StriderTextureConverter(),
+                new SulfurCubeTextureConverter(),
                 new TadpoleTextureConverter(),
                 new TraderLlamaTextureConverter(),
                 new TropicalFishTextureConverter(),

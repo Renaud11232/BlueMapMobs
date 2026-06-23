@@ -47,6 +47,9 @@ import net.minecraft.world.entity.boss.wither.WitherBoss;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.monster.breeze.Breeze;
 import net.minecraft.world.entity.monster.creaking.Creaking;
+import net.minecraft.world.entity.monster.cubemob.MagmaCube;
+import net.minecraft.world.entity.monster.cubemob.Slime;
+import net.minecraft.world.entity.monster.cubemob.SulfurCube;
 import net.minecraft.world.entity.monster.hoglin.Hoglin;
 import net.minecraft.world.entity.monster.illager.Evoker;
 import net.minecraft.world.entity.monster.illager.Illusioner;
@@ -137,6 +140,7 @@ public class FabricMobConverter implements EntityConverter<Mob, be.renaud11232.b
             case Squid squid -> new FabricSquid(squid);
             case Stray stray -> new FabricStray(stray);
             case Strider strider -> new FabricStrider(strider);
+            case SulfurCube sulfurCube -> new FabricSulfurCube(sulfurCube);
             case Tadpole tadpole -> new FabricTadpole(tadpole);
             case TropicalFish tropicalFish -> new FabricTropicalFish(tropicalFish);
             case Turtle turtle -> new FabricTurtle(turtle);

@@ -1,14 +1,14 @@
 [versions]
-bluemap-api = "2.7.8"
-minecraft = "26.1"
-fabric-loader = "0.19.2"
-fabric-api = "0.145.1+26.1"
-spigot-api = "[26.1, 26.2)"
-paper-api = "[26.1, 26.2)"
-citizens-main = "2.0.42-SNAPSHOT"
+bluemap-api = "2.8.0"
+minecraft = "26.2"
+fabric-loader = "0.19.3"
+fabric-api = "0.153.0+26.2"
+spigot-api = "26.2-R0.1-SNAPSHOT"
+paper-api = "26.2.build.+"
+citizens-main = "2.0.43-SNAPSHOT"
 picocli = "4.7.7"
-shadow = "9.4.1"
-fabric-loom = "1.16-SNAPSHOT"
+shadow = "9.4.2"
+fabric-loom = "1.17-SNAPSHOT"
 
 [libraries]
 bluemap-api = { group = "de.bluecolored", name = "bluemap-api", version.ref = "bluemap-api" }

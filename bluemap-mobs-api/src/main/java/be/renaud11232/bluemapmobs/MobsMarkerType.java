@@ -73,6 +73,7 @@ public enum MobsMarkerType implements MarkerType {
     SQUID,
     STRAY,
     STRIDER,
+    SULFUR_CUBE,
     TADPOLE,
     TRADER_LLAMA,
     TROPICAL_FISH,
