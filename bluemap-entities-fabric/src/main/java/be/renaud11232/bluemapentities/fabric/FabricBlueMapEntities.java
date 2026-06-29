@@ -25,10 +25,10 @@ public class FabricBlueMapEntities extends FabricMod<FabricConfiguration> implem
         ServerLifecycleEvents.SERVER_STARTING.register(server -> SERVER = server);
         ServerTickEvents.END_SERVER_TICK.register(_ -> {
             if (api != null) {
-                if (lastUpdateTick++ == 0) {
+                if (lastUpdateTick == 0) {
                     api.update();
                 }
-                if (lastUpdateTick >= 200) {
+                if (++lastUpdateTick >= 200) {
                     lastUpdateTick = 0;
                 }
             }
