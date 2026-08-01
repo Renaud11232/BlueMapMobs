@@ -9,3 +9,7 @@ dependencies{
     implementation(project(":bluemap-vehicles-api"))
     compileOnly(libs.spigot.api)
 }
+
+tasks.shadowJar {
+    relocate("be.renaud11232.bluemapentities", "be.renaud11232.bluemapvehicles.bluemapentities")
+}

@@ -8,3 +8,7 @@ dependencies{
     implementation(project(":bluemap-mobs-bukkit-common"))
     compileOnly(libs.paper.api)
 }
+
+tasks.shadowJar {
+    relocate("be.renaud11232.bluemapentities", "be.renaud11232.bluemapmobs.bluemapentities")
+}

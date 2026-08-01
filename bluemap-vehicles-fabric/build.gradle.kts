@@ -10,3 +10,7 @@ dependencies {
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
 }
+
+tasks.shadowJar {
+    relocate("be.renaud11232.bluemapentities", "be.renaud11232.bluemapvehicles.bluemapentities")
+}

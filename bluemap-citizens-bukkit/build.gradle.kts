@@ -11,3 +11,7 @@ dependencies{
         exclude(group = "*", module = "*")
     }
 }
+
+tasks.shadowJar {
+    relocate("be.renaud11232.bluemapentities", "be.renaud11232.bluemapcitizens.bluemapentities")
+}
