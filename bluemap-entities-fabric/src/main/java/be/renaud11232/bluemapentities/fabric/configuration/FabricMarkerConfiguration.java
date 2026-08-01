@@ -1,4 +1,4 @@
-package be.renaud11232.bluemapentities.fabric.module.configuration;
+package be.renaud11232.bluemapentities.fabric.configuration;
 
 import be.renaud11232.bluemapentities.configuration.MarkerConfiguration;
 

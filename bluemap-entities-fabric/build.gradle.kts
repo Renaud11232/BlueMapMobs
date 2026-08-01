@@ -1,12 +1,10 @@
 plugins {
-    `bluemap-entities-fabric-release`
+    `bluemap-entities-fabric-java`
 }
 
-project.description = project.property("bluemap-entities-description").toString()
-
 dependencies {
-    shadow(project(":bluemap-entities-api"))
+    api(project(":bluemap-entities-api"))
     minecraft(libs.minecraft)
-    implementation(libs.fabric.loader)
-    implementation(libs.fabric.api)
+    compileOnlyApi(libs.fabric.loader)
+    compileOnlyApi(libs.fabric.api)
 }

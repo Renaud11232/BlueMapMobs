@@ -22,6 +22,6 @@
 		"java": ">=${javaVersion}",
 		"minecraft": ">=${apiVersion}",
 		"fabricloader": "*",
-		"bluemap-entities": "*"
+		"bluemap": "*"
 	}
 }

@@ -1,32 +1,30 @@
 package be.renaud11232.bluemapentities.fabric;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.fabric.mod.FabricMod;
+import be.renaud11232.bluemapentities.module.Module;
+import be.renaud11232.bluemapentities.module.ModuleProvider;
 import de.bluecolored.bluemap.api.BlueMapAPI;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 
 import java.util.Optional;
 
-public class FabricBlueMapEntities extends FabricMod<FabricConfiguration> implements ModInitializer {
+public abstract class FabricBlueMapEntitiesMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> extends FabricMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> implements ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> {
     private static MinecraftServer SERVER;
 
-    private BlueMapEntitiesAPI api;
+    private Module<ServerLevel, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> module;
     private int lastUpdateTick = 0;
-
-    public FabricBlueMapEntities() {
-        super(FabricConfiguration.class);
-    }
 
     @Override
     public void onInitialize() {
         ServerLifecycleEvents.SERVER_STARTING.register(server -> SERVER = server);
         ServerTickEvents.END_SERVER_TICK.register(_ -> {
-            if (api != null) {
+            if (module != null) {
                 if (lastUpdateTick == 0) {
-                    api.update();
+                    module.update();
                 }
                 if (++lastUpdateTick >= 200) {
                     lastUpdateTick = 0;
@@ -35,19 +33,10 @@ public class FabricBlueMapEntities extends FabricMod<FabricConfiguration> implem
         });
         saveDefaultConfig();
         BlueMapAPI.onEnable(api -> {
-            getLogger().info("Enabling BlueMapEntities API...");
+            getLogger().info("Enabling {}", getName());
             reloadConfig();
+            module = provideModule(api, getConfig());
             lastUpdateTick = 0;
-            this.api = new FabricBlueMapEntitiesAPI(
-                    api,
-                    getConfig()
-            );
-            BlueMapEntitiesAPI.enable(this.api);
-        });
-        BlueMapAPI.onDisable(_ -> {
-            getLogger().info("Disabling BlueMapEntities API...");
-            BlueMapEntitiesAPI.disable(this.api);
-            this.api = null;
         });
     }
 

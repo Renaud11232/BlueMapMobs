@@ -1,21 +1,15 @@
 package be.renaud11232.bluemapmobs.fabric;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.fabric.mod.FabricMod;
-import be.renaud11232.bluemapentities.fabric.module.configuration.FabricModuleConfiguration;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import be.renaud11232.bluemapentities.fabric.FabricBlueMapEntitiesMod;
+import be.renaud11232.bluemapentities.module.Module;
+import de.bluecolored.bluemap.api.BlueMapAPI;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Mob;
 
-public class FabricBlueMapMobs extends FabricMod<FabricModuleConfiguration> {
-    public FabricBlueMapMobs() {
-        super(FabricModuleConfiguration.class);
-    }
-
+public class FabricBlueMapMobs extends FabricBlueMapEntitiesMod<Mob, be.renaud11232.bluemapmobs.entity.Mob> {
     @Override
-    public void onInitialize() {
-        saveDefaultConfig();
-        BlueMapEntitiesAPI.onEnable(api -> {
-            getLogger().info("Enabling BlueMapMobs...");
-            reloadConfig();
-            api.registerModule(new FabricMobsModule(api, getConfig()));
-        });
+    public Module<ServerLevel, Mob, be.renaud11232.bluemapmobs.entity.Mob> provideModule(BlueMapAPI api, Configuration configuration) {
+        return new FabricMobsModule(api, configuration);
     }
 }

@@ -1,4 +1,8 @@
 {
+  "general": {
+    "minimum_block_light": 4,
+    "minimum_sky_light": 1
+  },
   "marker_sets": [
     {
       "id": "bluemapentities-vehicles",
