@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapvehicles.fabric;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
+import be.renaud11232.bluemapentities.configuration.ModuleConfiguration;
 import be.renaud11232.bluemapvehicles.VehiclesModule;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.vehicle.VehicleEntity;

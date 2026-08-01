@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapentities.fabric;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.Configuration;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 
 import java.util.Collection;

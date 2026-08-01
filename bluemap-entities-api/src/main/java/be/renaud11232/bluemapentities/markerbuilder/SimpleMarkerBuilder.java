@@ -1,22 +1,26 @@
 package be.renaud11232.bluemapentities.markerbuilder;
 
 import be.renaud11232.bluemapentities.*;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.icon.Icon;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.POIMarker;
 
 import java.util.*;
 
 @SuppressWarnings("rawtypes")
 public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBuilder<T> {
-    private final BlueMapEntitiesAPI api;
+    private final BlueMapAPI api;
+    private final Configuration configuration;
     private final Map<Class<? extends Entity>, MarkerBuilder> registry;
     private final Map<Class<? extends Entity>, Optional<MarkerBuilder>> cachedRegistry;
     private final Icon defaultIcon;
     private final Collection<String> defaultStyleClasses;
 
-    public SimpleMarkerBuilder(BlueMapEntitiesAPI api) {
+    public SimpleMarkerBuilder(BlueMapAPI api, Configuration configuration) {
         this.api = api;
+        this.configuration = configuration;
         this.registry = new HashMap<>();
         this.cachedRegistry = new HashMap<>();
         this.defaultIcon = getDefaultIcon();
@@ -51,7 +55,7 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
     }
 
     private Optional<POIMarker> doBuild(T entity) {
-        if (entity.getBlockLightLevel() < api.getConfiguration().getGeneral().getMinimumBlockLight() && entity.getSkyLightLevel() < api.getConfiguration().getGeneral().getMinimumSkyLight()) {
+        if (entity.getBlockLightLevel() < configuration.getGeneral().getMinimumBlockLight() && entity.getSkyLightLevel() < configuration.getGeneral().getMinimumSkyLight()) {
             return Optional.empty();
         }
         Icon icon = getIcon(entity);
@@ -73,7 +77,7 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
                 .label(entity.getName())
                 .detail(entity.getName())
                 .position(position.x(), position.y(), position.z())
-                .icon(icon.getPath(), icon.getAnchor())
+                .icon(icon.getSrc(), icon.getAnchor())
                 .styleClasses(BlueMapEntitiesStyleClass.MARKER)
                 .build();
         marker.addStyleClasses(styleClasses);
@@ -96,7 +100,11 @@ public abstract class SimpleMarkerBuilder<T extends Entity> implements MarkerBui
         return null;
     }
 
-    protected BlueMapEntitiesAPI getAPI() {
+    protected BlueMapAPI getAPI() {
         return api;
+    }
+
+    protected Configuration getConfiguration() {
+        return configuration;
     }
 }

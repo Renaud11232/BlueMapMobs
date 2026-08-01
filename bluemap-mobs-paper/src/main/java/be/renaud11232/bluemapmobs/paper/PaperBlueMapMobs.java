@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.paper;
 
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.bukkit.module.configuration.BukkitModuleConfiguration;
+import be.renaud11232.bluemapentities.bukkit.configuration.BukkitModuleConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class PaperBlueMapMobs extends JavaPlugin {

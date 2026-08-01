@@ -1,8 +1,9 @@
 package be.renaud11232.bluemapentities.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.icon.Icon;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -12,8 +13,8 @@ public abstract class SimpleVariantMarkerBuilder<T extends Entity, ICON_VARIANT,
     private final Map<ICON_VARIANT, Icon> icons;
     private final Map<STYLE_CLASSES_VARIANT, Collection<String>> styleClasses;
 
-    public SimpleVariantMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public SimpleVariantMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         this.icons = new HashMap<>();
         this.styleClasses = new HashMap<>();
     }

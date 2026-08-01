@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapentities.fabric;
 
-import be.renaud11232.bluemapentities.GeneralConfiguration;
+import be.renaud11232.bluemapentities.configuration.GeneralConfiguration;
 
 public class FabricGeneralConfiguration implements GeneralConfiguration {
     private Integer minimum_block_light;

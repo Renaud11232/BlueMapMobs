@@ -1,17 +1,15 @@
 package be.renaud11232.bluemapvehicles.bukkit;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.bukkit.module.configuration.BukkitModuleConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
+import be.renaud11232.bluemapentities.bukkit.BukkitBlueMapEntitiesPlugin;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import be.renaud11232.bluemapentities.module.Module;
+import de.bluecolored.bluemap.api.BlueMapAPI;
+import org.bukkit.World;
+import org.bukkit.entity.Vehicle;
 
-public class BukkitBlueMapVehicles extends JavaPlugin {
+public class BukkitBlueMapVehicles extends BukkitBlueMapEntitiesPlugin<Vehicle, be.renaud11232.bluemapvehicles.entity.Vehicle> {
     @Override
-    public void onEnable() {
-        saveDefaultConfig();
-        BlueMapEntitiesAPI.onEnable(api -> {
-            getLogger().info("Enabling BlueMapVehicles...");
-            reloadConfig();
-            api.registerModule(new BukkitVehiclesModule(api, BukkitModuleConfiguration.deserialize(getConfig().getValues(true))));
-        });
+    public Module<World, Vehicle, be.renaud11232.bluemapvehicles.entity.Vehicle> provideModule(BlueMapAPI api, Configuration configuration) {
+        return new BukkitVehiclesModule(api, configuration);
     }
 }

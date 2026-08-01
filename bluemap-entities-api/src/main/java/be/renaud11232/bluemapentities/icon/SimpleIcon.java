@@ -3,17 +3,17 @@ package be.renaud11232.bluemapentities.icon;
 import com.flowpowered.math.vector.Vector2i;
 
 public class SimpleIcon implements Icon {
-    private final String path;
+    private final String src;
     private final Vector2i anchor;
 
-    public SimpleIcon(String path, Vector2i anchor) {
-        this.path = path;
+    public SimpleIcon(String src, Vector2i anchor) {
+        this.src = src;
         this.anchor = anchor;
     }
 
     @Override
-    public String getPath() {
-        return path;
+    public String getSrc() {
+        return src;
     }
 
     @Override

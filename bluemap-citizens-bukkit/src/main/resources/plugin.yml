@@ -3,7 +3,7 @@ version: '${version}'
 main: be.renaud11232.bluemapcitizens.bukkit.BlueMapCitizens
 api-version: '${apiVersion}'
 depend:
-  - BlueMapEntities
+  - BlueMap
   - Citizens
 authors:
   - Renaud11232

@@ -1,6 +1,6 @@
-package be.renaud11232.bluemapentities.bukkit;
+package be.renaud11232.bluemapentities.bukkit.configuration;
 
-import be.renaud11232.bluemapentities.GeneralConfiguration;
+import be.renaud11232.bluemapentities.configuration.GeneralConfiguration;
 
 import java.util.Map;
 

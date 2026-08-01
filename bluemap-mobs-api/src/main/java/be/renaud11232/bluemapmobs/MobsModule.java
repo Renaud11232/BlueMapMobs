@@ -3,7 +3,7 @@ package be.renaud11232.bluemapmobs;
 import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
 import be.renaud11232.bluemapentities.EntityConverter;
 import be.renaud11232.bluemapentities.module.SimpleModule;
-import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
+import be.renaud11232.bluemapentities.configuration.ModuleConfiguration;
 import be.renaud11232.bluemapmobs.entity.Mob;
 import be.renaud11232.bluemapmobs.markerbuilder.MobsMarkerBuilder;
 

@@ -2,9 +2,10 @@ package be.renaud11232.bluemapcitizens.bukkit;
 
 import be.renaud11232.bluemapcitizens.bukkit.entity.CitizensNPC;
 import be.renaud11232.bluemapcitizens.bukkit.markerbuilder.CitizensMarkerBuilder;
-import be.renaud11232.bluemapentities.*;
+import be.renaud11232.bluemapentities.bukkit.module.BukkitModule;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.module.SimpleModule;
-import be.renaud11232.bluemapentities.bukkit.module.configuration.BukkitModuleConfiguration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import net.citizensnpcs.api.CitizensAPI;
 import net.citizensnpcs.api.npc.NPC;
 import org.bukkit.World;
@@ -15,13 +16,13 @@ import java.util.stream.StreamSupport;
 
 import static java.util.function.Predicate.not;
 
-public class CitizensModule extends SimpleModule<World, NPC, CitizensNPC> {
-    protected CitizensModule(BlueMapEntitiesAPI api, BukkitModuleConfiguration configuration) {
-        super(api, configuration, World.class, new CitizensNPCConverter(), new CitizensMarkerBuilder(api));
+public class CitizensModule extends SimpleModule<World, NPC, CitizensNPC> implements BukkitModule<NPC, CitizensNPC> {
+    protected CitizensModule(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration, new CitizensNPCConverter(), new CitizensMarkerBuilder(api, configuration));
     }
 
     @Override
-    protected Collection<? extends NPC> getEntities(World world) {
+    public Collection<? extends NPC> getEntities(World world) {
         return StreamSupport.stream(CitizensAPI.getNPCRegistries().spliterator(), false)
                 .flatMap(registry -> StreamSupport.stream(registry.spliterator(), false))
                 .filter(NPC::isSpawned)
@@ -32,12 +33,7 @@ public class CitizensModule extends SimpleModule<World, NPC, CitizensNPC> {
     }
 
     @Override
-    public String getAssetDirectoryName() {
-        return "assets";
-    }
-
-    @Override
     public String getModuleIdentifier() {
-        return "citizens";
+        return "bluemap-citizens";
     }
 }

@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapentities.fabric.module.configuration;
 
-import be.renaud11232.bluemapentities.module.configuration.MarkerConfiguration;
+import be.renaud11232.bluemapentities.configuration.MarkerConfiguration;
 
 public class FabricMarkerConfiguration implements MarkerConfiguration {
     private String type;

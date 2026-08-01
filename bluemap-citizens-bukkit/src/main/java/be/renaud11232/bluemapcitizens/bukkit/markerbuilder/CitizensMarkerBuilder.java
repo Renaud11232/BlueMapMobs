@@ -2,16 +2,17 @@ package be.renaud11232.bluemapcitizens.bukkit.markerbuilder;
 
 import be.renaud11232.bluemapcitizens.bukkit.CitizensIcon;
 import be.renaud11232.bluemapcitizens.bukkit.entity.CitizensNPC;
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleSingleVariantMarkerBuilder;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import net.citizensnpcs.trait.SkinTrait;
 
 import java.io.IOException;
 
 public class CitizensMarkerBuilder extends SimpleSingleVariantMarkerBuilder<CitizensNPC, Integer> {
-    public CitizensMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public CitizensMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantIcon(0, CitizensIcon.ALEX);
         registerVariantIcon(1, CitizensIcon.ARI);
         registerVariantIcon(2, CitizensIcon.EFE);
@@ -35,7 +36,7 @@ public class CitizensMarkerBuilder extends SimpleSingleVariantMarkerBuilder<Citi
             return super.getIcon(entity);
         } else {
             try {
-                return CitizensIcon.head(getAPI().getBlueMap().getWebApp().getWebRoot(), skinTrait.getTexture());
+                return CitizensIcon.head(getAPI().getWebApp().getWebRoot(), skinTrait.getTexture());
             } catch (IOException e) {
                 return super.getIcon(entity);
             }

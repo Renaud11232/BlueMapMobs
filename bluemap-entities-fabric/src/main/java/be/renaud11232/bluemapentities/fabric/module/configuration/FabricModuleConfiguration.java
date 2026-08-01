@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapentities.fabric.module.configuration;
 
-import be.renaud11232.bluemapentities.module.configuration.MarkerSetConfiguration;
-import be.renaud11232.bluemapentities.module.configuration.ModuleConfiguration;
+import be.renaud11232.bluemapentities.configuration.MarkerSetConfiguration;
+import be.renaud11232.bluemapentities.configuration.ModuleConfiguration;
 
 import java.util.Collections;
 import java.util.List;

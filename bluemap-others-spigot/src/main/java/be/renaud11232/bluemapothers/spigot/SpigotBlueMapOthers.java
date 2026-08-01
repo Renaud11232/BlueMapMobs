@@ -1,17 +1,15 @@
 package be.renaud11232.bluemapothers.spigot;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.bukkit.module.configuration.BukkitModuleConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
+import be.renaud11232.bluemapentities.bukkit.BukkitBlueMapEntitiesPlugin;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import be.renaud11232.bluemapentities.module.Module;
+import de.bluecolored.bluemap.api.BlueMapAPI;
+import org.bukkit.World;
+import org.bukkit.entity.Entity;
 
-public class SpigotBlueMapOthers extends JavaPlugin {
+public class SpigotBlueMapOthers extends BukkitBlueMapEntitiesPlugin<Entity, be.renaud11232.bluemapentities.entity.Entity> {
     @Override
-    public void onEnable() {
-        saveDefaultConfig();
-        BlueMapEntitiesAPI.onEnable(api -> {
-            getLogger().info("Enabling BlueMapOthers...");
-            reloadConfig();
-            api.registerModule(new SpigotOthersModule(api, BukkitModuleConfiguration.deserialize(getConfig().getValues(true))));
-        });
+    public Module<World, Entity, be.renaud11232.bluemapentities.entity.Entity> provideModule(BlueMapAPI api, Configuration configuration) {
+        return new SpigotOthersModule(api, configuration);
     }
 }

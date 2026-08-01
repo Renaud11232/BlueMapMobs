@@ -1,17 +1,16 @@
 package be.renaud11232.bluemapcitizens.bukkit;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
-import be.renaud11232.bluemapentities.bukkit.module.configuration.BukkitModuleConfiguration;
-import org.bukkit.plugin.java.JavaPlugin;
+import be.renaud11232.bluemapcitizens.bukkit.entity.CitizensNPC;
+import be.renaud11232.bluemapentities.bukkit.BukkitBlueMapEntitiesPlugin;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import be.renaud11232.bluemapentities.module.Module;
+import de.bluecolored.bluemap.api.BlueMapAPI;
+import net.citizensnpcs.api.npc.NPC;
+import org.bukkit.World;
 
-public class BlueMapCitizens extends JavaPlugin {
+public class BlueMapCitizens extends BukkitBlueMapEntitiesPlugin<NPC, CitizensNPC> {
     @Override
-    public void onEnable() {
-        saveDefaultConfig();
-        BlueMapEntitiesAPI.onEnable(api -> {
-            getLogger().info("Enabling BlueMapCitizens...");
-            reloadConfig();
-            api.registerModule(new CitizensModule(api, BukkitModuleConfiguration.deserialize(getConfig().getValues(true))));
-        });
+    public Module<World, NPC, CitizensNPC> provideModule(BlueMapAPI api, Configuration configuration) {
+        return new CitizensModule(api, configuration);
     }
 }

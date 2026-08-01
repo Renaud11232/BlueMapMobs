@@ -1,8 +1,6 @@
 plugins {
-    `bluemap-entities-bukkit-release`
+    `bluemap-entities-java`
 }
-
-project.description = project.property("bluemap-entities-description").toString()
 
 dependencies{
     api(project(":bluemap-entities-api"))

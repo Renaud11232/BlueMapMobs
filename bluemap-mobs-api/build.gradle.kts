@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies{
-    compileOnlyApi(project(":bluemap-entities-api"))
+    api(project(":bluemap-entities-api"))
 }
