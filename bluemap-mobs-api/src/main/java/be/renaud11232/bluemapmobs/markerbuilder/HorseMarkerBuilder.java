@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.MobsStyleClass;
 import be.renaud11232.bluemapmobs.entity.Horse;
@@ -8,8 +9,8 @@ import be.renaud11232.bluemapmobs.entity.Horse;
 import java.util.List;
 
 public class HorseMarkerBuilder extends AgeableVariantMarkerBuilder<Horse, Horse.Style, Horse.Color> {
-    public HorseMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public HorseMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Horse.Style.NONE, MobsIcon.HORSE_MARKINGS_NONE);
         registerVariantAdultIcon(Horse.Style.WHITE, MobsIcon.HORSE_MARKINGS_WHITE);
         registerVariantAdultIcon(Horse.Style.WHITEFIELD, MobsIcon.HORSE_MARKINGS_WHITEFIELD);

@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Strider;
 
 public class StriderMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Strider, Boolean> {
-    public StriderMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public StriderMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(false, MobsIcon.STRIDER);
         registerVariantAdultIcon(true, MobsIcon.STRIDER_COLD);
         registerVariantBabyIcon(false, MobsIcon.STRIDER_BABY);

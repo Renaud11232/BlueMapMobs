@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Wolf;
@@ -16,8 +17,8 @@ public class WolfMarkerBuilder extends AgeableMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> angryBabyIcons;
     private final Map<Wolf.Variant, Icon> tameBabyIcons;
     
-    public WolfMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public WolfMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         adultIcons = new HashMap<>();
         adultIcons.put(Wolf.Variant.ASHEN, MobsIcon.WOLF_ASHEN);
         adultIcons.put(Wolf.Variant.BLACK, MobsIcon.WOLF_BLACK);

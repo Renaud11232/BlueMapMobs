@@ -1,11 +1,12 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapmobs.entity.Ageable;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 public abstract class AgeableSingleVariantMarkerBuilder<T extends Ageable, VARIANT> extends AgeableVariantMarkerBuilder<T, VARIANT, VARIANT> {
-    public AgeableSingleVariantMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public AgeableSingleVariantMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
     }
 
     @Override

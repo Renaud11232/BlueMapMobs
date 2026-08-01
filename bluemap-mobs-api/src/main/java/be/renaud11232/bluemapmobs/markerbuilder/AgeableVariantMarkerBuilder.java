@@ -1,8 +1,9 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.entity.Ageable;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -14,8 +15,8 @@ public abstract class AgeableVariantMarkerBuilder<T extends Ageable, ICON_VARIAN
     private final Map<STYLE_CLASSES_VARIANT, Collection<String>> adultStyleClasses;
     private final Map<STYLE_CLASSES_VARIANT, Collection<String>> babyStyleClasses;
 
-    public AgeableVariantMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public AgeableVariantMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         this.adultIcons = new HashMap<>();
         this.babyIcons = new HashMap<>();
         this.adultStyleClasses = new HashMap<>();

@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Frog;
 
 public class FrogMarkerBuilder extends MobSingleVariantMarkerBuilder<Frog, Frog.Variant> {
-    public FrogMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public FrogMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantIcon(Frog.Variant.TEMPERATE, MobsIcon.FROG_TEMPERATE);
         registerVariantIcon(Frog.Variant.WARM, MobsIcon.FROG_WARM);
         registerVariantIcon(Frog.Variant.COLD, MobsIcon.FROG_COLD);

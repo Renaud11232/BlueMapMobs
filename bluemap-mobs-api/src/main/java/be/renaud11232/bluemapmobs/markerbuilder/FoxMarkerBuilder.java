@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Fox;
@@ -14,8 +15,8 @@ public class FoxMarkerBuilder extends AgeableMarkerBuilder<Fox> {
     private final Map<Fox.Type, Icon> babyIcons;
     private final Map<Fox.Type, Icon> sleepBabyIcons;
 
-    public FoxMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public FoxMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         adultIcons = new HashMap<>();
         adultIcons.put(Fox.Type.RED, MobsIcon.FOX_RED);
         adultIcons.put(Fox.Type.SNOW, MobsIcon.FOX_SNOW);

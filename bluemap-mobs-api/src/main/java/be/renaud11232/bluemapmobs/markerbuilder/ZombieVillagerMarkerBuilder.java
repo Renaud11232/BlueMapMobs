@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.MobsStyleClass;
 import be.renaud11232.bluemapmobs.entity.Villager;
@@ -10,8 +11,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class ZombieVillagerMarkerBuilder extends AgeableSingleVariantMarkerBuilder<ZombieVillager, Villager.Type> {
-    public ZombieVillagerMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public ZombieVillagerMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.ZOMBIE_VILLAGER_SNOW);
         registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.ZOMBIE_VILLAGER_SWAMP);
         registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.ZOMBIE_VILLAGER_TAIGA);

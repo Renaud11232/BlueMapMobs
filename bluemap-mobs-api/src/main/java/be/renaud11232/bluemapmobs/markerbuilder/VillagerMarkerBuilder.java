@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.MobsStyleClass;
 import be.renaud11232.bluemapmobs.entity.Villager;
@@ -9,8 +10,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class VillagerMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Villager, Villager.Type> {
-    public VillagerMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public VillagerMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Villager.Type.SNOW, MobsIcon.VILLAGER_SNOW);
         registerVariantAdultIcon(Villager.Type.SWAMP, MobsIcon.VILLAGER_SWAMP);
         registerVariantAdultIcon(Villager.Type.TAIGA, MobsIcon.VILLAGER_TAIGA);

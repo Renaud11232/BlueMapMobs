@@ -1,13 +1,14 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Blaze;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 public class BlazeMarkerBuilder extends MobMarkerBuilder<Blaze> {
-    public BlazeMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public BlazeMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
     }
 
     @Override

@@ -1,13 +1,14 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Tadpole;
 
 public class TadpoleMarkerBuilder extends MobMarkerBuilder<Tadpole> {
-    public TadpoleMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public TadpoleMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
     }
 
     @Override

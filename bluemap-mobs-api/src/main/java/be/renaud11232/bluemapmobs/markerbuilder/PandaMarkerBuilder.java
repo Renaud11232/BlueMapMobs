@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Panda;
 
 public class PandaMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Panda, Panda.Gene> {
-    public PandaMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public PandaMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Panda.Gene.NORMAL, MobsIcon.PANDA_NORMAL);
         registerVariantAdultIcon(Panda.Gene.LAZY, MobsIcon.PANDA_LAZY);
         registerVariantAdultIcon(Panda.Gene.WORRIED, MobsIcon.PANDA_WORRIED);

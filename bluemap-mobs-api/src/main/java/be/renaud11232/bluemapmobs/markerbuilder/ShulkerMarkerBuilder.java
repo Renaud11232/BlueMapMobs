@@ -1,13 +1,14 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Shulker;
 
 public class ShulkerMarkerBuilder extends MobSingleVariantMarkerBuilder<Shulker, Shulker.Color> {
-    public ShulkerMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public ShulkerMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantIcon(Shulker.Color.WHITE, MobsIcon.SHULKER_WHITE);
         registerVariantIcon(Shulker.Color.ORANGE, MobsIcon.SHULKER_ORANGE);
         registerVariantIcon(Shulker.Color.MAGENTA, MobsIcon.SHULKER_MAGENTA);

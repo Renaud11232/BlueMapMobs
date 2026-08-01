@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Cat;
 
 public class CatMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Cat, Cat.Type> {
-    public CatMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public CatMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Cat.Type.RED, MobsIcon.CAT_RED);
         registerVariantAdultIcon(Cat.Type.BLACK, MobsIcon.CAT_BLACK);
         registerVariantAdultIcon(Cat.Type.TABBY, MobsIcon.CAT_TABBY);

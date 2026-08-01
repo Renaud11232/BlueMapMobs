@@ -1,13 +1,14 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Rabbit;
 
 public class RabbitMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Rabbit, Rabbit.Type> {
-    public RabbitMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public RabbitMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Rabbit.Type.GOLD, MobsIcon.RABBIT_GOLD);
         registerVariantAdultIcon(Rabbit.Type.WHITE, MobsIcon.RABBIT_WHITE);
         registerVariantAdultIcon(Rabbit.Type.BLACK_AND_WHITE, MobsIcon.RABBIT_BLACK_AND_WHITE);

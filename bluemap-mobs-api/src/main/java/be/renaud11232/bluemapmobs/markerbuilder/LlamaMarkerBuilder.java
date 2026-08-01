@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.MobsStyleClass;
@@ -9,8 +10,8 @@ import be.renaud11232.bluemapmobs.entity.Llama;
 import java.util.List;
 
 public class LlamaMarkerBuilder extends AgeableVariantMarkerBuilder<Llama, Llama.Carpet, Llama.Color> {
-    public LlamaMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public LlamaMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Llama.Carpet.WHITE, MobsIcon.LLAMA_DECOR_WHITE);
         registerVariantAdultIcon(Llama.Carpet.LIGHT_GRAY, MobsIcon.LLAMA_DECOR_LIGHT_GRAY);
         registerVariantAdultIcon(Llama.Carpet.GRAY, MobsIcon.LLAMA_DECOR_GRAY);

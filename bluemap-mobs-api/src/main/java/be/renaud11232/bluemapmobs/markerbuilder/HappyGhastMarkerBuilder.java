@@ -1,6 +1,7 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.icon.Icon;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.MobsStyleClass;
@@ -10,8 +11,8 @@ import java.util.Collection;
 import java.util.List;
 
 public class HappyGhastMarkerBuilder extends AgeableSingleVariantMarkerBuilder<HappyGhast, HappyGhast.Harness> {
-    public HappyGhastMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public HappyGhastMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(HappyGhast.Harness.WHITE, MobsIcon.HAPPY_GHAST_HARNESS_WHITE);
         registerVariantAdultIcon(HappyGhast.Harness.LIGHT_GRAY, MobsIcon.HAPPY_GHAST_HARNESS_LIGHT_GRAY);
         registerVariantAdultIcon(HappyGhast.Harness.GRAY, MobsIcon.HAPPY_GHAST_HARNESS_GRAY);

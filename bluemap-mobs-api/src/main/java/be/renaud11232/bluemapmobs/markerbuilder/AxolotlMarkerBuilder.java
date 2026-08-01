@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Axolotl;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 public class AxolotlMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Axolotl, Axolotl.Variant> {
-    public AxolotlMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public AxolotlMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Axolotl.Variant.LUCY, MobsIcon.AXOLOTL_LUCY);
         registerVariantAdultIcon(Axolotl.Variant.WILD, MobsIcon.AXOLOTL_WILD);
         registerVariantAdultIcon(Axolotl.Variant.GOLD, MobsIcon.AXOLOTL_GOLD);

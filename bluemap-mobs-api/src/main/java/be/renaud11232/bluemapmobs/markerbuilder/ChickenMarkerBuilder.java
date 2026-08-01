@@ -1,12 +1,13 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
-import be.renaud11232.bluemapentities.BlueMapEntitiesAPI;
+import be.renaud11232.bluemapentities.configuration.Configuration;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Chicken;
 
 public class ChickenMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Chicken, Chicken.Variant> {
-    public ChickenMarkerBuilder(BlueMapEntitiesAPI api) {
-        super(api);
+    public ChickenMarkerBuilder(BlueMapAPI api, Configuration configuration) {
+        super(api, configuration);
         registerVariantAdultIcon(Chicken.Variant.TEMPERATE, MobsIcon.CHICKEN_TEMPERATE);
         registerVariantAdultIcon(Chicken.Variant.COLD, MobsIcon.CHICKEN_COLD);
         registerVariantAdultIcon(Chicken.Variant.WARM, MobsIcon.CHICKEN_WARM);
