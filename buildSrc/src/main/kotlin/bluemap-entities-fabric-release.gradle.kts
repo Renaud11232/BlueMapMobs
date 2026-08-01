@@ -1,5 +1,5 @@
 plugins {
-    id("bluemap-entities-java")
+    id("bluemap-entities-fabric")
     id("net.fabricmc.fabric-loom")
     id("com.gradleup.shadow")
 }

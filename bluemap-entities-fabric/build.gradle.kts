@@ -1,5 +1,5 @@
 plugins {
-    `bluemap-entities-fabric-java`
+    `bluemap-entities-fabric`
 }
 
 dependencies {
