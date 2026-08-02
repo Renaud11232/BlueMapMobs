@@ -27,7 +27,7 @@ find what version you should use for your server :
 | 1.21.9 - 1.21.10 | 1.6.0 (BlueMapMobs)         |
 | 1.21.11          | 1.7.0 (BlueMapMobs)         |
 | 26.1 - 26.1.2    | 2.0.0                       |
-| 26.2             | 2.1.0                       |
+| 26.2             | 2.1.0 - 2.1.1               |
 
 Starting with version `2.1.0`, BlueMapMobs was split into separate plugins for mobs, vehicles, NPCs and other entities.
 
