@@ -64,7 +64,7 @@ public abstract class SimpleModule<WORLD_TYPE, SOURCE_ENTITY_TYPE, TARGET_ENTITY
 
     private Map<String, Marker> buildMarkers(MarkerConfiguration markerConfiguration, List<TARGET_ENTITY_TYPE> entities) {
         return entities.stream()
-                .map(entity -> Map.entry(getModuleIdentifier() + entity.getUUID(), markerBuilder.build(entity)))
+                .map(entity -> Map.entry(String.format("%s-%s", getModuleIdentifier(), entity.getUUID()), markerBuilder.build(entity)))
                 .filter(e -> e.getValue().isPresent())
                 .peek(e -> e.getValue().get().setMaxDistance(markerConfiguration.getMaxDistance()))
                 .collect(Collectors.toMap(Map.Entry::getKey, e -> e.getValue().get()));
