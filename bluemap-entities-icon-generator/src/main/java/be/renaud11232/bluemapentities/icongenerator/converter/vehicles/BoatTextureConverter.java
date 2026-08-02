@@ -10,7 +10,7 @@ public class BoatTextureConverter extends TextureConverter {
     public BoatTextureConverter() {
         super();
         registerTextureConversion((texture, icon) ->
-            icon.drawImage(texture, 0, 0, texture.getWidth() * 2, texture.getHeight() * 2, null)
+                icon.drawImage(texture, 0, 0, texture.getWidth() * 2, texture.getHeight() * 2, null)
         );
     }
 

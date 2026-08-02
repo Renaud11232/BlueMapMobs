@@ -12,9 +12,9 @@ public class SlimeTextureConverter extends TextureConverter {
         super();
         registerTextureConversion((texture, icon) -> {
             BufferedImage core = texture.getSubimage(6, 22, 6, 6);
-            BufferedImage leftEye =  texture.getSubimage(34, 2, 2, 2);
-            BufferedImage rightEye =  texture.getSubimage(34, 6, 2, 2);
-            BufferedImage mouth =  texture.getSubimage(33, 9, 1, 1);
+            BufferedImage leftEye = texture.getSubimage(34, 2, 2, 2);
+            BufferedImage rightEye = texture.getSubimage(34, 6, 2, 2);
+            BufferedImage mouth = texture.getSubimage(33, 9, 1, 1);
             BufferedImage skin = texture.getSubimage(8, 8, 8, 8);
             icon.drawImage(core, 4, 4, core.getWidth() * 4, core.getHeight() * 4, null);
             icon.drawImage(leftEye, 3, 8, leftEye.getWidth() * 4, leftEye.getHeight() * 4, null);

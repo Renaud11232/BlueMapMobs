@@ -12,13 +12,13 @@ public class DolphinTextureConverter extends TextureConverter {
         super();
         registerTextureConversion((texture, icon) -> {
             BufferedImage head = texture.getSubimage(0, 6, 6, 7);
-            BufferedImage nose =  texture.getSubimage(0, 17, 4, 2);
+            BufferedImage nose = texture.getSubimage(0, 17, 4, 2);
             icon.drawImage(head, -4, 2, head.getWidth() * 4, head.getHeight() * 4, null);
             icon.drawImage(nose, 20, 22, nose.getWidth() * 4, nose.getHeight() * 4, null);
         });
         registerTextureConversion((texture, icon) -> {
             BufferedImage head = texture.getSubimage(0, 4, 4, 5);
-            BufferedImage nose =  texture.getSubimage(0, 11, 2, 2);
+            BufferedImage nose = texture.getSubimage(0, 11, 2, 2);
             icon.drawImage(head, 4, 6, head.getWidth() * 4, head.getHeight() * 4, null);
             icon.drawImage(nose, 20, 18, nose.getWidth() * 4, nose.getHeight() * 4, null);
         });

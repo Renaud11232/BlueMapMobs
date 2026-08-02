@@ -77,7 +77,7 @@ public class FabricMobConverter implements EntityConverter<Mob, be.renaud11232.b
             case Blaze blaze -> new FabricBlaze(blaze);
             case Bogged bogged -> new FabricBogged(bogged);
             case Breeze breeze -> new FabricBreeze(breeze);
-            case CamelHusk camelHusk -> new  FabricCamelHusk(camelHusk);
+            case CamelHusk camelHusk -> new FabricCamelHusk(camelHusk);
             case Camel camel -> new FabricCamel(camel);
             case Cat cat -> new FabricCat(cat);
             case CaveSpider caveSpider -> new FabricCaveSpider(caveSpider);
@@ -101,7 +101,7 @@ public class FabricMobConverter implements EntityConverter<Mob, be.renaud11232.b
             case Giant giant -> new FabricGiant(giant);
             case GlowSquid glowSquid -> new FabricGlowSquid(glowSquid);
             case Goat goat -> new FabricGoat(goat);
-            case Guardian guardian -> new  FabricGuardian(guardian);
+            case Guardian guardian -> new FabricGuardian(guardian);
             case HappyGhast happyGhast -> new FabricHappyGhast(happyGhast);
             case Hoglin hoglin -> new FabricHoglin(hoglin);
             case Horse horse -> new FabricHorse(horse);

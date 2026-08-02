@@ -34,7 +34,7 @@ tasks {
     }
     register<Jar>("mergeShadowJarAndJar") {
         dependsOn(shadowJar, jar)
-        from (
+        from(
             zipTree(shadowJar.map { it.outputs.files.singleFile }).matching {
                 exclude("fabric.mod.json")
             },

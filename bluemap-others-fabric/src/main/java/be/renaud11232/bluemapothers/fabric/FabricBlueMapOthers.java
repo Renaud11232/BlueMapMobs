@@ -10,6 +10,6 @@ import net.minecraft.world.entity.Entity;
 public class FabricBlueMapOthers extends FabricBlueMapEntitiesMod<Entity, be.renaud11232.bluemapentities.entity.Entity> {
     @Override
     public Module<ServerLevel, Entity, be.renaud11232.bluemapentities.entity.Entity> provideModule(BlueMapAPI api, Configuration configuration) {
-        return new  FabricOthersModule(api, configuration);
+        return new FabricOthersModule(api, configuration);
     }
 }

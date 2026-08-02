@@ -11,25 +11,6 @@ import java.util.Map;
 public class AbstractFabricLlama<T extends net.minecraft.world.entity.animal.equine.Llama> extends FabricAgeable<T> implements Llama {
     private static final Map<Item, Carpet> CARPET_MAP = new HashMap<>();
 
-    public AbstractFabricLlama(T wrapped) {
-        super(wrapped);
-    }
-
-    @Override
-    public Carpet getCarpet() {
-        return CARPET_MAP.get(wrapped.getItemBySlot(EquipmentSlot.BODY).getItem());
-    }
-
-    @Override
-    public Color getColor() {
-        return switch (wrapped.getVariant()) {
-            case CREAMY -> Color.CREAMY;
-            case WHITE -> Color.WHITE;
-            case BROWN -> Color.BROWN;
-            case GRAY -> Color.GRAY;
-        };
-    }
-
     static {
         CARPET_MAP.put(Items.CARPET.white(), Carpet.WHITE);
         CARPET_MAP.put(Items.CARPET.lightGray(), Carpet.LIGHT_GRAY);
@@ -47,5 +28,24 @@ public class AbstractFabricLlama<T extends net.minecraft.world.entity.animal.equ
         CARPET_MAP.put(Items.CARPET.purple(), Carpet.PURPLE);
         CARPET_MAP.put(Items.CARPET.magenta(), Carpet.MAGENTA);
         CARPET_MAP.put(Items.CARPET.pink(), Carpet.PINK);
+    }
+
+    public AbstractFabricLlama(T wrapped) {
+        super(wrapped);
+    }
+
+    @Override
+    public Carpet getCarpet() {
+        return CARPET_MAP.get(wrapped.getItemBySlot(EquipmentSlot.BODY).getItem());
+    }
+
+    @Override
+    public Color getColor() {
+        return switch (wrapped.getVariant()) {
+            case CREAMY -> Color.CREAMY;
+            case WHITE -> Color.WHITE;
+            case BROWN -> Color.BROWN;
+            case GRAY -> Color.GRAY;
+        };
     }
 }

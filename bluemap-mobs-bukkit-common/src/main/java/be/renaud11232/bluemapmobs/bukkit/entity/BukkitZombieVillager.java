@@ -9,15 +9,6 @@ import java.util.Map;
 public class BukkitZombieVillager extends BukkitAgeable<org.bukkit.entity.ZombieVillager> implements ZombieVillager {
     public static final Map<org.bukkit.entity.Villager.Type, Villager.Type> TYPE_MAP = new HashMap<>();
 
-    public BukkitZombieVillager(org.bukkit.entity.ZombieVillager wrapped) {
-        super(wrapped);
-    }
-
-    @Override
-    public Villager.Type getType() {
-        return TYPE_MAP.get(wrapped.getVillagerType());
-    }
-
     static {
         TYPE_MAP.put(org.bukkit.entity.Villager.Type.DESERT, Villager.Type.DESERT);
         TYPE_MAP.put(org.bukkit.entity.Villager.Type.JUNGLE, Villager.Type.JUNGLE);
@@ -26,5 +17,14 @@ public class BukkitZombieVillager extends BukkitAgeable<org.bukkit.entity.Zombie
         TYPE_MAP.put(org.bukkit.entity.Villager.Type.SNOW, Villager.Type.SNOW);
         TYPE_MAP.put(org.bukkit.entity.Villager.Type.SWAMP, Villager.Type.SWAMP);
         TYPE_MAP.put(org.bukkit.entity.Villager.Type.TAIGA, Villager.Type.TAIGA);
+    }
+
+    public BukkitZombieVillager(org.bukkit.entity.ZombieVillager wrapped) {
+        super(wrapped);
+    }
+
+    @Override
+    public Villager.Type getType() {
+        return TYPE_MAP.get(wrapped.getVillagerType());
     }
 }

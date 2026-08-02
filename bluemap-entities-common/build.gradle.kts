@@ -2,6 +2,6 @@ plugins {
     `bluemap-entities-java`
 }
 
-dependencies{
+dependencies {
     compileOnlyApi(libs.bluemap.api)
 }

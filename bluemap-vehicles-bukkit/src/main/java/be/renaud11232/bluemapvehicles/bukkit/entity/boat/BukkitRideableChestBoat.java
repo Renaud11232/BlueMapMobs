@@ -8,12 +8,12 @@ import org.bukkit.entity.boat.*;
 
 public class BukkitRideableChestBoat extends BukkitVehicle<ChestBoat> implements RideableChestBoat {
     private final RideableBoat.Type type;
-    
+
     public BukkitRideableChestBoat(AcaciaChestBoat wrapped) {
         super(wrapped);
         type = RideableBoat.Type.ACACIA;
     }
-    
+
     public BukkitRideableChestBoat(BirchChestBoat wrapped) {
         super(wrapped);
         type = RideableBoat.Type.BIRCH;

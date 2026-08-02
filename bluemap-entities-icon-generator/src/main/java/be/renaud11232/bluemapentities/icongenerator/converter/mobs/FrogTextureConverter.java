@@ -13,8 +13,8 @@ public class FrogTextureConverter extends TextureConverter {
         registerTextureConversion((texture, icon) -> {
             BufferedImage headTop = texture.getSubimage(9, 22, 7, 3);
             BufferedImage headBottom = texture.getSubimage(12, 10, 7, 3);
-            BufferedImage leftEye =  texture.getSubimage(3, 3, 3, 2);
-            BufferedImage rightEye =  texture.getSubimage(3, 8, 3, 2);
+            BufferedImage leftEye = texture.getSubimage(3, 3, 3, 2);
+            BufferedImage rightEye = texture.getSubimage(3, 8, 3, 2);
             icon.drawImage(headTop, 2, 10, headTop.getWidth() * 4, headTop.getHeight() * 4, null);
             icon.drawImage(headBottom, 2, 18, headBottom.getWidth() * 4, headBottom.getHeight() * 4, null);
             icon.drawImage(leftEye, 2, 2, leftEye.getWidth() * 4, leftEye.getHeight() * 4, null);

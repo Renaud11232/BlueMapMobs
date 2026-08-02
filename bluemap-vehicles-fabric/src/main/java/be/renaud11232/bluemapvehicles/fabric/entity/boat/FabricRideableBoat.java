@@ -12,15 +12,6 @@ import java.util.Map;
 public class FabricRideableBoat extends FabricVehicle<Boat> implements RideableBoat {
     private static final Map<EntityType<?>, Type> TYPE_MAP = new HashMap<>();
 
-    public FabricRideableBoat(Boat wrapped) {
-        super(wrapped);
-    }
-
-    @Override
-    public Type getType() {
-        return TYPE_MAP.get(wrapped.getType());
-    }
-
     static {
         TYPE_MAP.put(EntityTypes.ACACIA_BOAT, Type.ACACIA);
         TYPE_MAP.put(EntityTypes.BIRCH_BOAT, Type.BIRCH);
@@ -31,5 +22,14 @@ public class FabricRideableBoat extends FabricVehicle<Boat> implements RideableB
         TYPE_MAP.put(EntityTypes.OAK_BOAT, Type.OAK);
         TYPE_MAP.put(EntityTypes.PALE_OAK_BOAT, Type.PALE_OAK);
         TYPE_MAP.put(EntityTypes.SPRUCE_BOAT, Type.SPRUCE);
+    }
+
+    public FabricRideableBoat(Boat wrapped) {
+        super(wrapped);
+    }
+
+    @Override
+    public Type getType() {
+        return TYPE_MAP.get(wrapped.getType());
     }
 }

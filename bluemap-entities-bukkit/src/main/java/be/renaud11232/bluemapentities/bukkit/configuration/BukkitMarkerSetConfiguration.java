@@ -20,6 +20,18 @@ public class BukkitMarkerSetConfiguration implements MarkerSetConfiguration {
         this.markers = markers;
     }
 
+    @SuppressWarnings("unchecked")
+    public static BukkitMarkerSetConfiguration deserialize(Map<String, Object> args) {
+        String id = (String) args.get("id");
+        String label = (String) args.get("label");
+        Boolean toggleable = (Boolean) args.get("toggleable");
+        Boolean hiddenByDefault = (Boolean) args.get("default_hidden");
+        List<BukkitMarkerConfiguration> markers = Optional.ofNullable((List<Map<String, Object>>) args.get("markers"))
+                .map(list -> list.stream().map(BukkitMarkerConfiguration::deserialize).toList())
+                .orElse(null);
+        return new BukkitMarkerSetConfiguration(id, label, toggleable, hiddenByDefault, markers);
+    }
+
     @Override
     public String getId() {
         return id;
@@ -43,17 +55,5 @@ public class BukkitMarkerSetConfiguration implements MarkerSetConfiguration {
     @Override
     public List<MarkerConfiguration> getMarkers() {
         return markers == null ? Collections.emptyList() : markers.stream().map(m -> (MarkerConfiguration) m).toList();
-    }
-
-    @SuppressWarnings("unchecked")
-    public static BukkitMarkerSetConfiguration deserialize(Map<String, Object> args) {
-        String id = (String) args.get("id");
-        String label = (String) args.get("label");
-        Boolean toggleable = (Boolean) args.get("toggleable");
-        Boolean hiddenByDefault = (Boolean) args.get("default_hidden");
-        List<BukkitMarkerConfiguration> markers = Optional.ofNullable((List<Map<String, Object>>) args.get("markers"))
-                .map(list -> list.stream().map(BukkitMarkerConfiguration::deserialize).toList())
-                .orElse(null);
-        return new BukkitMarkerSetConfiguration(id, label, toggleable, hiddenByDefault, markers);
     }
 }

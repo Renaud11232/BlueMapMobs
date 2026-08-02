@@ -12,7 +12,7 @@ public class IronGolemTextureConverter extends TextureConverter {
         super();
         registerTextureConversion((texture, icon) -> {
             BufferedImage head = texture.getSubimage(8, 8, 8, 10);
-            BufferedImage nose =  texture.getSubimage(26, 2, 2, 4);
+            BufferedImage nose = texture.getSubimage(26, 2, 2, 4);
             icon.drawImage(head, 0, -8, head.getWidth() * 4, head.getHeight() * 4, null);
             icon.drawImage(nose, 12, 20, nose.getWidth() * 4, nose.getHeight() * 4, null);
         });

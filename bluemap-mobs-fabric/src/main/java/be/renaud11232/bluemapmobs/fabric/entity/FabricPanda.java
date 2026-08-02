@@ -7,16 +7,6 @@ public class FabricPanda extends FabricAgeable<net.minecraft.world.entity.animal
         super(wrapped);
     }
 
-    @Override
-    public Gene getMainGene() {
-        return mapGene(wrapped.getMainGene());
-    }
-
-    @Override
-    public Gene getHiddenGene() {
-        return mapGene(wrapped.getHiddenGene());
-    }
-
     private static Gene mapGene(net.minecraft.world.entity.animal.panda.Panda.Gene gene) {
         return switch (gene) {
             case NORMAL -> Gene.NORMAL;
@@ -27,5 +17,15 @@ public class FabricPanda extends FabricAgeable<net.minecraft.world.entity.animal
             case WEAK -> Gene.WEAK;
             case AGGRESSIVE -> Gene.AGGRESSIVE;
         };
+    }
+
+    @Override
+    public Gene getMainGene() {
+        return mapGene(wrapped.getMainGene());
+    }
+
+    @Override
+    public Gene getHiddenGene() {
+        return mapGene(wrapped.getHiddenGene());
     }
 }

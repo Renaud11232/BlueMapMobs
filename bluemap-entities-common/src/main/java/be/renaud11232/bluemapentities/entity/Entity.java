@@ -7,9 +7,14 @@ import java.util.UUID;
 
 public interface Entity {
     UUID getUUID();
+
     String getName();
+
     Position getPosition();
+
     MarkerType getMarkerType();
+
     int getBlockLightLevel();
+
     int getSkyLightLevel();
 }

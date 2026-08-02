@@ -14,6 +14,12 @@ public class BukkitMarkerConfiguration implements MarkerConfiguration {
         this.maxDistance = maxDistance;
     }
 
+    public static BukkitMarkerConfiguration deserialize(Map<String, Object> args) {
+        String type = (String) args.get("type");
+        Integer maxDistance = (Integer) args.get("max_distance");
+        return new BukkitMarkerConfiguration(type, maxDistance);
+    }
+
     @Override
     public int getMaxDistance() {
         return maxDistance == null ? 1000 : maxDistance;
@@ -22,11 +28,5 @@ public class BukkitMarkerConfiguration implements MarkerConfiguration {
     @Override
     public String getType() {
         return type;
-    }
-
-    public static BukkitMarkerConfiguration deserialize(Map<String, Object> args) {
-        String type = (String) args.get("type");
-        Integer maxDistance = (Integer) args.get("max_distance");
-        return new BukkitMarkerConfiguration(type, maxDistance);
     }
 }

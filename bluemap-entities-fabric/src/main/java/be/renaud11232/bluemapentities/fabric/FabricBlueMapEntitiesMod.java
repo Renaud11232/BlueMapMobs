@@ -18,6 +18,10 @@ public abstract class FabricBlueMapEntitiesMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY
     private Module<ServerLevel, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> module;
     private int lastUpdateTick = 0;
 
+    public static Optional<MinecraftServer> getServer() {
+        return Optional.ofNullable(SERVER);
+    }
+
     @Override
     public void onInitialize() {
         ServerLifecycleEvents.SERVER_STARTING.register(server -> SERVER = server);
@@ -38,9 +42,5 @@ public abstract class FabricBlueMapEntitiesMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY
             module = provideModule(api, getConfig());
             lastUpdateTick = 0;
         });
-    }
-
-    public static Optional<MinecraftServer> getServer() {
-        return Optional.ofNullable(SERVER);
     }
 }

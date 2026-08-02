@@ -8,6 +8,27 @@ public class BukkitTropicalFish extends BukkitMob<org.bukkit.entity.TropicalFish
         super(wrapped);
     }
 
+    private static Color mapColor(DyeColor color) {
+        return switch (color) {
+            case WHITE -> Color.WHITE;
+            case ORANGE -> Color.ORANGE;
+            case MAGENTA -> Color.MAGENTA;
+            case LIGHT_BLUE -> Color.LIGHT_BLUE;
+            case YELLOW -> Color.YELLOW;
+            case LIME -> Color.LIME;
+            case PINK -> Color.PINK;
+            case GRAY -> Color.GRAY;
+            case LIGHT_GRAY -> Color.LIGHT_GRAY;
+            case CYAN -> Color.CYAN;
+            case PURPLE -> Color.PURPLE;
+            case BLUE -> Color.BLUE;
+            case BROWN -> Color.BROWN;
+            case GREEN -> Color.GREEN;
+            case RED -> Color.RED;
+            case BLACK -> Color.BLACK;
+        };
+    }
+
     @Override
     public Pattern getPattern() {
         return switch (wrapped.getPattern()) {
@@ -34,26 +55,5 @@ public class BukkitTropicalFish extends BukkitMob<org.bukkit.entity.TropicalFish
     @Override
     public Color getPatternColor() {
         return mapColor(wrapped.getPatternColor());
-    }
-
-    private static Color mapColor(DyeColor color) {
-        return switch (color) {
-            case WHITE -> Color.WHITE;
-            case ORANGE -> Color.ORANGE;
-            case MAGENTA -> Color.MAGENTA;
-            case LIGHT_BLUE -> Color.LIGHT_BLUE;
-            case YELLOW -> Color.YELLOW;
-            case LIME -> Color.LIME;
-            case PINK -> Color.PINK;
-            case GRAY -> Color.GRAY;
-            case LIGHT_GRAY -> Color.LIGHT_GRAY;
-            case CYAN -> Color.CYAN;
-            case PURPLE -> Color.PURPLE;
-            case BLUE -> Color.BLUE;
-            case BROWN -> Color.BROWN;
-            case GREEN -> Color.GREEN;
-            case RED -> Color.RED;
-            case BLACK -> Color.BLACK;
-        };
     }
 }

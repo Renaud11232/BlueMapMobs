@@ -10,16 +10,7 @@ import java.util.Map;
 
 public class FabricHappyGhast extends FabricAgeable<net.minecraft.world.entity.animal.happyghast.HappyGhast> implements HappyGhast {
     private static final Map<Item, Harness> HARNESS_MAP = new HashMap<>();
-    
-    public FabricHappyGhast(net.minecraft.world.entity.animal.happyghast.HappyGhast wrapped) {
-        super(wrapped);
-    }
 
-    @Override
-    public Harness getHarness() {
-        return HARNESS_MAP.get(wrapped.getItemBySlot(EquipmentSlot.BODY).getItem());
-    }
-    
     static {
         HARNESS_MAP.put(Items.HARNESS.white(), Harness.WHITE);
         HARNESS_MAP.put(Items.HARNESS.lightGray(), Harness.LIGHT_GRAY);
@@ -37,5 +28,14 @@ public class FabricHappyGhast extends FabricAgeable<net.minecraft.world.entity.a
         HARNESS_MAP.put(Items.HARNESS.purple(), Harness.PURPLE);
         HARNESS_MAP.put(Items.HARNESS.magenta(), Harness.MAGENTA);
         HARNESS_MAP.put(Items.HARNESS.pink(), Harness.PINK);
+    }
+
+    public FabricHappyGhast(net.minecraft.world.entity.animal.happyghast.HappyGhast wrapped) {
+        super(wrapped);
+    }
+
+    @Override
+    public Harness getHarness() {
+        return HARNESS_MAP.get(wrapped.getItemBySlot(EquipmentSlot.BODY).getItem());
     }
 }

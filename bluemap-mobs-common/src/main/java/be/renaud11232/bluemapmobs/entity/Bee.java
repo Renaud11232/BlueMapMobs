@@ -8,6 +8,8 @@ public interface Bee extends Animal {
     default MarkerType getMarkerType() {
         return MobsMarkerType.BEE;
     }
+
     boolean hasNectar();
+
     boolean isAngry();
 }

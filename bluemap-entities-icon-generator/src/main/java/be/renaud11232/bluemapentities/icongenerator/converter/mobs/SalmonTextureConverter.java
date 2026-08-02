@@ -14,7 +14,7 @@ public class SalmonTextureConverter extends TextureConverter {
         registerTextureConversion((texture, icon) -> {
             BufferedImage head = texture.getSubimage(22, 3, 3, 4);
             BufferedImage body = texture.getSubimage(0, 8, 8, 5);
-            BufferedImage fin =  ImageOperations.rotate(texture.getSubimage(0, 0, 2, 2), -90);
+            BufferedImage fin = ImageOperations.rotate(texture.getSubimage(0, 0, 2, 2), -90);
             icon.drawImage(head, 20, 10, head.getWidth() * 4, head.getHeight() * 4, null);
             icon.drawImage(body, -12, 8, body.getWidth() * 4, body.getHeight() * 4, null);
             icon.drawImage(fin, 12, 24, fin.getWidth() * 4, fin.getHeight() * 4, null);

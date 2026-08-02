@@ -4,7 +4,7 @@ plugins {
 
 project.description = project.property("bluemap-vehicles-description").toString()
 
-dependencies{
+dependencies {
     implementation(project(":bluemap-entities-bukkit"))
     implementation(project(":bluemap-vehicles-common"))
     compileOnly(libs.spigot.api)

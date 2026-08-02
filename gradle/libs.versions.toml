@@ -18,7 +18,7 @@ fabric-api = { group = "net.fabricmc.fabric-api", name = "fabric-api", version.r
 spigot-api = { group = "org.spigotmc", name = "spigot-api", version.ref = "spigot-api" }
 paper-api = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper-api" }
 citizens-main = { group = "net.citizensnpcs", name = "citizens-main", version.ref = "citizens-main" }
-picocli = { group = "info.picocli", name = "picocli", version.ref = "picocli"}
+picocli = { group = "info.picocli", name = "picocli", version.ref = "picocli" }
 
 [plugins]
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }

@@ -22,6 +22,23 @@ public abstract class TextureConverter {
         converters = new ArrayList<>();
     }
 
+    private static BufferedImage loadImage(Path directory, Path file) throws IOException {
+        Path filePath = directory.resolve(file);
+        try (var is = Files.newInputStream(filePath)) {
+            return ImageIO.read(is);
+        }
+    }
+
+    protected static void saveImage(Path directory, String fileName, BufferedImage image) throws IOException {
+        Path filePath = directory.resolve(fileName);
+        if (Files.notExists(filePath.getParent())) {
+            Files.createDirectories(filePath.getParent());
+        }
+        try (var os = Files.newOutputStream(filePath)) {
+            ImageIO.write(image, "png", os);
+        }
+    }
+
     protected void registerTexturesConversions(BiConsumer<List<BufferedImage>, List<Graphics2D>> converter) {
         converters.add(converter);
     }
@@ -87,23 +104,6 @@ public abstract class TextureConverter {
         graphics.forEach(Graphics::dispose);
         for (int i = 0; i < outputs.size(); i++) {
             saveImage(outDir, outputNames.get(i), outputs.get(i));
-        }
-    }
-
-    private static BufferedImage loadImage(Path directory, Path file) throws IOException {
-        Path filePath = directory.resolve(file);
-        try (var is = Files.newInputStream(filePath)) {
-            return ImageIO.read(is);
-        }
-    }
-
-    protected static void saveImage(Path directory, String fileName, BufferedImage image) throws IOException {
-        Path filePath = directory.resolve(fileName);
-        if (Files.notExists(filePath.getParent())) {
-            Files.createDirectories(filePath.getParent());
-        }
-        try (var os = Files.newOutputStream(filePath)) {
-            ImageIO.write(image, "png", os);
         }
     }
 

@@ -16,7 +16,7 @@ public class WolfMarkerBuilder extends AgeableMarkerBuilder<Wolf> {
     private final Map<Wolf.Variant, Icon> babyIcons;
     private final Map<Wolf.Variant, Icon> angryBabyIcons;
     private final Map<Wolf.Variant, Icon> tameBabyIcons;
-    
+
     public WolfMarkerBuilder(BlueMapAPI api, Configuration configuration) {
         super(api, configuration);
         adultIcons = new HashMap<>();

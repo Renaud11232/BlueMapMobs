@@ -15,15 +15,15 @@ public abstract class MobMarkerBuilder<T extends Mob> extends SimpleMarkerBuilde
         super(api, configuration);
     }
 
-    @Override
-    public Optional<POIMarker> build(T entity) {
-        return super.build(entity).map(marker -> updateMobMarker(entity, marker));
-    }
-
     static POIMarker updateMobMarker(Mob mob, POIMarker marker) {
         if (mob.getName().equals("Dinnerbone") || mob.getName().equals("Grumm")) {
             marker.addStyleClasses(List.of(MobsStyleClass.FLIP));
         }
         return marker;
+    }
+
+    @Override
+    public Optional<POIMarker> build(T entity) {
+        return super.build(entity).map(marker -> updateMobMarker(entity, marker));
     }
 }

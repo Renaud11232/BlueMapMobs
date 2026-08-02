@@ -2,7 +2,7 @@ plugins {
     `bluemap-entities-java`
 }
 
-dependencies{
+dependencies {
     api(project(":bluemap-entities-common"))
     compileOnly(libs.spigot.api)
 }

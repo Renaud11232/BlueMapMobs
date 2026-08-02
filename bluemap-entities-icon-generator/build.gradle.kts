@@ -3,7 +3,7 @@ plugins {
     id("application")
 }
 
-dependencies{
+dependencies {
     implementation(libs.picocli)
 }
 

@@ -2,6 +2,6 @@ plugins {
     `bluemap-entities-java`
 }
 
-dependencies{
+dependencies {
     api(project(":bluemap-entities-common"))
 }

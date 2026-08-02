@@ -17,6 +17,12 @@ public class BukkitGeneralConfiguration implements GeneralConfiguration {
         this.minimumSkyLight = minimumSkyLight;
     }
 
+    public static BukkitGeneralConfiguration deserialize(Map<String, Object> args) {
+        Integer minimumBlockLight = (Integer) args.get("minimum_block_light");
+        Integer minimumSkyLight = (Integer) args.get("minimum_sky_light");
+        return new BukkitGeneralConfiguration(minimumBlockLight, minimumSkyLight);
+    }
+
     @Override
     public int getMinimumBlockLight() {
         return minimumBlockLight == null ? 4 : minimumBlockLight;
@@ -25,11 +31,5 @@ public class BukkitGeneralConfiguration implements GeneralConfiguration {
     @Override
     public int getMinimumSkyLight() {
         return minimumSkyLight == null ? 1 : minimumSkyLight;
-    }
-
-    public static BukkitGeneralConfiguration deserialize(Map<String, Object> args) {
-        Integer minimumBlockLight = (Integer) args.get("minimum_block_light");
-        Integer minimumSkyLight = (Integer) args.get("minimum_sky_light");
-        return new BukkitGeneralConfiguration(minimumBlockLight, minimumSkyLight);
     }
 }

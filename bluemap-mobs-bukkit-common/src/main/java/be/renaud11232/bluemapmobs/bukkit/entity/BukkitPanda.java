@@ -7,16 +7,6 @@ public class BukkitPanda extends BukkitAgeable<org.bukkit.entity.Panda> implemen
         super(wrapped);
     }
 
-    @Override
-    public Gene getMainGene() {
-        return mapGene(wrapped.getMainGene());
-    }
-
-    @Override
-    public Gene getHiddenGene() {
-        return mapGene(wrapped.getHiddenGene());
-    }
-
     private static Gene mapGene(org.bukkit.entity.Panda.Gene gene) {
         return switch (gene) {
             case NORMAL -> Gene.NORMAL;
@@ -27,5 +17,15 @@ public class BukkitPanda extends BukkitAgeable<org.bukkit.entity.Panda> implemen
             case WEAK -> Gene.WEAK;
             case AGGRESSIVE -> Gene.AGGRESSIVE;
         };
+    }
+
+    @Override
+    public Gene getMainGene() {
+        return mapGene(wrapped.getMainGene());
+    }
+
+    @Override
+    public Gene getHiddenGene() {
+        return mapGene(wrapped.getHiddenGene());
     }
 }

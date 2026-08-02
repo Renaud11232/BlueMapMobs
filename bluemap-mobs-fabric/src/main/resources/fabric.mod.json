@@ -1,27 +1,27 @@
 {
-	"schemaVersion": 1,
-	"id": "bluemap-mobs",
-	"version": "${version}",
-	"name": "BlueMapMobs",
-	"description": "${description}",
-	"authors": [
-		"Renaud11232"
-	],
-	"contact": {
-		"homepage": "${website}",
-		"sources": "${website}"
-	},
-	"license": "MIT",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"be.renaud11232.bluemapmobs.fabric.FabricBlueMapMobs"
-		]
-	},
-	"depends": {
-		"java": ">=${javaVersion}",
-		"minecraft": ">=${apiVersion}",
-		"fabricloader": "*",
-		"bluemap": "*"
-	}
+  "schemaVersion": 1,
+  "id": "bluemap-mobs",
+  "version": "${version}",
+  "name": "BlueMapMobs",
+  "description": "${description}",
+  "authors": [
+    "Renaud11232"
+  ],
+  "contact": {
+    "homepage": "${website}",
+    "sources": "${website}"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "be.renaud11232.bluemapmobs.fabric.FabricBlueMapMobs"
+    ]
+  },
+  "depends": {
+    "java": ">=${javaVersion}",
+    "minecraft": ">=${apiVersion}",
+    "fabricloader": "*",
+    "bluemap": "*"
+  }
 }

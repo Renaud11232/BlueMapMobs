@@ -19,16 +19,6 @@ public class BukkitConfiguration implements Configuration {
         this.markerSets = markerSets;
     }
 
-    @Override
-    public GeneralConfiguration getGeneral() {
-        return general == null ? new BukkitGeneralConfiguration() : general;
-    }
-
-    @Override
-    public List<MarkerSetConfiguration> getMarkerSets() {
-        return markerSets == null ? Collections.emptyList() : markerSets.stream().map(s -> (MarkerSetConfiguration) s).toList();
-    }
-
     @SuppressWarnings("unchecked")
     public static BukkitConfiguration deserialize(Map<String, Object> args) {
         Map<String, Object> generalValues = args.entrySet()
@@ -37,8 +27,18 @@ public class BukkitConfiguration implements Configuration {
                 .collect(Collectors.toMap(entry -> entry.getKey().replace("general.", ""), Map.Entry::getValue));
         BukkitGeneralConfiguration general = BukkitGeneralConfiguration.deserialize(generalValues);
         List<BukkitMarkerSetConfiguration> markerSets = Optional.ofNullable((List<Map<String, Object>>) args.get("marker_sets"))
-                .map(list ->  list.stream().map(BukkitMarkerSetConfiguration::deserialize).toList())
+                .map(list -> list.stream().map(BukkitMarkerSetConfiguration::deserialize).toList())
                 .orElse(null);
         return new BukkitConfiguration(general, markerSets);
+    }
+
+    @Override
+    public GeneralConfiguration getGeneral() {
+        return general == null ? new BukkitGeneralConfiguration() : general;
+    }
+
+    @Override
+    public List<MarkerSetConfiguration> getMarkerSets() {
+        return markerSets == null ? Collections.emptyList() : markerSets.stream().map(s -> (MarkerSetConfiguration) s).toList();
     }
 }

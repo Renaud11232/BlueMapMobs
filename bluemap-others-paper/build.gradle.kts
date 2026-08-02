@@ -4,7 +4,7 @@ plugins {
 
 project.description = project.property("bluemap-others-description").toString()
 
-dependencies{
+dependencies {
     implementation(project(":bluemap-others-bukkit-common"))
     compileOnly(libs.paper.api)
 }

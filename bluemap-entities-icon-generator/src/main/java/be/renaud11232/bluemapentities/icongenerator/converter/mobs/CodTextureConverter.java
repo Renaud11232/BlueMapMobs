@@ -16,7 +16,7 @@ public class CodTextureConverter extends TextureConverter {
             BufferedImage nose = texture.getSubimage(0, 1, 1, 3);
             BufferedImage body = texture.getSubimage(0, 7, 7, 4);
             BufferedImage topFins = ImageOperations.flop(texture.getSubimage(26, 0, 6, 1));
-            BufferedImage bottomFin =  ImageOperations.rotate(texture.getSubimage(26, 1, 2, 2), -90);
+            BufferedImage bottomFin = ImageOperations.rotate(texture.getSubimage(26, 1, 2, 2), -90);
             icon.drawImage(head, 12, 10, head.getWidth() * 4, head.getHeight() * 4, null);
             icon.drawImage(nose, 24, 10, nose.getWidth() * 4, nose.getHeight() * 4, null);
             icon.drawImage(body, -16, 10, body.getWidth() * 4, body.getHeight() * 4, null);

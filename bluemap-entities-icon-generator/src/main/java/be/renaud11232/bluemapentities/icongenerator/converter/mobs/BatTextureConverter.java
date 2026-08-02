@@ -11,8 +11,8 @@ public class BatTextureConverter extends TextureConverter {
     public BatTextureConverter() {
         super();
         registerTextureConversion((texture, icon) -> {
-            BufferedImage leftEar =  texture.getSubimage(1, 15, 3, 5);
-            BufferedImage rightEar =  texture.getSubimage(8, 15, 3, 5);
+            BufferedImage leftEar = texture.getSubimage(1, 15, 3, 5);
+            BufferedImage rightEar = texture.getSubimage(8, 15, 3, 5);
             BufferedImage face = texture.getSubimage(2, 9, 4, 3);
             icon.drawImage(leftEar, 0, 4, leftEar.getWidth() * 4, leftEar.getHeight() * 4, null);
             icon.drawImage(rightEar, 20, 4, rightEar.getWidth() * 4, rightEar.getHeight() * 4, null);

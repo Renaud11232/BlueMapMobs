@@ -22,7 +22,7 @@ public class FabricHorse extends FabricAgeable<net.minecraft.world.entity.animal
 
     @Override
     public Style getStyle() {
-        return switch(wrapped.getMarkings()) {
+        return switch (wrapped.getMarkings()) {
             case NONE -> Style.NONE;
             case WHITE -> Style.WHITE;
             case WHITE_FIELD -> Style.WHITEFIELD;

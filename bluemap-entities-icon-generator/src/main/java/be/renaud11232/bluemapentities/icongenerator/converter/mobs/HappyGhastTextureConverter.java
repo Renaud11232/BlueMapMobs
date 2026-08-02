@@ -16,7 +16,7 @@ public class HappyGhastTextureConverter extends TextureConverter {
         });
         registerTextureConversion((texture, icon) -> {
             BufferedImage top = texture.getSubimage(32, 32, 32, 32);
-            BufferedImage glasses =  texture.getSubimage(10, 67, 32, 32);
+            BufferedImage glasses = texture.getSubimage(10, 67, 32, 32);
             icon.drawImage(top, 0, 0, top.getWidth(), top.getHeight(), null);
             icon.drawImage(glasses, 0, 0, glasses.getWidth(), glasses.getHeight(), null);
         });

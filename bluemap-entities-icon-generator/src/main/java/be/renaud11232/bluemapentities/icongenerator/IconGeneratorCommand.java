@@ -28,6 +28,10 @@ public class IconGeneratorCommand implements Callable<Integer> {
     )
     private Path out;
 
+    static void main(String[] args) {
+        System.exit(new CommandLine(new IconGeneratorCommand()).execute(args));
+    }
+
     @Override
     public Integer call() throws Exception {
         if (Files.notExists(source) || !Files.isDirectory(source)) {
@@ -41,9 +45,5 @@ public class IconGeneratorCommand implements Callable<Integer> {
         }
         new IconGenerator().generate(source, out);
         return 0;
-    }
-
-    static void main(String[] args) {
-        System.exit(new CommandLine(new IconGeneratorCommand()).execute(args));
     }
 }
