@@ -1,9 +1,9 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.configuration.Configuration;
-import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapmobs.MobsIcon;
 import be.renaud11232.bluemapmobs.entity.Chicken;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 public class ChickenMarkerBuilder extends AgeableSingleVariantMarkerBuilder<Chicken, Chicken.Variant> {
     public ChickenMarkerBuilder(BlueMapAPI api, Configuration configuration) {

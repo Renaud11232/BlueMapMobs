@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapvehicles.bukkit.entity.minecart;
 
-import be.renaud11232.bluemapvehicles.entity.minecart.SpawnerMinecart;
 import be.renaud11232.bluemapvehicles.bukkit.entity.BukkitVehicle;
+import be.renaud11232.bluemapvehicles.entity.minecart.SpawnerMinecart;
 
 public class BukkitSpawnerMinecart extends BukkitVehicle<org.bukkit.entity.minecart.SpawnerMinecart> implements SpawnerMinecart {
     public BukkitSpawnerMinecart(org.bukkit.entity.minecart.SpawnerMinecart wrapped) {

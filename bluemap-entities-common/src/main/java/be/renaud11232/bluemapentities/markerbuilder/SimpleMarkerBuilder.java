@@ -1,6 +1,8 @@
 package be.renaud11232.bluemapentities.markerbuilder;
 
-import be.renaud11232.bluemapentities.*;
+import be.renaud11232.bluemapentities.BlueMapEntitiesIcon;
+import be.renaud11232.bluemapentities.BlueMapEntitiesStyleClass;
+import be.renaud11232.bluemapentities.Position;
 import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.icon.Icon;

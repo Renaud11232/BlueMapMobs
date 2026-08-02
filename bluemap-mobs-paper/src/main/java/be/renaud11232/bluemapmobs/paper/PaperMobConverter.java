@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.paper;
 
-import be.renaud11232.bluemapmobs.entity.Mob;
 import be.renaud11232.bluemapmobs.bukkit.BukkitCommonMobConverter;
+import be.renaud11232.bluemapmobs.entity.Mob;
 import be.renaud11232.bluemapmobs.paper.entity.PaperCopperGolem;
 import org.bukkit.entity.CopperGolem;
 

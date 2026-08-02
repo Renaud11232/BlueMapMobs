@@ -1,11 +1,11 @@
 package be.renaud11232.bluemapmobs.markerbuilder;
 
 import be.renaud11232.bluemapentities.configuration.Configuration;
-import de.bluecolored.bluemap.api.BlueMapAPI;
 import be.renaud11232.bluemapentities.entity.UnknownEntity;
 import be.renaud11232.bluemapentities.markerbuilder.EmptyMarkerBuilder;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapmobs.entity.*;
+import de.bluecolored.bluemap.api.BlueMapAPI;
 
 public class MobsMarkerBuilder extends SimpleMarkerBuilder<Mob> {
     public MobsMarkerBuilder(BlueMapAPI api, Configuration configuration) {

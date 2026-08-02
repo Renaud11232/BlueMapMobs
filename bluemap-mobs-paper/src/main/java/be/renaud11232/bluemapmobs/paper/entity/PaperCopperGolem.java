@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.paper.entity;
 
-import be.renaud11232.bluemapmobs.entity.CopperGolem;
 import be.renaud11232.bluemapmobs.bukkit.entity.BukkitMob;
+import be.renaud11232.bluemapmobs.entity.CopperGolem;
 
 public class PaperCopperGolem extends BukkitMob<org.bukkit.entity.CopperGolem> implements CopperGolem {
     public PaperCopperGolem(org.bukkit.entity.CopperGolem wrapped) {

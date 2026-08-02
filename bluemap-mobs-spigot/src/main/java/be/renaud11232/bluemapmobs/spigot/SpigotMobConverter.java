@@ -1,7 +1,7 @@
 package be.renaud11232.bluemapmobs.spigot;
 
-import be.renaud11232.bluemapmobs.entity.Mob;
 import be.renaud11232.bluemapmobs.bukkit.BukkitCommonMobConverter;
+import be.renaud11232.bluemapmobs.entity.Mob;
 import be.renaud11232.bluemapmobs.spigot.entity.SpigotCopperGolem;
 import org.bukkit.entity.CopperGolem;
 

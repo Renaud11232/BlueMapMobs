@@ -2,18 +2,20 @@ package be.renaud11232.bluemapentities.module;
 
 import be.renaud11232.bluemapentities.EntityConverter;
 import be.renaud11232.bluemapentities.configuration.Configuration;
-import be.renaud11232.bluemapentities.io.AssetExtractor;
-import be.renaud11232.bluemapentities.markerbuilder.MarkerBuilder;
-import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.configuration.MarkerConfiguration;
 import be.renaud11232.bluemapentities.configuration.MarkerSetConfiguration;
+import be.renaud11232.bluemapentities.entity.Entity;
+import be.renaud11232.bluemapentities.io.AssetExtractor;
+import be.renaud11232.bluemapentities.markerbuilder.MarkerBuilder;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import de.bluecolored.bluemap.api.markers.Marker;
 import de.bluecolored.bluemap.api.markers.MarkerSet;
 
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public abstract class SimpleModule<WORLD_TYPE, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> implements Module<WORLD_TYPE, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> {

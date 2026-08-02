@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapvehicles;
 
-import be.renaud11232.bluemapentities.*;
+import be.renaud11232.bluemapentities.EntityConverter;
 import be.renaud11232.bluemapentities.configuration.Configuration;
 import be.renaud11232.bluemapentities.module.SimpleModule;
 import be.renaud11232.bluemapvehicles.entity.Vehicle;

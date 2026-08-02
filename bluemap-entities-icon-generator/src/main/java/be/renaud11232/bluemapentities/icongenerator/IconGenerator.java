@@ -1,6 +1,6 @@
 package be.renaud11232.bluemapentities.icongenerator;
 
-import be.renaud11232.bluemapentities.icongenerator.converter.*;
+import be.renaud11232.bluemapentities.icongenerator.converter.TextureConverter;
 import be.renaud11232.bluemapentities.icongenerator.converter.citizens.NPCTextureConverter;
 import be.renaud11232.bluemapentities.icongenerator.converter.mobs.*;
 import be.renaud11232.bluemapentities.icongenerator.converter.other.ArmorStandTextureConverter;

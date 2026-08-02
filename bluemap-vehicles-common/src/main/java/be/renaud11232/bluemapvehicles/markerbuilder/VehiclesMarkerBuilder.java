@@ -5,9 +5,15 @@ import be.renaud11232.bluemapentities.entity.UnknownEntity;
 import be.renaud11232.bluemapentities.markerbuilder.EmptyMarkerBuilder;
 import be.renaud11232.bluemapentities.markerbuilder.SimpleMarkerBuilder;
 import be.renaud11232.bluemapvehicles.entity.Vehicle;
-import be.renaud11232.bluemapvehicles.entity.boat.*;
+import be.renaud11232.bluemapvehicles.entity.boat.ChestRaft;
+import be.renaud11232.bluemapvehicles.entity.boat.Raft;
+import be.renaud11232.bluemapvehicles.entity.boat.RideableBoat;
+import be.renaud11232.bluemapvehicles.entity.boat.RideableChestBoat;
 import be.renaud11232.bluemapvehicles.entity.minecart.*;
-import be.renaud11232.bluemapvehicles.markerbuilder.boat.*;
+import be.renaud11232.bluemapvehicles.markerbuilder.boat.ChestRaftMarkerBuilder;
+import be.renaud11232.bluemapvehicles.markerbuilder.boat.RaftMarkerBuilder;
+import be.renaud11232.bluemapvehicles.markerbuilder.boat.RideableBoatMarkerBuilder;
+import be.renaud11232.bluemapvehicles.markerbuilder.boat.RideableChestBoatMarkerBuilder;
 import be.renaud11232.bluemapvehicles.markerbuilder.minecart.*;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 

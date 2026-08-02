@@ -2,7 +2,10 @@ package be.renaud11232.bluemapvehicles.bukkit;
 
 import be.renaud11232.bluemapentities.EntityConverter;
 import be.renaud11232.bluemapvehicles.bukkit.entity.BukkitUnknownVehicle;
-import be.renaud11232.bluemapvehicles.bukkit.entity.boat.*;
+import be.renaud11232.bluemapvehicles.bukkit.entity.boat.BukkitChestRaft;
+import be.renaud11232.bluemapvehicles.bukkit.entity.boat.BukkitRaft;
+import be.renaud11232.bluemapvehicles.bukkit.entity.boat.BukkitRideableBoat;
+import be.renaud11232.bluemapvehicles.bukkit.entity.boat.BukkitRideableChestBoat;
 import be.renaud11232.bluemapvehicles.bukkit.entity.minecart.*;
 import org.bukkit.entity.Vehicle;
 import org.bukkit.entity.boat.*;
