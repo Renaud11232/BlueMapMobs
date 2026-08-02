@@ -7,6 +7,7 @@ spigot-api = "26.2-R0.1-SNAPSHOT"
 paper-api = "26.2.build.+"
 citizens-main = "2.0.43-SNAPSHOT"
 picocli = "4.7.7"
+git-version = "5.0.0"
 shadow = "9.4.2"
 fabric-loom = "1.17-SNAPSHOT"
 
@@ -21,5 +22,6 @@ citizens-main = { group = "net.citizensnpcs", name = "citizens-main", version.re
 picocli = { group = "info.picocli", name = "picocli", version.ref = "picocli" }
 
 [plugins]
+git-version = { id = "com.palantir.git-version", version.ref = "git-version" }
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
 fabric-loom = { id = "net.fabricmc.fabric-loom", version.ref = "fabric-loom" }
