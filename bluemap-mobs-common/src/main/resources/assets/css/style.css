@@ -1,5 +1,5 @@
 #map-container .bluemapmobs-flip img {
-    --bluemapmobs-icon-transform: translate(-50%, -50%) rotate(180deg);
+    --bluemapentities-icon-transform: translate(-50%, -50%) rotate(180deg) !important;
 }
 
 #map-container .bluemapmobs-bee img {
