@@ -11,7 +11,7 @@ import net.minecraft.world.entity.EntityTypes;
 import java.util.Collection;
 import java.util.stream.Stream;
 
-public class FabricOthersModule extends OthersModule<ServerLevel, Entity> implements FabricModule<Entity, be.renaud11232.bluemapentities.entity.Entity> {
+public class FabricOthersModule extends OthersModule<ServerLevel, Entity> implements FabricModule<Entity> {
     protected FabricOthersModule(BlueMapAPI api, Configuration configuration) {
         super(api, configuration, new FabricOthersConverter());
     }

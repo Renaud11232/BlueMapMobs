@@ -7,9 +7,9 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
 import org.bukkit.entity.Vehicle;
 
-public class BukkitBlueMapVehicles extends BukkitBlueMapEntitiesPlugin<Vehicle, be.renaud11232.bluemapvehicles.entity.Vehicle> {
+public class BukkitBlueMapVehicles extends BukkitBlueMapEntitiesPlugin<Vehicle> {
     @Override
-    public Module<World, Vehicle, be.renaud11232.bluemapvehicles.entity.Vehicle> provideModule(BlueMapAPI api, Configuration configuration) {
+    public Module<World, Vehicle> provideModule(BlueMapAPI api, Configuration configuration) {
         return new BukkitVehiclesModule(api, configuration);
     }
 }

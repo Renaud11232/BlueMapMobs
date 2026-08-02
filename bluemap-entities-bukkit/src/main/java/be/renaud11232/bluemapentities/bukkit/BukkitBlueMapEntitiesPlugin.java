@@ -1,14 +1,13 @@
 package be.renaud11232.bluemapentities.bukkit;
 
 import be.renaud11232.bluemapentities.bukkit.configuration.BukkitConfiguration;
-import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.module.ModuleProvider;
 import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public abstract class BukkitBlueMapEntitiesPlugin<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> extends JavaPlugin implements ModuleProvider<World, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> {
+public abstract class BukkitBlueMapEntitiesPlugin<SOURCE_ENTITY_TYPE> extends JavaPlugin implements ModuleProvider<World, SOURCE_ENTITY_TYPE> {
     @Override
     public void onEnable() {
         saveDefaultConfig();

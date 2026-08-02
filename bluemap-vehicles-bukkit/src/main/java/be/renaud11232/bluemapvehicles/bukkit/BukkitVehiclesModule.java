@@ -12,7 +12,7 @@ import java.util.Collection;
 
 import static java.util.function.Predicate.not;
 
-public class BukkitVehiclesModule extends VehiclesModule<World, Vehicle> implements BukkitModule<Vehicle, be.renaud11232.bluemapvehicles.entity.Vehicle> {
+public class BukkitVehiclesModule extends VehiclesModule<World, Vehicle> implements BukkitModule<Vehicle> {
 
     public BukkitVehiclesModule(BlueMapAPI api, Configuration configuration) {
         super(api, configuration, new BukkitVehicleConverter());

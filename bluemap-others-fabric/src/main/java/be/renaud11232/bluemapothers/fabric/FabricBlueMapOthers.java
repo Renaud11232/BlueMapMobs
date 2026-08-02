@@ -7,9 +7,9 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 
-public class FabricBlueMapOthers extends FabricBlueMapEntitiesMod<Entity, be.renaud11232.bluemapentities.entity.Entity> {
+public class FabricBlueMapOthers extends FabricBlueMapEntitiesMod<Entity> {
     @Override
-    public Module<ServerLevel, Entity, be.renaud11232.bluemapentities.entity.Entity> provideModule(BlueMapAPI api, Configuration configuration) {
+    public Module<ServerLevel, Entity> provideModule(BlueMapAPI api, Configuration configuration) {
         return new FabricOthersModule(api, configuration);
     }
 }

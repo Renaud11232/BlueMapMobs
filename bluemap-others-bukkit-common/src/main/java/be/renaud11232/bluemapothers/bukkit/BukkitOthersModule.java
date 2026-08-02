@@ -13,7 +13,7 @@ import org.bukkit.entity.Mannequin;
 
 import java.util.Collection;
 
-public abstract class BukkitOthersModule extends OthersModule<World, Entity> implements BukkitModule<Entity, be.renaud11232.bluemapentities.entity.Entity> {
+public abstract class BukkitOthersModule extends OthersModule<World, Entity> implements BukkitModule<Entity> {
     protected BukkitOthersModule(BlueMapAPI api, Configuration configuration, EntityConverter<Entity, be.renaud11232.bluemapentities.entity.Entity> converter) {
         super(api, configuration, converter);
     }

@@ -10,7 +10,7 @@ import org.bukkit.entity.Mob;
 
 import java.util.Collection;
 
-public abstract class BukkitCommonMobsModule extends MobsModule<World, Mob> implements BukkitModule<Mob, be.renaud11232.bluemapmobs.entity.Mob> {
+public abstract class BukkitCommonMobsModule extends MobsModule<World, Mob> implements BukkitModule<Mob> {
     protected BukkitCommonMobsModule(BlueMapAPI api, Configuration configuration, EntityConverter<Mob, be.renaud11232.bluemapmobs.entity.Mob> converter) {
         super(api, configuration, converter);
     }

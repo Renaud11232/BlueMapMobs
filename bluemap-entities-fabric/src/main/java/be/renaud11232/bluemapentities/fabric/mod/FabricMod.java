@@ -1,7 +1,6 @@
 package be.renaud11232.bluemapentities.fabric.mod;
 
 import be.renaud11232.bluemapentities.configuration.Configuration;
-import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.fabric.configuration.FabricConfiguration;
 import be.renaud11232.bluemapentities.module.ModuleProvider;
 import com.google.gson.Gson;
@@ -18,7 +17,7 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public abstract class FabricMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> implements ModInitializer, ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> {
+public abstract class FabricMod<SOURCE_ENTITY_TYPE> implements ModInitializer, ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE> {
     private final Gson gson;
     private final FabricModDefinition modDefinition;
     private final Logger logger;

@@ -7,9 +7,9 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
 import org.bukkit.entity.Mob;
 
-public class PaperBlueMapMobs extends BukkitBlueMapEntitiesPlugin<Mob, be.renaud11232.bluemapmobs.entity.Mob> {
+public class PaperBlueMapMobs extends BukkitBlueMapEntitiesPlugin<Mob> {
     @Override
-    public Module<World, Mob, be.renaud11232.bluemapmobs.entity.Mob> provideModule(BlueMapAPI api, Configuration configuration) {
+    public Module<World, Mob> provideModule(BlueMapAPI api, Configuration configuration) {
         return new PaperMobsModule(api, configuration);
     }
 }

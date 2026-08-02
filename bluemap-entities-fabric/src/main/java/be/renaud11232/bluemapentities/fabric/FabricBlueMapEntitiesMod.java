@@ -1,6 +1,5 @@
 package be.renaud11232.bluemapentities.fabric;
 
-import be.renaud11232.bluemapentities.entity.Entity;
 import be.renaud11232.bluemapentities.fabric.mod.FabricMod;
 import be.renaud11232.bluemapentities.module.Module;
 import be.renaud11232.bluemapentities.module.ModuleProvider;
@@ -12,10 +11,10 @@ import net.minecraft.server.level.ServerLevel;
 
 import java.util.Optional;
 
-public abstract class FabricBlueMapEntitiesMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> extends FabricMod<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> implements ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> {
+public abstract class FabricBlueMapEntitiesMod<SOURCE_ENTITY_TYPE> extends FabricMod<SOURCE_ENTITY_TYPE> implements ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE> {
     private static MinecraftServer SERVER;
 
-    private Module<ServerLevel, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> module;
+    private Module<ServerLevel, SOURCE_ENTITY_TYPE> module;
     private int lastUpdateTick = 0;
 
     public static Optional<MinecraftServer> getServer() {

@@ -7,9 +7,9 @@ import de.bluecolored.bluemap.api.BlueMapAPI;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 
-public class SpigotBlueMapOthers extends BukkitBlueMapEntitiesPlugin<Entity, be.renaud11232.bluemapentities.entity.Entity> {
+public class SpigotBlueMapOthers extends BukkitBlueMapEntitiesPlugin<Entity> {
     @Override
-    public Module<World, Entity, be.renaud11232.bluemapentities.entity.Entity> provideModule(BlueMapAPI api, Configuration configuration) {
+    public Module<World, Entity> provideModule(BlueMapAPI api, Configuration configuration) {
         return new SpigotOthersModule(api, configuration);
     }
 }

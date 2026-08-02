@@ -16,7 +16,7 @@ import java.util.stream.StreamSupport;
 
 import static java.util.function.Predicate.not;
 
-public class CitizensModule extends SimpleModule<World, NPC, CitizensNPC> implements BukkitModule<NPC, CitizensNPC> {
+public class CitizensModule extends SimpleModule<World, NPC, CitizensNPC> implements BukkitModule<NPC> {
     protected CitizensModule(BlueMapAPI api, Configuration configuration) {
         super(api, configuration, new CitizensNPCConverter(), new CitizensMarkerBuilder(api, configuration));
     }

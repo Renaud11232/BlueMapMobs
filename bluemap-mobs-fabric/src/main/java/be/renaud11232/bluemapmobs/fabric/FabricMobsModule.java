@@ -10,7 +10,7 @@ import net.minecraft.world.level.entity.EntityTypeTest;
 
 import java.util.Collection;
 
-public class FabricMobsModule extends MobsModule<ServerLevel, Mob> implements FabricModule<Mob, be.renaud11232.bluemapmobs.entity.Mob> {
+public class FabricMobsModule extends MobsModule<ServerLevel, Mob> implements FabricModule<Mob> {
     protected FabricMobsModule(BlueMapAPI api, Configuration configuration) {
         super(api, configuration, new FabricMobConverter());
     }

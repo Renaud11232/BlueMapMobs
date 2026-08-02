@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public abstract class SimpleModule<WORLD_TYPE, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> implements Module<WORLD_TYPE, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> {
+public abstract class SimpleModule<WORLD_TYPE, SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE extends Entity> implements Module<WORLD_TYPE, SOURCE_ENTITY_TYPE> {
     private final BlueMapAPI api;
     private final Configuration configuration;
     private final EntityConverter<SOURCE_ENTITY_TYPE, TARGET_ENTITY_TYPE> converter;
