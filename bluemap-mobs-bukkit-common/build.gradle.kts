@@ -4,6 +4,6 @@ plugins {
 
 dependencies{
     api(project(":bluemap-entities-bukkit"))
-    api(project(":bluemap-mobs-api"))
+    api(project(":bluemap-mobs-common"))
     compileOnly(libs.spigot.api)
 }

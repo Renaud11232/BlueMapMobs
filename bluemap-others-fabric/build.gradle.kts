@@ -6,7 +6,7 @@ project.description = project.property("bluemap-others-description").toString()
 
 dependencies {
     shadow(project(":bluemap-entities-fabric"))
-    shadow(project(":bluemap-others-api"))
+    shadow(project(":bluemap-others-common"))
     minecraft(libs.minecraft)
     implementation(libs.fabric.loader)
 }
