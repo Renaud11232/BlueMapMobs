@@ -23,14 +23,14 @@ Using an older version of Minecraft however will most likely result in an error.
 | 1.21.9 - 1.21.10 | 1.6.0 (BlueMapMobs)         |
 | 1.21.11          | 1.7.0 (BlueMapMobs)         |
 | 26.1 - 26.1.2    | 2.0.0                       |
+| 26.2             | 2.1.0                       |
 
-Starting with version `2.0.0`, BlueMapMobs was split into separate plugins for mobs, vehicles, NPCs and other entities.
-All other plugins rely on the base bluemap-entities plugin, so make sure it's installed.
+Starting with version `2.1.0`, BlueMapMobs was split into separate plugins for mobs, vehicles, NPCs and other entities.
 
 ## Configuration
 
-The plugins provide a few configuration options to customize the markers.
-All configuration values are in the standard `config.yml`.
+These plugins provide a few configuration options to customize the markers.
+All configuration values are in the standard `config.yml` for Bukkit base servers and a `config.json` file for Fabric.
 The plugin is reloaded normally when BlueMap is reloaded.
 
 ## Download
