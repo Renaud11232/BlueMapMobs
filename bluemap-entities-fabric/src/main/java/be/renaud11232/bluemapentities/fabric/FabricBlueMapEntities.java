@@ -11,7 +11,7 @@ import net.minecraft.server.level.ServerLevel;
 
 import java.util.Optional;
 
-public abstract class FabricBlueMapEntitiesMod<SOURCE_ENTITY_TYPE> extends FabricMod<SOURCE_ENTITY_TYPE> implements ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE> {
+public abstract class FabricBlueMapEntities<SOURCE_ENTITY_TYPE> extends FabricMod<SOURCE_ENTITY_TYPE> implements ModuleProvider<ServerLevel, SOURCE_ENTITY_TYPE> {
     private static MinecraftServer SERVER;
 
     private Module<ServerLevel, SOURCE_ENTITY_TYPE> module;
