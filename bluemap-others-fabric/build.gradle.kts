@@ -8,7 +8,6 @@ dependencies {
     shadow(project(":bluemap-entities-fabric"))
     shadow(project(":bluemap-others-common"))
     minecraft(libs.minecraft)
-    implementation(libs.fabric.loader)
 }
 
 tasks.shadowJar {
