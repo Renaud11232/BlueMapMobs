@@ -22,7 +22,7 @@ jobs:
           name: build
           path: "*/build/release/*.jar"
   upload_release:
-    name: Upload jar to release
+    name: Upload JARs to release
     runs-on: ubuntu-latest
     needs:
       - build
