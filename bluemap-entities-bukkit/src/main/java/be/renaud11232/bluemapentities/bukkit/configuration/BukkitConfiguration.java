@@ -34,7 +34,7 @@ public class BukkitConfiguration implements Configuration {
 
     @Override
     public GeneralConfiguration getGeneral() {
-        return general == null ? new BukkitGeneralConfiguration() : general;
+        return general == null ? new BukkitGeneralConfiguration(null, null) : general;
     }
 
     @Override
