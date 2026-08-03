@@ -41,8 +41,6 @@ public abstract class FabricBlueMapEntities<SOURCE_ENTITY_TYPE> extends FabricMo
             module = provideModule(api, getConfig());
             lastUpdateTick = 0;
         });
-        BlueMapAPI.onDisable(_ -> {
-            module = null;
-        });
+        BlueMapAPI.onDisable(_ -> module = null);
     }
 }
