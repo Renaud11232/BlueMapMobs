@@ -45,6 +45,7 @@ will need to choose the correct version depending on your server software :
 * Files ending with `-bukkit` should work with all Bukkit-based servers (Paper, Spigot, Purpur, ...)
 * Files ending with `-paper` will only work on PaperMC (and forks)
 * Files ending with `-spigot` will only work on Spigot (and forks)
+* Files ending with `-fabric` will only work on Fabric servers
 
 ## Need help ?
 
