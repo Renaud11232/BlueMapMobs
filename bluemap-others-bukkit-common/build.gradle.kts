@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    api(project(":bluemap-entities-bukkit"))
+    api(project(":bluemap-entities-bukkit-common"))
     api(project(":bluemap-others-common"))
     compileOnly(libs.spigot.api)
 }

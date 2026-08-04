@@ -1,8 +1,8 @@
 rootProject.name = "bluemap-entities"
 
 include("bluemap-entities-common")
-include("bluemap-entities-bukkit")
-include("bluemap-entities-fabric")
+include("bluemap-entities-bukkit-common")
+include("bluemap-entities-fabric-common")
 include("bluemap-citizens-bukkit")
 include("bluemap-vehicles-common")
 include("bluemap-vehicles-bukkit")

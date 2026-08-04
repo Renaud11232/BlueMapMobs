@@ -5,7 +5,7 @@ plugins {
 project.description = project.property("bluemap-vehicles-description").toString()
 
 dependencies {
-    shadow(project(":bluemap-entities-fabric"))
+    shadow(project(":bluemap-entities-fabric-common"))
     shadow(project(":bluemap-vehicles-common"))
     minecraft(libs.minecraft)
 }
