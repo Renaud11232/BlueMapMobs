@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "bluemap-other-markers",
+  "version": "${version}",
+  "name": "BlueMapOtherMarkers",
+  "description": "${description}",
+  "authors": [
+    "Renaud11232"
+  ],
+  "contact": {
+    "homepage": "${website}",
+    "sources": "${website}"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "be.renaud11232.bluemapothermarkers.fabric.FabricBlueMapOtherMarkersMod"
+    ]
+  },
+  "depends": {
+    "java": ">=${javaVersion}",
+    "minecraft": ">=${apiVersion}",
+    "fabricloader": "*",
+    "bluemap": "*"
+  }
+}

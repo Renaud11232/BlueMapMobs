@@ -1,0 +1,17 @@
+general:
+  # Hide markers if they are in light levels under the specified value
+  # Both values have to be below the threshold fot the marker to be hidden
+  # 0 = Full shadow (doesn't hide the marker)
+  # 16 = Full block light
+  # 15 = Full sky light
+  minimum_block_light: 4
+  minimum_sky_light: 1
+
+marker_sets:
+  - id: "bluemapentitymarkers-others"
+    label: "Others"
+    toggleable: true
+    default_hidden: true
+    markers:
+      - type: "*"
+        max_distance: 1000

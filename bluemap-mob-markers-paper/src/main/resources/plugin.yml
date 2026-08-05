@@ -1,0 +1,10 @@
+name: BlueMapMobMarkers
+version: '${version}'
+main: be.renaud11232.bluemapmobmarkers.paper.PaperBlueMapMobMarkersPlugin
+api-version: '${apiVersion}'
+depend:
+  - BlueMap
+authors:
+  - Renaud11232
+description: '${description}'
+website: '${website}'

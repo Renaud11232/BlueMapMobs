@@ -1,4 +1,0 @@
-package be.renaud11232.bluemapentities;
-
-public record Position(double x, double y, double z) {
-}

@@ -1,0 +1,11 @@
+name: BlueMapCitizensMarkers
+version: '${version}'
+main: be.renaud11232.bluemapcitizensmarkers.bukkit.BlueMapCitizensMarkersPlugin
+api-version: '${apiVersion}'
+depend:
+  - BlueMap
+  - Citizens
+authors:
+  - Renaud11232
+description: '${description}'
+website: '${website}'

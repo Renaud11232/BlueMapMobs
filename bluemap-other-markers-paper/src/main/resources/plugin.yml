@@ -1,0 +1,10 @@
+name: BlueMapOtherMarkers
+version: '${version}'
+main: be.renaud11232.bluemapothermarkers.paper.PaperBlueMapOtherMarkersPlugin
+api-version: '${apiVersion}'
+depend:
+  - BlueMap
+authors:
+  - Renaud11232
+description: '${description}'
+website: '${website}'

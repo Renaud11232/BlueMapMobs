@@ -1,0 +1,20 @@
+{
+  "general": {
+    "minimum_block_light": 4,
+    "minimum_sky_light": 1
+  },
+  "marker_sets": [
+    {
+      "id": "bluemapentitymarkers-mobs",
+      "label": "Mobs",
+      "toggleable": true,
+      "default_hidden": true,
+      "markers": [
+        {
+          "type": "*",
+          "max_distance": 1000
+        }
+      ]
+    }
+  ]
+}

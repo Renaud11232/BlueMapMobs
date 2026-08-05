@@ -1,0 +1,75 @@
+package be.renaud11232.bluemapmobmarkers;
+
+import be.renaud11232.bluemapmobmarkers.entity.TropicalFish;
+
+public class MobStyleClass {
+    public static final String FLIP = "bluemapmobmarkers-flip";
+    public static final String BEE = "bluemapmobmarkers-bee";
+    public static final String BEE_ANGRY = "bluemapmobmarkers-bee-angry";
+    public static final String BEE_BABY = "bluemapmobmarkers-bee-baby";
+    public static final String BEE_ANGRY_BABY = "bluemapmobmarkers-bee-angry-baby";
+    public static final String HAPPY_GHAST = "bluemapmobmarkers-happy-ghast";
+    public static final String HORSE_WHITE = "bluemapmobmarkers-horse-white";
+    public static final String HORSE_CREAMY = "bluemapmobmarkers-horse-creamy";
+    public static final String HORSE_CHESTNUT = "bluemapmobmarkers-horse-chestnut";
+    public static final String HORSE_BROWN = "bluemapmobmarkers-horse-brown";
+    public static final String HORSE_BLACK = "bluemapmobmarkers-horse-black";
+    public static final String HORSE_GRAY = "bluemapmobmarkers-horse-gray";
+    public static final String HORSE_DARK_BROWN = "bluemapmobmarkers-horse-dark-brown";
+    public static final String HORSE_WHITE_BABY = "bluemapmobmarkers-horse-white-baby";
+    public static final String HORSE_CREAMY_BABY = "bluemapmobmarkers-horse-creamy-baby";
+    public static final String HORSE_CHESTNUT_BABY = "bluemapmobmarkers-horse-chestnut-baby";
+    public static final String HORSE_BROWN_BABY = "bluemapmobmarkers-horse-brown-baby";
+    public static final String HORSE_BLACK_BABY = "bluemapmobmarkers-horse-black-baby";
+    public static final String HORSE_GRAY_BABY = "bluemapmobmarkers-horse-gray-baby";
+    public static final String HORSE_DARK_BROWN_BABY = "bluemapmobmarkers-horse-dark-brown-baby";
+    public static final String LLAMA_CREAMY = "bluemapmobmarkers-llama-creamy";
+    public static final String LLAMA_WHITE = "bluemapmobmarkers-llama-white";
+    public static final String LLAMA_GRAY = "bluemapmobmarkers-llama-gray";
+    public static final String LLAMA_BROWN = "bluemapmobmarkers-llama-brown";
+    public static final String LLAMA_CREAMY_BABY = "bluemapmobmarkers-llama-creamy-baby";
+    public static final String LLAMA_WHITE_BABY = "bluemapmobmarkers-llama-white-baby";
+    public static final String LLAMA_GRAY_BABY = "bluemapmobmarkers-llama-gray-baby";
+    public static final String LLAMA_BROWN_BABY = "bluemapmobmarkers-llama-brown-baby";
+    public static final String SHEEP_WOOL_WHITE = "bluemapmobmarkers-sheep-wool-white";
+    public static final String SHEEP_WOOL_ORANGE = "bluemapmobmarkers-sheep-wool-orange";
+    public static final String SHEEP_WOOL_MAGENTA = "bluemapmobmarkers-sheep-wool-magenta";
+    public static final String SHEEP_WOOL_LIGHT_BLUE = "bluemapmobmarkers-sheep-wool-light-blue";
+    public static final String SHEEP_WOOL_YELLOW = "bluemapmobmarkers-sheep-wool-yellow";
+    public static final String SHEEP_WOOL_LIME = "bluemapmobmarkers-sheep-wool-lime";
+    public static final String SHEEP_WOOL_PINK = "bluemapmobmarkers-sheep-wool-pink";
+    public static final String SHEEP_WOOL_GRAY = "bluemapmobmarkers-sheep-wool-gray";
+    public static final String SHEEP_WOOL_LIGHT_GRAY = "bluemapmobmarkers-sheep-wool-light-gray";
+    public static final String SHEEP_WOOL_CYAN = "bluemapmobmarkers-sheep-wool-cyan";
+    public static final String SHEEP_WOOL_PURPLE = "bluemapmobmarkers-sheep-wool-purple";
+    public static final String SHEEP_WOOL_BLUE = "bluemapmobmarkers-sheep-wool-blue";
+    public static final String SHEEP_WOOL_BROWN = "bluemapmobmarkers-sheep-wool-brown";
+    public static final String SHEEP_WOOL_GREEN = "bluemapmobmarkers-sheep-wool-green";
+    public static final String SHEEP_WOOL_RED = "bluemapmobmarkers-sheep-wool-red";
+    public static final String SHEEP_WOOL_BLACK = "bluemapmobmarkers-sheep-wool-black";
+    public static final String SHEEP_JEB = "bluemapmobmarkers-sheep-wool-jeb";
+    public static final String SHEEP_WOOL_WHITE_BABY = "bluemapmobmarkers-sheep-wool-white-baby";
+    public static final String SHEEP_WOOL_ORANGE_BABY = "bluemapmobmarkers-sheep-wool-orange-baby";
+    public static final String SHEEP_WOOL_MAGENTA_BABY = "bluemapmobmarkers-sheep-wool-magenta-baby";
+    public static final String SHEEP_WOOL_LIGHT_BLUE_BABY = "bluemapmobmarkers-sheep-wool-light-blue-baby";
+    public static final String SHEEP_WOOL_YELLOW_BABY = "bluemapmobmarkers-sheep-wool-yellow-baby";
+    public static final String SHEEP_WOOL_LIME_BABY = "bluemapmobmarkers-sheep-wool-lime-baby";
+    public static final String SHEEP_WOOL_PINK_BABY = "bluemapmobmarkers-sheep-wool-pink-baby";
+    public static final String SHEEP_WOOL_GRAY_BABY = "bluemapmobmarkers-sheep-wool-gray-baby";
+    public static final String SHEEP_WOOL_LIGHT_GRAY_BABY = "bluemapmobmarkers-sheep-wool-light-gray-baby";
+    public static final String SHEEP_WOOL_CYAN_BABY = "bluemapmobmarkers-sheep-wool-cyan-baby";
+    public static final String SHEEP_WOOL_PURPLE_BABY = "bluemapmobmarkers-sheep-wool-purple-baby";
+    public static final String SHEEP_WOOL_BLUE_BABY = "bluemapmobmarkers-sheep-wool-blue-baby";
+    public static final String SHEEP_WOOL_BROWN_BABY = "bluemapmobmarkers-sheep-wool-brown-baby";
+    public static final String SHEEP_WOOL_GREEN_BABY = "bluemapmobmarkers-sheep-wool-green-baby";
+    public static final String SHEEP_WOOL_RED_BABY = "bluemapmobmarkers-sheep-wool-red-baby";
+    public static final String SHEEP_WOOL_BLACK_BABY = "bluemapmobmarkers-sheep-wool-black-baby";
+    public static final String SHEEP_JEB_BABY = "bluemapmobmarkers-sheep-wool-jeb-baby";
+    public static String tropicalFishBody(TropicalFish.BodyType bodyType, TropicalFish.Color bodyColor) {
+        return String.format("bluemapmobmarkers-tropical-fish-body-%s-%s", bodyType.name().toLowerCase(), bodyColor.name().toLowerCase().replace('_', '-'));
+    }
+    public static final String VILLAGER = "bluemapmobmarkers-villager";
+    public static final String VILLAGER_BABY = "bluemapmobmarkers-villager-baby";
+    public static final String ZOMBIE_VILLAGER = "bluemapmobmarkers-zombie-villager";
+    public static final String ZOMBIE_VILLAGER_BABY = "bluemapmobmarkers-zombie-villager-baby";
+}

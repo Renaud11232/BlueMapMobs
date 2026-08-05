@@ -1,0 +1,10 @@
+name: BlueMapVehicleMarkers
+version: '${version}'
+main: be.renaud11232.bluemapvehiclemarkers.bukkit.BukkitBlueMapVehicleMarkersPlugin
+api-version: '${apiVersion}'
+depend:
+  - BlueMap
+authors:
+  - Renaud11232
+description: '${description}'
+website: '${website}'

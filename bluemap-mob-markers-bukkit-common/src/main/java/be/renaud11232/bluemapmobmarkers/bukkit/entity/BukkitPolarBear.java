@@ -1,0 +1,9 @@
+package be.renaud11232.bluemapmobmarkers.bukkit.entity;
+
+import be.renaud11232.bluemapmobmarkers.entity.PolarBear;
+
+public class BukkitPolarBear extends BukkitAgeable<org.bukkit.entity.PolarBear> implements PolarBear {
+    public BukkitPolarBear(org.bukkit.entity.PolarBear wrapped) {
+        super(wrapped);
+    }
+}
